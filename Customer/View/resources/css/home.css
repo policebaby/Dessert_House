@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--primaryFont);
+}
+/* hero section start */
+.heroSection{
+    background-color: #fdf9f6;
+}
+.startOrder{
+    font-family: var(--secondaryFont);
+    font-size: var(--dsHeader) ;
+}
