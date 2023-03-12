@@ -1,0 +1,20 @@
+/* 20px = 1.2em */
+/* 16-17px = 1em */
+/* 15px = 0.9em */
+:root{
+    --userPrimarycolor: #6F4E37 !important;
+    --userTertiarycolor:#A2795C !important;
+    --userSecondarycolor: white !important;
+    --primaryFont:'Public Sans', sans-serif;
+    --secondaryFont:'DM Serif Display', serif;
+    --dsFontweightSemi:600;
+    --dsHeader:1.2em; 
+    --dsSubheader:1em;
+    --dsRegular:0.9em;
+    --btnBlue:#0057FF !important;
+    --btnRed:#C22014 !important;
+    --coinColor:#FFE55A !important;
+    --ratingColor:#FFE55A !important;
+    --logoWidth: 5% ;
+    
+}
