@@ -5,6 +5,8 @@
     --userPrimarycolor: #6F4E37 !important;
     --userTertiarycolor:#A2795C !important;
     --userSecondarycolor: white !important;
+    --primaryTextcolor: white !important;
+    --secondaryTextcolor:black  !important;
     --primaryFont:'Public Sans', sans-serif;
     --secondaryFont:'DM Serif Display', serif;
     --dsFontweightSemi:600;
@@ -16,5 +18,4 @@
     --coinColor:#FFE55A !important;
     --ratingColor:#FFE55A !important;
     --logoWidth: 5% ;
-    
 }
