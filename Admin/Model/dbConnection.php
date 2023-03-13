@@ -26,3 +26,5 @@ class DBConnection {
         return $pdo;
     }
 }
+
+?>

@@ -1,0 +1,11 @@
+:root{
+    --adminPrimaryColor:#C22014;
+    --adminSecondaryColor:#DA3226;
+    --primaryFont:'Public Sans', sans-serif;
+    --secondaryFont:'DM Serif Display', serif;
+    --header:1.25em;
+    --subeheader:1em;
+    --regular:0.9em;
+    --fontWeightSemi:600;
+
+}

@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--secondaryFont), serif;
+    font-family: var(--primaryFont), sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+
+
+/* background circle,upper left,inner cicrle */
+.upperLeftInnerCircle{
+    position: fixed;
+    height: 50vh;
+    width: 30vw;
+    background-color:var(--adminSecondaryColor);
+    border-radius: 50%;
+    top:-4em;
+    left: -4em;
+  
+}
+
+/* background circle,upper left,outer cicrle */
+.upperLeftOuterCircle{
+    position: fixed;
+    height: 55vh;
+    width: 31vw;
+    background-color:var(--adminPrimaryColor);
+    border-radius: 50%;
+    top:-5em;
+    left: -4em;
+}
+
+/* background circle,lower right,inner cicrle */
+.lowerRightInnerCircle{
+    position: fixed;
+    height: 50vh;
+    width: 30vw;
+    background-color:var(--adminSecondaryColor);
+    border-radius: 50%;
+    right: -4em;
+    bottom:-4em;
+}
+
+/* background circle,lower right,outercicrle */
+.lowerRightOuterCircle{
+    position: fixed;
+    height: 55vh;
+    width: 31vw;
+    background-color:var(--adminPrimaryColor);
+    border-radius: 50%;
+    right:-4em;
+    bottom: -5em;
+}
+
+/* Outermost First Container */
+.firstContainer{
+    height: 70vh;
+    width: 25vw;
+    background-color:white;
+    border: 0.5px solid black;
+    border-radius: 15px;
+    box-shadow: 0px 2px black;
+    position: relative;
+}
+
+/* Upper container in first Container */
+.upperContainer{
+    width: 100%;
+    height: 23%;
+    background-color: var(--adminPrimaryColor);
+    border-radius: 15px 15px 0px 0px;
+}
+
+/* position logo between upper and lower container */
+.logo{
+    position: absolute;
+    width: 4.2em;
+    height: 4em;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%);   
+}
+
+/* position the elements in lower container */
+.lowerContainer{
+    height: 77%;
+    width: 100%; 
+    text-align: center;   
+}
+
+/* Adjust the title under logo */
+.title{
+    font-family: var(--secondaryFont);
+    margin-top: 2em;
+    font-size: var(--header);
+    font-style: italic;
+    }
+
+/* Adjust login text  */
+.loginText{
+    margin-top: 1.5em;
+    font-size: var(--regular);
+    font-weight: var(--fontWeightSemi);
+}
+
+/* Adjust name input box, password input box and button */
+.nameInputBox, .passwordInputBox,.logInButton{
+    margin-top: 2em;
+    width: 65%;
+    height: 9%;
+    border-radius: 10px;
+    text-align: center;
+    border: 0.8px solid #710C05;
+}
+
+/* color log in button */
+.logInButton{
+    color: white;
+    background-color: var(--adminSecondaryColor);
+    font-size: var(--regular);  
+}
+
+/*  */
+::placeholder{
+    color:#9D9D9D;
+    opacity: 0.3;
+    font-size: var(--regular);
+}
+
+
+
+
+
