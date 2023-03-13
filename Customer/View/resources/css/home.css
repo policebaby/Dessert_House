@@ -1,13 +1,169 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: var(--primaryFont);
 }
+
+/* nav start */
+.nav {
+    background: var(--userPrimarycolor);
+}
+
+.logo {
+    border-radius: 50%;
+}
+
+.search {
+    width: 7em;
+    height: 1.5em;
+    border-style: none;
+    outline: none;
+    padding-left: 2.7em;
+    font-size: var(--dsRegular);
+}
+
+.searchBox {
+    /* margin-left: 30em; */
+    width: 10em;
+    height: 2em;
+    background-color: var(--userSecondarycolor);
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+
+}
+
+.searchBox>.search {
+    flex: 1;
+}
+
+/* nav end */
 /* hero section start */
-.heroSection{
+.heroSection {
     background-color: #fdf9f6;
 }
-.startOrder{
-    font-family: var(--secondaryFont);
-    font-size: var(--dsHeader) ;
+
+.orderInputs {
+
+    margin: 10em 0em 0em 5em;
+
 }
+
+.startOrder {
+    font-family: var(--secondaryFont);
+    font-size: var(--dsHeader);
+}
+
+.btnCoffee {
+    background-color: var(--userPrimarycolor);
+    color: var(--primaryTextcolor);
+    width: 9em;
+    border-radius: 8px !important;
+}
+
+/* hero section end */
+
+/* slideshow start */
+
+/* slideshow end */
+
+/* shop profiles start */
+.shopProfiles {
+    background-color: var(--userTertiarycolor);
+}
+
+.shopHeader {
+    font-weight: 600;
+}
+
+/* shop profile block start */
+.boxborder {
+    position: relative;
+    width: 15em;
+    height: 18em;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.box {
+    position: absolute;
+    margin-top: 2.5em;
+    left: 0;
+    width: 15em;
+    height: 10em;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+
+.circle {
+    position: absolute;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    left: 5em;
+    top: 0.1em;
+    background-color: black;
+}
+
+.pic {
+    position: absolute;
+    top: 9em;
+    left: 0;
+    width: 15em;
+    height: 9.5em;
+    border-radius: 0px 0px 5px 5px;
+    background-color: black;
+}
+
+.newItem {
+    position: absolute;
+    top: 2.4em;
+    left: 0;
+    width: 4em;
+    height: 2em;
+    border-radius: 5px 0px 0px 0px;
+    background-color: #6F4E37;
+    color: white;
+    text-align: center;
+    padding: 0.4em;
+}
+
+/* shop profiles end */
+
+/* guide start */
+.guideHeader {
+    font-weight: var(--dsFontweightSemi);
+    font-size: var(--dsHeader);
+}
+
+.stepCircle {
+    margin: 0.5em 0em 0em 6em;
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    line-height: 6em;
+    color: var(--primaryTextcolor);
+    background-color: var(--userPrimarycolor);
+}
+
+.dot {
+    margin: 0.3em 0em 0em 8.6em;
+
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 50%;
+    background-color: var(--userPrimarycolor);
+}
+
+.instruction {
+    font-size: var(--dsHeader);
+    margin: 2.5em 0em 8.4em 0em;
+}
+.instruction1 {
+    font-size: var(--dsHeader);
+    margin: 2.5em 0em 0em 0em;
+}
+
+/* guide end */
