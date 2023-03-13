@@ -1,0 +1,47 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'Public Sans', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+.seller_profile_page{
+    height:100vh !important;
+    background-color:var(--secondary-skyblue)!important;
+}
+.shopLogo{
+    width:5em ;
+}
+.profileLogo{
+    display:flex;
+    justify-content: center;
+}
+.name,.shop_name{
+    width:9em !important;
+    height:2.4em;
+    border-radius:0.5em;
+    border-style:none;
+}
+.edit{
+    width:20em !important;
+    height:2.5em;
+    border-radius:0.5em;
+    border-style: none;
+}
+.edit_center::placeholder{
+    text-align: center;
+}
+.edit_profile_btn{
+    background-color:var(--primary-blue);
+    color:var(--text-color-white);
+}
+.edit_nav{
+    background-color:var(--primary-blue)
+}
+.nav_text,.web_name{
+    color:var(--text-color-white)
+}
+.web_name{
+    font-family:"DM Serif Display","sans-serif";
+}

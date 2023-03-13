@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- seller profile css link -->
+    <link rel="stylesheet" href="./resources/css/sellerProfile.css">
+    <!-- seller root css link -->
+    <link rel="stylesheet" href="./resources/css/seller-root.css">
+    <!-- bootstrap js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <!-- bootstrap css cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Public+Sans&display=swap" rel="stylesheet">
+    <title>Seller Profile Page</title>
+</head>
+<body>
+    <div class="seller_profile_page row mt-0">
+
+    <div class="col-md-2 me-0 ms-0 edit_nav">
+        <div class="ms-2">
+        <div class="mt-3 mb-3 text-center">
+            <img src="./resources/images/Ellipse 3.png" alt="logo" width="33%">
+            <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
+        </div>
+        <!-- profile icon from left nav -->
+        <div class="mt-4 nav_text">
+            <img src="./resources/images/person.png" alt="">
+            <span>Profile</span>
+        </div>
+        <!-- meun icon from left nav -->
+        <div class="nav_text my-3 text-muted">
+            <img src="./resources/images/menu.png" alt="" class="my-3">
+            <span>Product Menu</span>
+        </div>
+        <!-- order list icon from left nav -->
+        <div class="nav_text text-muted">
+            <img src="./resources/images/orderList.png" alt="">
+            <span>Order Lists</span>
+        </div>
+        <!-- sold history icon from left nav -->
+        <div class="nav_text my-3 text-muted">
+            <img src="./resources/images/soldList.png" alt="" class="my-3">
+            <span>Sold History</span>
+        </div>
+        <!-- incoming order icon from left nav -->
+        <div class="nav_text text-muted">
+            <img src="./resources/images/incomingOrder.png" alt="">
+            <span>Incoming Orders</span>
+        </div>
+        <!-- logout icon from left nav-->
+        <div class="nav_text my-3 text-muted">
+            <img src="./resources/images/Logout.png" alt="" class="my-3 nav_text">
+            <span>Logout</span>
+        </div>
+        </div>
+    </div>
+
+    <div class="col-md-9 mt-5 ms-0">
+        <div class="mt-2 profileLogo">
+            <img src="./resources/images/shopLogo.jpg" alt="" class="shopLogo">
+        </div>
+        <div class="seller_name mt-5 profileLogo">
+            <!-- name -->
+            <div class="me-3">
+                <input type="text" class="name edit_center" placeholder="Mary">
+            </div>
+
+            <!-- cafe name -->
+            <div class=" ms-3">
+                <input type="text" class="shop_name edit_center" placeholder="cafe">
+            </div>
+
+        </div>
+
+        <!-- email -->
+        <div class="profileLogo mt-5">
+                <input type="email" placeholder="cafe@gmail.com" class="edit edit_center">
+        </div>
+
+        <!-- password -->
+            <div class="profileLogo my-4">
+                <input type="password" placeholder="password" class="edit edit_center">
+        </div>
+
+        <!-- phone number -->
+        <div class="profileLogo">
+                <input type="text" placeholder="09777777777" class="edit edit_center">
+            </div>
+
+            <!-- edit button -->
+            <div class="profileLogo my-4">
+                <button type="button" class="edit_profile_btn edit edit_center">Edit Profile</button>
+            </div>
+    </div>
+    </div>
+</body>
+</html>
