@@ -1,6 +1,5 @@
 <?php
 
-
 class DBConnection {
 
     // Setting
@@ -14,11 +13,9 @@ class DBConnection {
     public function connect() {
         #//Connection Connect
         $pdo = new PDO(
-            "mysql:host=$this->hostname;
-            port = $this->port;
-        dbname = $this->dbname",
+            "mysql:host=$this->hostname;port=$this->port;dbname=$this->dbname",
         $this->username,
-            $this->password
+        $this->password
         );
 
         // if error occurs, php show
