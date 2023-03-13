@@ -8,30 +8,31 @@
 
     <!-- Link with root css,login css, circleBackground css -->
     <link rel="stylesheet" href="./resources/css/root.css">
-    <link rel="stylesheet" href="./resources/css/logIn.css">
+    <link rel="stylesheet" href="./resources/css/adminProfile.css">
     <link rel="stylesheet" href="./resources/css/circleBackground.css">
+    <link rel="stylesheet" href="./resources/css/navbar.css">
 
     <!-- Import google fonts: public display & dm sen serif -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans&display=swap" rel="stylesheet">
 
-    <title>Admin Log In</title>
+    <title>Admin Profile</title>
 </head>
 
 <body>
-    <div class="firstContainer">
-        <img src="./resources/img/logo.png" alt="Fail to load Logo" class="logo">
-
-        <div class="upperContainer"></div>
-        <div class="lowerContainer">
-            <div class="title">DESSERT HOUSE</div>
-            <div class="loginText">Log in</div>
-            <input type="text" placeholder="Admin Name" id="adminName" class="nameInputBox">
-            <input type="text" placeholder="Password" id="adminpassword" class="passwordInputBox">
-            <button class="logInButton">Log in</button>
-        </div>
-    </div>
+    <!-- Nav Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><img src="./resources/img/logo.png" class="dessertHouseLogo" alt="Unable to load logo"></li>
+            <li><a href="">Seller Controller</a></li>
+            <li><a href="">User Controller</a></li>
+            <li><a href="">System Management</a></li>
+            <li>       
+                <img src="./resources/img/profilelogo.png" class="profileLogo" alt="Unable to load Profile Logo" srcset="">
+            </li>
+        </ul>
+    </nav>
 
 
 
