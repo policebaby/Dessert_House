@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'Public Sans', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+.seller_contact_admin_page{
+    height:100%;
+    background-color:var(--secondary-skyblue)!important;
+}
+.edit_nav{
+    height:100%;
+    background-color:var(--primary-blue);
+}
+.nav_logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav_text,.web_name{
+    color:var(--text-color-white);
+}
+.subject_text,.message{
+    font-size:1.2em;
+}
+.web_name{
+    font-family:"DM Serif Display","sans-serif";
+    font-size: 1.2em;
+}
+.sub_input,.message_input{
+    position:relative;
+    width:27em !important;
+
+}
+.sub_box{
+    width:27em !important;
+    margin-left:0 !important;
+}
+.message{
+    margin-left:0 !important;
+}
+.box2{
+    margin-left:25% !important;
+}
+
+.feedback_gp{
+    display:flex;
+}
+
+.upper_text{
+    font-size:1.2em;
+    word-spacing: 0.1em;
+}
+.send_btn{
+    width:7em;
+    height:2em;
+    border-radius:0.5em;
+    border-style:none;
+    background-color: var(--primary-blue);
+    color:var(--text-color-white);
+}
+
+
+
+
+
+
+@media screen and (max-width:700px){
+    body{
+        overflow-x: hidden;
+    }
+    .web_name,.title{
+        display:none !important;
+    }
+    .web_logo{
+        width:65% !important;
+        margin-left:15%;
+    }
+    .nav_text{
+        text-align: center;
+    }
+    .icons{
+        width:45%;
+    }
+    .cFeedback{
+        margin-left:17%;
+    }
+    .footer_text{
+        font-size:0.8em !important;
+    }
+    .edit_nav{
+        height:100%;
+    }
+    .box2{
+        margin-left:3% !important;
+    }
+}
