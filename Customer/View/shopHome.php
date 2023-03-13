@@ -25,6 +25,8 @@
 
     <!-- nav end -->
     <!-- hero section start -->
+    <div>
     <img src="./resources/img/shop pic.jpg" alt="">
+    </div>
 </body>
 </html>
