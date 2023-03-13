@@ -31,19 +31,68 @@ body{
     display:flex;
 }
 .box2{
-    margin-left:25% !important;
+    margin-left:15% !important;
 }
 .edit_photo_bg{
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     width:4em;
     height:4em;
+    margin-left:13%;
     border-radius:50%;
-    background-color:var(--text-color-white);
+    background-color: var(--text-color-white);
+}
+.editPhoto{
+    position:absolute;
+}
+.profile_banner{
+    position:relative;
+    margin-left:23%;
+    
+}
+.label_box_row{
+    display:flex;
+}
+.label_box{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+}
+.corner_label{
+    left:0;
+}
+.input_box{
+    width:19em !important;
+    height:2.3em !important;
+    border-radius:0.5em;
+    border-style:none;
+}
+.input_box::placeholder{
+    text-align: center;
+}
+.btns{
+    width:8.7em;
+    height:2.3em;
+    border-radius:0.5em;
+    border-style:none;
+    color:var(--text-color-white);
+}
+.saveBtn{
+    background-color: var(--primary-blue);
+}
+.cancelBtn{
+    background-color: var(--red-color);
 }
 
-
-
-
-
+/* choose file button */
+.form-control{
+    background-color:var(--primary-blue) !important;
+    color:var(--text-color-white) !important;
+    width:15.5em !important;
+    border-radius:0 !important;
+}
 
 
 @media screen and (max-width:700px){
@@ -68,5 +117,12 @@ body{
     }
     .edit_nav{
         height:100%;
+    }
+    .label_box_row{
+        display:flex;
+        flex-direction:column !important;
+    }
+    .input_box,.label_box{
+        margin-left:0;
     }
 }
