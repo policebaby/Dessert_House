@@ -40,7 +40,7 @@
     <div class="redLine mt-5 mb-4">
       <div class="header__center">Login with other</div>
   </div>
-    <div class = "mt-5">
+    <div class = "mt-5 mb-5">
       <img src="./resources/images/logos_facebook.png" alt="" class="me-5">
       <img src="./resources/images/Group.png" alt="" class="mx-5">
       <img src="./resources/images/logos_google-icon.png" alt="" class="ms-5">

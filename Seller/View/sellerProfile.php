@@ -20,48 +20,49 @@
     <title>Seller Profile Page</title>
 </head>
 <body>
-    <div class="seller_profile_page row mt-0">
+    <div class=" row mt-0 seller_profile_page">
 
-    <div class="col-md-2 me-0 ms-0 edit_nav">
-        <div class="ms-2">
-        <div class="mt-3 mb-3 text-center">
-            <img src="./resources/images/Ellipse 3.png" alt="logo" width="33%">
+    <div class="col-3 me-0 ms-0 edit_nav">
+    <div class="mt-3 mb-3 text-center">
+            <img src="./resources/images/Ellipse 3.png" alt="logo" width="33%" class="nav_logo">
             <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
         </div>
+        <div class="ms-4">
         <!-- profile icon from left nav -->
         <div class="mt-4 nav_text">
-            <img src="./resources/images/person.png" alt="">
-            <span>Profile</span>
+            <img src="./resources/images/person.png" class="icons">
+            <span class="title">Profile</span>
         </div>
         <!-- meun icon from left nav -->
         <div class="nav_text my-3 text-muted">
-            <img src="./resources/images/menu.png" alt="" class="my-3">
-            <span>Product Menu</span>
+            <img src="./resources/images/menu.png" alt="" class="my-3 icons">
+            <span class="title">Product Menu</span>
         </div>
         <!-- order list icon from left nav -->
         <div class="nav_text text-muted">
-            <img src="./resources/images/orderList.png" alt="">
-            <span>Order Lists</span>
+            <img src="./resources/images/orderList.png" class="icons">
+            <span class="title">Order Lists</span>
         </div>
         <!-- sold history icon from left nav -->
         <div class="nav_text my-3 text-muted">
-            <img src="./resources/images/soldList.png" alt="" class="my-3">
-            <span>Sold History</span>
+            <img src="./resources/images/soldList.png" alt="" class="my-3 icons">
+            <span class="title">Sold History</span>
         </div>
         <!-- incoming order icon from left nav -->
         <div class="nav_text text-muted">
-            <img src="./resources/images/incomingOrder.png" alt="">
-            <span>Incoming Orders</span>
+            <img src="./resources/images/incomingOrder.png" class="icons">
+            <span class="title">Incoming Orders</span>
         </div>
         <!-- logout icon from left nav-->
         <div class="nav_text my-3 text-muted">
-            <img src="./resources/images/Logout.png" alt="" class="my-3 nav_text">
-            <span>Logout</span>
+            <img src="./resources/images/Logout.png" alt="" class="my-3 nav_text icons">
+            <span class="title">Logout</span>
         </div>
         </div>
     </div>
 
-    <div class="col-md-9 mt-5 ms-0">
+    <!-- fill input box -->
+    <div class="col-9 mt-5 ms-0 seller_profile_page">
         <div class="mt-2 profileLogo">
             <img src="./resources/images/shopLogo.jpg" alt="" class="shopLogo">
         </div>
