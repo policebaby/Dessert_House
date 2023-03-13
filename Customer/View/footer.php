@@ -53,6 +53,7 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
     <!-- js link end -->
     <title>footer</title>
 </head>
@@ -91,6 +92,15 @@
 
 
         <div class="col-md-6">
+        <div class="mt-4">
+        <h4 class="subHeader text-white ">Navigate</h4>
+        <br />
+        <p class="text-white">
+          Coin Shop <br />
+          Product Page <br />
+          Seat booking
+        </p>
+      </div>
         <div class="mt-4 me-5">
         <h4 class="subHeader text-white">Follow us</h4>
         <div class="mt-2 mb-2 ">
