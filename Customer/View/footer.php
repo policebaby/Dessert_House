@@ -35,7 +35,7 @@
       <div class="row">
         <!--sub col start -->
         <div class="col-lg-3 col-6 mb-4 mvLogo">
-          <div class="mt-3">
+          <div class="">
             <div class="d-flex">
               <img src="../View/resources/img/logo.png" alt="logo" class="logo" />
               <h4 class="logoName font text-white ms-2">Dessert House</h4>
