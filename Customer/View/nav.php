@@ -110,8 +110,8 @@
         <!-- sub col end -->
 
         <!-- needHelp col start -->
-        <div class="col-lg-3 col-6 mb-4 mb-md-0 footer_mv">
-          <div class="mt-4 ms-lg-5">
+        <div class="col-lg-3 col-6 mb-4 mb-md-0 footer_mv footer_bar">
+          <div class="mt-4 ms-lg-5 ">
             <h4 class="footer_subHeader text-white">Need Help?</h4>
             <br />
             <p class="text-white">
@@ -139,7 +139,7 @@
         </div>
         <!-- Navigate col end -->
         <!-- followUs col start -->
-        <div class="col-lg-3 col-6 mb-4 mb-md-0 footer_mv">
+        <div class="col-lg-3 col-6 mb-4 mb-md-0 footer_mv footer_bar">
           <div class="mt-4 me-md-5 mobile">
             <h4 class="footer_subHeader text-white">Follow us</h4>
             <div class="mt-2 mb-2 footer_icons">

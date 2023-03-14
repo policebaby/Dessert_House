@@ -3,8 +3,8 @@ body {
   font-family: var(--primaryFont);
 }
 .nav_logo {
-  width: 4.5em !important;
-  height: 4.5em !important;
+  width: 4em !important;
+  height: 4em !important;
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
   margin-left: 2em !important;
@@ -91,6 +91,9 @@ body {
   }
   .nav_logo {
     margin-left: 2em !important;
+    width: 3em !important;
+    height: 3em !important ;
+    margin-top: 1em !important;
   }
   .nav_desktop {
     display: none;
@@ -106,8 +109,18 @@ body {
     margin-left: 9em !important;
   }
 }
+@media (max-width : 880px) and (min-width : 800px){
+  .nav_desktop > .nav_name {
+    padding-left: 1.5em !important;
+  }
+.nav_logo{
+  width: 3em !important;
+  height: 3em !important ;
+  margin-top: 1em !important;
+}
+}
 @media screen and (max-width: 816px) {
-  .nav_desktop{
+  .nav_desktop  {
     margin-left:.1em !important;
   }
   .searchBox {
@@ -118,7 +131,7 @@ body {
 
 /* user footer start */
 .footer {
-  width: 100%;
+  width: 100% !important; 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -165,11 +178,14 @@ body {
   width: 4em;
   height: 4em;
 }
-.font {
+.footer_font {
   font-size: var(--dsFontweightSemi);
   margin-top: 1.2em !important;
 }
 @media (max-width: 576px) {
+  .footer{
+    width: 100% !important;
+  }
   .footer_mv {
     font-size: var(--dsRegular);
     padding-right: 5em !important;
