@@ -1,0 +1,8 @@
+body{
+    background-color: var(--userTertiarycolor);
+}
+/* pagination start */
+.p_arrow{
+    color: var(--userPrimarycolor);
+}
+/* pagination end */
