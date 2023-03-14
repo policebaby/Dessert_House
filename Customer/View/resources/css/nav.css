@@ -1,16 +1,15 @@
+/* user nav bar start */
 body {
- 
   font-family: var(--primaryFont);
 }
-
-.logo {
+.nav_logo {
   width: 4.5em !important;
   height: 4.5em !important;
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
   margin-left: 2em !important;
 }
-.nav {
+.user_navbar {
   width: 100%;
   background: #6f4e37;
   display: flex;
@@ -28,7 +27,7 @@ body {
 
 .searchBox {
   width: 10em;
-  height: 1em;
+  height: 2em;
   background-color: var(--userSecondarycolor);
   border-radius: 2em;
   display: flex;
@@ -38,37 +37,40 @@ body {
   margin-bottom: 1.5em !important ;
   margin-left: 5em;
 }
-.desktop {
-  margin-left: 19em !important;
+.nav_desktop {
+  margin-left: 8em !important;
 }
 .searchBox > .search {
   flex: 1;
   padding-left: 10px;
 }
-.pficons {
+.nav_icons {
   color: var(--userSecondarycolor);
   font-size: 1.8em !important;
   margin-top: 0.8em !important;
   margin-bottom: 0.7em !important;
 }
-ul {
+.nav_desktop {
   display: flex;
 }
-ul > li {
+.nav_desktop > .nav_name {
   margin-top: 1.7em !important;
   margin-bottom: 1.7em !important;
   display: inline;
   font-size: var(--dsFontweightSemi);
   color: var(--userSecondarycolor);
-  padding-left: 5em !important;
-  padding-left: 5em !important;
+  padding-left: 3em !important;
+  
+}
+.nav_mobile > .nav_mvname {
+  display: inline;
 }
 
 .search_icon {
   color: black;
   width: 1.2em;
 }
-.menu {
+.nav_menu {
   color: var(--primaryTextcolor);
   background-color: var(--userPrimarycolor);
   font-size: 2em !important;
@@ -76,27 +78,27 @@ ul > li {
   margin-bottom: 0.7em;
   display: none;
 }
-.mobile {
+.nav_mobile {
   display: none;
 }
-#check {
+#nav_check {
   display: none;
 }
 @media screen and (max-width: 720px) {
-  .menu {
+  .nav_menu {
     display: block;
     cursor: pointer;
   }
-  .logo {
+  .nav_logo {
     margin-left: 2em !important;
   }
-  .desktop {
+  .nav_desktop {
     display: none;
   }
-  .pf {
+  .nav_pf {
     display: none;
   }
-  #check:checked + .mobile {
+  #nav_check:checked + .nav_mobile {
     display: flex;
     flex-direction: column;
   }
@@ -104,3 +106,114 @@ ul > li {
     margin-left: 9em !important;
   }
 }
+@media screen and (max-width: 816px) {
+  .nav_desktop{
+    margin-left:.1em !important;
+  }
+  .searchBox {
+    margin-left: 3em !important;
+  }
+}
+/* user nav bar end */
+
+/* user footer start */
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--userPrimarycolor);
+}
+.logoName {
+  font-family: var(--secondaryFont);
+}
+.line {
+  color: white !important;
+}
+.mailText {
+  background-color: transparent;
+  border-style: none;
+  width: 8em !important;
+}
+.mailicon {
+  font-size: 1.2em !important;
+}
+.footer_icons {
+  font-size: 2em !important;
+  color: #699bf7;
+}
+.mailbox {
+  width: 11em;
+  height: 0.5em;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  border: solid 0.1em white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.footer_subHeader {
+  font-size: var(--dsSubheader);
+  font-weight: var(--dsFontweightSemi);
+}
+.normalText {
+  font-size: 0.7em;
+}
+.footer_logo {
+  width: 4em;
+  height: 4em;
+}
+.font {
+  font-size: var(--dsFontweightSemi);
+  margin-top: 1.2em !important;
+}
+@media (max-width: 576px) {
+  .footer_mv {
+    font-size: var(--dsRegular);
+    padding-right: 5em !important;
+  }
+  .footer_logo {
+    width: 3em !important;
+    height: 3em !important ;
+    margin-top: 1.5em !important;
+  }
+  .footer_font {
+    font-size: var(--dsRegular);
+    margin-top: 2.5em !important;
+  }
+  .mailbox {
+    width: 9em;
+    height: 0.5em;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    border: solid 0.1em white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  .mailText {
+    font-size: var(--dsRegular);
+  }
+  .mailicon {
+    font-size: 0.9em !important;
+  }
+  .footer_icons {
+    font-size: 1.5em !important;
+    color: #699bf7;
+    display: flex;
+    flex-direction: row;
+  }
+  .logoName {
+    font-family: var(--secondaryFont);
+    font-size: var(--dsRegular);
+  }
+  .footer_subHeader {
+    font-size: var(--dsRegular);
+    font-weight: var(--dsFontweightSemi);
+  }
+}
+/* user footer end */
