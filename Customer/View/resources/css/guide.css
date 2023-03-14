@@ -1,0 +1,17 @@
+.FAQheader{
+    font-size: var(--dsHeader);
+    font-weight: var(--dsFontweightSemi);
+    margin: 1em 0em 5em 0em;
+}
+.FAQ{
+    font-size: var(--dsSubheader);
+    font-weight: var(--dsFontweightSemi);
+    margin: 4em 0em 1em 0em
+}
+.logoName{
+    font-family: var(--secondaryFont);
+}
+.FAQbox{
+    margin: 3em;
+    
+}

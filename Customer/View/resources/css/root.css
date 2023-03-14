@@ -18,7 +18,8 @@
     --btnRed:#C22014 !important;
     --coinColor:#FFE55A !important;
     --ratingColor:#FFE55A !important;
-    --logoWidth: 5% ;
+    --logoWidth: 4.5em ;
+    --logoHeight: 4.5em;
 }
 
 *{
