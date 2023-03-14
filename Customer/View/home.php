@@ -10,6 +10,7 @@
     <!-- css link start -->
     <link rel="stylesheet" href="./resources/css/root.css">
     <link rel="stylesheet" href="./resources/css/home.css">
+    <link rel="stylesheet" href="./resources/css/footer.css">
     <!-- css link end -->
     <!-- js link start -->
     <!-- js link end -->
@@ -57,18 +58,18 @@
     <!-- hero section start -->
     <div class="container-fluid heroSection">
         <div class="row">
-            <div class="col-6 ">
+            <div class="col-md-6 ">
                 <div class="orderInputs">
                     <p class="startOrder">Start order now</p>
                     <form>
                         <div class="form-row">
-                            <div class="col-md-4 mb-3">
+                            <div class="col-md-5 mb-3 me-5">
                                 <label for="validationDefault01">Dessert name</label>
                                 <input type="text" class="form-control" id="validationDefault01" placeholder="Search dessert name" value="" required>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="col-md-4 mb-3">
+                            <div class="col-md-5 mb-3 me-5">
                                 <label for="validationDefault01">Shop name</label>
                                 <input type="text" class="form-control" id="validationDefault01" placeholder="Search shop name" value="" required>
                             </div>
@@ -77,57 +78,19 @@
                     </form>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
                 <img src="./resources/img/coffeeHS.jpeg" alt="" width="100%">
             </div>
         </div>
     </div>
     <!-- hero section end -->
-    <!-- slideshow start -->
-    <div id="carouselExampleInterval" class="carousel slide " data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="5000">
-                <img src="./resources/img/dessertSlide1.webp" class="d-block w-100" alt="...">
-                <!-- <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <button class="btn btnCoffee">View More</button>
-                </div> -->
-            </div>
-            <div class="carousel-item" data-bs-interval="5000">
-                <img src="./resources/img/dessertSlide2.webp" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
 
-                </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="5000">
-                <img src="./resources/img/dessertSlide3.webp" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    <!-- slideshow end -->
     <!-- shops profiles start -->
     <div class="shopProfiles ">
-        <div class="p-3" >
-            <p class="shopHeader fs-3 text-center ">Shops</p>
+        <div class="">
+            <p class="shopHeader fs-3 text-center text-light ">Shops</p>
         </div>
-        
-        <div class="row  mx-5">
+        <div class="row  mx-5 ">
             <!-- profile block start -->
             <div class="boxborder m-5  col-4">
                 <div class="box ">
@@ -176,8 +139,8 @@
     <div class="guide p-4">
         <p class="text-center guideHeader">How to use this website</p>
         <div class="row">
-            <div class="col-3 "> 
-            <div class="stepCircle ">
+            <div class="col-2 col-3  ">
+                <div class="stepCircle">
                     <p class="step text-center">1st Step</p>
                 </div>
                 <div class="dot"></div>
@@ -186,7 +149,7 @@
                 <div class="dot"></div>
                 <div class="dot"></div>
                 <div class="stepCircle ">
-                    <p class="step text-center">1st Step</p>
+                    <p class="step text-center">2nd Step</p>
                 </div>
                 <div class="dot"></div>
                 <div class="dot"></div>
@@ -194,7 +157,7 @@
                 <div class="dot"></div>
                 <div class="dot"></div>
                 <div class="stepCircle ">
-                    <p class="step text-center">1st Step</p>
+                    <p class="step text-center">3rd Step</p>
                 </div>
                 <div class="dot"></div>
                 <div class="dot"></div>
@@ -202,19 +165,92 @@
                 <div class="dot"></div>
                 <div class="dot"></div>
                 <div class="stepCircle ">
-                    <p class="step text-center">1st Step</p>
+                    <p class="step text-center">4th Step</p>
                 </div>
-                
+
             </div>
             <div class="col-9 ">
-                <p class="instruction">Choose the shop you desire and select the desserts you want from the menu.  </p>
+                <p class="instruction">Choose the shop you desire and select the desserts you want from the menu. </p>
                 <p class="instruction">Select the estimated time you will arrive to the shop.</p>
-                <p class="instruction">Pay the total amount calculated in the cart when you check out.</p>
+                <p class="instruction ">Pay the total amount calculated in the cart when you check out.</p>
                 <p class="instruction1">Enjoy the dessert you pre-ordered at our Dessert House when you arrived. </p>
             </div>
         </div>
     </div>
     <!-- guide end -->
+
+    <!-- footer start -->
+    <div class="footer container-fluid">
+        <div class="container p-4">
+            <div class="row">
+                <!--sub col start -->
+                <div class="col-lg-3 col-6 mb-4 mvLogo">
+                    <div class="mt-3">
+                        <div class="d-flex">
+                            <img src="../View/resources/img/logo.png" alt="logo" class="logo" />
+                            <h4 class="logoName font text-white ms-2">Dessert House</h4>
+                        </div>
+                        <h6 class="text-white font mt-3">Subscribe our website</h6>
+                        <div class="mailbox">
+                            <iconify-icon icon="logos:google-gmail" class="mailicon"></iconify-icon>
+                            <input type="text" class="mailText text-white-50 ms-2" placeholder="Enter Your Email" />
+                        </div>
+                    </div>
+                </div>
+                <!-- sub col end -->
+
+                <!-- needHelp col start -->
+                <div class="col-lg-3 col-6 mb-4 mb-md-0 mv">
+                    <div class="mt-4 ms-lg-5">
+                        <h4 class="subHeader text-white">Need Help?</h4>
+                        <br />
+                        <p class="text-white">
+                            Contact Admin <br />
+                            Contact Seller <br />
+                            Guide <br />
+                            About us <br />
+                            Privacy Policy
+                        </p>
+                    </div>
+                </div>
+                <!-- needHelp col end -->
+
+                <!-- Navigate col start -->
+                <div class="col-lg-3 col-6 mb-4 mb-md-0 mv">
+                    <div class="mt-4 mobile ms-lg-2">
+                        <h4 class="subHeader text-white">Navigate</h4>
+                        <br />
+                        <p class="text-white">
+                            Coin Shop <br />
+                            Product Page <br />
+                            Seat booking
+                        </p>
+                    </div>
+                </div>
+                <!-- Navigate col end -->
+                <!-- followUs col start -->
+                <div class="col-lg-3 col-6 mb-4 mb-md-0 mv">
+                    <div class="mt-4 me-md-5 mobile">
+                        <h4 class="subHeader text-white">Follow us</h4>
+                        <div class="mt-2 mb-2 icons">
+                            <iconify-icon icon="logos:facebook"></iconify-icon>
+                            <iconify-icon icon="skill-icons:instagram" class="mx-2 px-1"></iconify-icon>
+                            <iconify-icon icon="bi:twitter"></iconify-icon>
+                        </div>
+                        <h4 class="subHeader text-white">Address</h4>
+                        <p class="text-white normalText">
+                            No.66, Bahan Township, Yangon, <br />
+                            Myanmar. <br />
+                            +95 977777777<br />
+                            desserthouse@gmail.com
+                        </p>
+                    </div>
+                </div>
+                <!-- followUs col end -->
+            </div>
+        </div>
+    </div>
+    <!-- footer end -->
 </body>
 
 </html>

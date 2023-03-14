@@ -30,6 +30,7 @@
 </head>
 
 <body>
+  <!-- footer start -->
   <div class="footer container-fluid">
     <div class="container p-4">
       <div class="row">
@@ -100,6 +101,7 @@
       </div>
     </div>
   </div>
+  <!-- footer end -->
 </body>
 </html>
 
