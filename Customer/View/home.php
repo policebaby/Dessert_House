@@ -22,39 +22,7 @@
 </head>
 
 <body>
-    <!-- nav start -->
-    <nav class="navbar navbar-expand-lg navbar-light nav">
-        <div class="container-fluid ">
-            <img src="../View/resources/img/Dessert House-3.png" alt="logo" width="5%" class="ms-3 logo" />
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <ul class="nav justify-content-center me-5">
-                        <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link text-white mx-3" href="#">Shop</a>
-                        </li>
-                        <li class="nav-item me-5">
-                            <a class="nav-link text-white" href="#">Coin Shop</a>
-                        </li>
-                        <li class="nav-item">
-                            <div class=" searchBox ms-5">
-                                <span><iconify-icon icon="material-symbols:search-rounded" style="color: black" width="1.2em" height="1.2em" class="pt-2"></iconify-icon></span>
-                                <input type="text" class="search " placeholder="Search" />
-                            </div>
-                        </li>
-
-                        <li class="nav-item ">
-                            <iconify-icon icon="healthicons:ui-user-profile" style="color: white" width="1.8em" height="1.8em" class="mx-2"></iconify-icon>
-                            <iconify-icon icon="material-symbols:shopping-bag" style="color: white" width="1.8em" height="1.8em" class="me-2"></iconify-icon>
-                        </li>
-                    </ul>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- nav end -->
+    
     <!-- hero section start -->
     <div class="container-fluid heroSection">
         <div class="row">
@@ -91,46 +59,47 @@
             <p class="shopHeader fs-3  text-center text-light ">Shops</p>
         </div>
         <div class="flex">
-        <div class="row justify-content-center mx-5 ">
-            <!-- profile block start -->
-            <div class="boxborder m-5  col-4">
-                <div class="box ">
-                    <p class="text-center mt-5 fs-4">Starbuck</p>
+            <div class="row justify-content-center mx-5 ">
+                <!-- profile block start -->
+                <div class="boxborder m-5  col-4">
+                    <div class="box ">
+                        <p class="text-center mt-5 fs-4">Starbuck</p>
+                    </div>
+                    <div class="circle"> <img class="position-relative rounded-circle " src="./resources/img/Ellipse 180.png" alt="" width="100%"> </div>
+                    <!-- had to put both width and height 100% because of sample picture -->
+                    <div class="pic"> <img src="./resources/img/Rectangle 381.png" alt="" width="100%" height="100%"></div>
+                    <div class="newItem ">New</div>
                 </div>
-                <div class="circle"> <img class="position-relative rounded-circle " src="./resources/img/Ellipse 180.png" alt="" width="100%"> </div>
-                <!-- had to put both width and height 100% because of sample picture -->
-                <div class="pic"> <img src="./resources/img/Rectangle 381.png" alt="" width="100%" height="100%"></div>
-                <div class="newItem ">New</div>
-            </div>
-            <div class="boxborder m-5 col-4">
-                <div class="box ">
-                    <p class="text-center mt-5 fs-4">Starbuck</p>
+                <div class="boxborder m-5 col-4">
+                    <div class="box ">
+                        <p class="text-center mt-5 fs-4">Starbuck</p>
+                    </div>
+                    <div class="circle"> <img class="position-relative rounded-circle " src="./resources/img/Ellipse 180.png" alt="" width="100%"> </div>
+                    <!-- had to put both width and height 100% because of sample picture -->
+                    <div class="pic"> <img src="./resources/img/Rectangle 381.png" alt="" width="100%" height="100%"></div>
+                    <div class="newItem ">New</div>
                 </div>
-                <div class="circle"> <img class="position-relative rounded-circle " src="./resources/img/Ellipse 180.png" alt="" width="100%"> </div>
-                <!-- had to put both width and height 100% because of sample picture -->
-                <div class="pic"> <img src="./resources/img/Rectangle 381.png" alt="" width="100%" height="100%"></div>
-                <div class="newItem ">New</div>
-            </div>
-            <div class="boxborder m-5 col-4">
-                <div class="box ">
-                    <p class="text-center mt-5 fs-4">Starbuck</p>
+                <div class="boxborder m-5 col-4">
+                    <div class="box ">
+                        <p class="text-center mt-5 fs-4">Starbuck</p>
+                    </div>
+                    <div class="circle"> <img class="position-relative rounded-circle " src="./resources/img/Ellipse 180.png" alt="" width="100%"> </div>
+                    <!-- had to put both width and height 100% because of sample picture -->
+                    <div class="pic"> <img src="./resources/img/Rectangle 381.png" alt="" width="100%" height="100%"></div>
+                    <div class="newItem ">New</div>
                 </div>
-                <div class="circle"> <img class="position-relative rounded-circle " src="./resources/img/Ellipse 180.png" alt="" width="100%"> </div>
-                <!-- had to put both width and height 100% because of sample picture -->
-                <div class="pic"> <img src="./resources/img/Rectangle 381.png" alt="" width="100%" height="100%"></div>
-                <div class="newItem ">New</div>
-            </div>
-            <div class="boxborder m-5 col-4">
-                <div class="box ">
-                    <p class="text-center mt-5 fs-4">Starbuck</p>
+                <div class="boxborder m-5 col-4">
+                    <div class="box ">
+                        <p class="text-center mt-5 fs-4">Starbuck</p>
+                    </div>
+                    <div class="circle"> <img class="position-relative rounded-circle " src="./resources/img/Ellipse 180.png" alt="" width="100%"> </div>
+                    <!-- had to put both width and height 100% because of sample picture -->
+                    <div class="pic"> <img src="./resources/img/Rectangle 381.png" alt="" width="100%" height="100%"></div>
+                    <div class="newItem ">New</div>
                 </div>
-                <div class="circle"> <img class="position-relative rounded-circle " src="./resources/img/Ellipse 180.png" alt="" width="100%"> </div>
-                <!-- had to put both width and height 100% because of sample picture -->
-                <div class="pic"> <img src="./resources/img/Rectangle 381.png" alt="" width="100%" height="100%"></div>
-                <div class="newItem ">New</div>
+                <!-- profile block end -->
             </div>
-            <!-- profile block end -->
-        </div></div>
+        </div>
         <div class="text-center ">
             <button class="btn btnCoffee my-3">View More</button>
         </div>

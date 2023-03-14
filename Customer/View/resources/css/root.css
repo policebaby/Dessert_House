@@ -26,4 +26,12 @@
     margin: 0;
     padding: 0;
 }
+/* Everyone must use this class for coin icon in COIN SYSTEM */
+/* coinIcon CSS start */
+.coinIcon{
+    color:var(--ratingColor);
+    font-size: 2.5em;
+}
+/* coinIcon CSS end */
+
 
