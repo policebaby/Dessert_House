@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css link start -->
     <link rel="stylesheet" href="./resources/css/root.css">
-    <link rel="stylesheet" href="./resources/css/shopHome.css">
+    <link rel="stylesheet" href="./resources/css/shopProfile.css">
     <!-- css link end -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
     <!-- nav end -->
     <!-- hero section start -->
     <div>
-    <img src="./resources/img/shop pic.jpg" alt="">
+    <img src="./resources/img/shop pic.jpg" alt="shop pic">
     </div>
 </body>
 </html>

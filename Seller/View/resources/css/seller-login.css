@@ -1,0 +1,98 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'Public Sans', sans-serif;
+}
+body{
+    overflow-x:hidden;
+}
+.back-blue{
+    background-color:var(--primary-blue) !important;
+}
+.login-text{
+    color:var(--text-color-white) !important;
+}
+.box1{
+    width:20em !important;
+    height:2.8em;
+    border-radius:0.8em;
+    border:2px solid black !important;
+}
+.box1::placeholder{
+    text-align: center;
+}
+.loginBtn{
+    width:20em !important;
+    height:2.3em;
+    border-radius:0.5em;
+    background-color:var(--primary-blue) !important;
+    border:1.5px solid var(--text-color-white) !important;
+    color:var(--text-color-white);
+}
+/* text between two lines */
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    align-items: center;
+    
+}
+.redLine{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__center {
+    display: grid;
+    grid-template-columns: 4.5em max-content 4.5em;
+    grid-column-gap: 1.2em;
+    align-items: center;
+    color:var(--text-color-white);
+}
+
+.header__center::before,
+.header__center::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: var(--red-color);
+    align-items:center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #fccb90;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    }
+    
+    @media (min-width: 768px) {
+    .gradient-form {
+    height: 100vh !important;
+    }
+    }
+    @media (min-width: 769px) {
+    .gradient-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    }
+    }

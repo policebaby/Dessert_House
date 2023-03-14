@@ -1,0 +1,128 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'Public Sans', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+.seller_edit_profile_page{
+    height:100%;
+    background-color:var(--secondary-skyblue)!important;
+}
+.edit_nav{
+    height:100%;
+    background-color:var(--primary-blue);
+}
+.nav_logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav_text,.web_name{
+    color:var(--text-color-white);
+}
+.web_name{
+    font-family:"DM Serif Display","sans-serif";
+    font-size: 1.2em;
+}
+.feedback_gp{
+    display:flex;
+}
+.box2{
+    margin-left:15% !important;
+}
+.edit_photo_bg{
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:4em;
+    height:4em;
+    margin-left:13%;
+    border-radius:50%;
+    background-color: var(--text-color-white);
+}
+.editPhoto{
+    position:absolute;
+}
+.profile_banner{
+    position:relative;
+    margin-left:23%;
+    
+}
+.label_box_row{
+    display:flex;
+}
+.label_box{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+}
+.corner_label{
+    left:0;
+}
+.input_box{
+    width:19em !important;
+    height:2.3em !important;
+    border-radius:0.5em;
+    border-style:none;
+}
+.input_box::placeholder{
+    text-align: center;
+}
+.btns{
+    width:8.7em;
+    height:2.3em;
+    border-radius:0.5em;
+    border-style:none;
+    color:var(--text-color-white);
+}
+.saveBtn{
+    background-color: var(--primary-blue);
+}
+.cancelBtn{
+    background-color: var(--red-color);
+}
+
+/* choose file button */
+.form-control{
+    background-color:var(--primary-blue) !important;
+    color:var(--text-color-white) !important;
+    width:15.5em !important;
+    border-radius:0 !important;
+}
+
+
+@media screen and (max-width:700px){
+    body{
+        overflow-x: hidden;
+    }
+    .web_name,.title{
+        display:none !important;
+    }
+    .web_logo{
+        width:65% !important;
+        margin-left:15%;
+    }
+    .nav_text{
+        text-align: center;
+    }
+    .icons{
+        width:45%;
+    }
+    .cFeedback{
+        margin-left:17%;
+    }
+    .edit_nav{
+        height:100%;
+    }
+    .label_box_row{
+        display:flex;
+        flex-direction:column !important;
+    }
+    .input_box,.label_box{
+        margin-left:0;
+    }
+}
