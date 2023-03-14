@@ -1,0 +1,19 @@
+/* coin exchange start */
+.rateBg{
+    background-color: var(--userTertiarycolor);
+
+}
+.coinCurrency{
+    position: absolute;
+    margin-top: 0.5em;
+    color: var(--primaryTextcolor)
+}
+.currencyRates{
+    position: relative;
+    padding:1em ;
+
+}
+.coinPosition{
+    /* position: absolute; */
+    left: 0;
+}

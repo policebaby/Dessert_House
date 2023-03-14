@@ -9,7 +9,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- css link start -->
     <link rel="stylesheet" href="./resources/css/root.css">
-    <link rel="stylesheet" href="./resources/css/guide.css">
+    <!-- <link rel="stylesheet" href="./nav.css"> -->
+    <link rel="stylesheet" href="./resources/css/coinExchange.css">
     <link rel="stylesheet" href="./resources/css/footer.css">
 
     <!-- css link end -->
@@ -19,12 +20,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
-    <title>Guide</title>
+    <title>Coin Exchange</title>
 </head>
 
 <body>
     <!-- nav start -->
-    <nav class="navbar navbar-expand-lg navbar-light nav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark nav">
         <div class="container-fluid ">
             <img src="../View/resources/img/Dessert House-3.png" alt="logo" width="5%" class="ms-3 logo" />
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
@@ -56,29 +57,32 @@
         </div>
     </nav>
     <!-- nav end -->
-    <!-- FAQ Start -->
-    <div class="container">
-        <p class="FAQheader text-center ">Frequently asked Questions </p>
-        <ul style="list-style-type:disc" class="FAQbox">
-            <li>
-                <p class="FAQ">What is <span class="logoName"> DESSERT HOUSE ?</span></p>
-                <p><span class="logoName"> DESSERT HOUSE</span> is a website that will help customers to be convenience and reduced the time of waiting before enjoying desserts at our food court.</p>
-            </li>
-            <li>
-                <p class="FAQ">What is coin ?</p>
-                <p> Coin is the currency that will be used in our system to buy the project of our website and the purpose is to make customer experienced easier times while using our website.</p>
-            </li>
-            <li>
-                <p class="FAQ">What is booking system ?</p>
-                <p> Booking system is for customers who want to make sure the seat are available before coming to our food courts and to avoid cases where customers have to experience queuing for a long time.</p>
-            </li>
-            <li>
-                <p class="FAQ">Is it possible to pay with cash without buying coins?</p>
-                <p>We prioritized the customer’s satisfactory the most. Which is why we accept both the coin payment, cash payment as well as credit cards.</p>
-            </li>
-        </ul>
+    <!-- coin exchange start -->
+    <div class=" p-5 ">
+        <p class="text-center">Coin Exchange Rates</p>
+        <div class="container-fluid row exchangeBox ">
+            <div class="col-5 rateBg ">
+                <div class=" currencyRates ">
+                    <iconify-icon class="coinIcon coinPosition" icon="healthicons:coins"></iconify-icon>
+                    <span class="coinCurrency">x 1 = 1000 MMK</span>
+                </div>
+                <div class=" currencyRates ">
+                    <iconify-icon class="coinIcon coinPosition" icon="healthicons:coins"></iconify-icon>
+                    <span class="coinCurrency">x 1 = 1000 MMK</span>
+                </div>
+                <div class=" currencyRates ">
+                    <iconify-icon class="coinIcon coinPosition" icon="healthicons:coins"></iconify-icon>
+                    <span class="coinCurrency">x 1 = 1000 MMK</span>
+                </div>
+                <div class=" currencyRates ">
+                    <iconify-icon class="coinIcon coinPosition" icon="healthicons:coins"></iconify-icon>
+                    <span class="coinCurrency">x 1 = 1000 MMK</span>
+                </div>
+            </div>
+            <div class="col-7 bg-warning"></div>
+        </div>
     </div>
-    <!-- FAQ end -->
+    <!-- coin exchange end -->
     <!-- footer start -->
     <div class="footer container-fluid">
         <div class="container p-4">
