@@ -1,0 +1,68 @@
+/* shop profiles start */
+.shopProfiles {
+    background-color: var(--userTertiarycolor);
+}
+
+.shopHeader {
+    font-weight: 600;
+}
+
+/* shop profile block start */
+.boxborder {
+    position: relative;
+    width: 15em;
+    height: 18em;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.box {
+    position: absolute;
+    margin-top: 2.5em;
+    left: 0;
+    width: 15em;
+    height: 10em;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+
+.circle {
+    position: absolute;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    left: 5em;
+    top: 0.1em;
+    background-color: black;
+}
+
+.pic {
+    position: absolute;
+    top: 9em;
+    left: 0;
+    width: 15em;
+    height: 9.5em;
+    border-radius: 0px 0px 5px 5px;
+    background-color: black;
+}
+
+.newItem {
+    position: absolute;
+    top: 2.4em;
+    left: 0;
+    width: 4em;
+    height: 2em;
+    border-radius: 5px 0px 0px 0px;
+    background-color: #6F4E37;
+    color: white;
+    text-align: center;
+    padding: 0.4em;
+}
+.btnCoffee {
+    background-color: var(--userPrimarycolor);
+    color: var(--primaryTextcolor);
+    width: 9em;
+    border-radius: 8px !important;
+}
+/* shop profiles end */

@@ -18,11 +18,20 @@
     --btnRed:#C22014 !important;
     --coinColor:#FFE55A !important;
     --ratingColor:#FFE55A !important;
-    --logoWidth: 5% ;
+    --logoWidth: 4.5em ;
+    --logoHeight: 4.5em;
 }
 
 *{
     margin: 0;
     padding: 0;
 }
+/* Everyone must use this class for coin icon in COIN SYSTEM */
+/* coinIcon CSS start */
+.coinIcon{
+    color:var(--ratingColor);
+    font-size: 2.5em;
+}
+/* coinIcon CSS end */
+
 
