@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -35,13 +36,13 @@
     <div class="container p-4">
       <div class="row">
         <!--sub col start -->
-        <div class="col-lg-3 col-6 mb-4 mvLogo">
+        <div class="col-lg-3 col-6 mb-4 ">
           <div class="">
             <div class="d-flex">
-              <img src="../View/resources/img/logo.png" alt="logo" class="logo" />
-              <h4 class="logoName font text-white ms-2">Dessert House</h4>
+              <img src="../View/resources/img/logo.png" alt="logo" class="footer_logo" />
+              <h4 class="logoName footer_font text-white ms-2">Dessert House</h4>
             </div>
-            <h6 class="text-white font mt-3">Subscribe our website</h6>
+            <h6 class="text-white footer_font mt-3">Subscribe our website</h6>
             <div class="mailbox">
               <iconify-icon icon="logos:google-gmail" class="mailicon"></iconify-icon>
               <input type="text" class="mailText text-white-50 ms-2" placeholder="Enter Your Email" />
@@ -51,9 +52,9 @@
         <!-- sub col end -->
 
         <!-- needHelp col start -->
-        <div class="col-lg-3 col-6 mb-4 mb-md-0 mv">
-          <div class="mt-4 ms-lg-5">
-            <h4 class="subHeader text-white">Need Help?</h4>
+        <div class="col-lg-3 col-6 mb-4 mb-md-0 footer_mv footer_bar">
+          <div class="mt-4 ms-lg-5 ">
+            <h4 class="footer_subHeader text-white">Need Help?</h4>
             <br />
             <p class="text-white">
               Contact Admin <br />
@@ -67,9 +68,9 @@
         <!-- needHelp col end -->
 
         <!-- Navigate col start -->
-        <div class="col-lg-3 col-6 mb-4 mb-md-0 mv">
+        <div class="col-lg-3 col-6 mb-4 mb-md-0 footer_mv">
           <div class="mt-4 mobile ms-lg-2">
-            <h4 class="subHeader text-white">Navigate</h4>
+            <h4 class="footer_subHeader text-white">Navigate</h4>
             <br />
             <p class="text-white">
               Coin Shop <br />
@@ -80,15 +81,15 @@
         </div>
         <!-- Navigate col end -->
         <!-- followUs col start -->
-        <div class="col-lg-3 col-6 mb-4 mb-md-0 mv">
+        <div class="col-lg-3 col-6 mb-4 mb-md-0 footer_mv footer_bar">
           <div class="mt-4 me-md-5 mobile">
-            <h4 class="subHeader text-white">Follow us</h4>
-            <div class="mt-2 mb-2 icons">
+            <h4 class="footer_subHeader text-white">Follow us</h4>
+            <div class="mt-2 mb-2 footer_icons">
               <iconify-icon icon="logos:facebook"></iconify-icon>
               <iconify-icon icon="skill-icons:instagram" class="mx-2 px-1"></iconify-icon>
               <iconify-icon icon="bi:twitter"></iconify-icon>
             </div>
-            <h4 class="subHeader text-white">Address</h4>
+            <h4 class="footer_subHeader text-white">Address</h4>
             <p class="text-white normalText">
               No.66, Bahan Township, Yangon, <br />
               Myanmar. <br />
@@ -102,8 +103,8 @@
     </div>
   </div>
   <!-- footer end -->
-</body>
+
+
+  </body>
+
 </html>
-
-
-
