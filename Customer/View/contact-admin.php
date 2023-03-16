@@ -45,7 +45,7 @@
     <!-- icon link end -->
 </head>
 
-<body>
+<body class=" ">
     <!--Nav bar start-->
     <div class="user_navbar">
         <img src="../View/resources/img/logo.png" alt="logo" class="nav_logo" />
@@ -92,7 +92,7 @@
     <!--Nav bar end-->
 
     <!--contact admin start-->
-    <div class="row">
+    <div class="row contactA_ctn">
         <div class="col-md-6">
             <img src="../View/resources/img/conact admin (4).png" alt="contact admin" class="contactA_pic">
         </div>
@@ -114,75 +114,75 @@
 
     <!-- footer start -->
     <div class="footer container-fluid">
-        <div class="container p-4">
-            <div class="row">
-                <!--sub col start -->
-                <div class="col-lg-3 col-6 mb-4 ">
-                    <div class="">
-                        <div class="d-flex">
-                            <img src="../View/resources/img/logo.png" alt="logo" class="footer_logo" />
-                            <h4 class="logoName footer_font text-white ms-2">Dessert House</h4>
-                        </div>
-                        <h6 class="text-white footer_font mt-3">Subscribe our website</h6>
-                        <div class="mailbox">
-                            <iconify-icon icon="logos:google-gmail" class="mailicon"></iconify-icon>
-                            <input type="text" class="mailText text-white-50 ms-2" placeholder="Enter Your Email" />
-                        </div>
-                    </div>
-                </div>
-                <!-- sub col end -->
-
-                <!-- needHelp col start -->
-                <div class="col-lg-3 col-6 mb-4 mb-md-0 footer_mv footer_bar">
-                    <div class="mt-4 ms-lg-5 ">
-                        <h4 class="footer_subHeader text-white">Need Help?</h4>
-                        <br />
-                        <p class="text-white">
-                            Contact Admin <br />
-                            Contact Seller <br />
-                            Guide <br />
-                            About us <br />
-                            Privacy Policy
-                        </p>
-                    </div>
-                </div>
-                <!-- needHelp col end -->
-
-                <!-- Navigate col start -->
-                <div class="col-lg-3 col-6 mb-4 mb-md-0 footer_mv">
-                    <div class="mt-4 mobile ms-lg-2">
-                        <h4 class="footer_subHeader text-white">Navigate</h4>
-                        <br />
-                        <p class="text-white">
-                            Coin Shop <br />
-                            Product Page <br />
-                            Seat booking
-                        </p>
-                    </div>
-                </div>
-                <!-- Navigate col end -->
-                <!-- followUs col start -->
-                <div class="col-lg-3 col-6 mb-4 mb-md-0 footer_mv footer_bar">
-                    <div class="mt-4 me-md-5 mobile">
-                        <h4 class="footer_subHeader text-white">Follow us</h4>
-                        <div class="mt-2 mb-2 footer_icons">
-                            <iconify-icon icon="logos:facebook"></iconify-icon>
-                            <iconify-icon icon="skill-icons:instagram" class="mx-2 px-1"></iconify-icon>
-                            <iconify-icon icon="bi:twitter"></iconify-icon>
-                        </div>
-                        <h4 class="footer_subHeader text-white">Address</h4>
-                        <p class="text-white normalText">
-                            No.66, Bahan Township, Yangon, <br />
-                            Myanmar. <br />
-                            +95 977777777<br />
-                            desserthouse@gmail.com
-                        </p>
-                    </div>
-                </div>
-                <!-- followUs col end -->
+    <div class="container p-4">
+      <div class="row">
+        <!--sub col start -->
+        <div class="col-lg-3 col-6 mb-4 ">
+          <div class="">
+            <div class="d-flex">
+              <img src="../View/resources/img/logo.png" alt="logo" class="footer_logo" />
+              <h4 class="logoName footer_font text-white ms-2">Dessert House</h4>
             </div>
+            <h6 class="text-white footer_font mt-3">Subscribe our website</h6>
+            <div class="mailbox">
+              <iconify-icon icon="logos:google-gmail" class="mailicon"></iconify-icon>
+              <input type="text" class="mailText text-white-50 ms-2" placeholder="Enter Your Email" />
+            </div>
+          </div>
         </div>
+        <!-- sub col end -->
+
+        <!-- needHelp col start -->
+        <div class="col-lg-3 col-6 mb-4 mb-md-0 footer_mv footer_bar">
+          <div class="mt-4 ms-lg-5 ">
+            <h4 class="footer_subHeader text-white">Need Help?</h4>
+            <br />
+            <p class="text-white">
+              Contact Admin <br />
+              Contact Seller <br />
+              Guide <br />
+              About us <br />
+              Privacy Policy
+            </p>
+          </div>
+        </div>
+        <!-- needHelp col end -->
+
+        <!-- Navigate col start -->
+        <div class="col-lg-3 col-6 mb-4 mb-md-0 footer_mv">
+          <div class="mt-4 mobile ms-lg-2">
+            <h4 class="footer_subHeader text-white">Navigate</h4>
+            <br />
+            <p class="text-white">
+              Coin Shop <br />
+              Product Page <br />
+              Seat booking
+            </p>
+          </div>
+        </div>
+        <!-- Navigate col end -->
+        <!-- followUs col start -->
+        <div class="col-lg-3 col-6 mb-4 mb-md-0 footer_mv footer_bar">
+          <div class="mt-4 me-md-5 mobile">
+            <h4 class="footer_subHeader text-white">Follow us</h4>
+            <div class="mt-2 mb-2 footer_icons">
+              <iconify-icon icon="logos:facebook"></iconify-icon>
+              <iconify-icon icon="skill-icons:instagram" class="mx-2 px-1"></iconify-icon>
+              <iconify-icon icon="bi:twitter"></iconify-icon>
+            </div>
+            <h4 class="footer_subHeader text-white">Address</h4>
+            <p class="text-white normalText">
+              No.66, Bahan Township, Yangon, <br />
+              Myanmar. <br />
+              +95 977777777<br />
+              desserthouse@gmail.com
+            </p>
+          </div>
+        </div>
+        <!-- followUs col end -->
+      </div>
     </div>
+  </div>
     <!-- footer end -->
 
 </body>

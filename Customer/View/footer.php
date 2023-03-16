@@ -7,11 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>footer User</title>
   <!-- css link start -->
-  <link rel="stylesheet" href="../View/resources/css/footer.css" />
+  <link rel="stylesheet" href="../View/resources/css/nav.css" />
   <link rel="stylesheet" href="../View/resources/css/root.css">
   <!-- css link end -->
-  <!-- font link start -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+<!--font link start-->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,6 +25,10 @@
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
   <!-- icon link end -->
 </head>
 
@@ -38,7 +42,7 @@
           <div class="">
             <div class="d-flex">
               <img src="../View/resources/img/logo.png" alt="logo" class="footer_logo" />
-              <h4 class="logoName footer_font text-white ms-2">Dessert House</h4>
+              <p class="logoName footer_font text-white ms-2">Dessert House</p>
             </div>
             <h6 class="text-white footer_font mt-3">Subscribe our website</h6>
             <div class="mailbox">
