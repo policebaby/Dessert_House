@@ -10,7 +10,6 @@
     <!-- css link start -->
     <link rel="stylesheet" href="./resources/css/root.css">
     <link rel="stylesheet" href="./resources/css/shops.css">
-    <link rel="stylesheet" href="./resources/css/footer.css">
     <link rel="stylesheet" href="./resources/css/shop_pblock.css">
     <!-- css link end -->
     <!-- js link start -->

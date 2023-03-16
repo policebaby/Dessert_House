@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>footer User</title>
   <!-- css link start -->
-  <link rel="stylesheet" href="../View/resources/css/nav.css" />
+  <link rel="stylesheet" href="../View/resources/css/footer.css">
   <link rel="stylesheet" href="../View/resources/css/root.css">
   <!-- css link end -->
 <!--font link start-->

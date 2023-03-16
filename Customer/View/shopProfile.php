@@ -17,7 +17,7 @@
     <!-- css link start -->
     <link rel="stylesheet" href="./resources/css/root.css">
     <link rel="stylesheet" href="./resources/css/shopProfile.css">
-    <!-- <link rel="stylesheet" href="./resources/css/footer.css"> -->
+
     <!-- css link end -->
     <!-- js link start -->
     <!-- js link end -->

@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="./resources/css/root.css">
     <!-- <link rel="stylesheet" href="./nav.css"> -->
     <link rel="stylesheet" href="./resources/css/coinExchange.css">
-    <link rel="stylesheet" href="./resources/css/footer.css">
 
     <!-- css link end -->
     <!-- js link start -->
