@@ -93,6 +93,4 @@
   <!--flex text end-->
   <!--Nav bar end-->
 
-  
-  <body>
 </html>
