@@ -1,0 +1,140 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'Public Sans', sans-serif;
+}
+body{
+    overflow-x: hidden;
+    max-height:100vh;
+}
+.feedbackDetails_page,.main-page{
+    max-height:100%;
+    background-color:var(--secondary-skyblue)!important;
+}
+/* nav css */
+.edit_nav{
+    max-height:100% !important;
+    background-color:var(--primary-blue);
+}
+.nav_logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav_text,.web_name{
+    color:var(--text-color-white);
+}
+.web_name{
+    font-family:"DM Serif Display","sans-serif";
+    font-size: 1.2em;
+}
+.feedback_gp{
+    display:flex;
+}
+.icons{
+    opacity:0.6;
+}
+
+/* page css */
+.feedback-title{
+    color:var(--primary-blue);
+    margin-left:25%;
+}
+.each-progress{
+    display:flex;
+}
+.details{
+    display:flex;
+}
+.each-review{
+    display:flex;
+    flex-direction: column;
+}
+.dis{
+    width:1.5em;
+    height:1.5em;
+    border-radius:50%;
+    background-color:var(--primary-blue);
+}
+.date{
+    font-size:0.7em;
+}
+.ha-face{
+    width:2em;
+    margin-left:80%;
+}
+.each-review{
+    position:relative;
+    width:90%;
+    padding:0.3em;
+    background-color:white;
+    border-radius:0.3em;
+    border:1px solid gray;
+}
+.reply-text{
+    margin-left:92%;
+}
+.cFeedback{
+    opacity:1;
+}
+
+@media screen and (max-width:720px){
+    body{
+        overflow-x: hidden;
+    }
+    .web_name,.title{
+        display:none !important;
+    }
+    .web_logo{
+        width:55% !important;
+        margin-left:6%;
+    }
+    .nav_text{
+        text-align: center;
+        margin-top:15%;
+    }
+    .icons{
+        width:25%;
+        margin:0.3em;
+    }
+    .edit_nav{
+        position:fixed;
+        height:100vh !important;
+        background-color: var(--primary-blue)!important ;
+    }
+    .cFeedback{
+        margin-left:32%;
+    }
+    /* for page */
+    .per-text{
+        font-size:1em !important;
+    }
+    .above-text{
+        font-size:0.8em !important;
+    }
+    .smile-face{
+        width:2.2em;
+        opacity:0.9;
+    }
+    .faces{
+        width:1.3em;
+        height:1.3em;
+    }
+    .progress{
+        height:1em !important;
+    }
+    .total-review{
+        font-size:0.8em;
+    }
+    .user-text,.seller-text{
+        font-size:0.8em;
+        opacity:0.9;
+    }
+    .reply-text{
+        margin-left:85%;
+    }
+    .ha-face{
+        margin-left:55%;
+    }
+}
