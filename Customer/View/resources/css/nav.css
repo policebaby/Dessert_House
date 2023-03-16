@@ -139,6 +139,7 @@ body {
 }
 .logoName {
   font-family: var(--secondaryFont);
+  font-style: italic !important;
 }
 .line {
   color: white !important;

@@ -129,18 +129,16 @@ body {
 /* user nav bar end */
 
 /* contact admin start */
+.contactA_ctn{
+ width: 100% !important;
+ overflow: hidden !important;
+}
 .contactA_input {
   width: 20em;
   height: 2.5em;
   border-radius: 0.7em;
   border-style: none;
   background-color: var(--userFourthcolor);
-}
-.contactA_pic {
-  display: block;
-}
-.contactA_replacepic {
-  display: none;
 }
 .contactA_textarea {
   border-radius: 0.7em;
