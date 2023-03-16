@@ -24,7 +24,7 @@
 <body>
     <!-- nav start -->
     <?php 
-    // include "./nav.php" 
+    include "./nav.php" 
     ?>
     <!-- nav end -->
     <!-- hero section start -->
@@ -154,7 +154,7 @@
     <!-- guide end -->
 
     <?php
-    // include "./footer.php";s
+    include "./footer.php";
     ?>
     <!-- footer start -->
 
