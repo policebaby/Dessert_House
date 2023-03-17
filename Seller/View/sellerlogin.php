@@ -23,7 +23,7 @@
 <body>
   <div class="seller_login row mt-0 back-blue">
 
-  <div class="col-md-5 me-0 text-center">
+  <div class="col-md-5 me-0 text-center mb-sm-5">
     <div class = "mt-5">
     <img src="./resources/images/Ellipse 3.png" alt="logo">
     </div>
@@ -47,7 +47,7 @@
     </div>
     </div>
 
-    <div class="col-md-7 mt-0 ms-0">
+    <div class="col-md-7 mt-0 ms-0  login-bg-photo">
     <img src="./resources/images/Rectangle 174.png" alt="seller-login-photo" class="ms-0" width="100%">
     </div>
   </div>

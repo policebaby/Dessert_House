@@ -1,0 +1,45 @@
+/* Setting nav bar bg and position */
+.navbar{
+    height: 10vh;
+    width: 100vw;
+    background-color: var(--adminPrimaryColor);
+    position: float;
+}
+
+/* to make nav bar display in row */
+.navbar ul{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+/* to change the default a text setting */
+nav a{
+    text-decoration: none;
+    color:#FFFFFF ;
+    opacity: 0.6;
+    font-size: var(--header);
+}
+
+/* to make more visible when hover */
+nav a:hover{
+    color: #FFFFFF;
+    opacity: 1;
+    font-weight: var(--fontWeightSemi);
+}
+
+/* set width and height of logo */
+.dessertHouseLogo{
+    width: 50%;
+    height: 50%;
+    margin-left: 0.43em;
+}
+
+/* set logo pic width and height */
+.profileLogo{
+    width: 3em;
+    height: 3em;
+    margin-right:0.43em;
+}
