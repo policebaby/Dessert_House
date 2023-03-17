@@ -81,7 +81,7 @@
         border-radius: 0em 0em 0.5em 0.5em;
     }
     .inputWidth{
-        width: 23em !important;
+        width: 22em !important;
         margin-right: 1em;
     }
     .inputWidth2{
@@ -99,7 +99,7 @@
 
 @media (max-width:1056px) {
     .inputWidth{
-        width: 23em !important;
+        width: 22em !important;
         margin-right: 1em;
     }
     .inputWidth2{
@@ -108,7 +108,10 @@
     } 
   
 }
-@media (max-width:530px) {
-    
+@media (max-width:500px) {
+    .inputWidth{
+        width: 22em !important;
+        margin-right: 1em;
+    }
 }
 /* mb view end */

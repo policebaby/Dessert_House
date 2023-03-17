@@ -20,22 +20,23 @@
     <title>Seller Edit Profile Page</title>
 </head>
 <body class="seller_edit_profile_page">
-    <div class="row">
-        <!-- column1 -->
-    <div class="col-2 me-0 ms-0 edit_nav">
-    <div class="my-3 nav_logo">
-            <img src="./resources/images/Ellipse 3.png" alt="logo" width="35%" class="web_logo">
+<div class="main-page">
+        <div class="row">
+        <nav class="col-2 mt-0">
+        <div class="edit_nav">
+    <div class="nav_logo">
+            <img src="./resources/images/Ellipse 3.png" alt="logo" width="35%" class="web_logo mt-5">
             <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
     </div>
-        <div class="ms-4">
+    <div class="ms-md-4">
         <!-- profile icon from left nav -->
-        <div class="mt-4 nav_text">
+        <div class="nav_text text-muted mt-4">
             <img src="./resources/images/person.png" class="icons">
             <span class="title ms-1">Profile</span>
         </div>
         <!-- meun icon from left nav -->
-        <div class="nav_text my-3 text-muted">
-            <img src="./resources/images/menu.png" alt="" class="my-3 icons">
+        <div class="nav_text my-md-1 text-muted">
+            <img src="./resources/images/menu.png" class="my-md-5 icons">
             <span class="title ms-1">Product Menu</span>
         </div>
         <!-- order list icon from left nav -->
@@ -44,8 +45,8 @@
             <span class="title ms-1">Order Lists</span>
         </div>
         <!-- sold history icon from left nav -->
-        <div class="nav_text my-3 text-muted">
-            <img src="./resources/images/soldList.png"class="my-3 icons">
+        <div class="nav_text text-muted">
+            <img src="./resources/images/soldList.png"class="my-md-5 icons">
             <span class="title ms-1">Sold History</span>
         </div>
         <!-- incoming order icon from left nav -->
@@ -54,20 +55,22 @@
             <span class="title ms-1">Incoming Orders</span>
         </div>
         <!-- feedback icon -->
-        <div class="nav_text my-3 text-muted feedback_gp">
-            <img src="./resources/images/feedback.png" class="icons my-3 cFeedback" width="13%" height="5%">
-            <p class="title feedback_text ms-1 mt-2">Customer's Feedback</p>
+        <div class="nav_text mt-md-5 text-muted feedback_gp">
+            <img src="./resources/images/feedback.png" class="icons cFeedback mt-1" width="13%" height="5%" >
+            <p class="title feedback_text ms-1">Customer's Feedback</p>
         </div>
         <!-- logout icon from left nav-->
-        <div class="nav_text text-muted mb-5">
-            <img src="./resources/images/Logout.png" alt="" class="nav_text icons">
+        <div class="nav_text text-muted my-md-5">
+            <img src="./resources/images/Logout.png" alt="" class="nav_text icons logout">
             <span class="title ms-1">Logout</span>
         </div>
+        <br>
         </div>
-    </div>
+<br>
+        </nav>
 
     <!-- column2 -->
-    <div class="col-10">
+    <div class="col-9 column2">
 
         <div class="box2 mt-4">
 
@@ -82,12 +85,12 @@
 
         <!-- sellerName and old password input box -->
         <div class="mt-4 label_box_row">
-            <span class="label_box">
+            <span class="label_box mb-sm-3">
                 <label for="sellerName" class="coner_label">Seller Name</label>
                 <input type="text" placeholder="enter your name" class="input_box">
             </span>
 
-            <span class="label_box ms-5">
+            <span class="label_box ms-md-5">
                 <label for="oldPassword" class="coner_label">Old Password</label>
                 <input type="password" placeholder="enter your old password" class="input_box">
             </span>
@@ -95,22 +98,22 @@
 
         <!-- shopName and new password box -->
         <div class="label_box_row mt-3">
-            <span class="label_box">
+            <span class="label_box mb-sm-3">
                 <label for="shopName" class="coner_label">Shop Name</label>
                 <input type="text" placeholder="enter your shop name" class="input_box">
             </span>
-            <span class="label_box ms-5">
+            <span class="label_box ms-md-5">
                 <label for="newPassword" class="coner_label">New Password</label>
                 <input type="password" placeholder="enter your new password" class="input_box">
             </span>
         </div>
         <!-- phone and confirm password box -->
         <div class="label_box_row mt-3">
-            <span class="label_box">
+            <span class="label_box mb-sm-3">
                 <label for="phone" class="coner_label">Phone</label>
                 <input type="text" placeholder="enter your phone number" class="input_box">
             </span>
-            <span class="label_box ms-5">
+            <span class="label_box ms-md-5">
                 <label for="newPassword" class="coner_label">Confirm Password</label>
                 <input type="password" placeholder="confirm your new password" class="input_box">
             </span>
@@ -122,7 +125,7 @@
         </div>
 
         <!-- button -->
-        <div class="mt-4">
+        <div class="mt-4 mb-sm-5">
             <span>
                 <button class="btns saveBtn">Save Profile</button>
             </span>
@@ -132,13 +135,7 @@
         </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
+    </div>
+    
     </body>
 </html>
