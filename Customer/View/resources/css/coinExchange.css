@@ -1,4 +1,7 @@
 /* coin exchange start */
+.coinbody{
+    height: 60vh;
+}
 .coinSubheader{
     font-weight: var(--dsFontweightSemi);
 }

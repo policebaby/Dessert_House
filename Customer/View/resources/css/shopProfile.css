@@ -7,6 +7,8 @@ body{
     background-image: url(/Dessert_House/Customer/View/resources/img/shop\ pic.jpg);
     background-repeat: no-repeat;
     background-size:cover;
+    height: 30vh;
+
 }
 /* .shopHSpic{
     position: relative;

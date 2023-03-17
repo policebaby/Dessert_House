@@ -1,9 +1,14 @@
+/* user footer start */
 .footer {
-  width: 100%;
+  width: 100% !important;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
   background-color: var(--userPrimarycolor);
+}
+.footer_mv{
+  margin-bottom: 2em !important;
 }
 .logoName {
   font-family: var(--secondaryFont);
@@ -19,7 +24,7 @@
 .mailicon {
   font-size: 1.2em !important;
 }
-.icons {
+.footer_icons {
   font-size: 2em !important;
   color: #699bf7;
 }
@@ -35,32 +40,35 @@
   border-left: none;
   border-right: none;
 }
-.subHeader {
+.footer_subHeader {
   font-size: var(--dsSubheader);
   font-weight: var(--dsFontweightSemi);
 }
 .normalText {
   font-size: 0.7em;
 }
-.logo {
+.footer_logo {
   width: 4em;
   height: 4em;
 }
-.font {
+.footer_font {
   font-size: var(--dsFontweightSemi);
   margin-top: 1.2em !important;
 }
 @media (max-width: 576px) {
-  .mv {
+  .footer {
+    width: 100% !important;
+  }
+  .footer_mv {
     font-size: var(--dsRegular);
     padding-right: 5em !important;
   }
-  .logo {
+  .footer_logo {
     width: 3em !important;
     height: 3em !important ;
     margin-top: 1.5em !important;
   }
-  .font {
+  .footer_font {
     font-size: var(--dsRegular);
     margin-top: 2.5em !important;
   }
@@ -82,19 +90,19 @@
   .mailicon {
     font-size: 0.9em !important;
   }
-  .icons {
+  .footer_icons {
     font-size: 1.5em !important;
     color: #699bf7;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
   }
   .logoName {
     font-family: var(--secondaryFont);
     font-size: var(--dsRegular);
   }
-  .subHeader {
+  .footer_subHeader {
     font-size: var(--dsRegular);
     font-weight: var(--dsFontweightSemi);
   }
 }
+/* user footer end */
