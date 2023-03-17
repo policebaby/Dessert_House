@@ -1,0 +1,48 @@
+/* background circle,upper left,inner cicrle */
+.upperLeftInnerCircle{
+    position: fixed;
+    height: 50vh;
+    width: 30vw;
+    background-color:var(--adminSecondaryColor);
+    border-radius: 50%;
+    top:-4em;
+    left: -4em;
+    z-index: -1;
+  
+}
+
+/* background circle,upper left,outer cicrle */
+.upperLeftOuterCircle{
+    position: fixed;
+    height: 55vh;
+    width: 31vw;
+    background-color:var(--adminPrimaryColor);
+    border-radius: 50%;
+    top:-5em;
+    left: -4em;
+    z-index: -1;
+}
+
+/* background circle,lower right,inner cicrle */
+.lowerRightInnerCircle{
+    position: fixed;
+    height: 50vh;
+    width: 30vw;
+    background-color:var(--adminSecondaryColor);
+    border-radius: 50%;
+    right: -5em;
+    bottom:-5em;
+    z-index: -1;
+}
+
+/* background circle,lower right,outercicrle */
+.lowerRightOuterCircle{
+    position: fixed;
+    height: 55vh;
+    width: 31vw;
+    background-color:var(--adminPrimaryColor);
+    border-radius: 50%;
+    right:-4em;
+    bottom: -6em;
+    z-index: -1;
+}

@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--secondaryFont), serif;
+    font-family: var(--primaryFont), sans-serif;
+}
+
+/* prepare a container and make it flex */
+.container{
+    height: 80vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* to move the logo upper */
+.logoWithBorder{
+    margin-bottom: 3em;
+}
+
+/* the height here will determine the two child's input box height */
+.twoInputBoxes{
+    height: 6%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* to adjust the input box height and width based on it's parent */
+.twoInputBoxes input{
+    width: 14%;
+    margin-left: 3em;
+    margin-right: 3em;
+    height:100% ;
+    border: 0.115em solid black;
+    border-radius: 0.3em;
+    text-align: center;
+}
+
+/* to color and text-align centers of all input boxes placeholder */
+::placeholder{
+    text-align: center;
+    color: #9d9d9d;
+}
+
+/* set other input boxes width and height */
+input{
+    height: 6%;
+    width: 34%;
+    border: 0.115em solid black;
+    border-radius: 0.3em;
+    text-align: center;
+}
+
+/* the height here will determine the two child's button height */
+.twoButtons{
+    height: 6%;   
+    width: 100vw;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+/* set two buttons width, height and style based on parent */
+.twoButtons button{
+    width: 14%;
+    height: 100%;
+    margin-left: 3em;
+    margin-right: 3em;
+    border: 0.115em solid white;
+    background-color: var(--adminPrimaryColor);
+    color: white;
+    border-radius: 0.625em;
+}
+
