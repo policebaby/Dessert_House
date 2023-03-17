@@ -12,6 +12,7 @@ body{
 }
 .shopLogo{
     width:5em ;
+    border-radius:0.3em;
 }
 .profileLogo{
     display:flex;
@@ -46,7 +47,7 @@ body{
     font-family:"DM Serif Display","sans-serif";
     font-size:1.2em;
 }
-@media screen and (max-width:700px){
+@media screen and (max-width:720px){
     body{
         overflow-x: hidden;
     }
@@ -54,13 +55,33 @@ body{
         display:none !important;
     }
     .nav_logo{
-        width:80% !important;
+        width:5em !important;
     }
     .nav_text{
         text-align: center;
+        margin-top:15%;
+    }
+    .cFeedback{
+        margin-left:17%;
+    }
+    .edit_nav{
+        position:fixed;
+        height:100vh !important;
+        background-color: var(--primary-blue)!important ;
     }
     .icons{
-        width:45%;
+        width:1.8em;
+        margin:0.3em;
+    }
+    .profile-page{
+        margin-left:15% !important;
+    }
+    .edit_center{
+        height:2.3em;
+    }
+    .name,.shop_name{
+        width:8.7em !important;
+        height:2em;
     }
 }
 

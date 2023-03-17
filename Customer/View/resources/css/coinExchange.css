@@ -1,11 +1,15 @@
 /* coin exchange start */
+.coinSubheader{
+    font-weight: var(--dsFontweightSemi);
+}
 .rateBg{
     background-color: var(--userTertiarycolor);
-
+    border-radius: 0.5em 0em 0em 0.5em;
 }
 .coinCurrency{
     position: absolute;
     margin-top: 0.5em;
+    font-weight: var(--dsFontweightSemi);
     color: var(--primaryTextcolor)
 }
 .currencyRates{
@@ -17,3 +21,97 @@
     /* position: absolute; */
     left: 0;
 }
+
+.exchangeBg{
+    background-color: var(--userPrimarycolor);
+    border-radius: 0em 0.5em 0.5em 0em;
+}
+.inputWidth{
+    position: relative;
+    width: 33em !important;
+    margin-right: 1em;
+}
+.inputWidth2{
+    width: 25em !important;
+    margin-right: 1em;
+}
+.coinInput{
+    margin-right: 1em;
+    border-radius:0.2em !important;
+}
+.currencySelect{
+    border-radius: 0.2em !important;
+    margin-right: 1em !important;
+}
+.calculated{
+    color: var(--primaryTextcolor);
+    line-height: 2em;
+    /* margin-left: 1em !important ; */
+}
+.exchangeSubheader{
+    color: var(--primaryTextcolor);
+    margin: 1em 0em 1em 0em;
+    font-weight: var(--dsFontweightSemi);
+
+}
+.btnSubmit{
+    color: var(--primaryTextcolor);
+    width: 7em;
+    background-color: var(--btnBlue);
+    margin: 0em 1.5em 2em 0em;
+}
+.btnCancel{
+    color: var(--primaryTextcolor);
+    width: 7em;
+    background-color: var(--btnRed);
+    margin: 0em 0em 2em 0em;
+}
+.mbCalculated{
+    color: var(--primaryTextcolor);
+    display: none;
+}
+/* mb view start */
+@media (max-width :767px) {
+    .rateBg{
+        background-color: var(--userTertiarycolor);
+        border-radius: 0.5em 0.5em 0em 0em;
+    }
+    .exchangeBg{
+        background-color: var(--userPrimarycolor);
+        border-radius: 0em 0em 0.5em 0.5em;
+    }
+    .inputWidth{
+        width: 22em !important;
+        margin-right: 1em;
+    }
+    .inputWidth2{
+        width: 15em !important;
+        margin-right: 1em;
+    }   
+    .mbCalculated{
+        display: block;
+    }
+    .calculated{
+        display: none;
+    }
+    
+}
+
+@media (max-width:1056px) {
+    .inputWidth{
+        width: 22em !important;
+        margin-right: 1em;
+    }
+    .inputWidth2{
+        width: 15em !important;
+        margin-right: 1em;
+    } 
+  
+}
+@media (max-width:500px) {
+    .inputWidth{
+        width: 22em !important;
+        margin-right: 1em;
+    }
+}
+/* mb view end */

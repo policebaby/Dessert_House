@@ -10,7 +10,7 @@
     --secondaryTextcolor:black  !important;
     --primaryFont:'Public Sans', sans-serif;
     --secondaryFont:'DM Serif Display', serif;
-    --dsFontweightSemi:600;
+    --dsFontweightSemi:600 !important;
     --dsHeader:1.2em; 
     --dsSubheader:1em;
     --dsRegular:0.9em;
@@ -33,5 +33,3 @@
     font-size: 2.5em;
 }
 /* coinIcon CSS end */
-
-

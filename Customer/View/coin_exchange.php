@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="./resources/css/root.css">
     <!-- <link rel="stylesheet" href="./nav.css"> -->
     <link rel="stylesheet" href="./resources/css/coinExchange.css">
-    <link rel="stylesheet" href="./resources/css/footer.css">
 
     <!-- css link end -->
     <!-- js link start -->
@@ -25,135 +24,63 @@
 
 <body>
     <!-- nav start -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark nav">
-        <div class="container-fluid ">
-            <img src="../View/resources/img/Dessert House-3.png" alt="logo" width="5%" class="ms-3 logo" />
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <ul class="nav justify-content-center me-5">
-                        <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link text-white mx-3" href="#">Shop</a>
-                        </li>
-                        <li class="nav-item me-5">
-                            <a class="nav-link text-white" href="#">Coin Shop</a>
-                        </li>
-                        <li class="nav-item">
-                            <div class=" searchBox ms-5">
-                                <span><iconify-icon icon="material-symbols:search-rounded" style="color: black" width="1.2em" height="1.2em" class="pt-2"></iconify-icon></span>
-                                <input type="text" class="search " placeholder="Search" />
-                            </div>
-                        </li>
-
-                        <li class="nav-item ">
-                            <iconify-icon icon="healthicons:ui-user-profile" style="color: white" width="1.8em" height="1.8em" class="mx-2"></iconify-icon>
-                            <iconify-icon icon="material-symbols:shopping-bag" style="color: white" width="1.8em" height="1.8em" class="me-2"></iconify-icon>
-                        </li>
-                    </ul>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php
+    include "./nav.php"
+    ?>
     <!-- nav end -->
     <!-- coin exchange start -->
     <div class=" p-5 ">
-        <p class="text-center">Coin Exchange Rates</p>
-        <div class="container-fluid row exchangeBox ">
-            <div class="col-5 rateBg ">
+        <p class="text-center fs-5 coinsubheader">Coin Exchange Rates</p>
+        <div class="container-fluid row exchangeBox =">
+            <div class="col-md-5 rateBg ">
                 <div class=" currencyRates ">
                     <iconify-icon class="coinIcon coinPosition" icon="healthicons:coins"></iconify-icon>
                     <span class="coinCurrency">x 1 = 1000 MMK</span>
                 </div>
                 <div class=" currencyRates ">
                     <iconify-icon class="coinIcon coinPosition" icon="healthicons:coins"></iconify-icon>
-                    <span class="coinCurrency">x 1 = 1000 MMK</span>
+                    <span class="coinCurrency">x 1 = 10 USD</span>
                 </div>
                 <div class=" currencyRates ">
                     <iconify-icon class="coinIcon coinPosition" icon="healthicons:coins"></iconify-icon>
-                    <span class="coinCurrency">x 1 = 1000 MMK</span>
+                    <span class="coinCurrency">x 1 = 0.94 Euro</span>
                 </div>
                 <div class=" currencyRates ">
                     <iconify-icon class="coinIcon coinPosition" icon="healthicons:coins"></iconify-icon>
-                    <span class="coinCurrency">x 1 = 1000 MMK</span>
+                    <span class="coinCurrency">x 1 = 0.94 Pound</span>
                 </div>
             </div>
-            <div class="col-7 bg-warning"></div>
+            <div class="col-md-7 exchangeBg ">
+                <p class=" exchangeSubheader">Exchange Coin</p>
+                <form action="">
+                    <div class="input-group mb-3 inputWidth">
+                        <input type="text" class="form-control coinInput" aria-label="Amount (to the nearest dollar)" placeholder="Coin">
+                        <select class="form-select currencySelect" id="inputGroupSelect01">
+                            <option value="1" selected>MMK</option>
+                            <option value="2">USD</option>
+                            <option value="3">Euro</option>
+                            <option value="4">Pound</option>
+                        </select>
+                        <div class="calculated"> = MMK</div>
+                    </div>
+                    <p class="mbCalculated "> =MMK</p>
+                    <p class="exchangeSubheader"> Attach Screenshot of bank transition</p>
+                    <div class="input-group mb-3 inputWidth2">
+                        <input type="file" class="form-control" id="inputGroupFile02" >
+                    </div>
+                    <div class="mt-4">
+                        <button class="btn btnSubmit">Submit</button>
+                        <button class="btn btnCancel"> Cancel</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     <!-- coin exchange end -->
     <!-- footer start -->
-    <div class="footer container-fluid">
-        <div class="container p-4">
-            <div class="row">
-                <!--sub col start -->
-                <div class="col-lg-3 col-6 mb-4 mvLogo">
-                    <div class="">
-                        <div class="d-flex">
-                            <img src="../View/resources/img/logo.png" alt="logo" class="logo" />
-                            <h4 class="logoName font text-white ms-2">Dessert House</h4>
-                        </div>
-                        <h6 class="text-white font mt-3">Subscribe our website</h6>
-                        <div class="mailbox">
-                            <iconify-icon icon="logos:google-gmail" class="mailicon"></iconify-icon>
-                            <input type="text" class="mailText text-white-50 ms-2" placeholder="Enter Your Email" />
-                        </div>
-                    </div>
-                </div>
-                <!-- sub col end -->
-
-                <!-- needHelp col start -->
-                <div class="col-lg-3 col-6 mb-4 mb-md-0 mv">
-                    <div class="mt-4 ms-lg-5">
-                        <h4 class="subHeader text-white">Need Help?</h4>
-                        <br />
-                        <p class="text-white">
-                            Contact Admin <br />
-                            Contact Seller <br />
-                            Guide <br />
-                            About us <br />
-                            Privacy Policy
-                        </p>
-                    </div>
-                </div>
-                <!-- needHelp col end -->
-
-                <!-- Navigate col start -->
-                <div class="col-lg-3 col-6 mb-4 mb-md-0 mv">
-                    <div class="mt-4 mobile ms-lg-2">
-                        <h4 class="subHeader text-white">Navigate</h4>
-                        <br />
-                        <p class="text-white">
-                            Coin Shop <br />
-                            Product Page <br />
-                            Seat booking
-                        </p>
-                    </div>
-                </div>
-                <!-- Navigate col end -->
-                <!-- followUs col start -->
-                <div class="col-lg-3 col-6 mb-4 mb-md-0 mv">
-                    <div class="mt-4 me-md-5 mobile">
-                        <h4 class="subHeader text-white">Follow us</h4>
-                        <div class="mt-2 mb-2 icons">
-                            <iconify-icon icon="logos:facebook"></iconify-icon>
-                            <iconify-icon icon="skill-icons:instagram" class="mx-2 px-1"></iconify-icon>
-                            <iconify-icon icon="bi:twitter"></iconify-icon>
-                        </div>
-                        <h4 class="subHeader text-white">Address</h4>
-                        <p class="text-white normalText">
-                            No.66, Bahan Township, Yangon, <br />
-                            Myanmar. <br />
-                            +95 977777777<br />
-                            desserthouse@gmail.com
-                        </p>
-                    </div>
-                </div>
-                <!-- followUs col end -->
-            </div>
-        </div>
-    </div>
+    <?php 
+    include "./footer.php";
+    ?>
     <!-- footer end -->
 </body>
 

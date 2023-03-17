@@ -1,0 +1,154 @@
+body{
+    background-color: var(--userTertiarycolor);
+
+}
+/* shopProfile HS start */
+.shopProfile{
+    background-image: url(/Dessert_House/Customer/View/resources/img/shop\ pic.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+/* .shopHSpic{
+    position: relative;
+    height: 100vh;
+} */
+
+.btnBack{
+    background-color: var(--userPrimarycolor);
+    border-style: solid;
+    border-color: white;
+    color: white;
+}
+.backIcon{
+
+}
+.textBack{
+    font-size: 1.3em;
+}
+.shopLogo{
+    height: 20em;
+}
+.shopProfileLogo{
+    width: var(--logoWidth);
+    height: var(--logoHeight);
+    border-radius: 50%;
+    margin-bottom: 1.5em;
+}
+.shopName{
+    font-family: var(--secondaryFont);
+    color: var(--primaryTextcolor);
+    font-size: 2.5em;
+    margin: 0em 0em 0.5em 0.5em;
+}
+.smileIcon{
+    font-size: 2.5em ;
+    color: var(--ratingColor);
+    margin: 0em 0em 0em 0.9em;
+}
+.cusRating{
+    position: absolute;
+    top:0.5em;
+    font-weight: var(--dsFontweightSemi);
+
+}
+
+
+
+/* shopProfile HS end */
+/* menu section start */
+.menuBG{
+    background-color: var(--userPrimarycolor);
+}
+.menu{
+    font-weight: var(--dsFontweightSemi);
+    margin: 1em 5em 1em 5em;
+    color: var(--primaryTextcolor);
+}
+.opacity70{
+    opacity: 70%;
+}
+/* menu section end */
+/* menublocks start  */
+
+.menuBlockBg{
+background-color: var(--userTertiarycolor);
+}
+.menublock{
+    position: relative;
+    width:15em;
+    height:21em;
+    border-radius: 1em;
+    background-color: white;
+    margin: 3em;
+}
+.newItem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5em;
+    height: 2.4em;
+    border-radius: 1em 0em 0em 0em;
+    background-color: var(--userPrimarycolor);
+    color: white;
+    text-align: center;
+    padding: 0.4em;
+}
+.imgBorder{
+    position: relative;
+    width:13em;
+}
+.menuImg{
+    margin: 2.5em 0em 0em 4.5em;
+}
+
+.price{
+    position: relative;
+    margin: 0em 0em 0em 5.2em ;
+}
+.priceCoin{
+    color: var(--userPrimarycolor);
+    font-size: 2.5em;
+}
+.priceNum{
+    font-size: 1.4em;
+    position: absolute;
+    top:0.1em;
+}
+.line{
+    background-color: black;
+    width: 12em;
+    height: 0.1em;
+    opacity: 60%;
+    margin: 0em 0em 0.1em 0.9em;
+}
+.productName{
+    padding: 0.4em;
+    margin: 0em 0em 0.1em 0em;
+    font-size: var(--dsHeader);
+}
+.itemCount{
+    margin: 1em 4em 0em 0em ;
+}
+.btnOutline{
+    border-color: var(--userPrimarycolor);
+    border-width: 0.1em;
+    font-size: 1.2em !important;
+}
+.productCart{
+    color:var(--userPrimarycolor) ;
+    font-size: 2.5em;
+    margin-top: 0.4em;
+}
+/* menublocks end  */
+.bookSeatText{
+    color: var(--primaryTextcolor);
+    font-size: var(--dsHeader);
+    margin: 1em;
+}
+.btnBooking{
+    background-color: var(--userPrimarycolor) !important;
+    color: var(--primaryTextcolor);
+    padding: 0.5em 3em 0.5em 3em ;
+    border-radius: 0.6em;
+    margin: 1em;
+}
