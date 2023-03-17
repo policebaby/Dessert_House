@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    <!-- Login Card -->
     <div class="firstContainer">
         <img src="./resources/img/logo.png" alt="Fail to load Logo" class="logo">
 

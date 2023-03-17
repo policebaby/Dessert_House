@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Link with root css,login css, circleBackground css -->
+    <!-- Link with root css,login css, circleBackground css, nav bar css -->
     <link rel="stylesheet" href="./resources/css/root.css">
     <link rel="stylesheet" href="./resources/css/adminEditProfile.css">
     <link rel="stylesheet" href="./resources/css/circleBackground.css">
     <link rel="stylesheet" href="./resources/css/navbar.css">
+    <link rel="stylesheet" href="./resources/css/adminProfile.css">
 
     <!-- Import google fonts: public display & dm sen serif -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,9 +35,26 @@
         </ul>
     </nav>
 
+    <!-- Body -->
+    <div class="container">
+        <img class="logoWithBorder" src="./resources/img/logoWithBorder.png" alt="Unable to load Logo">
+        <div class="filesButton">
+        <button>Choose file</button>
+        <button>No file choosen</button>
+        </div>
+        <div class="twoInputBoxes">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+        </div>
+        <input type="text" placeholder="Password">
+        <input type="text" placeholder="Phone Number">
+        <input type="email" placeholder="Email">
+        <div class="twoButtons">
+            <button>Save Profile</button>
+            <button>Cancel</button>
+        </div>
 
-
-
+    </div>
 
     <!-- background circles -->
     <div class="upperLeftOuterCircle"></div>

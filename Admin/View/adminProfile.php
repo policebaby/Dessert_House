@@ -28,11 +28,28 @@
             <li><a href="">Seller Controller</a></li>
             <li><a href="">User Controller</a></li>
             <li><a href="">System Management</a></li>
-            <li>       
-                <img src="./resources/img/profilelogo.png" class="profileLogo" alt="Unable to load Profile Logo" srcset="">
+            <li>
+                <a><img src="./resources/img/profilelogo.png" class="profileLogo" alt="Unable to load Profile Logo" srcset=""></a>
             </li>
         </ul>
     </nav>
+
+    <!-- Body -->
+    <div class="container">
+        <img class="logoWithBorder" src="./resources/img/logoWithBorder.png" alt="Unable to load Logo">
+        <div class="twoInputBoxes">
+            <input type="text" placeholder="John Smith">
+            <input type="text" placeholder="Dessert House">
+        </div>
+        <input type="text" placeholder="desserthouse@gmail.com">
+        <input type="password" placeholder="●●●●●">
+        <input type="text" placeholder="+95 9777777777">
+        <div class="twoButtons">
+            <button>Edit Profile</button>
+            <button>Cancel</button>
+        </div>
+
+    </div>
 
 
 
