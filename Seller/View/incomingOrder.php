@@ -53,8 +53,8 @@
             <span class="title ms-1">Sold History</span>
         </div>
         <!-- incoming order icon from left nav -->
-        <div class="nav_text text-muted">
-            <img src="./resources/images/incomingOrder.png" class="icons">
+        <div class="nav_text active">
+            <img src="./resources/images/incomingOrder.png">
             <span class="title ms-1">Incoming Orders</span>
         </div>
         <!-- feedback icon -->
@@ -145,28 +145,44 @@
                             <span class="total_items me-5">x 2</span>
                         </div>
                     </div>
+                    <div class="small-pop">
+                        <hr>
+                        <span class="ms-4">Total</span>
+                        <span class="total_items me-5">$80</span>
+                        <p class="my-4 ms-4 h5 fw-bold">Status : Pending</p>
+                    </div>
                 </div>
             </div>
         </div>
         </div>
+
+        <!-- for pagination -->
+        <nav aria-label="">
+                <ul class="pagination mb-sm-5">
+                    <li class="page-item disabled">
+                        <a class="page-link great" href="#" tabindex="-1" aria-disabled="true">
+                            <ion-icon name="chevron-back-outline"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link p-one" href="#">1</a>
+                    </li>
+                    <li class="page-item" aria-current="page">
+                        <a class="page-link text-muted" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link text-muted" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link less" href="#">
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-
-        
-
-
-
-
-
-
-
-
-
-
-
 
         </div>
     </div>
-    <!-- incoming order js link -->
-    <script src="./resources/js/incomingOrder.js"></script>
     </body>
 </html>

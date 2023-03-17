@@ -23,10 +23,10 @@
     <title>Seller New Product Menu Page</title>
 </head>
 <body class="seller_new_product_menu_page">
-    <div class="row">
+<div class="row">
 
         <!-- column1 -->
-    <div class="col-2 edit_nav">
+        <div class="col-2 edit_nav">
     <div class="my-md-4 mt-md-3 nav_logo">
             <img src="./resources/images/Ellipse 3.png" alt="logo" width="35%" class="web_logo mt-5">
             <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
@@ -101,92 +101,94 @@
         <div class="second-row mt-5 ms-5">
             <p class="product-menu-text fw-bold">Product Menu</p>
             <div class="mt-3 text-center ms-5 row">
-            <div class="blue-width">
-            <table class="table table-borderless w-75 ms-4">
-            <tr class="t-head">
-            <td class="w-sm-100">Dessert Name</td>
-            <td class="w-sm-100">Price</td>
-            <td class="w-sm-100">Product Type</td>
-            <td class="w-sm-100">
-            <a href="">Edit</a>
-            </td>
-            <td class="w-sm-100">
-            <a href="" class="text-danger">Delete</a>
-            </td>
-            </tr>
-            <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            </tr>
-            <tr class="color-tr">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            </tr>
-            <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            </tr>
-            <tr class="color-tr">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            </tr>
-            <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            </tr>
-            <tr class="color-tr">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            </tr>
-
-            </table>
+                <div class="blue-width">
+                    <table class="table table-borderless w-75 ms-4">
+                        <tr class="t-head">
+                            <td class="w-sm-100">Dessert Name</td>
+                            <td class="w-sm-100">Price</td>
+                            <td class="w-sm-100">Product Type</td>
+                            <td class="w-sm-100">
+                                <a href="">Edit</a>
+                            </td>
+                            <td class="w-sm-100">
+                                <a href="" class="text-danger">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="color-tr">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="color-tr">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="color-tr">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-            
-            <nav aria-label="...">
-<ul class="pagination mb-sm-5">
-    <li class="page-item disabled">
-        <a class="page-link great" href="#" tabindex="-1" aria-disabled="true">
-        <ion-icon name="chevron-back-outline"></ion-icon>
-        </a>
-    </li>
-    <li class="page-item">
-        <a class="page-link p-one" href="#">1</a>
-    </li>
-    <li class="page-item" aria-current="page">
-        <a class="page-link text-muted" href="#">2</a>
-    </li>
-    <li class="page-item">
-        <a class="page-link text-muted" href="#">3</a>
-    </li>
-    <li class="page-item">
-        <a class="page-link less" href="#">
-        <ion-icon name="chevron-forward-outline"></ion-icon>
-        </a>
-    </li>
-</ul>
-</nav>
 
-            </div>
+            <!-- for pagination -->
+            <nav aria-label="">
+                <ul class="pagination mb-sm-5">
+                    <li class="page-item disabled">
+                        <a class="page-link great" href="#" tabindex="-1" aria-disabled="true">
+                            <ion-icon name="chevron-back-outline"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link p-one" href="#">1</a>
+                    </li>
+                    <li class="page-item" aria-current="page">
+                        <a class="page-link text-muted" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link text-muted" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link less" href="#">
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- </div> -->
         </div>
     </div>
+</div>
 
     </body>
 </html>

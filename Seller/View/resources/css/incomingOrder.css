@@ -11,6 +11,12 @@ body{
     max-height:100vh;
     background-color:var(--secondary-skyblue)!important;
 }
+.icons{
+    opacity:0.5;
+}
+.incoming-logo{
+    opacity:1 !important;
+}
 /* for sidebar nav */
 .edit_nav{
     max-height:100% !important;
@@ -85,6 +91,20 @@ td{
 .seeMore,.small-pop{
     display:none;
 }
+/*for pigination */
+.pagination{
+    margin-left:30%;
+    position:absolute;
+    bottom:0;
+}
+.p-one{
+    color:var(--text-color-white) !important;
+    background-color:var(--primary-blue) !important;
+}
+.great,.less{
+    color:var(--primary-blue) !important;
+}
+
 @media screen and (max-width:720px){
     body{
         overflow-x: hidden;

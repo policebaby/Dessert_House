@@ -7,10 +7,17 @@ body{
     overflow-x: hidden;
     height:100vh;
 }
-.seller_new_product_menu_page{
+.sold_history,.main-page{
     max-height:100vh;
     background-color:var(--secondary-skyblue)!important;
 }
+.icons{
+    opacity:0.5;
+}
+.incoming-logo{
+    opacity:1 !important;
+}
+/* for sidebar nav */
 .edit_nav{
     max-height:100% !important;
     background-color:var(--primary-blue);
@@ -31,75 +38,39 @@ body{
 .feedback_gp{
     display:flex;
 }
-.icons{
-    opacity:0.6;
-}
-.seller-photo{
-    width:8.5em;
-    height:8.5em;
-    background-color:aliceblue;
-}
-.form-control{
-    width:15.5em !important;
-    background-color:var(--primary-blue) !important;
-    color:var(--text-color-white) !important;
-    border-radius:0 !important;
-}
-.first-row-first{
-    width:15.5em;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left:9%;
-}
-.first-row{
-    display:flex;
-}
-.label-box{
-    display:flex;
-    flex-direction: column;
-}
-.input-box{
-    width:22em;
-    height:2em;
-    border-style:none;
-    border-radius:0.2em;
-}
-.btns{
-    width:10em !important;
-    height:2.2em;
-    border-radius:0.3em;
-    border-style:none;
-    color:var(--text-color-white);
-}
-.add-btn{
-    background-color:var(--primary-blue);
-}
-.cancel-btn{
-    background-color:var(--red-color);
-}
+/* for page */
 tr{
     width:6em !important;
-    height:2.5em;
+    line-height:2.5em;
 }
 .t-head{
     color:var(--text-color-white);
     background-color:var(--primary-blue) !important;
 }
 .color-tr{
-    background-color:var(--primary-blue);
-    opacity:0.2;
+    background-color:var(--tr-second-color);
+    height:2em !important;
 }
-.second-row{
-    position:relative;
+td{
+    text-align:center;
 }
-.product-menu-text{
-    margin-left:35%;
+.td-text{
+    font-size:0.9em !important;
+}
+.down{
+    color:white;
+    font-size:2em;
+    padding:0;
+}
+.down:hover{
+    color:var(--primary-blue);
+    cursor:pointer;
 }
 /*for pigination */
 .pagination{
     margin-left:30%;
+    position:absolute;
+    bottom:0;
 }
 .p-one{
     color:var(--text-color-white) !important;
@@ -109,7 +80,6 @@ tr{
     color:var(--primary-blue) !important;
 }
 
-
 @media screen and (max-width:720px){
     body{
         overflow-x: hidden;
@@ -118,15 +88,15 @@ tr{
         display:none !important;
     }
     .web_logo{
-        width:65% !important;
-        margin-left:15%;
+        width:55% !important;
+        margin-left:6%;
     }
     .nav_text{
         text-align: center;
         margin-top:15%;
     }
     .icons{
-        width:45%;
+        width:25%;
         margin:0.3em;
     }
     .edit_nav{
@@ -135,12 +105,18 @@ tr{
         background-color: var(--primary-blue)!important ;
     }
     .cFeedback{
-        margin-left:17%;
+        margin-left:32%;
     }
-    .logout{
-        top:15%;
+    .title-name{
+        display:none;
     }
-    .first-row-second{
-        margin-left:35% !important;
+    table{
+        width:100%;
+    }
+    .seeMore,.small-pop{
+        display:block;
+    }
+    .title-none{
+        display:none;
     }
 }
