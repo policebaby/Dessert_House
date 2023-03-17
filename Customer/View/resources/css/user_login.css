@@ -1,0 +1,97 @@
+.login_frame{
+    width: 100%;
+    position:  relative !important;
+  }
+  .login_pic{
+    width: 100% !important;
+    opacity: 90%;
+    background-size: cover;
+    position:  absolute !important;
+  }
+  .login_text{
+    width: 50% !important;
+    height: 125.5vh !important;
+    background-color: var(--userTertiarycolor);
+    opacity: 85%;
+    background-size: cover;
+    position: absolute !important;
+  }
+  .login_logo{
+    width: 6em !important;
+    height: 6em !important;
+  }
+  .login_header{
+    display: flex !important;
+    margin-top: 2.5em !important;
+    margin-left: 3.5em;
+  }
+  .login_title{
+    font-family: var(--secondaryFont);
+    margin-top: 1em !important;
+    margin-left: 1em !important;
+    font-size: 1.5em !important;
+    color: var(--primaryTextcolor);
+  }
+  .log_in_name{
+    color: var(--primaryTextcolor);
+    font-family: var(--primaryFont);
+    text-align: center;
+  }
+  .login_input{
+    width: 30em;
+    height: 4em;
+    border-radius: 1em;
+    border: solid .1em #6F4E37 !important;
+    border-width: .1em;;
+    background-color: var(--userSecondarycolor);
+    margin-left: 5em !important;
+    margin-top: 3em ;
+    text-align: center;
+  }
+  .login_btn{
+    width:9em !important;
+    height: 3.5em !important;
+    border-radius: .7em !important;
+    background-color: var(--userPrimarycolor);
+    color: var(--primaryTextcolor);
+    font-size: var(--dsSubheader);
+    margin-left: 15em !important;
+    margin-top: 3em !important;
+  }
+  .two_lines{
+      float: none;
+      position: relative;
+      margin: 2em auto 1.3em;
+      text-align: center;
+      width: 70%;
+      box-sizing: border-box;
+    margin-top: 3em;
+  }
+  .two_lines .line{
+      border-top: .3em solid #ff0000;;
+      position: absolute;
+      top: .8em !important;
+      width: 32%;
+  }
+  .line.line_left{
+      left: .5em;
+  }
+  .line.line_right{
+      right: .5em;
+  
+  }
+  .two_lines span{
+      font-size: var(--dsSubheader);
+    background-color: #A2795C;
+    color: var(--primaryTextcolor);
+  }
+  .login_icons{
+    display: flex;
+    margin-left: 11em;
+    margin-top: 3em;
+  }
+  .login_icon{
+    font-size: 3em;
+    width: 2.5em !important;
+  
+  }
