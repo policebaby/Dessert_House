@@ -7,7 +7,7 @@ body{
     overflow-x: hidden;
     height:100vh;
 }
-.seller_edit_profile_page,.main-page{
+.seller_new_product_menu_page{
     max-height:100vh;
     background-color:var(--secondary-skyblue)!important;
 }
@@ -31,73 +31,84 @@ body{
 .feedback_gp{
     display:flex;
 }
-/* page */
-.box2{
-    margin-left:13% !important;
+.icons{
+    opacity:0.6;
 }
-.edit_photo_bg{
-    position:relative;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width:4em;
-    height:4em;
-    margin-left:15%;
-    border-radius:50%;
-    background-color: var(--text-color-white);
+.seller-photo{
+    width:8.5em;
+    height:8.5em;
+    background-color:aliceblue;
 }
-.editPhoto{
-    position:absolute;
+.form-control{
+    width:15.5em !important;
+    background-color:var(--primary-blue) !important;
+    color:var(--text-color-white) !important;
+    border-radius:0 !important;
 }
-.profile_banner{
-    position:relative;
-    margin-left:23%;
-    
-}
-.label_box_row{
-    display:flex;
-}
-.label_box{
+.first-row-first{
+    width:15.5em;
     display:flex;
     flex-direction: column;
-    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-left:9%;
 }
-.corner_label{
-    left:0;
+.first-row{
+    display:flex;
 }
-.input_box{
-    width:19em !important;
-    height:2.3em !important;
-    border-radius:0.5em;
+.label-box{
+    display:flex;
+    flex-direction: column;
+}
+.input-box{
+    width:22em;
+    height:2em;
     border-style:none;
-}
-.input_box::placeholder{
-    text-align: center;
+    border-radius:0.2em;
 }
 .btns{
-    width:8.7em;
-    height:2.3em;
-    border-radius:0.5em;
+    width:10em !important;
+    height:2.2em;
+    border-radius:0.3em;
     border-style:none;
     color:var(--text-color-white);
 }
-.saveBtn{
-    background-color: var(--primary-blue);
+.add-btn{
+    background-color:var(--primary-blue);
 }
-.cancelBtn{
-    background-color: var(--red-color);
+.cancel-btn{
+    background-color:var(--red-color);
 }
-.column2{
-    padding:0 !important;
+tr{
+    width:6em !important;
+    height:2.5em;
+}
+.t-head{
+    color:var(--text-color-white);
+    background-color:var(--primary-blue) !important;
+}
+.color-tr{
+    background-color:var(--primary-blue);
+    opacity:0.2;
+}
+.second-row{
+    position:relative;
+}
+.product-menu-text{
+    margin-left:35%;
+}
+.pagination{
+    margin-left:30%;
+}
+.p-one{
+    color:var(--text-color-white) !important;
+    background-color:var(--primary-blue) !important;
+}
+.great,.less{
+    color:var(--primary-blue) !important;
 }
 
-/* choose file button */
-.form-control{
-    background-color:var(--primary-blue) !important;
-    color:var(--text-color-white) !important;
-    width:15.5em !important;
-    border-radius:0 !important;
-}
+
 
 
 @media screen and (max-width:720px){
@@ -115,35 +126,22 @@ body{
         text-align: center;
         margin-top:15%;
     }
-    .cFeedback{
-        margin-left:17%;
+    .icons{
+        width:45%;
+        margin:0.3em;
     }
     .edit_nav{
         position:fixed;
         height:100vh !important;
         background-color: var(--primary-blue)!important ;
     }
-    .label_box_row{
-        display:flex;
-        flex-direction:column !important;
-    }
-    .input_box,.label_box{
-        margin-left:0;
-    }
-    .edit_photo_bg{
-        margin-left:25%;
-    }
-    .box2{
-        margin-left:23% !important;
-    }
-    .profile_banner{
-        margin-left:10%;
-    }
-    .icons{
-        width:1.8em;
-        margin:0.3em;
-    }
     .cFeedback{
-        margin-left:32%;
+        margin-left:17%;
+    }
+    .logout{
+        top:15%;
+    }
+    .first-row-second{
+        margin-left:35% !important;
     }
 }

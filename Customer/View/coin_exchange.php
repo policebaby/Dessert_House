@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="./resources/css/root.css">
     <!-- <link rel="stylesheet" href="./nav.css"> -->
     <link rel="stylesheet" href="./resources/css/coinExchange.css">
-    <link rel="stylesheet" href="./resources/css/footer.css">
 
     <!-- css link end -->
     <!-- js link start -->
@@ -26,7 +25,7 @@
 <body>
     <!-- nav start -->
     <?php
-    // include "./nav.php"
+    include "./nav.php"
     ?>
     <!-- nav end -->
     <!-- coin exchange start -->
@@ -80,7 +79,7 @@
     <!-- coin exchange end -->
     <!-- footer start -->
     <?php 
-    // include "./footer.php";
+    include "./footer.php";
     ?>
     <!-- footer end -->
 </body>
