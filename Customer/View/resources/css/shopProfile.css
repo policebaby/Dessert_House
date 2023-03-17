@@ -7,7 +7,7 @@ body{
     background-image: url(/Dessert_House/Customer/View/resources/img/shop\ pic.jpg);
     background-repeat: no-repeat;
     background-size:cover;
-    height: 30vh;
+    height: 50vh;
 
 }
 /* .shopHSpic{
@@ -95,12 +95,14 @@ background-color: var(--userTertiarycolor);
     text-align: center;
     padding: 0.4em;
 }
-.imgBorder{
-    position: relative;
-    width:13em;
-}
+/* .imgBorder{
+    height:150px;
+    width:100px;
+    background-color: black;
+
+} */
 .menuImg{
-    margin: 2.5em 0em 0em 4.5em;
+    /* margin: 2.5em 0em 0em 4.5em; */
 }
 
 .price{

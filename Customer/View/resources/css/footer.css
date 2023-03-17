@@ -4,11 +4,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-<<<<<<< HEAD
-  margin-bottom: 3em !important;
-=======
-
->>>>>>> origin/main
   background-color: var(--userPrimarycolor);
 }
 .footer_mv{
@@ -109,8 +104,4 @@
     font-weight: var(--dsFontweightSemi);
   }
 }
-<<<<<<< HEAD
 /* user footer end */
-=======
-/* user footer end */
->>>>>>> origin/main

@@ -17,7 +17,6 @@
     <!-- css link start -->
     <link rel="stylesheet" href="./resources/css/root.css">
     <link rel="stylesheet" href="./resources/css/shopProfile.css">
-    <link href="style.css?key=<?php echo time(); ?>" type="text/css" rel="stylesheet" />
     <!-- css link end -->
     <!-- js link start -->
     <!-- js link end -->
@@ -70,9 +69,9 @@
             <!-- single menu block start -->
             <div class="menublock col-md-3  justify-content-center">
                 <div class="newItem ">New</div>
-                <!-- <div class="imgBorder"> -->
-                <img src="./resources/img/americano1.png" alt="" width="40%" class="menuImg ">
-                <!-- </div> -->
+                <div class="w-auto h-50  d-flex justify-content-center ">
+                <img src="./resources/img/oneset.png" alt="" width="100%" class="menuImg ">
+                </div>
                 <div class="price ">
                     <iconify-icon class="priceCoin" icon="healthicons:coins"></iconify-icon>
                     <span class="priceNum">34</span>
@@ -95,7 +94,7 @@
             <div class="menublock col-md-3  justify-content-center">
                 <div class="newItem ">New</div>
                 <!-- <div class="imgBorder"> -->
-                <img src="./resources/img/americano1.png" alt="" width="40%" class="menuImg ">
+                <img src="./resources/img/oneset.png" alt="" width="40%" class="menuImg ">
                 <!-- </div> -->
                 <div class="price ">
                     <iconify-icon class="priceCoin" icon="healthicons:coins"></iconify-icon>

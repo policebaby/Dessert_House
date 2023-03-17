@@ -28,11 +28,11 @@
     <!-- nav end -->
 
     <!-- buyHistory start -->
-    <div class="container-fluid p-5 text-center ">
+    <div class="container-fluid p-5 mb-2 text-center ">
         <p class="bhHeader"><u> Your Buying History</u></p>
-        <table class="table table-hover">
-            <thead>
-                <tr class="rowCoffee rounded">
+        <table class="table table-hover  ">
+            <thead class="">
+                <tr class="rowCoffee ">
                     <th scope="col">No.</th>
                     <th scope="col">Item Name</th>
                     <th scope="col">Amount</th>
