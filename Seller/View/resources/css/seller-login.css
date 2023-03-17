@@ -29,7 +29,12 @@ body{
     border:1.5px solid var(--text-color-white) !important;
     color:var(--text-color-white);
 }
-/* text between two lines */
+.loginBtn:hover{
+    background-color:var(--btn-hover-one) !important;
+    color:var(--primary-blue);
+    font-weight:800;
+}
+/* text between two lines --- Red 2 Lines*/
 *::before,
 *::after {
     margin: 0;
@@ -60,39 +65,8 @@ body{
     align-items:center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.gradient-custom-2 {
-    /* fallback for old browsers */
-    background: #fccb90;
-    
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
-    
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+@media screen and (max-width:700px){
+    .login-bg-photo{
+        display:none;
     }
-    
-    @media (min-width: 768px) {
-    .gradient-form {
-    height: 100vh !important;
-    }
-    }
-    @media (min-width: 769px) {
-    .gradient-custom-2 {
-    border-top-right-radius: .3rem;
-    border-bottom-right-radius: .3rem;
-    }
-    }
+}

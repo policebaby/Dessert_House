@@ -63,10 +63,8 @@
         <div class="nav_text text-muted my-md-5">
             <img src="./resources/images/Logout.png" alt="" class="nav_text icons logout">
             <span class="title ms-1">Logout</span>
-        </div>
-        <br>
-        </div>
-<br>
+        </div><br>
+        </div><br>
         </nav>
 
         

@@ -101,7 +101,7 @@
         <div class="second-row mt-5 ms-5">
             <p class="product-menu-text fw-bold">Product Menu</p>
             <div class="mt-3 text-center ms-5 row">
-            <div class="col-12">
+            <div class="blue-width">
             <table class="table table-borderless w-75 ms-4">
             <tr class="t-head">
             <td class="w-sm-100">Dessert Name</td>

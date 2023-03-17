@@ -1,0 +1,131 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'Public Sans', sans-serif;
+}
+body{
+    overflow-x: hidden;
+    height:100vh;
+}
+.incoming_order_page,.main-page{
+    max-height:100vh;
+    background-color:var(--secondary-skyblue)!important;
+}
+/* for sidebar nav */
+.edit_nav{
+    max-height:100% !important;
+    background-color:var(--primary-blue);
+}
+.nav_logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav_text,.web_name{
+    color:var(--text-color-white);
+}
+.web_name{
+    font-family:"DM Serif Display","sans-serif";
+    font-size: 1.2em;
+}
+.feedback_gp{
+    display:flex;
+}
+/* for page */
+tr{
+    width:6em !important;
+    line-height:2.5em;
+}
+.t-head{
+    color:var(--text-color-white);
+    background-color:var(--primary-blue) !important;
+}
+.color-tr{
+    background-color:var(--tr-second-color);
+    height:2em !important;
+}
+.aBtn{
+    background-color:#0057FF !important;
+}
+.rBtn{
+    background-color:var(--red-color);
+}
+.accept-reject{
+    border-style:none;
+    border-radius:0.5em;
+    width:6em;
+    height:2em;
+    /* padding:0 !important; */
+    line-height: initial;
+    text-align: center;
+    color:var(--text-color-white);
+}
+td{
+    text-align:center;
+}
+.td-text{
+    font-size:0.9em !important;
+}
+.down{
+    color:white;
+    font-size:2em;
+    padding:0;
+}
+.down:hover{
+    color:var(--primary-blue);
+    cursor:pointer;
+}
+.modal-header{
+    border-bottom: none !important;
+}
+.total_items{
+    float:right
+}
+.seeMore,.small-pop{
+    display:none;
+}
+@media screen and (max-width:720px){
+    body{
+        overflow-x: hidden;
+    }
+    .web_name,.title{
+        display:none !important;
+    }
+    .web_logo{
+        width:55% !important;
+        margin-left:6%;
+    }
+    .nav_text{
+        text-align: center;
+        margin-top:15%;
+    }
+    .icons{
+        width:25%;
+        margin:0.3em;
+    }
+    .edit_nav{
+        position:fixed;
+        height:100vh !important;
+        background-color: var(--primary-blue)!important ;
+    }
+    .cFeedback{
+        margin-left:32%;
+    }
+    .title-name{
+        display:none;
+    }
+    table{
+        width:100%;
+    }
+    .seeMore,.small-pop{
+        display:block;
+    }
+    .accept-reject{
+        width:5.5em;
+        font-size:0.6em;
+    }
+    .btn2{
+        padding:0 !important;
+    }
+}
