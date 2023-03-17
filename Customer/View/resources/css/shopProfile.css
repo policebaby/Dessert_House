@@ -9,7 +9,8 @@ body{
     background-size:cover;
 }
 /* .shopHSpic{
-    width: 100%;
+    position: relative;
+    height: 100vh;
 } */
 
 .btnBack{

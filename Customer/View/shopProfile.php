@@ -17,7 +17,7 @@
     <!-- css link start -->
     <link rel="stylesheet" href="./resources/css/root.css">
     <link rel="stylesheet" href="./resources/css/shopProfile.css">
-
+    <link href="style.css?key=<?php echo time(); ?>" type="text/css" rel="stylesheet" />
     <!-- css link end -->
     <!-- js link start -->
     <!-- js link end -->
@@ -36,8 +36,8 @@
     <!-- nav end -->
     <!-- hero section start -->
     <div class="container-fluid  shopProfile  ">
-        <div class="">
             <!-- <img src="./resources/img/shop pic.jpg" alt="" class="shopHSpic"> -->
+        <div class="">
             <button class="btn btnBack px-3 ms-5 mt-5">
                 <iconify-icon icon="material-symbols:arrow-back-ios-new-rounded" class="backIcon"></iconify-icon>
                 <span class="textBack ">Back</span>
