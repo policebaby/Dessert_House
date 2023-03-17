@@ -1,46 +1,295 @@
-.pf_container{
-    width: 100% !important;
-    overflow: hidden !important;
+.pf_container {
+  width: 100% !important;
+  overflow: hidden !important;
+  font-family: var(--primaryFont);
 }
-.left_line{
-    width: 3em !important;
-    margin-top: 2em !important;
-    transform: rotate(-90deg);
-    color: var(--userPrimarycolor)!important;
+.left_line {
+  width: 3em !important;
+  margin-top: 2em !important;
+  height: 0.2em !important;
+  transform: rotate(-90deg);
+  color: var(--userPrimarycolor) !important;
 }
-.right_line{
-    color: var(--userPrimarycolor)!important;
+.right_line {
+  width: 45em !important;
+  height: 0.2em !important;
+  color: var(--userPrimarycolor) !important;
 }
-.profile_name{
-    display: flex !important;
-    flex-direction: row;
+.profile_name {
+  display: flex !important;
+  flex-direction: row;
 }
-.pf_logout{
+.pf_logout {
+  display: flex;
+}
+.first_pf_title {
+  font-weight: var(--dsFontweightSemi);
+  display: flex;
+  margin-top: 2em !important;
+  justify-content: right;
+}
+.sec_pf_title {
+  display: flex;
+  margin-top: 3em !important;
+}
+.pf_pic1 {
+  font-size: 2em !important;
+  color: var(--userPrimarycolor);
+  padding-top: 0.4em !important;
+  padding-right: 0.3em !important;
+}
+.pf_pic2 {
+  font-size: 3.5em !important;
+  color: var(--userPrimarycolor);
+}
+.title1 {
+  padding-top: 1em !important;
+}
+.title2 {
+  font-size: 2em !important;
+}
+.email {
+  margin-top: 1em !important;
+}
+.password {
+  margin-top: 1em !important;
+}
+.phone_number {
+  margin-top: 1em !important;
+}
+.first_name input {
+  width: 17em !important;
+  border-radius: 0.5em !important;
+  padding-top: 0.2em !important;
+  padding-bottom: 0.2em !important;
+  border: solid 0.1em #6f4e37;
+  padding-left: 1em !important;
+}
+.desk_mobile {
+  display: flex;
+  flex-direction: row;
+}
+.link_change_pwd {
+  margin-top: 3em !important;
+  margin-left: 1em !important;
+  color: white;
+  display: none;
+}
+.last_name input {
+  width: 17em !important;
+  border-radius: 0.5em !important;
+  padding-top: 0.2em !important;
+  padding-bottom: 0.2em !important;
+  border: solid 0.1em #6f4e37;
+  padding-left: 1em !important;
+}
+.last_name {
+  margin-left: 3em !important;
+}
+.email input {
+  width: 17em !important;
+  border-radius: 0.5em !important;
+  padding-top: 0.2em !important;
+  padding-bottom: 0.2em !important;
+  border: solid 0.1em #6f4e37;
+  padding-left: 1em !important;
+}
+.password input {
+  width: 17em !important;
+  border-radius: 0.5em !important;
+  padding-top: 0.2em !important;
+  padding-bottom: 0.2em !important;
+  border: solid 0.1em #6f4e37;
+  padding-left: 1em !important;
+}
+.phone_number input {
+  width: 17em !important;
+  border-radius: 0.5em !important;
+  border: solid 0.1em #6f4e37;
+  padding-top: 0.2em !important;
+  padding-bottom: 0.2em !important;
+  padding-left: 1em !important;
+}
+.buy_coin {
+  display: flex;
+  margin-top: 1em !important;
+}
+.coin_icon {
+  font-size: 1.7em !important;
+  color: #ffe55a;
+}
+.buy_coin input {
+  width: 4em !important;
+  height: 1.7em !important;
+  border: solid 0.1em #6f4e37;
+  padding-left: 0.8em !important;
+  border-radius: 0.5em !important;
+  margin-left: 1em !important;
+  margin-right: 1.3em !important;
+}
+.buy_coin button {
+  width: 7em !important;
+  height: 2em !important;
+  border-style: none;
+  background-color: var(--userPrimarycolor);
+  color: var(--primaryTextcolor);
+  border-radius: 0.5em !important;
+}
+.coin_line {
+  display: none;
+}
+.last_role {
+  display: flex;
+  margin-bottom: 4em !important;
+}
+#change_btn {
+  width: 12em !important;
+  height: 2.5em !important;
+  border-radius: 0.6em !important;
+  border-style: none;
+  margin-top: 1.5em !important;
+  background-color: var(--userPrimarycolor);
+  color: var(--primaryTextcolor);
+}
+#logout_icon {
+  padding-top: 0.3em !important;
+  font-size: var(--dsFontweightSemi) !important;
+}
+#pf_logout {
+  display: flex;
+  background-color: transparent;
+  border-style: none;
+  margin-top: 2em !important;
+  margin-left: 22em !important;
+}
+/* media screen start */
+@media (max-width: 960px) and (min-width: 930px) {
+  #pf_logout {
     display: flex;
+    margin-top: 2em !important;
+    margin-left: 20em !important;
+  }
 }
-.first_pf_title{
-    font-weight: var(--dsFontweightSemi);
+@media (max-width: 930px) and (min-width: 769px) {
+  .profile_name {
+    display: block !important;
+  }
+  .last_name {
+    margin-top: 1em !important;
+    margin-left: 0em !important;
+  }
+  #pf_logout {
     display: flex;
     margin-top: 2em !important;
-    justify-content: right;
+    margin-left: 1em !important;
+  }
 }
-.sec_pf_title{
+@media (max-width: 769px) and (min-width: 500px) {
+  .pf_container {
+    background-color: var(--userTertiarycolor) !important;
+    color: var(--primaryTextcolor);
+  }
+  .first_pf_title {
+    display: none !important;
+  }
+  .sec_pf_title {
     display: flex;
     margin-top: 3em !important;
-}
-.pf_pic1{
-    font-size: 2em !important;
-    color: var(--userPrimarycolor);
-    padding-top: .4em !important;
-    padding-right: .3em !important;
-}
-.pf_pic2{
-    font-size: 3.5em !important;
-    color: var(--userPrimarycolor);
-}
-.title1{
-    padding-top: 1em !important;
-}
-.title2{
-    font-size: 2em !important;
+    margin-left: 3em !important;
+  }
+  .right_line {
+    color: black !important;
+    width: 35em !important;
+    margin-left: 2em;
+    height: 0.2em !important;
+  }
+  .pf_pic2 {
+    font-size: 3em !important;
+    color: var(--userSecondarycolor);
+  }
+  .title2 {
+    font-size: 1.8em !important;
+  }
+  .profile_name {
+    display: block !important;
+  }
+  .last_name {
+    margin-top: 1em !important;
+    margin-left: 0em !important;
+  }
+  .profile_name {
+    margin-left: 3em !important;
+  }
+  #pf_logout {
+    display: flex;
+    margin-top: 2em !important;
+    margin-left: 1em !important;
+  }
+  .email {
+    margin-left: 3em !important;
+  }
+  .password {
+    margin-left: 3em !important;
+  }
+  .phone_number {
+    margin-left: 3em !important;
+  }
+  .buy_coin {
+    margin-left: 2.5em !important;
+  }
+  #change_btn {
+    display: none;
+  }
+  .last_role {
+    display: block !important;
+  }
+  #pf_logout {
+    display: flex;
+    margin-top: 2em !important;
+    margin-left: 22em !important;
+  }
+  .link_change_pwd {
+    margin-top: 3em !important;
+    margin-left: 1em !important;
+    color: white;
+    text-decoration-color: white;
+    display: block;
+  }
+  .buy_coin input {
+    border: solid 0.2em #6f4e37;
+  }
+  .buy_coin button {
+    display: none;
+  }
+  .coin_line {
+    display: block;
+    color: white;
+    text-decoration-color: white;
+  }
+  #logout_icon {
+    display: none;
+  }
+  #pf_logout {
+    width: 9em !important;
+    height: 2.5em;
+    font-size: var(--dsSubheader);
+    padding-top: 0.5em;
+    color: white;
+    padding-left: 2.5em;
+    border-radius: 0.9em;
+    margin-left: 11em !important;
+    background-color: #c21111;
+  }
+  .email input {
+    width: 26em !important;
+  }
+  .first_name input {
+    width: 26em !important;
+  }
+  .last_name input {
+    width: 26em !important;
+  }
+  .phone_number input {
+    width: 26em !important;
+  }
 }

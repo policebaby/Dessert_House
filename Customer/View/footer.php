@@ -18,7 +18,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet" />
   <!-- font link end -->
-  <!-- bootstrap link start -->
+    <!-- bootstrap link start -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- bootstrap link end -->
   
   <!-- icon link start -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -33,16 +36,16 @@
 </head>
 
 <body>
-  <!-- footer start -->
-  <div class="footer container-fluid">
+      <!-- footer start -->
+      <div class="footer container-fluid">
     <div class="container p-4">
       <div class="row">
         <!--sub col start -->
-        <div class="col-lg-3 col-6 mb-4 ">
+        <div class="col-lg-3 col-6 mb-4 footer_mv">
           <div class="">
             <div class="d-flex">
               <img src="../View/resources/img/logo.png" alt="logo" class="footer_logo" />
-              <p class="logoName footer_font text-white ms-2">Dessert House</p>
+              <h4 class="logoName footer_font text-white ms-2">Dessert House</h4>
             </div>
             <h6 class="text-white footer_font mt-3">Subscribe our website</h6>
             <div class="mailbox">
@@ -104,7 +107,7 @@
       </div>
     </div>
   </div>
-  <!-- footer end -->
+    <!-- footer end -->
 
 
   </body>

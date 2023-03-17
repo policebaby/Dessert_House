@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!--css link start-->
-    <link href="../View/resources/css/user_profile.css?key=<?php echo time(); ?>" type="text/css" rel="stylesheet" />
+    <link href="../View/resources/css/user_change_pwd.css?php echo time(); ?>" type="text/css" rel="stylesheet" />
     <link href="../View/resources/css/root.css?key=<?php echo time(); ?>" type="text/css" rel="stylesheet" />
     <!--css link end-->
     <!--font link start-->
@@ -41,72 +41,44 @@
         <!-- navbar  start -->
         <?php include "./nav.php" ?>
         <!-- navbar end -->
-        <!-- user_profile start -->
-        <div class="pf_container">
+        <!-- user_change_pwd start -->
+        <div class="">
         <div class="row ">
-            <div class="col-md-4 first_pf_title">
+            <!--left side-->
+            <div class="col-md-4 ">
             <iconify-icon icon="healthicons:ui-user-profile-outline"  class="pf_pic1"></iconify-icon>
-            <p  class="title1">Profile</p>
-            <hr class="left_line"> 
+            <p  class="">Profile</p>
+            <hr class=""> 
             </div>
+            <!---->
             <div class="col-md-8">
-            <div class="sec_pf_title">
+            <div class="">
             <iconify-icon icon="healthicons:ui-user-profile-outline"  class="pf_pic2"></iconify-icon>
-            <p class="title2">Profile</p>
+            <p class="">Profile</p>
             </div>
-            <hr class="right_line">
-            <div class="profile_name">
-            <!-- first name -->
-            <div class="first_name">
-            <h6>First Name</h6>
-            <input type="text" placeholder="Alexis">
+            <hr class="">
+            <!-- Old password -->
+            <div class="">
+            <h6>Old password</h6>
+            <input type="text" placeholder="Please input your old password">
             </div>
-            <!-- last name -->
-            <div class="last_name">
-            <h6>Last Name</h6>
-            <input type="text" placeholder="Van Krik">
+            <!-- Create new password -->
+            <div class="">
+            <h6>Create new password</h6>
+            <input type="text" placeholder="Please input your new password">
             </div>
-            </div>
-            <!-- email -->
-            <div class="email">
-            <h6>Email</h6>
-            <input type="text" placeholder="alexisvankrik@gmail.com"> 
+            <!-- Confirm new password -->
+            <div class="">
+            <h6>Confirm new password</h6>
+            <input type="text" placeholder="Please confirm your new password"> 
             </div> 
-            <!-- password -->
-            <div class="desk_mobile">
-            <div class="password">        
-            <h6>Password</h6>
-            <input type="text" placeholder="........."> 
-            </div> 
-            <a href="#"><u class="link_change_pwd"><p>Change Password</p></u> </a>
-            </div>   
-            <!-- phone number -->
-            <div class="phone_number">       
-            <h6>Phone Number</h6>
-            <input type="text" placeholder="+95 9777777777">
-            </div>
-            <br>
-            <div class="buy_coin">
-            <iconify-icon icon="healthicons:coins" class="coin_icon"></iconify-icon>
-            <p>Coins</p>
-            <input type="text" placeholder="100">
-            <button id="buycoin_btn">Buy Coins</button>
-            <a href="#"><u class="coin_line">Buy Coins</u></a>
-            </div>
-            <div class="last_role">
-            <button id="change_btn">Change Password</button>
-            <button id="pf_logout">
-            <iconify-icon icon="material-symbols:logout" id="logout_icon"></iconify-icon>
-            <p class="logout_text">Log Out</p>
-            </button>
-            </div>
-  
+            <button id="confirm">Confirm</button>
         </div>
 
 
         </div>
         </div>
-        <!-- user_profile end -->
+        <!-- user_change_pwd end -->
         <!-- footer start -->
         <?php include "./footer.php"   ?>
         <!-- footer end -->

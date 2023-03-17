@@ -195,6 +195,9 @@ h5 {
   justify-content: space-between;
   background-color: var(--userPrimarycolor);
 }
+.footer_mv{
+  margin-bottom: 2em !important;
+}
 .logoName {
   font-family: var(--secondaryFont);
 }

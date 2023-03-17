@@ -14,7 +14,6 @@
 }
 .third_para {
   margin-top: 2em !important;
-
   margin-bottom: 3em !important;
 }
 .text {
@@ -59,13 +58,13 @@
   }
   .first_para {
     margin-top: 2em !important;
-    margin-left: 2em !important;
+    margin-left: 3em !important;
     margin-right: 3em !important;
   }
   .second_para {
     margin-top: 2em !important;
-    margin-left: 2em !important;
-    margin-right: 3em !important;
+    margin-left: 3em !important;
+    margin-right: 2em !important;
   }
   .third_para {
     margin-top: 2em !important;
@@ -86,7 +85,7 @@
     margin-left: 14em !important;
   }
   .para2_pic {
-    margin-left: 13em !important;
+    margin-left: 14em !important;
   }
 }
 
@@ -115,7 +114,7 @@
     text-align: center !important;
   }
   .title {
-    margin-left: 8em !important;
+    margin-left: 7em !important;
   }
   .para1_pic {
     margin-left: 6em !important;
