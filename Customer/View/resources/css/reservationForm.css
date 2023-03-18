@@ -1,0 +1,19 @@
+.bgImg{
+
+    background-image: url(../img/bgImg1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    /* opacity: 80%; */
+}
+.reserveBg{
+    padding: 1.5em;
+    background-color: rgb(163, 122, 92,0.8)  !important;
+}
+.logo{
+    width: 5em;
+    height: 5em;
+}
+.logoborder{
+
+}

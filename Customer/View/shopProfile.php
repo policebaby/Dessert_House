@@ -57,9 +57,9 @@
     <!-- hero section end -->
     <!-- menu section start -->
     <div class="container-fluid d-flex justify-content-center menuBG">
-        <div class="menu">Main Menu</div>
-        <div class="menu opacity70">Cold Drink</div>
-        <div class="menu opacity70">Dessert Menu</div>
+        <div class="menu  text-center">Main Menu</div>
+        <div class="menu text-center  opacity70">Cold Drink</div>
+        <div class="menu text-center opacity70">Dessert Menu</div>
     </div>
     <!-- menu section end -->
     <!-- menublocks start -->
@@ -69,8 +69,32 @@
             <!-- single menu block start -->
             <div class="menublock col-md-3  justify-content-center">
                 <div class="newItem ">New</div>
-                <div class="w-auto h-50  d-flex justify-content-center ">
-                <img src="./resources/img/oneset.png" alt="" width="100%" class="menuImg ">
+                <div class="  d-flex justify-content-center imgBorder">
+                <img src="./resources/img/americano1.png" alt="" width="80%" class="menuImg ">
+                </div>
+                <div class="price ">
+                    <iconify-icon class="priceCoin" icon="healthicons:coins"></iconify-icon>
+                    <span class="priceNum">34</span>
+                </div>
+                <div class="line "></div>
+                <p class="productName text-center">Black Coffee</p>
+                <div class="line"></div>
+                <div class=" d-flex justify-content-center">
+                    <div class="btn-group btn-group-sm itemCount" role="group" aria-label="Basic outlined example">
+                        <button type="button" class="btn btnOutline">-</button>
+                        <button type="button" class="btn btnOutline">5</button>
+                        <button type="button" class="btn btnOutline">+</button>
+                    </div>
+                    <iconify-icon icon="material-symbols:add-shopping-cart" class="productCart"></iconify-icon>
+                </div>
+            </div>
+            <!-- single menu block end -->
+            
+            <!-- single menu block start -->
+            <div class="menublock col-md-3  justify-content-center">
+                <div class="newItem ">New</div>
+                <div class="  d-flex justify-content-center imgBorder">
+                <img src="./resources/img/oneset.png" alt="" width="80%" class="menuImg ">
                 </div>
                 <div class="price ">
                     <iconify-icon class="priceCoin" icon="healthicons:coins"></iconify-icon>
@@ -93,9 +117,9 @@
             <!-- single menu block start -->
             <div class="menublock col-md-3  justify-content-center">
                 <div class="newItem ">New</div>
-                <!-- <div class="imgBorder"> -->
-                <img src="./resources/img/oneset.png" alt="" width="40%" class="menuImg ">
-                <!-- </div> -->
+                <div class="  d-flex justify-content-center imgBorder">
+                <img src="./resources/img/coffeeheart.png" alt="" width="80%" class="menuImg ">
+                </div>
                 <div class="price ">
                     <iconify-icon class="priceCoin" icon="healthicons:coins"></iconify-icon>
                     <span class="priceNum">34</span>
@@ -113,13 +137,12 @@
                 </div>
             </div>
             <!-- single menu block end -->
-
             <!-- single menu block start -->
             <div class="menublock col-md-3  justify-content-center">
                 <div class="newItem ">New</div>
-                <!-- <div class="imgBorder"> -->
-                <img src="./resources/img/americano1.png" alt="" width="40%" class="menuImg ">
-                <!-- </div> -->
+                <div class="  d-flex justify-content-center imgBorder">
+                <img src="./resources/img/blackcoffee.png" alt="" width="80%" class="menuImg ">
+                </div>
                 <div class="price ">
                     <iconify-icon class="priceCoin" icon="healthicons:coins"></iconify-icon>
                     <span class="priceNum">34</span>
@@ -137,13 +160,12 @@
                 </div>
             </div>
             <!-- single menu block end -->
-
             <!-- single menu block start -->
             <div class="menublock col-md-3  justify-content-center">
                 <div class="newItem ">New</div>
-                <!-- <div class="imgBorder"> -->
-                <img src="./resources/img/americano1.png" alt="" width="40%" class="menuImg ">
-                <!-- </div> -->
+                <div class="  d-flex justify-content-center imgBorder">
+                <img src="./resources/img/.png" alt="" width="80%" class="menuImg ">
+                </div>
                 <div class="price ">
                     <iconify-icon class="priceCoin" icon="healthicons:coins"></iconify-icon>
                     <span class="priceNum">34</span>
@@ -161,13 +183,12 @@
                 </div>
             </div>
             <!-- single menu block end -->
-
             <!-- single menu block start -->
             <div class="menublock col-md-3  justify-content-center">
                 <div class="newItem ">New</div>
-                <!-- <div class="imgBorder"> -->
-                <img src="./resources/img/americano1.png" alt="" width="40%" class="menuImg ">
-                <!-- </div> -->
+                <div class="  d-flex justify-content-center imgBorder">
+                <img src="./resources/img/americano1.png" alt="" width="80%" class="menuImg ">
+                </div>
                 <div class="price ">
                     <iconify-icon class="priceCoin" icon="healthicons:coins"></iconify-icon>
                     <span class="priceNum">34</span>
@@ -185,30 +206,7 @@
                 </div>
             </div>
             <!-- single menu block end -->
-
-            <!-- single menu block start -->
-            <div class="menublock col-md-3  justify-content-center">
-                <div class="newItem ">New</div>
-                <!-- <div class="imgBorder"> -->
-                <img src="./resources/img/americano1.png" alt="" width="40%" class="menuImg ">
-                <!-- </div> -->
-                <div class="price ">
-                    <iconify-icon class="priceCoin" icon="healthicons:coins"></iconify-icon>
-                    <span class="priceNum">34</span>
-                </div>
-                <div class="line "></div>
-                <p class="productName text-center">Black Coffee</p>
-                <div class="line"></div>
-                <div class=" d-flex justify-content-center">
-                    <div class="btn-group btn-group-sm itemCount" role="group" aria-label="Basic outlined example">
-                        <button type="button" class="btn btnOutline">-</button>
-                        <button type="button" class="btn btnOutline">5</button>
-                        <button type="button" class="btn btnOutline">+</button>
-                    </div>
-                    <iconify-icon icon="material-symbols:add-shopping-cart" class="productCart"></iconify-icon>
-                </div>
-            </div>
-            <!-- single menu block end -->
+            
         </div>
         <!-- pagination start -->
         <nav aria-label="Page navigation example">

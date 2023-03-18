@@ -27,9 +27,9 @@
     ?>
     <!-- nav end -->
     <!-- coin exchange start -->
-    <div class=" p-5 coinbody">
+    <div class="ms-3 d-flex flex-column justify-content-center coinbody">
         <p class="text-center fs-5 coinsubheader">Coin Exchange Rates</p>
-        <div class="container-fluid row exchangeBox =">
+        <div class="container-fluid row exchangeBox">
             <div class="col-md-5 rateBg ">
                 <div class=" currencyRates ">
                     <iconify-icon class="coinIcon coinPosition" icon="healthicons:coins"></iconify-icon>

@@ -6,15 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Link with root css,adminSellerAccountList css, , nav bar css -->
+    <!-- Link with CSS root,adminSellerAccountList, nav bar , admin dashboard for seller controller,pagination -->
     <link rel="stylesheet" href="./resources/css/root.css">
     <link rel="stylesheet" href="./resources/css/navbar.css">
     <link rel="stylesheet" href="./resources/css/adminSellerAccountList.css">
+    <link rel="stylesheet" href="./resources/css/adminDashboardforSellerController.css">
+    <link rel="stylesheet" href="./resources/css/pagination.css">
 
     <!-- Import google fonts: public display & dm sen serif -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans&display=swap" rel="stylesheet">
+
+    
     <title>Seller Account List</title>
 </head>
 
@@ -32,7 +36,7 @@
         </ul>
     </nav>
 
-    <!-- Dashboard -->
+    <!-- Dashboard for Seller Controller-->
     <div class="dashboard">
         <!-- Account Icon -->
         <div>
@@ -65,8 +69,8 @@
 
         <!-- Generate Seller Icon -->
         <div>
-            <div class="icon">
-                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="icon generate">
+                <svg width="100" height="100" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path id="path1" d="M7.33333 7.33398V11.0007H36.6667V7.33398M7.33333 12.834L5.5 22.0007V25.6673H7.33333V36.6673H23.8333C23.7417 36.044 23.6867 35.4023 23.6867 34.7423C23.6867 32.5057 24.3833 30.3057 25.6667 28.4723V25.6673H28.49C30.3233 24.439 32.4683 23.7607 34.6683 23.7607C35.97 23.7607 37.2717 23.999 38.5 24.4573V22.0007L36.6667 12.834M11 25.6673H22V33.0007H11M33 27.5007V33.0007H27.5V36.6673H33V42.1673H36.6667V36.6673H42.1667V33.0007H36.6667V27.5007" fill="white" />
                 </svg>
                 <p>Generate Seller Account</p>
@@ -94,6 +98,64 @@
         </div>
     </div>
 
+    <!-- Table  -->
+    <div class="container">
+        <h2 class="title">Seller Account List</h2>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Registered Date</th>
+                        <th>Revenue</th>
+                        <th>Rating</th>
+                        <th>Status</th>
+                        <th>Contact Info</th>
+                        <th>Buttons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="No">1</td>
+                        <td data-label="Id">001</td>
+                        <td data-label="Name">Frost Goddess</td>
+                        <td data-label="Registered Date">2023/02/05</td>
+                        <td data-label="Revenue">$ 10240</td>
+                        <td data-label="Rating"><a href="">75%</a></td>
+                        <td data-label="Status"><b>Active</b></td>
+                        <td data-label="Contact Info">+959 888888888<br>frostgoddess@gmail.com</td>
+                        <td data-label="Buttons"><button class="btn activate">Activate</button><button class="btn disable">Disable</button></td>
+                    </tr>
+                    <tr>
+                        <td data-label="No">1</td>
+                        <td data-label="Id">001</td>
+                        <td data-label="Name">Frost Goddess</td>
+                        <td data-label="Registered Date">2023/02/05</td>
+                        <td data-label="Revenue">$ 10240</td>
+                        <td data-label="Rating"><a href="">75%</a></td>
+                        <td data-label="Status"><b>Active</b></td>
+                        <td data-label="Contact Info">+959 888888888<br>frostgoddess@gmail.com</td>
+                        <td data-label="Buttons"><button class="btn activate">Activate</button><button class="btn disable">Disable</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="moveToCorner">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link arrowToRed" href="#">&lt;</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">...</a></li>
+      <li class="page-item"><a class="page-link arrowToRed" href="#">&gt;</a></li>
+    </ul>
+    </div>
+    
 </body>
 
 </html>

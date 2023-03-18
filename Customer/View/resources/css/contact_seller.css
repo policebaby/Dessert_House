@@ -22,8 +22,8 @@
   align-items: center;
 } 
 .contact_seller_frame{
-  width: 30em !important;
-  height:130vh !important;
+  width: 40em !important;
+  height:100vh !important;
   background-color: white;
   border-radius: 1.5em !important;
   margin-left: 32%;
@@ -42,12 +42,13 @@
  }
  .contactS_textarea {
    border-radius: 0.7em;
+   width: 20em;
    border-style: none;
    background-color: var(--userFourthcolor);
  }
  .contactS_text {
   text-align: left;
-  margin-left: 4em;
+  margin-left: 8em;
   margin-top: 1em;
  }
  h5 {
@@ -73,7 +74,7 @@
  @media (max-width:1022px)and (min-width:886px){
   .contact_seller_frame{
     width: 30em !important;
-    height:130vh !important;
+    height:100vh !important;
     background-color: white;
     border-radius: 1.5em !important;
     margin-left: 27%;
@@ -83,7 +84,7 @@
 @media (max-width:880px)and (min-width:762px){
   .contact_seller_frame{
     width: 30em !important;
-    height:130vh !important;
+    height:100vh !important;
     background-color: white;
     border-radius: 1.5em !important;
     margin-left: 20%;
@@ -93,7 +94,7 @@
 @media (max-width:762px)and (min-width:597px){
   .contact_seller_frame{
     width: 30em !important;
-    height:130vh !important;
+    height:100vh !important;
     background-color: white;
     border-radius: 1.5em !important;
     margin-left: 10%;
@@ -103,7 +104,7 @@
 @media (max-width:597px)and (min-width:555px){
   .contact_seller_frame{
     width: 30em !important;
-    height:130vh !important;
+    height:100vh !important;
     background-color: white;
     border-radius: 1.5em !important;
     margin-left: 8%;
@@ -113,10 +114,24 @@
 @media (max-width:555px)and (min-width:500px){
   .contact_seller_frame{
     width: 28em !important;
-    height:130vh !important;
+    height:100vh !important;
     background-color: white;
     border-radius: 1.5em !important;
     margin-left: 4%;
     margin-bottom: 3em;
 }
+
+
+}
+@media (max-width:499px){
+  .contact_seller_frame{
+    width: auto !important;
+    height:100vh !important;
+    background-color: white;
+    border-radius: 1.5em !important;
+    margin-left: 4%;
+    margin-bottom: 3em;
+}
+
+
 }

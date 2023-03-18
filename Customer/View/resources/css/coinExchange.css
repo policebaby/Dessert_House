@@ -4,6 +4,8 @@
 }
 .coinbody{
     height: auto;
+    margin: 7em 0em 6.8em 0em;
+
 }
 
 .rateBg {
@@ -132,6 +134,16 @@
 
 }
 
-@media (max-width:530px) {}
+@media (max-width:635px) {
+    .inputWidth {
+        width: 15em !important;
+        margin-right: 1em;
+    }
+
+    .inputWidth2 {
+        width: 15em !important;
+        margin-right: 1em;
+    }
+}
 
 /* mb view end */
