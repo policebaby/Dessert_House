@@ -82,11 +82,28 @@
             </div>
             </div>
 
+            <div class="guide_none">
+                <div class="tone">
+                <div class="green"></div>
+                <p>Green buttons are available</p>
+                </div>
+
+                <div class="tone">
+                <div class="red"></div>
+                <p>Red buttons are taken</p>
+                </div>
+
+                <div class="tone">
+                <div class="grey"></div>
+                <p>Grey buttons are pending</p>
+                </div>
+            </div>
+
         </div>
         <!---->
         <div class="col third_col">
             <div class="F_table">
-            <button id="f1" class="tbl">F1</button>
+            <button id="f1" class="tbl_2">F1</button>
             <button id="f2" class="tables">F2</button>
             <button id="f3" class="tables">F3</button> <br>
             <button id="f4" class="tables">F4</button>
@@ -95,11 +112,28 @@
 
 
             <div class="E_table">
-            <button id="e1" class="tbl">E1</button>
+            <button id="e1" class="tbl_2">E1</button>
             <button id="e2" class="tables">E2</button>
             <button id="e3" class="tables">E3</button>  <br>
             <button id="e4" class="tables">E4</button>
             <button id="e5" class="tables">E5</button>
+            </div>
+<br>
+            <div class="guide">
+                <div class="tone">
+                <div class="green"></div>
+                <p>Green buttons are available</p>
+                </div>
+
+                <div class="tone">
+                <div class="red"></div>
+                <p>Red buttons are taken</p>
+                </div>
+
+                <div class="tone">
+                <div class="grey"></div>
+                <p>Grey buttons are pending</p>
+                </div>
             </div>
         </div>
     </div>
