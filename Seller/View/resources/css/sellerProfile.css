@@ -37,6 +37,9 @@ body{
     background-color:var(--primary-blue);
     color:var(--text-color-white);
 }
+.edit_profile_btn:hover{
+    box-shadow:4px 4px 8px var(--primary-blue) !important;
+}
 .edit_nav{
     background-color:var(--primary-blue);
 }
@@ -84,4 +87,3 @@ body{
         height:2em;
     }
 }
-

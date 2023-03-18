@@ -30,7 +30,7 @@
     </div>
     <div class="ms-md-4">
         <!-- profile icon from left nav -->
-        <div class="nav_text text-muted mt-4">
+        <div class="nav_text  mt-4">
             <img src="./resources/images/person.png" class="icons">
             <span class="title ms-1">Profile</span>
         </div>

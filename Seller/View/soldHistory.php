@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- incoming order css link -->
+    <!-- sold history css link -->
     <link rel="stylesheet" href="./resources/css/soldHistory.css">
     <!-- seller root css link -->
     <link rel="stylesheet" href="./resources/css/seller-root.css">
