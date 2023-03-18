@@ -9,7 +9,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,46 +36,47 @@
     <!-- bootstrap link end -->
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <head>
+
+</head>
     <body>
         <!-- navbar  start -->
-        <?php include "./nav.php" ?>
+        <?php include "./nav.php"  ?>
         <!-- navbar end -->
         <!-- user_change_pwd start -->
-        <div class="">
-        <div class="row ">
-            <!--left side-->
-            <div class="col-md-4 ">
-            <iconify-icon icon="healthicons:ui-user-profile-outline"  class="pf_pic1"></iconify-icon>
-            <p  class="">Profile</p>
-            <hr class=""> 
-            </div>
-            <!---->
-            <div class="col-md-8">
-            <div class="">
-            <iconify-icon icon="healthicons:ui-user-profile-outline"  class="pf_pic2"></iconify-icon>
-            <p class="">Profile</p>
-            </div>
-            <hr class="">
-            <!-- Old password -->
-            <div class="">
-            <h6>Old password</h6>
-            <input type="text" placeholder="Please input your old password">
-            </div>
-            <!-- Create new password -->
-            <div class="">
-            <h6>Create new password</h6>
-            <input type="text" placeholder="Please input your new password">
-            </div>
-            <!-- Confirm new password -->
-            <div class="">
-            <h6>Confirm new password</h6>
-            <input type="text" placeholder="Please confirm your new password"> 
-            </div> 
-            <button id="confirm">Confirm</button>
-        </div>
+        <div class="ch_pwd_container">
+            <div class="row ">
+                <div class="col-md-4 first_pwd_title">
+                    <iconify-icon icon="healthicons:ui-user-profile-outline" class="pwd_pic1"></iconify-icon>
+                    <p class="pw_title1">Profile</p>
+                    <hr class="left_line">
+                </div>
+                <div class="col-md-8">
+                    <div class="sec_pwd_title">
+                        <iconify-icon icon="healthicons:ui-user-profile-outline" class="pwd_pic2"></iconify-icon>
+                        <p class="pw_title2">Profile</p>
+                    </div>
+                    <hr class="right_line">
 
+                    <!-- Old password  -->
+                    <div class="old">
+                        <h6>Old password</h6>
+                        <input type="text" placeholder="Please input your old password">
+                    </div>
 
+                    <!-- Create new password -->
+                    <div class="create_new">
+                        <h6>Create new password</h6>
+                        <input type="text" placeholder="Please input your new password">
+                    </div>
+
+                    <!-- Confirm new password-->
+                    <div class="confirm_new">
+                        <h6>Confirm new password</h6>
+                        <input type="text" placeholder="Please confirm your new password">
+                    </div>
+                    <button id="change_btn">Confirm</button>
+                </div>
+            </div>
         </div>
         </div>
         <!-- user_change_pwd end -->
@@ -83,4 +84,5 @@
         <?php include "./footer.php"   ?>
         <!-- footer end -->
     </body>
+
 </html>
