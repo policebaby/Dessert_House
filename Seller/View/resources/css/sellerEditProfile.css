@@ -100,50 +100,12 @@ body{
 }
 
 
-@media screen and (max-width:720px){
-    body{
-        overflow-x: hidden;
-    }
-    .web_name,.title{
-        display:none !important;
-    }
-    .web_logo{
-        width:65% !important;
-        margin-left:15%;
-    }
-    .nav_text{
-        text-align: center;
-        margin-top:15%;
-    }
-    .cFeedback{
-        margin-left:17%;
-    }
-    .edit_nav{
-        position:fixed;
-        height:100vh !important;
-        background-color: var(--primary-blue)!important ;
-    }
-    .label_box_row{
-        display:flex;
-        flex-direction:column !important;
-    }
-    .input_box,.label_box{
-        margin-left:0;
-    }
-    .edit_photo_bg{
-        margin-left:25%;
-    }
-    .box2{
-        margin-left:23% !important;
-    }
-    .profile_banner{
-        margin-left:10%;
-    }
-    .icons{
-        width:1.8em;
-        margin:0.3em;
-    }
-    .cFeedback{
-        margin-left:32%;
-    }
+/* Pagination */
+.arrowToRed{
+    color: red !important;
+}
+
+ul li a:hover{
+    background-color: red !important;
+    color: white !important;
 }
