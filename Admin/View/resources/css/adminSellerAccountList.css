@@ -1,62 +1,111 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-/* adjust dashboard positions and color */
-.dashboard {
-	height: 80vh;
-	width: 13%;
-	float: left;
-    display: flex;
-    justify-content:center;
-    align-items:flex-end;
-    flex-direction: column;
-    background-color:var(--adminPrimaryColor);
-    border-radius: 10px;
-    margin: 3em 1em 0em 2em;
+.title{
+    margin-left: 50%;
+    line-height: 2em;
 }
 
-/* use display flex again to center text */
-.dashboard div {
-	height: 20%;
-	width: 100%;
-	color: #333;
+/* Table */
+table {
+  border-collapse: collapse;
+  width: 82%;
+  margin-top: 0.3em;
+  transform: translateX(0.5em);
+}
+
+th,
+td {
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  background-color: #c22014;
+  color: white;
+}
+
+td:nth-child(odd) {
+  background-color: #eaebed;
+}
+
+/* To make the contact info column smaller */
+td:nth-child(8){
+    padding:0.5em;
+    text-align: left;
+}
+
+/* To make the button column bigger */
+td:nth-child(9){
+    width: 20%;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Activate and Disable */
+.btn{
+    height: 3em;
+    width: 43%;
     border: transparent;
+    border-radius:10px ;
     color: white;
+}
+
+.activate{
+    background-color:#0057FF ;
+}
+
+.disable{
+    background-color: #C5332D;
+    margin-left: 5%;
+}
+
+/* pagination */
+.pagination {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+    list-style: none;
+    padding: 0;
+  }
 
-/* to make the title become two lines */
-div p{
-    width: 70%;
-    text-align: center;
-}
+  .pagination li {
+    margin: 0 0.5px;
+  }
 
-/* adjust the icons using % unit to make it responsive */
-div .icon{
-    width: 70%;
-    height: 60%;
-}
+  .pagination li a {
+    display: inline-block;
+    text-decoration: none;
+    color: grey;
+    border: 0.7px solid #ccc;
+    font-weight: bold;
+    padding: 0.5em;
+  }
 
-.icon:hover{
-    background-color:  white;
-    border-radius: 10px;
-}
+  .pagination li.active a,
+  .pagination li a:hover {
+    background-color: #c22014;
+    color: white !important;
+    border-color: #c22014;
+  }
+  
+  .pagination .arrowToRed {
+    color: #c22014;
+    border-color: #c22014;
+  }
 
-/* To turn the icon color into black when hovering */
-.icon:hover #path1{
-    fill: black;
-}
-
-.icon:hover p{
-    color: black;
-}
+  /* Move the pagination to corner */
+  .moveToCorner{
+    position: fixed;
+    top: 90%;
+    right:10%;
+  }
+  
