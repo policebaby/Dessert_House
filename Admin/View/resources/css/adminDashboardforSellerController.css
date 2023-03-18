@@ -37,10 +37,10 @@ div .icon{
     height: 60%;
 }
 
-.generate{
-    width: 70% !important;
-    height: 75% !important;
-}
+/* .generate{
+    width: 65% !important;
+    height: 70% !important;
+} */
 
 .icon:hover{
     background-color:  white;
