@@ -43,13 +43,13 @@
             <span class="title ms-1">Product Menu</span>
         </div>
         <!-- order list icon from left nav -->
-        <div class="nav_text text-muted">
-            <img src="./resources/images/orderList.png" class="icons">
+        <div class="nav_text active">
+            <img src="./resources/images/orderList.png" class="orderList-logo">
             <span class="title ms-1">Order Lists</span>
         </div>
         <!-- sold history icon from left nav -->
-        <div class="nav_text active">
-            <img src="./resources/images/soldList.png"class="my-md-5 orderList-logo">
+        <div class="nav_text text-muted">
+            <img src="./resources/images/soldList.png"class="my-md-5 icons">
             <span class="title ms-1">Sold History</span>
         </div>
         <!-- incoming order icon from left nav -->
@@ -71,33 +71,31 @@
         </nav>
 
         <div class="col-10">
-        <p class="h4 fw-bold my-4 text-center">Incoming Order</p>
-        <div class="blue-width me-4">
-        <table class="table table-borderless ms-md-2">
+        <p class="h4 fw-bold my-md-4 my-sm-4 order-text">Order List</p>
+        <div class="blue-width me-5">
+        <table class="table table-borderless ms-md-2 ms-sm-3">
             <tr class="t-head">
             <td>No.</td>
             <td>Date</td>
             <td>Order No.</td>
-            <td class="col-md-2">Items</td>
+            <td class="col-md-2 col-sm-2">Items</td>
             <td class="title-name">Total Price</td>
             <td class="title-name">Reservation Time</td>
             <td>Status</td>
             </tr>
             <tr>
-                <td class="h6 td-text fw-bold">1</td>
-                <td class="h6 td-text fw-bold">2023/03/05</td>
-                <td class="h6 td-text fw-bold">DS_030001</td>
-                <td class="h6 td-text fw-bold">
+                <td class="td-text fw-bold">1</td>
+                <td class="td-text fw-bold">2023/03/05</td>
+                <td class="td-text fw-bold">DS_030001</td>
+                <td class="td-text fw-bold types">
                     <span>Latte x  2</span>
-                    <br>
-                    <span>Pineapple Cake x 3</span>
                     <span>
                     <ion-icon name="chevron-down-outline" class="down" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></ion-icon>
                     </span>
                 </td>
-                <td class="h6 td-text fw-bold title-name">$ 80</td>
-                <td class="h6 td-text fw-bold title-name">2023/03/06 14:30:00</td>
-                <td class="h6 td-text fw-bold">Accept</td>
+                <td class="td-text fw-bold title-name">$ 80</td>
+                <td class="td-text fw-bold title-name">2023/03/06 14:30:00</td>
+                <td class="td-text fw-bold">Accept</td>
             </tr>
             <tr class="color-tr">
                 <td class=" td-text fw-bold">2</td>

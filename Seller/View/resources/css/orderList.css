@@ -75,6 +75,15 @@ td{
 .small-pop{
     display:none;
 }
+.order-text{
+    margin-left:35%;
+}
+/* mean that  td--items types */
+.types{
+    display:flex;
+    flex-direction:column;
+
+}
 /*for pigination */
 .pagination{
     margin-left:30%;
@@ -125,5 +134,40 @@ td{
     }
     .small-pop{
         display:block;
+    }
+}
+
+@media screen and (max-width:468px){
+    .edit_nav{
+        width:2.7em !important;
+        max-height:100% !important;
+    }
+    .web_logo{
+        width:2em !important;
+    }
+    .icons,.orderList-logo{
+        width:1em;
+    }
+    td{
+        padding:0 !important;
+        font-size:0.6em;
+    }
+    .td-text{
+        font-size:0.5em !important;
+        font-weight:800 !important;
+    }
+    tr{
+        line-height:1.5em !important;
+    }
+    .col-10{
+        width:70% !important;
+    }
+    .blue-width{
+        margin-left:-1.5em !important;
+    }
+    .order-text{
+        margin-left:4em !important;
+        margin-top:0.8em !important;
+        font-size:0.9em !important;
     }
 }
