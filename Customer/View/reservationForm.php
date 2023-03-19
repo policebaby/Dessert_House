@@ -13,6 +13,10 @@
     <link href="style.css?key=<?php echo time(); ?>" type="text/css" rel="stylesheet" />
     <!-- css link end -->
     <!-- js link start -->
+    <script src="./resources/js/reservationForm.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
     <!-- js link end -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +34,7 @@
                 <div class="reserveForm  ">
                     <p class="text-center text-light fs-4">Reservation Form</p>
                     <div class="p-3">
-                        <form>
+                        <form onsubmit="return reserve(this)">
                             <!-- input group start -->
                             <div class="mb-4">
                                 <input type="text" class="form-control outlineColor" id="" placeholder="User Name">
@@ -66,8 +70,8 @@
                             </div>
                             <!-- person count end -->
                             <div class="d-flex justify-content-end">
-                                <button type="submit" class="btn outlineColor btnBook">Book Seat</button>
-                                <button type="submit" class="btn btnCancel">Cancel</button>
+                                <button type="submit" id="btnBook" class="btn  btnBook">Book Seat</button>
+                                <button type="submit"  class="btn btnCancel">Cancel</button>
 
                             </div>
                         </form>
