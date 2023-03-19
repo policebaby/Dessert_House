@@ -15,6 +15,7 @@
     height: 5em;
 }
 .outlineColor{
+    border-radius: 0.5em;
     border-style: solid ;
     border-width: 0.1em !important;
     border-color: var(--userPrimarycolor) ;
@@ -24,6 +25,9 @@
     width: 7em;
     background-color: var(--userSecondarycolor);
     margin: 2em 0em 2em 0em;
+    border-style: solid ;
+    border-width: 0.1em !important;
+    border-color: var(--userPrimarycolor)
 }
 .btnCancel {
     color: var(--primaryTextcolor);
