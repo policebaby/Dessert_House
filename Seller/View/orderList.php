@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- incoming order css link -->
-    <link rel="stylesheet" href="./resources/css/incomingOrder.css">
+    <!-- order list css link -->
+    <link rel="stylesheet" href="./resources/css/orderList.css">
     <!-- seller root css link -->
     <link rel="stylesheet" href="./resources/css/seller-root.css">
     <!-- bootstrap js cdn -->
@@ -20,13 +20,13 @@
     <!-- ionic icon link -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <title>Incoming Order Page</title>
+    <title>Order List Page</title>
 </head>
-<body class="incoming_order_page">
+<body class="order_list_page">
     <div class="main-page">
         <div class="row">
         <nav class="col-2 mt-0">
-        <div class="edit_nav">
+        <div class="me-0 ms-0 edit_nav">
     <div class="nav_logo">
             <img src="./resources/images/Ellipse 3.png" alt="logo" width="35%" class="web_logo mt-5">
             <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
@@ -43,8 +43,8 @@
             <span class="title ms-1">Product Menu</span>
         </div>
         <!-- order list icon from left nav -->
-        <div class="nav_text text-muted">
-            <img src="./resources/images/orderList.png" class="icons">
+        <div class="nav_text active">
+            <img src="./resources/images/orderList.png" class="orderList-logo">
             <span class="title ms-1">Order Lists</span>
         </div>
         <!-- sold history icon from left nav -->
@@ -53,8 +53,8 @@
             <span class="title ms-1">Sold History</span>
         </div>
         <!-- incoming order icon from left nav -->
-        <div class="nav_text active">
-            <img src="./resources/images/incomingOrder.png" class="incoming-logo">
+        <div class="nav_text text-muted">
+            <img src="./resources/images/incomingOrder.png" class="icons">
             <span class="title ms-1">Incoming Orders</span>
         </div>
         <!-- feedback icon -->
@@ -70,70 +70,49 @@
         </div><br>
         </nav>
 
-        <!-- page -->
-        <div class="col-10 ">
-        <p class="h4 fw-bold my-4 incoming-text">Incoming Order</p>
-        <div class="blue-width me-md-4 me-sm-4">
-        <table class="table table-borderless ms-md-1 ms-sm-1">
+        <div class="col-10">
+        <p class="h4 fw-bold my-md-4 my-sm-4 order-text">Order List</p>
+        <div class="blue-width me-5">
+        <table class="table table-borderless ms-md-2 ms-sm-3">
             <tr class="t-head">
             <td>No.</td>
             <td>Date</td>
             <td>Order No.</td>
-            <td class="col-md-2 title-name">Items</td>
+            <td class="col-md-2 col-sm-2">Items</td>
             <td class="title-name">Total Price</td>
             <td class="title-name">Reservation Time</td>
-            <td class="title-name">Status</td>
-            <td class="col-3"></td>
-            <td class="seeMore"></td>
+            <td>Status</td>
             </tr>
             <tr>
-                <td class="h6 td-text fw-bold">1</td>
-                <td class="h6 td-text fw-bold">2023/03/05</td>
-                <td class="h6 td-text fw-bold">DS_030001</td>
-                <td class="h6 td-text fw-bold title-name">
+                <td class="td-text fw-bold">1</td>
+                <td class="td-text fw-bold">2023/03/05</td>
+                <td class="td-text fw-bold">DS_030001</td>
+                <td class="td-text fw-bold types">
                     <span>Latte x  2</span>
-                    <br>
-                    <span>Pineapple Cake x 3</span>
                     <span>
                     <ion-icon name="chevron-down-outline" class="down" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></ion-icon>
                     </span>
                 </td>
-                <td class="h6 td-text fw-bold title-name">$ 80</td>
-                <td class="h6 td-text fw-bold title-name">2023/03/06 14:30:00</td>
-                <td class="h6 td-text fw-bold title-name">Pending</td>
-                <td class="btn2">
-                    <button class="aBtn accept-reject">Accept</button>
-                    <button class="rBtn accept-reject">Reject</button>
-                </td>
-                <td class="seeMore">
-                    <a href="#" class="fw-bold"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">See More</a>
-                </td>
+                <td class="td-text fw-bold title-name">$ 80</td>
+                <td class="td-text fw-bold title-name">2023/03/06 14:30:00</td>
+                <td class="td-text fw-bold">Accept</td>
             </tr>
             <tr class="color-tr">
                 <td class=" td-text fw-bold">2</td>
                 <td class=" td-text fw-bold">2023/03/05</td>
                 <td class=" td-text fw-bold">DS_030001</td>
-                <td class=" td-text fw-bold title-name">Americano coffee x 2</td>
+                <td class=" td-text fw-bold">Americano coffee x 2</td>
                 <td class=" td-text fw-bold title-name">$12</td>
                 <td class=" td-text fw-bold title-name">2023/03/05 15:30:00</td>
-                <td class=" td-text fw-bold title-name">Pending</td>
-                <td>
-                <button class="aBtn accept-reject">Accept</button>
-                <button class="rBtn accept-reject ms-md-2">Reject</button>
-                </td>
-                <td class="seeMore">
-                    <a href="#" class="fw-bold"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">See More</a>
-                </td>
+                <td class=" td-text fw-bold">Reject</td>
             </tr>
             </table>
             <!-- popup screen-->
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
-                        <div class="small-pop ms-3 mt-3">
-                                <p>Order No. :<span>DS_030003</span></p>
-                                <p>Date :<span>2023/03/05</span></p>
-                                <p>Reservation Date : <span>2023/03/06 13:40:00</span></p>
+                        <div class="small-pop mt-3 ms-3">
+                            <p class="fw-bold">Reservation Time : <span>2023/03/06 14:30:00	</span></p>
                         </div>
                         <div class="modal-header">
                             <h5 class="modal-title text-decoration-underline" id="staticBackdropLabel">Items</h5>
@@ -145,11 +124,10 @@
                             <span class="total_items me-5">x 2</span>
                         </div>
                     </div>
-                    <div class="small-pop">
+                    <div class="mb-4">
                         <hr>
-                        <span class="ms-4">Total</span>
+                        <span class="ms-3">Total</span>
                         <span class="total_items me-5">$80</span>
-                        <p class="my-4 ms-4 h5 fw-bold">Status : Pending</p>
                     </div>
                 </div>
             </div>
@@ -182,6 +160,7 @@
             </nav>
         </div>
 
+        </div>
         </div>
     </div>
     </body>

@@ -76,8 +76,14 @@ body{
 .add-btn{
     background-color:var(--primary-blue);
 }
+.add-btn:hover{
+    box-shadow:4px 4px 8px var(--primary-blue) !important;
+}
 .cancel-btn{
     background-color:var(--red-color);
+}
+.cancel-btn:hover{
+    box-shadow:4px 4px 8px var(--primary-blue);
 }
 tr{
     width:6em !important;

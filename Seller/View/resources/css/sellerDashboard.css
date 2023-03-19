@@ -116,6 +116,9 @@ body{
     margin-left:60%;
     font-size:0.9em;
 }
+.replyBtn:hover{
+    box-shadow:4px 4px 8px var(--primary-blue) !important;
+}
 .view{
     width:5.5em;
     height:2.3em;
@@ -126,6 +129,9 @@ body{
     font-size:0.9em;
     margin-left:45%;
 
+}
+.view:hover{
+    box-shadow:0 0 8px var(--secondary-skyblue) !important;
 }
 
 

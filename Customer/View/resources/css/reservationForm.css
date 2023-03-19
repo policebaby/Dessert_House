@@ -8,12 +8,31 @@
 }
 .reserveBg{
     padding: 1.5em;
-    background-color: rgb(163, 122, 92,0.8)  !important;
+    background-color: rgb(163, 122, 92,0.7)  !important;
 }
 .logo{
     width: 5em;
     height: 5em;
 }
-.logoborder{
+.outlineColor{
+    border-style: solid ;
+    border-width: 0.1em !important;
+    border-color: var(--userPrimarycolor) ;
+}
+.btnBook {
+    color: var(--secondaryTextcolor);
+    width: 7em;
+    background-color: var(--userSecondarycolor);
+    margin: 2em 0em 2em 0em;
+}
+.btnCancel {
+    color: var(--primaryTextcolor);
+    width: 7em;
+    background-color: var(--btnRed);
+    margin: 2em 0em 2em 1em;
+}
+/* media screen start */
 
+@media (max-width:390px) {
+    
 }

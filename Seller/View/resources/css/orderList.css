@@ -7,17 +7,14 @@ body{
     overflow-x: hidden;
     height:100vh;
 }
-.incoming-text{
-    margin-left:35%;
-}
-.incoming_order_page,.main-page{
+.order_list_page,.main-page{
     max-height:100vh;
     background-color:var(--secondary-skyblue)!important;
 }
 .icons{
     opacity:0.5;
 }
-.incoming-logo{
+.orderList-logo{
     opacity:1 !important;
 }
 /* for sidebar nav */
@@ -54,27 +51,6 @@ tr{
     background-color:var(--tr-second-color);
     height:2em !important;
 }
-.aBtn{
-    background-color:#0057FF !important;
-}
-.aBtn:hover{
-    box-shadow: 4px 4px 8px var(--primary-blue);
-}
-.rBtn{
-    background-color:var(--red-color);
-}
-.rBtn:hover{
-    box-shadow:4px 4px 8px var(--primary-blue);
-}
-.accept-reject{
-    border-style:none;
-    border-radius:0.5em;
-    width:6em;
-    height:2em;
-    line-height: initial;
-    text-align: center;
-    color:var(--text-color-white);
-}
 td{
     text-align:center;
 }
@@ -96,8 +72,17 @@ td{
 .total_items{
     float:right
 }
-.seeMore,.small-pop{
+.small-pop{
     display:none;
+}
+.order-text{
+    margin-left:35%;
+}
+/* mean that  td--items types */
+.types{
+    display:flex;
+    flex-direction:column;
+
 }
 /*for pigination */
 .pagination{
@@ -112,6 +97,7 @@ td{
 .great,.less{
     color:var(--primary-blue) !important;
 }
+
 
 @media screen and (max-width:720px){
     body{
@@ -128,7 +114,7 @@ td{
         text-align: center;
         margin-top:15%;
     }
-    .icons,.incoming-logo{
+    .icons{
         width:25%;
         margin:0.3em;
     }
@@ -146,22 +132,11 @@ td{
     table{
         width:100%;
     }
-    td{
-        padding:0.1em !important;
-    }
-    .seeMore,.small-pop{
+    .small-pop{
         display:block;
-    }
-    .accept-reject{
-        width:5.5em;
-        font-size:0.6em;
-    }
-    .btn2{
-        padding:0 !important;
     }
 }
 
-/* for mobile view */
 @media screen and (max-width:468px){
     .edit_nav{
         width:2.7em !important;
@@ -170,12 +145,8 @@ td{
     .web_logo{
         width:2em !important;
     }
-    .icons,.incoming-logo{
+    .icons,.orderList-logo{
         width:1em;
-    }
-    .incoming-text{
-        font-size:1em !important;
-        margin-left:1.6em;
     }
     td{
         padding:0 !important;
@@ -183,20 +154,20 @@ td{
     }
     .td-text{
         font-size:0.5em !important;
-        font-weight:700 !important;
+        font-weight:800 !important;
     }
     tr{
         line-height:1.5em !important;
     }
+    .col-10{
+        width:70% !important;
+    }
     .blue-width{
-        margin-left:-1.9em !important;
-        margin-right:4em !important;
+        margin-left:-1.5em !important;
     }
-    .accept-reject{
-        width:5.3em ;
-    }
-    .seeMore{
-        font-size:0.6em !important;
-        margin-right:4em !important;
+    .order-text{
+        margin-left:4em !important;
+        margin-top:0.8em !important;
+        font-size:0.9em !important;
     }
 }

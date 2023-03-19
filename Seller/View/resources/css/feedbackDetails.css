@@ -22,6 +22,9 @@ body{
     justify-content: center;
     align-items: center;
 }
+.web_logo{
+    width:4em;
+}
 .nav_text,.web_name{
     color:var(--text-color-white);
 }
@@ -40,6 +43,9 @@ body{
 .feedback-title{
     color:var(--primary-blue);
     margin-left:25%;
+}
+.per-average{
+    margin-left:2em !important;
 }
 .each-progress{
     display:flex;
@@ -87,7 +93,7 @@ body{
         display:none !important;
     }
     .web_logo{
-        width:55% !important;
+        width:55%;
         margin-left:6%;
     }
     .nav_text{
@@ -95,7 +101,7 @@ body{
         margin-top:15%;
     }
     .icons{
-        width:25%;
+        width:1.8em;
         margin:0.3em;
     }
     .edit_nav{
@@ -136,5 +142,74 @@ body{
     }
     .ha-face{
         margin-left:55%;
+    }
+}
+
+/* for mobile view */
+@media screen and (max-width:468px){
+    .edit_nav{
+        width:4em !important;
+        max-height:100% !important;
+    }
+    .web_logo{
+        width:3em;
+    }
+    .icons{
+        width:1.5em;
+    }
+    .feedback-title{
+        font-size:1em !important;
+        margin-left:2.7em !important;
+    }
+    .per-text{
+        font-size:1em !important;
+    }
+    .smile-face{
+        width:1.8em;
+    }
+    .above-text{
+        font-size:0.9em !important;
+    }
+    .per-average{
+        margin-left:4em;
+    }
+    .progress{
+        height:0.8em !important;
+        margin-left:0.7em !important;
+    }
+    .total-review{
+        margin-left:0.7em !important;
+    }
+    .each-progress{
+        margin-left:1em;
+    }
+    .each-review{
+        width:13.3em !important;
+        padding:0 !important;
+        margin-left:0;
+    }
+    .ha-face{
+        margin-left:2em ;
+    }
+    .details{
+        margin-left:0;
+    }
+    .date{
+        margin-left:2em;
+    }
+    .user-text,.seller-text{
+        margin-left:1.5em;
+        margin-top:0.5em;
+        padding:0.3em;
+    }
+    .reply-text{
+        font-size:0.9em;
+        margin-left:10em;
+    }
+    .row{
+        max-height:100%;
+    }
+    .space-bottom{
+        margin-bottom:15em !important;
     }
 }

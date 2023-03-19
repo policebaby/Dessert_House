@@ -62,6 +62,9 @@ body{
     background-color: var(--primary-blue);
     color:var(--text-color-white);
 }
+.send_btn:hover{
+    box-shadow:4px 4px 8px var(--primary-blue) !important;
+}
 
 
 
