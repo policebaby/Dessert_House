@@ -5,6 +5,15 @@
   height: 100vh;
   /* opacity: 80%; */
 }
+.login_form{
+  display: flex;
+  justify-content: center;
+
+}
+.frame{
+  text-align: center;
+  display: block;
+}
 .login_bg{
   padding: 1.5em;
   background-color: rgb(163, 122, 92,0.7)  !important;
@@ -15,11 +24,8 @@
 .logo{
   width: 4.5em;
   height: 4.5em;
-  margin-left: 5.5em !important;
 }
-.login_input{
-margin-left: 15%;
-}
+
 .outlineColor{
   width: 20em !important;
   height: 3.3em !important;
@@ -35,7 +41,6 @@ margin-left: 15%;
   height: 3em !important;
   background-color: var(--userPrimarycolor) !important;
   border-radius: .7em !important;
-  margin-left: 25%;
 }
 .two_lines{
   float: none;
@@ -68,18 +73,13 @@ width: 2.5em !important;
 }
 
 @media (max-width:500px) and (min-width:380px){
-  .login_input{
-    margin-left: 5%;
-    }
   .two_lines span{
     font-size: .7em !important;
   background-color:transparent;
   color: var(--primaryTextcolor);
   margin-left: .9em !important;
   }
-  .btnlogin {
-    margin-left: 30%;
-  }
+
   .two_lines{
     margin-left: 1em !important;
   }

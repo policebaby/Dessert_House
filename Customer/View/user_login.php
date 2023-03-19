@@ -34,9 +34,9 @@
         <div class="col-md-6  login_bg">
             <div class="logo_border">
                 <img src="../View/resources/img/logo.png" alt="logo" class="logo" />
-                <div class="login_form ">
+                <div class="frame">
                     <p class="text-center text-light fs-3 title">Log in</p>
-                    <div class="p-3 login_input">
+                    <div class="p-3 login_input login_form ">
                         <form>
                             <!-- input group start -->
                             <div class="mb-4 ">
