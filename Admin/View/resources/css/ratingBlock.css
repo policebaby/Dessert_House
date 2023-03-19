@@ -1,0 +1,31 @@
+/*Adjust the rating block color and sizes */
+  .ratingBlock {
+    height: 8em;
+    width: 18em;
+    background-color:#710C05;
+    color: white;
+    border-radius: 1em;
+
+  }
+
+  /* Adjust icons and texts positions inside the rating block */
+  .iconAndShopName{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: flex-end;
+    padding-top: 0.5em;
+  }
+
+  .shopName{
+    font-size: 1.2rem;
+    margin-bottom: 0.6em;
+    padding-right: 0.8em;
+  }
+
+  .percent {
+    font-size: 2em;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 42%;
+  }
+

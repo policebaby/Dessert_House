@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--secondaryFont), serif;
+    font-family: var(--primaryFont), sans-serif;
+}
+
+body{
+    height: 100vh;
+}
+
+/* Back Bar CSS */
+.back-bar {
+    position: absolute;
+    top: 15.3%;
+    right: 3%;
+    width: 78%;
+    height: 4%;
+    display: flex;
+    align-items: center;
+    background-color: #c22014;
+    color: white;
+    padding: 0 10px;
+  }
+
+  .back-arrow {
+    margin-right: 10px;
+    font-weight: 700;
+  }
+
+  /* A big container include rating block and satisfactory block */
+.ratingBlockAndSatisfactoryBlock {
+    height: 13%;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8%;
+  }
+
+/* 
+
+/* Face Block Big Container*/
+  .satisfactoryBlockContainer{
+    height: 100%;
+    width: 45%;
+    background-color:#710C05;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.25em;
+  }
+
+  /* Ajust each line of text positions including face, text and counts */
+  .textLine {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .faces {
+    margin-right: 10px;
+
+  }
+
+  .satisfactoryLevel {
+    margin-right: 10px;
+  }
+
+  /* to make the count appear bigger */
+  .satisfactoryLevel+span{
+    font-weight: bolder;
+    font-size: 1.5em;
+  }
+
+  /* Review Box with reply */
+  .reviewBoxWithReplyContainer{
+    height: 30%;
+    width: 78%;
+    border: 2px solid #c22014;
+    position: relative;
+    top: 5%;
+    margin-left: 18%;
+    font-size: 1em;
+    height: auto;
+  }
+
+  /* separator line */
+  .separator{
+    width: 90%;
+    height:0.1em;
+    background-color: #710C05;
+    margin: auto;
+    margin-top: 1em;
+  }
+
+  /* Seller reply (inline-block means it's parent's height will auto adjust based on the text) */
+  .reply{
+   margin-left: 10%;
+   display: inline-block;
+   margin-bottom: 2em;
+  }
+
+  

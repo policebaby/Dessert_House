@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--secondaryFont), serif;
+    font-family: var(--primaryFont), sans-serif;
+}
+
+body{
+    width: 100vw;
+}
+
+.blocks{
+    position: absolute;
+    width: 80%;
+    left: 25%;
+    top: 15%;
+
+}
