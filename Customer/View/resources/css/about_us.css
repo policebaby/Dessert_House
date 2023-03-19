@@ -123,4 +123,37 @@
     margin-left: 6em !important;
   }
 }
+@media screen and (max-width: 420px) {
+  .text br {
+    display: none !important;
+  }
+  .first_para {
+    margin-top: 2em !important;
+    margin-left: 2em !important;
+  }
+  .second_para {
+    margin-top: 2em !important;
+    margin-left: 2em !important;
+  }
+  .third_para {
+    margin-top: 2em !important;
+    margin-bottom: 3em !important;
+    margin-left: 2em !important;
+  }
+  .para1_title {
+    text-align: center !important;
+  }
+  .para2_title {
+    text-align: center !important;
+  }
+  .title {
+    margin-left: 5em !important;
+  }
+  .para1_pic {
+    margin-left: 3em !important;
+  }
+  .para2_pic {
+    margin-left: 3em !important;
+  }
+}
 /* about us end */

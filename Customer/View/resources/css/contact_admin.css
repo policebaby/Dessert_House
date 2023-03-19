@@ -169,7 +169,7 @@ h5 {
   margin-left: 16em !important;
   padding-bottom: 0.3em;
 }
-@media screen and (max-width: 800px) {
+@media  (max-width: 800px) and (min-width: 500px){
   .contactA_input {
     margin-left: 5em !important;
   }
@@ -184,6 +184,62 @@ h5 {
   }
   .contact_text_header {
     margin-left: 3.7em !important;
+  }
+}
+@media  (max-width: 500px) and (min-width: 440px) {
+  .contactA_input {
+    margin-left:5em !important;
+  }
+  .contactA_textarea {
+    margin-left: 5em !important;
+  }
+  .send_btn {
+    margin-left:17em !important;
+  }
+  .contact_text_header {
+    margin-left: 3.7em !important;
+  }
+  .contactA_input {
+    width:19em !important;
+    height: 2.5em;
+    border-radius: 0.7em;
+    border-style: none;
+    background-color: var(--userFourthcolor);
+  }
+  .contactA_textarea {
+    border-radius: 0.7em;
+    border-style: none;
+    background-color: var(--userFourthcolor);
+  }
+  .contact_text {
+    margin-left: 4em !important;
+  }
+}
+@media  (max-width: 440px) and (min-width: 380px) {
+  .contactA_input {
+    margin-left:2.5em !important;
+  }
+  .contactA_textarea {
+    margin-left: 2.5em !important;
+  }
+  .send_btn {
+    margin-left:14em !important;
+  }
+  .contact_text_header {
+    margin-left: 3.7em !important;
+  }
+  .contactA_input {
+    width:19em !important;
+    height: 2.5em;
+    border-radius: 0.7em;
+    border-style: none;
+    background-color: var(--userFourthcolor);
+  }
+  .contact_text {
+    margin-left: 2.3em !important;
+  }
+  .contact_text_header {
+    margin-left: 2.3em !important;
   }
 }
 /* contact admin end */
@@ -293,4 +349,5 @@ h5 {
     font-weight: var(--dsFontweightSemi);
   }
 }
+
 /* user footer end */

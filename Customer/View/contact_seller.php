@@ -12,9 +12,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Seller</title>
-    <link rel="stylesheet" href="../View/resources/css/contact_seller.css">
-    <link rel="stylesheet" href="../View/resources/css/root.css">
-
+    <!--css link start-->
+    <link href="../View/resources/css/contact_seller.css?key=<?php echo time(); ?>" type="text/css" rel="stylesheet" />
+    <link href="../View/resources/css/root.css?key=<?php echo time(); ?>" type="text/css" rel="stylesheet" />
+    <!--css link end-->
           <!--font link start-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

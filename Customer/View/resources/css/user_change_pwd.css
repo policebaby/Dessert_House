@@ -146,3 +146,53 @@
     color: var(--secondaryTextcolor) !important;
   }
 }
+@media (max-width:500px)and (min-width:380px) {
+  .first_pwd_title {
+    display: none;
+  }
+  body {
+    background-color: var(--userTertiarycolor) !important;
+  }
+  .sec_pwd_title {
+    display: flex;
+    margin-top: 3em !important;
+    color: var(--userSecondarycolor);
+    margin-left: 3em !important;
+  }
+  .pwd_pic2 {
+    color: white !important;
+  }
+  .right_line {
+    color: black !important;
+  }
+  .pw_title2 {
+    font-size: 2em !important;
+    padding-top: 0.2em;
+  }
+  #change_btn {
+    border: 0.1em solid #6f4e37 !important;
+    margin-top: 2.5em !important;
+    background-color: var(--userSecondarycolor);
+    color: var(--secondaryTextcolor);
+    margin-left: 13em !important;
+  }
+  .old input {
+    margin-left: 3em !important;
+  }
+  .create_new input {
+    margin-left: 3em !important;
+  }
+  .confirm_new input {
+    margin-left: 3em !important;
+  }
+  h6 {
+    color: var(--primaryTextcolor) !important;
+    margin-left: 3em !important;
+  }
+  .right_line {
+    width: 25em !important;
+    height: 0.2em !important;
+    margin-left: 3em !important;
+    color: var(--secondaryTextcolor) !important;
+  }
+}

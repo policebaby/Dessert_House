@@ -16,8 +16,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!--css link start-->
-    <link rel="stylesheet" href="../View/resources/css/contact_admin.css">
-    <link rel="stylesheet" href="../View/resources/css/root.css">
+    <link href="../View/resources/css/contact_admin.css?key=<?php echo time(); ?>" type="text/css" rel="stylesheet" />
+    <link href="../View/resources/css/root.css?key=<?php echo time(); ?>" type="text/css" rel="stylesheet" />
     <!--css link end-->
     <!--font link start-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

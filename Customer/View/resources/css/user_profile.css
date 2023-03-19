@@ -293,3 +293,115 @@
     width: 26em !important;
   }
 }
+@media (max-width: 500px) and (min-width: 380px) {
+  .pf_container {
+    background-color: var(--userTertiarycolor) !important;
+    color: var(--primaryTextcolor);
+  }
+  .first_pf_title {
+    display: none !important;
+  }
+  .sec_pf_title {
+    display: flex;
+    margin-top: 3em !important;
+    margin-left: 3em !important;
+  }
+  .right_line {
+    color: black !important;
+    width: 25em !important;
+    margin-left: 2em;
+    height: 0.2em !important;
+  }
+  .pf_pic2 {
+    font-size: 3em !important;
+    color: var(--userSecondarycolor);
+  }
+  .title2 {
+    font-size: 1.8em !important;
+  }
+  .profile_name {
+    display: block !important;
+  }
+  .last_name {
+    margin-top: 1em !important;
+    margin-left: 0em !important;
+  }
+  .profile_name {
+    margin-left: 3em !important;
+  }
+  #pf_logout {
+    display: flex;
+    margin-top: 2em !important;
+    margin-left: 1em !important;
+  }
+  .email {
+    margin-left: 3em !important;
+  }
+  .password {
+    margin-left: 3em !important;
+  }
+  .phone_number {
+    margin-left: 3em !important;
+  }
+  .buy_coin {
+    margin-left: 2.5em !important;
+  }
+  #change_btn {
+    display: none;
+  }
+  .last_role {
+    display: block !important;
+  }
+  #pf_logout {
+    display: flex;
+    margin-top: 2em !important;
+    margin-left: 22em !important;
+  }
+  .link_change_pwd {
+    margin-top: 3em !important;
+    margin-left: 1em !important;
+    color: white;
+    text-decoration-color: white;
+    display: block;
+  }
+  .buy_coin input {
+    border: solid 0.2em #6f4e37;
+  }
+  .buy_coin button {
+    display: none;
+  }
+  .coin_line {
+    display: block;
+    color: white;
+    text-decoration-color: white;
+  }
+  #logout_icon {
+    display: none;
+  }
+  #pf_logout {
+    width: 9em !important;
+    height: 2.5em;
+    font-size: var(--dsSubheader);
+    padding-top: 0.5em;
+    color: white;
+    padding-left: 2.5em;
+    border-radius: 0.9em;
+    margin-left: 8em !important;
+    background-color: #c21111;
+  }
+  .email input {
+    width: 20em !important;
+  }
+  .first_name input {
+    width: 20em !important;
+  }
+  .last_name input {
+    width: 20em !important;
+  }
+  .phone_number input {
+    width: 20em !important;
+  }
+  .password input {
+    width: 10em !important;
+  }
+}

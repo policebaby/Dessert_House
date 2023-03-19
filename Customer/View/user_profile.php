@@ -83,7 +83,7 @@
             <!-- phone number -->
             <div class="phone_number">       
             <h6>Phone Number</h6>
-            <input type="text" placeholder="+95 9777777777">
+            <input type="text" placeholder="+95 9777777777" >
             </div>
             <br>
             <div class="buy_coin">

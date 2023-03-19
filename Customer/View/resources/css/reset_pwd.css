@@ -101,3 +101,31 @@
     text-align: center;
   }
 }
+@media  (max-width: 500px) and (min-width:380px){
+  .pi_card {
+    width: 20em !important;
+    height: 30em !important;
+    margin-top: 15vh;
+  }
+  .input_code {
+    width: 15em !important;
+    height: 2.5em !important;
+  }
+  .input_new {
+    width: 15em !important;
+    height: 2.5em !important;
+  }
+  .input_confirm {
+    width: 15em !important;
+    height: 2.5em !important;
+  }
+  #reset_btn {
+    background-color: var(--userPrimarycolor);
+    width: 12em !important;
+    height: 2.5em !important;
+  }
+  .title {
+    font-weight: var(--dsFontweightSemi);
+    font-size: 1.3em !important;
+  }
+}

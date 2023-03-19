@@ -280,6 +280,22 @@ margin-left: 10em ;
         margin-left: 4em ;
         }
 }
+@media (max-width: 499px) and (min-width: 380px) {
+  .pp_title{
+      position: absolute !important;
+      margin-top: 2em !important;
+      margin-left:3em !important;
+      font-family: var( --primaryFont);
+      font-size: 1.5em !important;
+  }
+  .pp_paragraph{
+      margin-left: 4em;
+      font-size: var(--dsRegular);
+  }
+  .pp_img{
+      margin-left: 4em ;
+      }
+}
     /* p&p end */
     /* user footer start */
 .footer {

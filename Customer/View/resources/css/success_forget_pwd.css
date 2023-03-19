@@ -92,3 +92,32 @@
     text-align: center;
   }
 }
+@media (max-width: 500px) and (min-width:380px) {
+  #continue_btn {
+    background-color: var(--userPrimarycolor);
+    width: 10em !important;
+    height: 2.3em !important;
+    color: white !important;
+    border-radius: 0.4em !important;
+    margin-left: 3em !important;
+    margin-top: 0.8em !important;
+  }
+  .circle_icon {
+    margin-top: 0.2em !important;
+    font-size: 3.5em !important;
+    margin-left: 2.3em !important;
+    margin-bottom: 0.5em !important;
+    color: #6f4e37;
+  }
+  .card {
+    width: 20em !important;
+    height: 18em !important;
+    box-shadow: 0px 4px 3px 0px grey;
+    border-radius: 1em !important;
+    position: absolute !important;
+    margin-top: 20vh;
+    background-color: var(--userSecondarycolor);
+    margin-left: 10%;
+    text-align: center;
+  }
+}
