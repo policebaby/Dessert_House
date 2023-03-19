@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User login</title>
     <!--css link start-->
-    <link href="../View/resources/css/user_login.css?key=<?php echo time(); ?>" type="text/css" rel="stylesheet" />
+    <link href="../View/resources/css/user_signup.css?key=<?php echo time(); ?>" type="text/css" rel="stylesheet" />
     <link href="../View/resources/css/root.css?key=<?php echo time(); ?>" type="text/css" rel="stylesheet" />
     <!--css link end-->
     <!-- js link start -->
@@ -31,38 +31,34 @@
 <body class="container-fluid position-relative">
     <div class=" row bg_img">
         <!-- reservationForm start -->
-        <div class="col-md-6  login_bg">
+        <div class="col-md-6  signup_bg">
             <div class="logo_border">
                 <img src="../View/resources/img/logo.png" alt="logo" class="logo" />
-                <div class="login_form ">
-                    <p class="text-center text-light fs-3 title">Log in</p>
-                    <div class="p-3 login_input">
+                <div class="signup_form ">
+                    <p class="text-center text-light fs-3 title">Sign Up</p>
+                    <div class="p-3 signup_input">
                         <form>
                             <!-- input group start -->
                             <div class="mb-4 ">
                                 <input type="text" class="form-control outlineColor" id="" placeholder="User Name">
                             </div>
                             <div class="mb-4">
+                                <input type="text" class="form-control outlineColor" id="" placeholder="Email">
+                            </div>
+                            <div class="mb-4">
                                 <input type="text" class="form-control outlineColor" id="" placeholder="Password">
                             </div>
+                            <div class="mb-4">
+                                <input type="text" class="form-control outlineColor" id="" placeholder="Confirm Password">
+                            </div>
+                            <div class="mb-4">
+                                <input type="text" class="form-control outlineColor" id="" placeholder="Gender">
+                            </div>
                             <!-- input group end -->
-                            <button type="submit" class="btn btnlogin">log in</button>
-                            <!-- line start -->
-        <!-- text between two lines -->
-        <div class="two_lines">
-                    <div class="row">
-                        <div class="col-3"><div class="line_left line"></div></div>
-                        <div class="col-6"><span>login with other</span></div>
-                        <div class="col-3"><div class="line_right line"></div></div>
-                    </div>
-        </div>
-        <!-- Three icons -->
-        <div class="login_icons">
-        <iconify-icon icon="logos:facebook" class="login_icon"></iconify-icon>
-        <iconify-icon icon="skill-icons:twitter" class="login_icon"></iconify-icon>
-        <iconify-icon icon="logos:google-icon" class="login_icon"></iconify-icon>
-        </div>
-                            <!-- line end -->
+                            <div class="ask_bar">
+                            <u>Already Account?</u>
+                            <button type="submit" class="btn btn_signup">Sign Up</button>
+                            </div>
                         </form>
                     </div>
                 </div>
