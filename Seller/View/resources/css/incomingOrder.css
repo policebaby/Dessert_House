@@ -99,6 +99,10 @@ td{
 .seeMore,.small-pop{
     display:none;
 }
+.types{
+    display:flex;
+    flex-direction:column;
+}
 /*for pigination */
 .pagination{
     margin-left:30%;
@@ -175,7 +179,7 @@ td{
     }
     .incoming-text{
         font-size:1em !important;
-        margin-left:1.6em;
+        margin-left:5.5em;
     }
     td{
         padding:0 !important;
@@ -188,9 +192,9 @@ td{
     tr{
         line-height:1.5em !important;
     }
-    .blue-width{
-        margin-left:-1.9em !important;
-        margin-right:4em !important;
+    .col-10{
+        width:82% !important;
+        margin-left:-1em;
     }
     .accept-reject{
         width:5.3em ;

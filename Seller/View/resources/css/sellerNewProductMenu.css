@@ -34,6 +34,9 @@ body{
 .icons{
     opacity:0.6;
 }
+.product-logo{
+    opacity:1;
+}
 .seller-photo{
     width:8.5em;
     height:8.5em;
@@ -97,6 +100,9 @@ tr{
     background-color:var(--primary-blue);
     opacity:0.2;
 }
+.table{
+    margin-right:5em !important;
+}
 .second-row{
     position:relative;
 }
@@ -105,7 +111,7 @@ tr{
 }
 /*for pigination */
 .pagination{
-    margin-left:30%;
+    margin-left:33%;
 }
 .p-one{
     color:var(--text-color-white) !important;
@@ -148,5 +154,75 @@ tr{
     }
     .first-row-second{
         margin-left:35% !important;
+    }
+    .seller-photo{
+        margin-top:1em !important;
+        margin-left:5em !important;
+    }
+    .form-control{
+        margin-left:6em;
+    }
+    tr{
+        font-size:0.7em !important;
+    }
+    .product-menu-text{
+        margin-left:15em;
+    }
+    .pagination{
+        margin-left:13em;
+    }
+    .blue-width{
+        margin-left:6em;
+    }
+}
+
+/* for mobile view */
+@media screen and (max-width:468px){
+    .edit_nav{
+        width:3.6em !important;
+        max-height:100% !important;
+    }
+    .web_logo{
+        width:2em !important;
+    }
+    .icons,.product-logo{
+        width:1em;
+        margin-left:1em;
+    }
+    .cFeedback{
+        margin-top:1em !important;
+    }
+    .seller-photo{
+        width:6em;
+        height:6em;
+    }
+    .form-control{
+        width:17em !important;
+        font-size:0.6em !important;
+        padding:0.2em !important;
+    }
+    .insert-title{
+        margin-top:1.3em;
+        font-size:0.8em !important;
+    }
+    .label-box{
+        font-size:0.6em !important;
+    }
+    .btns{
+        margin-top:1.5em;
+        width:9em !important;
+        font-size:0.6em;
+    }
+    .product-menu-text{
+        font-size:0.8em;
+        font-weight:900;
+    }
+    table{
+        margin-left:-2.4em;
+    }
+    .pagination{
+        font-size:0.6em;
+        margin-left:14em;
+        margin-top:1em;
     }
 }

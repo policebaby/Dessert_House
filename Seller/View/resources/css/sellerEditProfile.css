@@ -153,3 +153,65 @@ body{
         margin-left:32%;
     }
 }
+
+/* for mobile view */
+@media screen and (max-width:468px){
+    .edit_nav{
+        width:2.7em !important;
+        max-height:100% !important;
+    }
+    .web_logo{
+        width:2em;
+        margin-top:1em !important;
+    }
+    .icons{
+        width:1em;
+        margin-top:1.3em;
+    }
+    .profile_banner{
+        width:1em;
+        margin-left:3em;
+        margin-top:-1em;
+    }
+    .edit_photo_bg{
+        width:3em;
+        height:3em;
+        margin-left:1.1em;
+    }
+    .editPhoto{
+        width:2.5em;
+
+    }
+    .form-control{
+        width:17em !important;
+        padding:0.3em !important;
+        font-size:0.6em !important;
+        margin-left:-4em;
+        margin-top:1em !important;
+    }
+    .coner_label,.email{
+        font-size:0.7em !important;
+        font-weight:800;
+        margin-left:-2.3em;
+    }
+    .input_box{
+        width:20em !important;
+        margin-left:-2em;
+        font-size:0.7em;
+    }
+    .label_box_row{
+        margin-top:-2em;
+    }
+    .lbox1{
+        margin-top:-2em;
+    }
+    .lbox2{
+        margin-top:-1em;
+    }
+    .btns{
+        width:9em;
+        margin-top:1.5em;
+        margin-left:-2em;
+        font-size:0.7em;
+    }
+}

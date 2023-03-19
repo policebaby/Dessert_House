@@ -21,21 +21,21 @@
 </head>
 <body class="seller_contact_admin_page">
     <div class="row">
-
-    <div class="col-2 me-0 ms-0 edit_nav">
-    <div class="my-3 nav_logo">
-            <img src="./resources/images/Ellipse 3.png" alt="logo" width="35%" class="web_logo">
+    <nav class="col-2 mt-0">
+    <div class="me-0 ms-0 edit_nav">
+    <div class="nav_logo">
+            <img src="./resources/images/Ellipse 3.png" alt="logo" width="35%" class="web_logo mt-md-5 mt-sm-5">
             <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
     </div>
-        <div class="ms-4">
+        <div class="ms-md-4 ms-sm-4">
         <!-- profile icon from left nav -->
-        <div class="mt-4 nav_text">
+        <div class="mt-md-4 mt-sm-4 nav_text">
             <img src="./resources/images/person.png" class="icons">
             <span class="title ms-1">Profile</span>
         </div>
         <!-- meun icon from left nav -->
-        <div class="nav_text my-3 text-muted">
-            <img src="./resources/images/menu.png" alt="" class="my-3 icons">
+        <div class="nav_text my-md-3 my-sm-3 text-muted">
+            <img src="./resources/images/menu.png" alt="" class="my-md-3 my-sm-3 icons">
             <span class="title ms-1">Product Menu</span>
         </div>
         <!-- order list icon from left nav -->
@@ -44,8 +44,8 @@
             <span class="title ms-1">Order Lists</span>
         </div>
         <!-- sold history icon from left nav -->
-        <div class="nav_text my-3 text-muted">
-            <img src="./resources/images/soldList.png"class="my-3 icons">
+        <div class="nav_text my-md-3 my-sm-5 text-muted">
+            <img src="./resources/images/soldList.png"class="my-ms-3 my-md-3 icons">
             <span class="title ms-1">Sold History</span>
         </div>
         <!-- incoming order icon from left nav -->
@@ -54,22 +54,21 @@
             <span class="title ms-1">Incoming Orders</span>
         </div>
         <!-- feedback icon -->
-        <div class="nav_text my-3 text-muted feedback_gp">
-            <img src="./resources/images/feedback.png" class="icons my-3 cFeedback" width="13%" height="5%">
+        <div class="nav_text my-md-3 my-sm-4 text-muted feedback_gp">
+            <img src="./resources/images/feedback.png" class="icons my-md-3 my-sm-3 cFeedback" width="13%" height="5%">
             <p class="title feedback_text ms-1 mt-2">Customer's Feedback</p>
         </div>
         <!-- logout icon from left nav-->
         <div class="nav_text text-muted mb-5">
             <img src="./resources/images/Logout.png" alt="" class="nav_text icons">
             <span class="title ms-1">Logout</span>
-        </div>
-        </div>
-    </div>
-
+        </div><br>
+    </div><br>
+    </nav>
     <!-- fill boxes -->
-    <div class="col-10 ms-0 mt-4">
+    <div class="col-10 mt-4">
         <div class="box2">
-        <p class="upper_text mt-4">Send us a message and we'll get right back to you!</p>
+        <p class="upper_text fw-bold mt-4">Send us a message and we'll get right back to you!</p>
         <div class="sub_input mt-4">
             <!-- <p class="subject mb-0">Subject</p> -->
             <p class="mb-0 subject_text">Subject</p>
@@ -77,9 +76,9 @@
         </div>
 
         <!-- for message box -->
-        <div class="message_input mt-2">
+        <div class="message_input mt-4">
         <p class="message mb-0">Message</p>
-        <textarea name="" id="" cols="50" rows="8" class="mt-0"></textarea>
+        <textarea name="" id="" cols="50" rows="8" class="mt-0 message-box"></textarea>
         </div>
 
         <div>

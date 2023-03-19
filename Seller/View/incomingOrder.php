@@ -87,13 +87,13 @@
             <td class="seeMore"></td>
             </tr>
             <tr>
-                <td class="h6 td-text fw-bold">1</td>
-                <td class="h6 td-text fw-bold">2023/03/05</td>
-                <td class="h6 td-text fw-bold">DS_030001</td>
-                <td class="h6 td-text fw-bold title-name">
+                <td class="td-text fw-bold">1</td>
+                <td class="td-text fw-bold">2023/03/05</td>
+                <td class="td-text fw-bold">DS_030001</td>
+                <td class="td-text fw-bold title-name">
+                    <span class="types">
                     <span>Latte x  2</span>
-                    <br>
-                    <span>Pineapple Cake x 3</span>
+                    </span>
                     <span>
                     <ion-icon name="chevron-down-outline" class="down" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></ion-icon>
                     </span>
@@ -113,7 +113,14 @@
                 <td class=" td-text fw-bold">2</td>
                 <td class=" td-text fw-bold">2023/03/05</td>
                 <td class=" td-text fw-bold">DS_030001</td>
-                <td class=" td-text fw-bold title-name">Americano coffee x 2</td>
+                <td class=" td-text fw-bold title-name">
+                    <span class="types">
+                        <span>Americano coffee x 2</span>
+                    <span>
+                    <ion-icon name="chevron-down-outline" class="down" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></ion-icon>
+                    </span>
+                    </span>
+                </td>
                 <td class=" td-text fw-bold title-name">$12</td>
                 <td class=" td-text fw-bold title-name">2023/03/05 15:30:00</td>
                 <td class=" td-text fw-bold title-name">Pending</td>
