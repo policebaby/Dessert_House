@@ -57,6 +57,10 @@ td{
 .td-text{
     font-size:0.9em !important;
 }
+.types{
+    display:flex;
+    flex-direction: column;
+}
 .down{
     color:white;
     font-size:2em;
@@ -66,11 +70,18 @@ td{
     color:var(--primary-blue);
     cursor:pointer;
 }
+.total_items{
+    float:right;
+}
+.modal-header{
+    border-style:none !important;
+}
 /*for pigination */
 .pagination{
     margin-left:30%;
-    position:absolute;
+    position:relative;
     bottom:0;
+    margin-top:25% !important;
 }
 .p-one{
     color:var(--text-color-white) !important;
@@ -118,6 +129,44 @@ td{
     }
     .title-none{
         display:none;
+    }
+}
+/* for mobile view */
+@media screen and (max-width:468px){
+    .edit_nav{
+        width:2.7em !important;
+        max-height:100% !important;
+    }
+    .web_logo{
+        width:2em !important;
+        margin-top:1em;
+    }
+    .icons,.soldHistory-logo{
+        width:1em;
+    }
+    td{
+        padding:0 !important;
+        font-size:0.6em;
+    }
+    .td-text{
+        font-size:0.5em !important;
+        font-weight:800 !important;
+    }
+    tr{
+        line-height:1.5em !important;
+    }
+    .col-10{
+        width:80% !important;
+    }
+    .sold-title{
+        font-size:0.8em !important;
+        margin-left:-3.5em;
+        margin-top:1em !important;
+    }
+    .pagination{
+        position:relative;
+        font-size:0.6em;
+        margin-left:5.5em;
     }
 }
 

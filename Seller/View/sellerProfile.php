@@ -22,12 +22,12 @@
 <body>
     <div class=" row mt-0 seller_profile_page">
 
-    <div class="col-2 me-0 ms-0 edit_nav">
+    <div class="col-2 edit_nav">
     <div class="mt-3 mb-3 text-center">
             <img src="./resources/images/Ellipse 3.png" alt="logo" width="33%" class="nav_logo">
             <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
         </div>
-        <div class="ms-4">
+        <div class="ms-md-4 ms-sm-4">
         <!-- profile icon from left nav -->
         <div class="mt-4 nav_text">
             <img src="./resources/images/person.png" class="icons">
@@ -69,12 +69,12 @@
         </div>
         <div class="seller_name mt-4 profileLogo">
             <!-- name -->
-            <div class="me-3">
+            <div class="me-md-3 me-sm-3">
                 <input type="text" class="name edit_center MaryCafe" placeholder="Mary">
             </div>
 
             <!-- cafe name -->
-            <div class=" ms-3">
+            <div class=" ms-md-3 ms-sm-3">
                 <input type="text" class="shop_name edit_center MaryCafe" placeholder="cafe">
             </div>
 
