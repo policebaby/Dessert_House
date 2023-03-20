@@ -87,8 +87,6 @@ td{
 /*for pigination */
 .pagination{
     margin-left:30%;
-    position:absolute;
-    bottom:0;
 }
 .p-one{
     color:var(--text-color-white) !important;
