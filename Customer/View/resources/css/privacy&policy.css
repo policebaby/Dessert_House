@@ -133,30 +133,29 @@ body {
     width: 100% !important;
 }
 .pp_img{
-width: 80%;
-/* opacity: 45% !important; */
-margin-left: 10em ;
+width: 100%;
 }
 .pp_herosection{
-    position: relative !important;
+position: relative !important;
 }
 .pp_title{
-    position: absolute !important;
-    margin-top: 5em !important;
-    margin-left: 20em !important;
     font-family: var( --primaryFont);
     font-size: 2em !important;
-}
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 3em !important;
+  }
 .pp_paragraph{
     background-color: var(--userSecondarycolor) ;
     font-family: var(--primaryFont);
     font-size: var(--dsHeader);
-    margin-left: 12em;
+    margin-left: 10%;
+    margin-right: 5%;
     line-height: 2em;
     margin-bottom: 5em;
-    padding-right: 2em;
 }
-@media (max-width: 1264px) and (min-width: 1160px) {
+/* @media (max-width: 1264px) and (min-width: 1160px) {
     .pp_title{
         position: absolute !important;
         margin-top: 4.5em !important;
@@ -296,7 +295,7 @@ margin-left: 10em ;
       margin-left: 4em ;
       }
 }
-    /* p&p end */
+    p&p end */
     /* user footer start */
 .footer {
     width: 100% !important; 

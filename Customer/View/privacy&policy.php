@@ -33,12 +33,12 @@
     <!--P&P start-->
     <div class="pp_mainbody">
         <div class="pp_herosection">
-            <h4 class="pp_title">Privacy Policy</h4>
+    <h4 class="pp_title">Privacy Policy</h4>
             <img src="../View/resources/img/p&p (3).png" alt="" class="pp_img">
-        </div>
-        <div class="pp_paragraph">
+            </div>
+            <div class="pp_paragraph">
             <p>Your Privacy Policy will contain a variety of clauses depending on your business type and applicable             
-                law. Accordingly, there are certain clauses that every website, which collects personal data from           
+                law.Accordingly, there are certain clauses that every website, which collects personal data from           
                 visitors, should include in their Privacy Policies.</p>
             <br>
             <p>A website might collect information such as a user's address and name in order to ship products          

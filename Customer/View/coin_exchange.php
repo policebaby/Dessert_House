@@ -12,6 +12,10 @@
 
     <!-- css link end -->
     <!-- js link start -->
+    <script src="./resources/js/coin_exchange.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
     <!-- js link end -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,7 +71,7 @@
                         <input type="file" class="form-control" id="inputGroupFile02" >
                     </div>
                     <div class="mt-4">
-                        <button class="btn btnSubmit">Submit</button>
+                        <button type="button" id="submitBtn" class="btn btnSubmit">Submit</button>
                         <button class="btn btnCancel"> Cancel</button>
                     </div>
                 </form>

@@ -37,8 +37,6 @@
     <!-- nav bar end -->
     <!-- forget password start -->
     <div class="main_container">
-        <div class="first_row">
-        </div>
         <div class="card">
             <iconify-icon icon="material-symbols:check-circle-rounded" class="circle_icon"></iconify-icon>
             <p> Your password has been reset successfully! </p>
