@@ -7,40 +7,47 @@ body{
     overflow-x: hidden;
     height:100vh;
 }
-.sold_history,.main-page{
+.sold_history{
     max-height:100vh;
+    display:flex;
     background-color:var(--secondary-skyblue)!important;
 }
-.icons{
+.nav-icons{
+    font-size:2.5em !important;
     opacity:0.5;
 }
-.incoming-logo{
-    opacity:1 !important;
+.profile-icon{
+    font-size:3em !important;
+    color:var(--text-color-white) !important;
 }
-/* for sidebar nav */
-.edit_nav{
-    max-height:100% !important;
-    background-color:var(--primary-blue);
+.profile-names{
+    font-size:1.2em;
 }
-.nav_logo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.nav-names{
+    font-size:1.2em;
+    opacity:0.5;
 }
-.nav_text,.web_name{
-    color:var(--text-color-white);
-}
-.web_name{
-    font-family:"DM Serif Display","sans-serif";
-    font-size: 1.2em;
-}
-.feedback_gp{
+.side{
     display:flex;
+    max-height:100%;
+    margin-left:1.5em;
+    margin-top:1.5em;
+}
+.web-logo{
+    width:5em;
+}
+.web-name{
+    font-family:"DM Serif Display";
+    font-size:1.2em;
+}
+.side-nav{
+    width:15em;
+    height:100% !important;
+    background-color:var(--primary-blue);
+    color:var(--text-color-white);
 }
 /* for page */
 tr{
-    width:6em !important;
     line-height:2.5em;
 }
 .t-head{
@@ -48,7 +55,7 @@ tr{
     background-color:var(--primary-blue) !important;
 }
 .color-tr{
-    background-color:var(--tr-second-color);
+    background-color:#0b00332a;
     height:2em !important;
 }
 td{
