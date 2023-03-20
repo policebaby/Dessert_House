@@ -25,12 +25,12 @@
         <nav class="col-2 mt-0">
         <div class="edit_nav">
     <div class="nav_logo">
-            <img src="./resources/images/Ellipse 3.png" alt="logo" width="35%" class="web_logo mt-5">
+            <img src="./resources/images/Ellipse 3.png" alt="logo" width="35%" class="web_logo mt-md-5 mt-sm-5">
             <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
     </div>
     <div class="ms-md-4">
         <!-- profile icon from left nav -->
-        <div class="nav_text  mt-4">
+        <div class="nav_text  mt-md-4 mt-sm-4">
             <img src="./resources/images/person.png" class="icons">
             <span class="title ms-1">Profile</span>
         </div>
@@ -56,7 +56,7 @@
         </div>
         <!-- feedback icon -->
         <div class="nav_text mt-md-5 text-muted feedback_gp">
-            <img src="./resources/images/feedback.png" class="icons cFeedback mt-1" width="13%" height="5%" >
+            <img src="./resources/images/feedback.png" class="icons cFeedback mt-md-1 mt-sm-1" width="13%" height="5%" >
             <p class="title feedback_text ms-1">Customer's Feedback</p>
         </div>
         <!-- logout icon from left nav-->
@@ -78,54 +78,54 @@
         <span class="edit_photo_bg">
             <img src="./resources/images/editPhoto.png" class="editPhoto">
         </span>
-        <div class="mb-3 mt-3">
+        <div class="mb-3 mt-md-3 mt-sm-3">
             <input class="form-control" type="file" id="formFile">
         </div>
         </div>
 
         <!-- sellerName and old password input box -->
         <div class="mt-4 label_box_row">
-            <span class="label_box mb-sm-3">
-                <label for="sellerName" class="coner_label">Seller Name</label>
+            <span class="label_box mb-sm-3 lbox1">
+                <label for="sellerName" class="coner_label fw-bold">Seller Name</label>
                 <input type="text" placeholder="enter your name" class="input_box">
             </span>
 
             <span class="label_box ms-md-5">
-                <label for="oldPassword" class="coner_label">Old Password</label>
+                <label for="oldPassword" class="coner_label fw-bold">Old Password</label>
                 <input type="password" placeholder="enter your old password" class="input_box">
             </span>
         </div>
 
         <!-- shopName and new password box -->
         <div class="label_box_row mt-3">
-            <span class="label_box mb-sm-3">
-                <label for="shopName" class="coner_label">Shop Name</label>
+            <span class="label_box mb-sm-3 lbox2">
+                <label for="shopName" class="coner_label fw-bold">Shop Name</label>
                 <input type="text" placeholder="enter your shop name" class="input_box">
             </span>
             <span class="label_box ms-md-5">
-                <label for="newPassword" class="coner_label">New Password</label>
+                <label for="newPassword" class="coner_label fw-bold">New Password</label>
                 <input type="password" placeholder="enter your new password" class="input_box">
             </span>
         </div>
         <!-- phone and confirm password box -->
         <div class="label_box_row mt-3">
-            <span class="label_box mb-sm-3">
-                <label for="phone" class="coner_label">Phone</label>
+            <span class="label_box mb-sm-3 lbox2">
+                <label for="phone" class="coner_label fw-bold">Phone</label>
                 <input type="text" placeholder="enter your phone number" class="input_box">
             </span>
             <span class="label_box ms-md-5">
-                <label for="newPassword" class="coner_label">Confirm Password</label>
+                <label for="newPassword" class="coner_label fw-bold">Confirm Password</label>
                 <input type="password" placeholder="confirm your new password" class="input_box">
             </span>
         </div>
         <!-- email box -->
-        <div class="label_box mt-3">
-            <label for="email">Email</label>
+        <div class="label_box mt-md-3 mt-sm-3">
+            <label for="email" class="email fw-bold">Email</label>
             <input type="email" placeholder="enter your email" class="input_box">
         </div>
 
         <!-- button -->
-        <div class="mt-4 mb-sm-5">
+        <div class="mt-md-4 mt-sm-4 mb-sm-5">
             <span>
                 <button class="btns saveBtn">Save Profile</button>
             </span>

@@ -39,8 +39,6 @@
     <!-- nav bar end -->
     <!-- forget password start -->
     <div class="main_div">
-        <div class="brown_role">
-        </div>
         <div class="white_card">
             <iconify-icon icon="bx:question-mark" class="q_icon"></iconify-icon>
             <p class="title">Forget Password?</p>
@@ -53,4 +51,5 @@
     <?php include "./footer.php"  ?>
     <!-- footer end -->
 </body>
+
 </html>

@@ -25,14 +25,13 @@
     <script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
+
 <body>
-        <!-- nav bar start -->
-        <?php include "./nav.php"  ?>
+    <!-- nav bar start -->
+    <?php include "./nav.php"  ?>
     <!-- nav bar end -->
     <!-- reset password start -->
     <div class="div_main">
-        <div class="first_pi">
-        </div>
         <div class="pi_card">
             <iconify-icon icon="ion:lock-closed-sharp" class="lock_icon"></iconify-icon>
             <p class="title">Reset your password?</p>
@@ -44,8 +43,8 @@
         </div>
     </div>
     <!-- reset password start -->
-        <!-- footer start -->
-        <?php include "./footer.php"  ?>
+    <!-- footer start -->
+    <?php include "./footer.php"  ?>
     <!-- footer end -->
 </body>
 

@@ -61,17 +61,13 @@ body{
     border-style:none;
     background-color: var(--primary-blue);
     color:var(--text-color-white);
+    margin-left:10em;
 }
 .send_btn:hover{
     box-shadow:4px 4px 8px var(--primary-blue) !important;
 }
 
-
-
-
-
-
-@media screen and (max-width:700px){
+@media screen and (max-width:720px){
     body{
         overflow-x: hidden;
     }
@@ -80,16 +76,9 @@ body{
     }
     .web_logo{
         width:65% !important;
-        margin-left:15%;
-    }
-    .nav_text{
-        text-align: center;
     }
     .icons{
-        width:45%;
-    }
-    .cFeedback{
-        margin-left:17%;
+        width:2em;
     }
     .footer_text{
         font-size:0.8em !important;
@@ -99,5 +88,63 @@ body{
     }
     .box2{
         margin-left:3% !important;
+    }
+}
+
+/* for mobile view */
+@media screen and (max-width:468px){
+    /* for nav */
+    .edit_nav{
+        width:2.7em !important;
+        max-height:100% !important;
+        position:fixed;
+    }
+    .web_logo{
+        margin-top:2em;
+        width:1.8em !important;
+    }
+    .col-2{
+        max-height:100% !important;
+    }
+    .icons{
+        width:1em;
+        margin-left:0.8em;
+        margin-top:1.5em;
+    }
+    .cFeedback{
+        margin-left:29%;
+    }
+    /* for page */
+    .upper_text{
+        font-size:0.6em;
+        font-weight:900;
+        margin-left:1.6em !important;
+    }
+    .subject_text,.message{
+        font-size:0.6em;
+        font-weight:600;
+    }
+    .sub_box{
+        width:13em !important;
+        height:1.3em !important;
+    }
+    .sub_input{
+        margin-left:1em;
+    }
+    .message-box{
+        width:13em !important;
+        height:5em !important;
+    }
+    .message_input{
+        margin-left:1em;
+    }
+    .send_btn{
+        font-size:0.6em !important;
+        margin-left:8em;
+    }
+    .footer_text{
+        font-size:0.4em !important;
+        margin-left:1em;
+        font-weight:600;
     }
 }

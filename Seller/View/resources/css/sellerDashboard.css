@@ -42,7 +42,7 @@ body{
     width:13em !important;
     height:9.5em;
     border-radius:0.5em;
-    margin:1.5em !important;
+    margin:0.8em !important;
     text-align: center;
     color:var(--text-color-white);
     background-color:var(--primary-blue);
@@ -59,7 +59,7 @@ body{
     opacity:0.6;
 }
 .second_row_second{
-    width:33em;
+    width:33.5em !important;
     height:34em;
     border-radius:0.5em;
     background-color:var(--primary-blue);
@@ -95,8 +95,9 @@ body{
     opacity:0.8;
 }
 .feedback_card{
-    width:30em;
+    width:28em;
     height:7.5em;
+    margin-left:-2em !important;
     border-style:none;
     border-radius:0.5em;
     background-color:var(--secondary-skyblue);
@@ -133,7 +134,12 @@ body{
 .view:hover{
     box-shadow:0 0 8px var(--secondary-skyblue) !important;
 }
-
+.bs-1{
+    display:flex;
+}
+.bs-2{
+    display:flex;
+}
 
 @media screen and (max-width:720px){
     body{
@@ -169,13 +175,15 @@ body{
         margin-left:25% !important;
     }
     .second_row_second{
+        width:26em !important;
         height:33em;
+        margin-left:1em;
     }
     .blue_squares{
-        width:9.5em !important;
+        width:11em !important;
     }
     .feedback_card{
-        width:18.8em;
+        width:22em;
         height:7.5em;
     }
     .feedback_header{
@@ -188,5 +196,103 @@ body{
         height:2.2em;
         font-size:0.5em;
         margin-left:66%;
+    }
+    .bs-1{
+        display:flex;
+        margin-left:7.6em;
+    }
+    .bs-2{
+        display:flex;
+        flex-direction:column;
+    }
+    .view{
+        width:5em !important;
+    }
+}
+
+/* for mobile view */
+@media screen and (max-width:468px){
+    .edit_nav{
+        position:fixed;
+        width:2.7em !important;
+        height:100% !important;
+    }
+    .web_logo{
+        width:2em;
+    }
+    .icons{
+        width:1.2em;
+        margin-top:1.3em;
+    }
+    .blue_squares{
+        width:15em !important;
+        height:12em;
+        font-size:0.5em;
+        /* margin-left:-1em !important; */
+    }
+    .bs-2{
+        margin-left:-3.5em;
+    }
+    .icon21{
+        margin-top:1em;
+    }
+    .text_21{
+        margin-top:0.3em;
+    }
+    .second_row_first{
+        width:15.5em !important;
+        height:10em !important;
+        margin-left:-2em;
+    }
+    .user-per-text{
+        font-size:0.4em;
+        margin-left:1em;
+    }
+    .smile{
+        width:1em !important;
+        margin-top:-0.5em;
+    }
+    .cent{
+        font-size:0.4em;
+    }
+    .emoji{
+        width:1em;
+        margin-left:3em;
+    }
+    .second_row_second{
+        width:15.5em !important;
+        height:25em !important;
+        margin-left:-1.8em;
+        margin-top:1em !important;
+    }
+    .feedback_header{
+        font-size:0.6em;
+    }
+    .feedback_card{
+        width:13.3em !important;
+        height:6em !important;
+        margin-left:0.3em !important;
+    }
+    .dis{
+        font-size:0.6em;
+        margin-left:-1em;
+    }
+    .user_name{
+        font-size:0.5em;
+        font-weight:800;
+        margin-left:-1em;
+    }
+    .user_text{
+        margin-left:2em;
+        font-size:0.5em;
+    }
+    .replyBtn{
+        font-size:0.4em !important;
+        margin-left:18em;
+    }
+    .view{
+        width:5em !important;
+        font-size:0.5em;
+        margin-left:9em;
     }
 }

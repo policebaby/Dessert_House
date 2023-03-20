@@ -56,7 +56,7 @@
         </div>
         <!-- feedback icon -->
         <div class="nav_text mt-md-5 active feedback_gp">
-            <img src="./resources/images/feedback.png" class="icons cFeedback mt-1" width="13%" height="5%" >
+            <img src="./resources/images/feedback.png" class="icons cFeedback mt-md-1 mt-sm-1" width="13%" height="5%" >
             <p class="title feedback_text ms-1">Customer's Feedback</p>
         </div>
         <!-- logout icon from left nav-->
@@ -80,11 +80,11 @@
                         <span class="h3 fw-bold per-text">75%</span>
                         <img src="./resources/images/happy-face.png" class="smile-face">
                     </div>
-                    <p class="ms-3 fw-bold above-text">Above Average</p>
+                    <p class="ms-md-3 ms-sm-3 fw-bold above-text">Above Average</p>
                 </div>
                 </div>
                 <!-- for progress gp -->
-                <div class="col-9">
+                <div class="col-md-9 col-sm-9">
                 <div class="progress-gp">
                     <!-- progress 1 -->
                     <div class="each-progress">
@@ -123,9 +123,9 @@
             </div>
 
             <!-- review cards -->
-            <p class="fw-bold mt-2 ms-3">Reviews</p>
+            <p class="fw-bold mt-2 ms-md-3 ms-sm-3 review-title">Reviews</p>
             <div>
-                <div class="each-review ms-3">
+                <div class="each-review ms-md-3 ms-sm-3">
                     <div class="details mt-2">
                         <div class="dis me-1 mt-md-2 mt-sm-2 ms-2"></div>
                         <span class="ms-md-3 ms-sm-3 fw-bold">username</span>
@@ -138,7 +138,7 @@
                     <span class="reply-text mb-1">Reply</span>
                 </div>
                 <!-- for reply review -->
-                <div class="each-review mt-4 ms-3 mb-sm-5 space-bottom">
+                <div class="each-review mt-md-4 mt-sm-4 ms-md-3 ms-sm-3 mb-sm-5 space-bottom">
                     <div class="details mt-2">
                         <div class="dis me-1 mt-md-2 mt-sm-2 ms-2"></div>
                         <span class="ms-md-3 ms-sm-3 fw-bold">username</span>

@@ -31,15 +31,15 @@
             <img src="./resources/images/Ellipse 3.png" alt="logo" width="35%" class="web_logo mt-5">
             <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
     </div>
-        <div class="ms-4">
+        <div class="ms-md-4 ms-sm-4">
         <!-- profile icon from left nav -->
         <div class="mt-4 nav_text text-muted">
             <img src="./resources/images/person.png" class="icons">
             <span class="title ms-1">Profile</span>
         </div>
         <!-- meun icon from left nav -->
-        <div class="nav_text my-md-5 text-muted">
-            <img src="./resources/images/menu.png" class="my-3 icons">
+        <div class="nav_text my-md-5 active">
+            <img src="./resources/images/menu.png" class="my-3 product-logo">
             <span class="title ms-1">Product Menu</span>
         </div>
         <!-- order list icon from left nav -->
@@ -59,7 +59,7 @@
         </div>
         <!-- feedback icon -->
         <div class="nav_text mt-md-5 text-muted feedback_gp">
-            <img src="./resources/images/feedback.png" class="icons cFeedback mt-1 mb-3" width="13%" height="5%">
+            <img src="./resources/images/feedback.png" class="icons cFeedback mt-md-1 mt-sm-1 mb-3" width="13%" height="5%">
             <p class="title feedback_text ms-1 mt-0">Customer's Feedback</p>
         </div>
         <!-- logout icon from left nav-->
@@ -74,43 +74,43 @@
         <div class="first-row row mb-5 me-5">
             <div class="first-row-first col-md-5 ms-sm-5">
                 <div class="seller-photo mb-2"></div>
-                <input class="form-control mt-2 ms-sm-5" type="file" id="formFile">
+                <input class="form-control mt-2 ms-md-3" type="file" id="formFile">
             </div>
 
             <div class="first-row-second col-md-5 mt-md-4 mt-sm-5">
-                <p class="fw-bold">Insert New Product's Information</p>
+                <p class="fw-bold insert-title">Insert New Product's Information</p>
                 <div class="label-box">
-                    <label for="new-product-name texts">New Product Name</label>
+                    <label for="new-product-name texts" class="fw-bold">New Product Name</label>
                     <input type="text" class="input-box">
                 </div>
-                <div class="label-box my-3">
-                    <label for="product-type">Product Type</label>
+                <div class="label-box my-md-3 my-sm-3">
+                    <label for="product-type" class="fw-bold">Product Type</label>
                     <input type="text" class="input-box">
                 </div>
-                <div class="label-box mb-5">
-                    <label for="price-of-each-product">Price Of Each Product</label>
+                <div class="label-box mb-md-5 mb-sm-5">
+                    <label for="price-of-each-product" class="fw-bold">Price Of Each Product</label>
                     <input type="text" class="input-box">
                 </div>
-                <div class="mb-5">
+                <div class="mb-md-5 mb-sm-5">
                     <button class="btns add-btn">Add</button>
                     <button class="btns ms-4 cancel-btn">Cancel</button>
                 </div>
             </div>
         </div>
 
-        <div class="second-row mt-5 ms-5">
+        <div class="second-row mt-5">
             <p class="product-menu-text fw-bold">Product Menu</p>
-            <div class="mt-3 text-center ms-5 row">
-                <div class="blue-width">
-                    <table class="table table-borderless w-75 ms-4">
+            <div class="mt-3 text-center me-md-2 row">
+                <div class="blue-width me-md-4 me-sm-1">
+                    <table class="table table-borderless ms-sm-1 ms-md-1">
                         <tr class="t-head">
-                            <td class="w-sm-100">Dessert Name</td>
-                            <td class="w-sm-100">Price</td>
-                            <td class="w-sm-100">Product Type</td>
-                            <td class="w-sm-100">
+                            <td class="col-md-3">Dessert Name</td>
+                            <td class="col-md-2">Price</td>
+                            <td class="col-md-3">Product Type</td>
+                            <td class="col-md-2">
                                 <a href="">Edit</a>
                             </td>
-                            <td class="w-sm-100">
+                            <td class="col-2">
                                 <a href="" class="text-danger">Delete</a>
                             </td>
                         </tr>

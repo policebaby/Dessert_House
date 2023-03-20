@@ -65,8 +65,33 @@ body{
     align-items:center;
 }
 
-@media screen and (max-width:700px){
+@media screen and (max-width:720px){
     .login-bg-photo{
         display:none;
     }
+}
+
+/* for mobile view */
+@media screen and (max-width:468px){
+    .web-logo{
+        width:4em;
+        margin-top:1em;
+        margin-left:-2em;
+    }
+    .login-text{
+        margin-top:0.7em;
+        margin-left:-2em;
+    }
+    .box1,.loginBtn{
+        margin-left:-2em;
+        width:15em !important;
+    }
+    .header__center{
+        margin-left:-3.3em;
+        grid-column-gap: 1em;
+    }
+    .social3{
+        margin-left:-2em;
+    }
+
 }
