@@ -34,7 +34,7 @@
                 <div class="reserveForm  ">
                     <p class="text-center text-light fs-4">Reservation Form</p>
                     <div class="p-3">
-                        <form onsubmit="return reserve(this)">
+                        <form >
                             <!-- input group start -->
                             <div class="mb-4">
                                 <input type="text" class="form-control outlineColor" id="" placeholder="User Name">
@@ -70,7 +70,7 @@
                             </div>
                             <!-- person count end -->
                             <div class="d-flex justify-content-end">
-                                <button type="submit" id="btnBook" class="btn  btnBook">Book Seat</button>
+                                <button type="button" id="btnBook" class="btn  btnBook">Book Seat</button>
                                 <button type="submit"  class="btn btnCancel">Cancel</button>
 
                             </div>
