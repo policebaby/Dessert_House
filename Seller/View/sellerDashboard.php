@@ -69,36 +69,42 @@
 
         
         <div class="col-md-10">
-            <div class="first-row mt-2 row">
-                <div class=" col-md-2 mx-md-4 col-sm-3 mx-sm-5">
+            <!-- <div class="first-row mt-2 row"> -->
+                <div class="bs-2 ms-md-4 ms-sm-5">
+                <div class="bs-1">
+                    <!-- <div class=" col-md-2 mx-md-4 col-sm-3 mx-sm-5"> -->
                     <div class="blue_squares">
                         <img src="./resources/images/itemCount.png" class="mt-md-3 mt-sm-3 icon21">
                         <p class="text_21 mt-md-2 mt-sm-2">21</p>
                         <span class="blue_name">Item Count</span>
                     </div>
-                </div>
-                <div class=" col-md-2 mx-md-4 col-sm-3 mx-sm-5">
-                    <div class="blue_squares">
+                <!-- </div> -->
+                <!-- <div class=" col-md-2 mx-md-4 col-sm-3 mx-sm-5"> -->
+                    <div class="blue_squares ms-sm-5 ms-md-0">
                         <img src="./resources/images/total.png" class="mt-md-3 mt-sm-3 icon21">
                         <p class="text_21 mt-md-2 mt-sm-2">21</p>
                         <p class="blue_name">Total Order</p>
                     </div>
+                <!-- </div> -->
                 </div>
-                <div class=" col-md-2 mx-md-4 col-sm-3 mx-sm-5">
+                <div class="bs-1">
+                    <!-- <div class=" col-md-2 mx-md-4 col-sm-3 mx-sm-5"> -->
                     <div class="blue_squares">
                         <img src="./resources/images/soldCount.png" class="mt-md-3 mt-sm-3 icon21">
                         <p class="text_21 mt-md-2 mt-sm-2">21</p>
                         <p class="blue_name">Sold Item Count</p>
                     </div> 
-                </div>
-                <div class=" col-md-2 mx-md-4 col-sm-3 mx-sm-5">
-                    <div class="blue_squares">
+                <!-- </div> -->
+                <!-- <div class=" col-md-2 mx-md-4 col-sm-3 mx-sm-5"> -->
+                    <div class="blue_squares ms-sm-5 ms-md-0">
                         <img src="./resources/images/pendingOrder.png" class="mt-md-3 mt-sm-3 icon21">
                         <p class="text_21 mt-md-2 mt-sm-2">21</p>
                         <p class="blue_name">Pending Orders</p>
                     </div>
+                <!-- </div> -->
                 </div>
-            </div>
+            <!-- </div> -->
+                </div>
 
                 <div class="second-row row">
                 <span class="second_row_first mt-2 ms-md-5 col-md-4 col-sm-10 ms-sm-3">
