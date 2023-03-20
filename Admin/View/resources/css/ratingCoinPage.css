@@ -185,6 +185,10 @@ table {
     flex-direction: column;
 }
 
+.coinHistoryContainer > div:first-of-type{
+  padding-left: 2em;
+}
+
 /* Separator */
 .separator{
     width: 90%;

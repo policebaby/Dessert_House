@@ -5,7 +5,6 @@
     background-color:#710C05;
     color: white;
     border-radius: 1em;
-
   }
 
   /* Adjust icons and texts positions inside the rating block */
@@ -28,4 +27,6 @@
     display: inline-block;
     margin-left: 42%;
   }
+
+
 

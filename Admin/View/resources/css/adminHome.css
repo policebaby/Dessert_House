@@ -9,10 +9,104 @@ body{
     width: 100vw;
 }
 
+/* Big Container */
 .blocks{
     position: absolute;
+    height: 60vh;
     width: 80%;
-    left: 25%;
+    left: 22%;
     top: 15%;
-
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
 }
+
+/*Adjust the rating block color and sizes */
+.ratingBlock {
+    height: 55%;
+    width: 60%;
+    background-color:#710C05;
+    color: white;
+    border-radius: 1em;
+  }
+
+  /* Adjust icons and texts positions inside the rating block */
+  .iconAndShopName{
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    align-items: center;
+    padding-top: 1em;
+  }
+
+  .shopName{
+    font-size: 1.2rem;
+    margin-bottom: 0.6em;
+    padding-right: 0.8em;
+  }
+
+  .percent {
+    font-size: 2em;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 46%;
+  }
+
+  .satisfactoryPercentage{
+    font-size: 2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-left: 36%;
+  }
+
+   /* System Profit Lower Big Container */
+.systemProfitContainer{
+  background-color:#710C05;
+  height: 90%;
+  width: 60%;
+  border-radius: 10px;
+  color: white;
+  font-size: var(--header);
+  display: flex;
+  flex-direction: column;
+  border-radius: 1em;
+}
+
+.systemProfitContainer > div:first-of-type{
+padding-left: 2em;
+}
+
+/* Separator */
+.separator{
+  width: 90%;
+  height:0.1em;
+  background-color:white;
+  margin: auto;
+  margin-top: 1em;
+}
+
+/* Dollar Coin */
+.dollarIcon{
+  margin: 1em;
+}
+
+.countAndDownArrow{
+  display: flex;
+  justify-content:space-between;
+}
+
+.countAndDownArrow div,.countAndUpArrow div{
+ font-size: 2em;
+}
+
+.yesterdayCoinContainer,.todayCoinContainer{
+  margin: 2em 2em 0 2em;
+}
+
+.countAndUpArrow{
+  display: flex;
+  justify-content: space-between;
+}
+
