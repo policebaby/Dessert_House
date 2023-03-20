@@ -7,8 +7,9 @@
 }
 .login_form{
   display: flex;
+  align-items: center;
   justify-content: center;
-
+  margin-top: 2em !important;
 }
 .frame{
   text-align: center;
@@ -25,7 +26,6 @@
   width: 4.5em;
   height: 4.5em;
 }
-
 .outlineColor{
   width: 20em !important;
   height: 3.3em !important;
@@ -34,6 +34,9 @@
   border-width: 0.1em !important;
   border-color: var(--userPrimarycolor) !important;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .btnlogin {
   color: var(--primaryTextcolor) !important;
@@ -42,13 +45,21 @@
   background-color: var(--userPrimarycolor) !important;
   border-radius: .7em !important;
 }
+.lastbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lastbar_icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
 .two_lines{
-  float: none;
   position: relative;
-  text-align: right !important;
-  width: 76%;
-  box-sizing: border-box;
-margin-top: 3em;
+  width: 100%;
+margin-top: 2em;
 }
 .two_lines .line{
   border-top: .2em solid #C22014;
@@ -57,38 +68,23 @@ margin-top: 3em;
   width: 32%;
 }
 .two_lines span{
-  font-size: 1em !important;
+  font-size: .9em !important;
 background-color:transparent;
 color: var(--primaryTextcolor);
-margin-left: .9em !important;
 }
-.login_icons{
-display: flex;
-margin-left: 1em;
-margin-top: 3em;
-}
+ .line_right{
+  margin-left: -2.5em !important;
+} 
 .login_icon{
 font-size: 3em !important;
-width: 2.5em !important;
 }
 
 @media (max-width:500px) and (min-width:380px){
-  .two_lines span{
-    font-size: .7em !important;
-  background-color:transparent;
-  color: var(--primaryTextcolor);
-  margin-left: .9em !important;
+  .bg_img{
+    background-image: url(../img/bgImg1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    /* opacity: 80%; */
   }
-
-  .two_lines{
-    margin-left: 1em !important;
-  }
-  .login_icons{
-    margin-left: 2em;
-    }
-    .logo{
-      width: 4.5em;
-      height: 4.5em;
-      margin-left: 2.5em !important;
-    }
 }

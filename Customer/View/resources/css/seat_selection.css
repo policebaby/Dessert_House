@@ -101,7 +101,7 @@
   margin-right: 0.5em !important;
   margin-top: 0.5em !important;
 }
-.F_table,
+/* .F_table,
 .E_table {
   margin-top: 1em !important;
   margin-left: 0em !important;
@@ -135,7 +135,7 @@
 }
 .tone {
   display: flex;
-}
+} */
 .green {
   width: 1.5em !important;
   height: 1.5em !important;

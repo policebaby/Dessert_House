@@ -31,7 +31,7 @@
 <body class="container-fluid position-relative">
     <div class=" row bg_img">
         <!-- reservationForm start -->
-        <div class="col-md-6  login_bg">
+        <div class="col-md-5  login_bg">
             <div class="logo_border">
                 <img src="../View/resources/img/logo.png" alt="logo" class="logo" />
                 <div class="frame">
@@ -46,21 +46,25 @@
                                 <input type="text" class="form-control outlineColor" id="" placeholder="Password">
                             </div>
                             <!-- input group end -->
-                            <button type="submit" class="btn btnlogin">log in</button>
+                            <button type="submit" class="btn btnlogin mt-3">log in</button>
                             <!-- line start -->
         <!-- text between two lines -->
+        <div class="lastbar">
         <div class="two_lines">
                     <div class="row">
                         <div class="col-3"><div class="line_left line"></div></div>
-                        <div class="col-6"><span>login with other</span></div>
+                        <div class="col-6 "><span>login with other</span></div>
                         <div class="col-3"><div class="line_right line"></div></div>
                     </div>
         </div>
+        </div>
         <!-- Three icons -->
-        <div class="login_icons">
+        <div class="lastbar_icon">
+        <div class="login_icons mt-4 fs-6 align-center">
         <iconify-icon icon="logos:facebook" class="login_icon"></iconify-icon>
-        <iconify-icon icon="skill-icons:twitter" class="login_icon"></iconify-icon>
+        <iconify-icon icon="skill-icons:twitter" class="login_icon mx-5"></iconify-icon>
         <iconify-icon icon="logos:google-icon" class="login_icon"></iconify-icon>
+        </div>
         </div>
                             <!-- line end -->
                         </form>

@@ -6,12 +6,13 @@
     /* opacity: 80%; */
   }
   .signup_bg{
-    padding: 1.5em;
+    padding: 1em;
     background-color: rgb(163, 122, 92,0.7)  !important;
     height: 100vh;
   }
   .title{
     font-weight: var(--dsFontweightSemi);
+    text-align: center !important;
   }
   .logo{
     width: 4.5em;
@@ -19,7 +20,9 @@
     margin-left: 5.5em !important;
   }
   .signup_input{
-  margin-left: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .outlineColor{
     width: 20em !important;
@@ -36,23 +39,23 @@
     height: 2.9em !important;
     background-color: var(--userPrimarycolor) !important;
     border-radius: .7em !important;
-    margin-left: 19%;
+  }
+  .btn_signup button{
+    background-color: transparent;
+    border-style: none;
+    color: white;
   }
   .ask_bar{
-    display: flex;
     color: white !important;
     cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-between !important;
   }
   .ask_bar u{
     margin-top: .5em !important;
   }
   @media (max-width:500px) and (min-width:380px){
-    .signup_input{
-      margin-left: 5%;
-      }
-    .btn_signup{
-      margin-left: 23%;
-    }
       .logo{
         width: 4.5em;
         height: 4.5em;

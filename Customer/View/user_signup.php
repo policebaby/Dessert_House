@@ -57,7 +57,7 @@
                             <!-- input group end -->
                             <div class="ask_bar">
                             <u>Already Account?</u>
-                            <button type="submit" class="btn btn_signup">Sign Up</button>
+                            <div class="btn btn_signup"><button type="submit" >Sign Up</button></div>
                             </div>
                         </form>
                     </div>

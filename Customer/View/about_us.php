@@ -46,45 +46,51 @@
     <!--about us start-->
     <div class="about_us_body">
         <div class="row first_para">
-            <div class="col-md-10 offset-md-2">
+            <div class="col-12">
                 <h4 class="title">About Us</h4>
-                <p class="text">
+                <p class="text paragraph">
                     This information is essential and is not collected more than necessary. This is very different from
-                    a website <br> that collects users'names and addresses and then sells it to a third party for marketing
-                    purposes.Our Shop <br> just uses a crisp drain and similar Mocha Italia mix as our shops to make the
-                    ideal.You haven’t tasted cafe <br> until the point when you’ve tasted Costa.
+                    a website  that collects <br> users'names and addresses and then sells it to a third party for marketing
+                    purposes.Our Shop  just uses a crisp drain  and<br> similar Mocha Italia mix as our shops to make the
+                    ideal.You haven’t tasted cafe  until the point when you’ve tasted Costa.
                 </p>
             </div>
         </div>
 
         <div class="row second_para">
-            <div class="col-md-5 offset-md-2 ">
+            <div class="paragraph">
+            <div class="col-md-6 paragraph">
                 <img src="../View/resources/img/about_us_1.png" alt="about_us" class="para1_pic">
             </div>
-            <div class="col-md-5">
+            <div class="col-md-6 paragraph">
+                <div class="first">
                 <h4 class="para1_title">Our Team</h4>
-                <p class="text">This information is essential <br>
+                <p class="text paragraph">This information is essential <br>
                     and is not collected more than <br>
                     necessary. This is very different <br>
                     from a website that collects users .
                 </p>
+                </div>
+            </div>
             </div>
         </div>
         <div class="row third_para">
-            <div class="col-md-5 offset-md-2 ">
+        <div class="paragraph">
+            <div class="col-md-6 paragraph">
+            <div class="first">
                 <h4 class="para2_title">Customer Care</h4>
-                <p class="text">This information is essential <br>
+                <p class="text paragraph">This information is essential <br>
                     and is not collected more than <br>
                     necessary. This is very different <br>
                     from a website that collects users .
                 </p>
-
+                </div>
             </div>
-            <div class="col-md-5 ">
+            <div class="col-md-6 paragraph">
                 <img src="../View/resources/img/about_us_2.png" alt="about_us" class="para2_pic">
             </div>
         </div>
-
+        </div>
     </div>
     <!--about us end-->
 
