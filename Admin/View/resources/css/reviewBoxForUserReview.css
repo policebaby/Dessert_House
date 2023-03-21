@@ -1,0 +1,56 @@
+/* To adjust the review box container position */
+.reviewBoxContainer{
+    height: auto;
+    width: 60%;
+    border: 2px solid #c22014;
+    position: absolute;
+    top: 18%;
+    left: 35%;
+    margin-bottom: 2%;
+}
+
+/* user box */
+.userDetails{
+    height: 30%;
+    display: flex;
+}
+
+.userProfile{
+    height: 2.5em;
+    width: 3.5%;
+    background-color: #710C05;
+    border-radius: 50%;
+    margin: 1%;
+}
+
+.userNameandDate{
+    margin-top: 1em;
+}
+
+.userName{
+    font-weight: bolder;
+}
+
+.date{
+    font-size: 0.2em;
+    color: grey;
+}
+
+/* face and message box */
+.faceAndMessage{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* comment box */
+.comment{
+    margin-top: 1em;
+    width: 80%;
+    margin-left: 10%;
+    display: inline-block;
+    margin-bottom: 1em;
+}

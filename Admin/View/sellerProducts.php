@@ -9,9 +9,11 @@
     <!-- Link with CSS root,adminSellerAccountList, nav bar , admin dashboard for seller controller,rating block -->
     <link rel="stylesheet" href="./resources/css/root.css">
     <link rel="stylesheet" href="./resources/css/navbar.css">
-    <link rel="stylesheet" href="./resources/css/createSellerAccount.css">
+    <link rel="stylesheet" href="./resources/css/sellerRatings.css">
     <link rel="stylesheet" href="./resources/css/adminDashboardforSellerController.css">
-    <link rel="stylesheet" href="./resources/css/ratingBlock.css">
+    <link rel="stylesheet" href="./resources/css/sellerProducts.css">
+    <link rel="stylesheet" href="./resources/css/pagination.css">
+   
 
 
     <!-- Import google fonts: public display & dm sen serif -->
@@ -19,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans&display=swap" rel="stylesheet">
 
-    <title>Seller Ratings</title>
+    <title>Seller Products</title>
 </head>
 
 <body>
@@ -99,50 +101,44 @@
         </div>
     </div>
 
-    <!-- Create Account Body -->
-    <div class="createAccountContainer">
 
-    <!-- Create Account title and successfully created line container -->
-        <div class="createHeader">
-            <div class="createTitle">Create Account</div>
-            <div class="successCreated">
-                <svg class="stick" width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <mask id="mask0_588_352" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="17">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2 8.69643L4.02546 6.46429L8.07639 10.9286L16.1782 2L18.2037 4.23214L8.07639 15.3929L2 8.69643Z" fill="white" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </mask>
-                    <g mask="url(#mask0_588_352)">
-                        <path d="M-1 -0.570312H18.4444V20.8583H-1V-0.570312Z" fill="#42CD29" />
-                    </g>
-                </svg>
-                <div class="circleForStick"></div>
-            </div>
-            <div class="stext">Successfully created</div>
+     <!-- Table  -->
+     <div class="container">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Seller Account</th>
+                        <th>Contact Info</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="No">1</td>
+                        <td data-label="Id">001</td>
+                        <td data-label="Name"><a href="">Frost Goddess</a></td>
+                        <td data-label="Seller Account">Pedri</td>
+                        <td data-label="Contact Info">+959 888888888</br>frostgoddess@gmail.com</td>                      
+                    </tr>
+                </tbody>
+            </table>
         </div>
-
-        <!-- titles and input boxes -->
-        <div class="labels">
-            <div class="description">SHOP NAME</div>
-            <input type="text">
-        </div>
-        <div class="labels">
-            <div class="description">EMAIL</div>
-            <input type="text">
-        </div>
-        <div class="labels">
-            <div class="description">PASSWORD</div>
-            <input type="text">
-        </div>
-        <div class="labels">
-            <div class="description">Contact Ph</div>
-            <input type="text">
-        </div>
-        <div class="labels">
-            <div class="description">ADDRESS</div>
-            <input type="text">
-        </div>
-        <button>CREATE</button>
     </div>
 
+     <!-- Pagination -->
+     <div class="moveToCorner">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link arrowToRed" href="#">&lt;</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">...</a></li>
+      <li class="page-item"><a class="page-link arrowToRed" href="#">&gt;</a></li>
+    </ul>
+    </div>
 
 
 

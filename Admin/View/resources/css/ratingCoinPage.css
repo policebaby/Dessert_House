@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--secondaryFont), serif;
+    font-family: var(--primaryFont), sans-serif;
+}
+body{
+    position: relative;
+    height: 100vh;
+}
+
+/* Table */
+table {
+    position: absolute;
+    left: 19%;
+    top:14%;
+    border-collapse: collapse;
+    width: 75%;
+    margin-top: 0.3em;
+    transform: translateX(0.5em);
+  }
+  
+  th,
+  td {
+    text-align: center;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #c22014;
+    color: white;
+  }
+
+  td{
+    color: black;
+  }
+  
+  td:nth-child(odd) {
+    background-color: #eaebed;
+  }
+  
+  /* To make the contact info column smaller */
+  td:nth-child(8){
+      padding:0.5em;
+  }
+  
+  /* To make the button column bigger */
+  td:nth-child(9){
+      width: 20%;
+  }
+  
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  /* Activate and Disable Buttons */
+  .btn{
+      height: 3em;
+      width: 43%;
+      border: transparent;
+      border-radius:10px ;
+      color: white;
+  }
+  
+  .activate{
+      background-color:#0057FF ;
+  }
+  
+  .disable{
+      background-color: #C5332D;
+      margin-left: 5%;
+  }
+
+  /* pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+
+  .pagination li a {
+    text-decoration: none;
+    color: grey;
+    border: 0.7px solid #ccc;
+    font-weight: bold;
+    padding: 0.5em;
+  }
+
+  .pagination li a:hover {
+    background-color: var(--adminPrimaryColor);
+    color: white !important;
+    border-color:var(--adminPrimaryColor);
+  }
+  
+  .pagination .arrowToRed {
+    color:var(--adminPrimaryColor);
+    border-color:var(--adminPrimaryColor);
+  }
+
+  /* Move the pagination to corner */
+  .moveToCorner{
+    position: fixed;
+    top: 45%;
+    left: 40%;
+  }
+
+  /* Insert Rate Big Container */
+  .insertRateContainer{
+    background-color:#710C05;
+    position: absolute;
+    left: 19%;
+    top: 60%;
+    height: 37%;
+    width: 25%;
+    border-radius: 10px;
+    color: white;
+    font-size: var(--header);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  /* Title and Header */
+  .exchangeTitle{
+    text-align: center;
+  }
+
+  .insertHeader{
+    margin-left: 2em;
+  }
+
+  /* Each Insert Row Container */
+  .inputCurrencyValueContainer{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  /* Insert Button */
+  .inputCurrencyValueContainer button{
+   height: 2.5em;
+   width:6em;
+   border-radius: 10px;
+   background-color:var(--adminPrimaryColor) ;
+   border: transparent;
+   color: white;
+  }
+
+  /* Adjust position of Container shows today currency */
+  .todayCurrencyContainer{
+    background-color:#710C05;
+    position: absolute;
+    left: 45%;
+    top: 60%;
+    height: 37%;
+    width: 20%;
+    border-radius: 10px;
+    color: white;
+    font-size: var(--header);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.todayCurrencyTitle{
+    margin: 2em;
+}
+
+.todayCurrencyContainer div{
+   margin: 1em;
+  }
+
+  /* Sold Coin Container */
+.coinHistoryContainer{
+    background-color:#710C05;
+    position: absolute;
+    left: 66%;
+    top: 60%;
+    height: 37%;
+    width: 29%;
+    border-radius: 10px;
+    color: white;
+    font-size: var(--header);
+    display: flex;
+    flex-direction: column;
+}
+
+.coinHistoryContainer > div:first-of-type{
+  padding-left: 2em;
+}
+
+/* Separator */
+.separator{
+    width: 90%;
+    height:0.1em;
+    background-color:white;
+    margin: auto;
+    margin-top: 1em;
+  }
+
+/* Dollar Coin */
+.dollarIcon{
+    margin: 1em;
+}
+
+.countAndDownArrow{
+    display: flex;
+    justify-content:space-between;
+}
+
+.countAndDownArrow div,.countAndUpArrow div{
+   font-size: 2em;
+}
+
+.yesterdayCoinContainer,.todayCoinContainer{
+    margin: 2em 2em 0 2em;
+}
+
+.countAndUpArrow{
+    display: flex;
+    justify-content: space-between;
+}
+
+.countAndUpArrow{
+    display: flex;
+    justify-content: space-between;
+}
+
+.countAndUpArrow svg{
+    margin-right: 0.7em;
+}
+
+

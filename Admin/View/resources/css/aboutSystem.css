@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--secondaryFont), serif;
+  font-family: var(--primaryFont), sans-serif;
+}
+
+/* Add New Paragraph Button */
+.addNewParagraph {
+  height: 3em;
+  width: 16em;
+  background-color: var(--adminPrimaryColor);
+  color: white;
+  border: transparent;
+  border-radius: 0.5em;
+  font-size: 1em;
+  margin: 3em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  display: inline-block;
+}
+
+/* Receiver Options */
+.receiverOptions {
+  height: 3em;
+  width: 16em;
+  background-color: var(--adminPrimaryColor);
+  color: white;
+  border: transparent;
+  border-radius: 0.5em;
+  font-size: 1em;
+  padding: 1em;
+}
+
+/* Greeting Letter Container */
+.greetingLetterContainer {
+  height: 34vh;
+  width: 70%;
+  background-color: #7f241e;
+  margin-left: 17.5%;
+  border-radius: 0.5em;
+  color: white;
+}
+
+.greetingTitle,
+.ourTeamTitle {
+  font-size: 1.5em;
+  padding: 1em;
+}
+
+.greetingLetterContainer div {
+  padding: 1em;
+}
+
+.greetingLetterContainer input {
+  margin: 1em;
+  width: 98%;
+  height: 10%;
+  border-radius: 0.5em;
+}
+
+.greetingLetterContainer textarea {
+  margin: 1em;
+  width: 98%;
+  height: 30%;
+  border-radius: 0.5em;
+}
+
+/* Our Team Container */
+.ourTeamContainer {
+  height: 34vh;
+  width: 70%;
+  background-color: #7f241e;
+  margin-left: 17.5%;
+  border-radius: 0.5em;
+  color: white;
+  margin-top: 2em;
+  position: relative;
+}
+
+.leftSideAndRightSide {
+  display: flex;
+}
+
+/* Left Side */
+.profilePic {
+  height: 10em;
+  width: 10em;
+  background-color: white;
+  margin: 1em 10em 0 10em;
+  border-radius: 0.5em;
+}
+
+.leftSide button {
+  height: 3em;
+  width: 12em;
+}
+
+.buttons {
+  margin: 2em 5em 0;
+  display: flex;
+  border-radius: 0.5em;
+}
+
+.buttons button:nth-of-type(2) {
+  background-color: var(--adminPrimaryColor);
+  color: white;
+  border: none;
+}
+
+/* Right Side */
+.rightSide input {
+  margin: 1em 0 1em 0;
+  width: 44vw;
+  height: 2vw;
+  border-radius: 0.5em;
+}
+
+.rightSide textarea {
+  width: 44vw;
+  border-radius: 0.5em;
+}
+
+/* Delete Button */
+.deleteButton {
+  background-color: var(--adminPrimaryColor);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 3em;
+  width: 8em;
+  border-radius: 0.5em;
+  color: white;
+  border: transparent;
+  position: absolute;
+  top: 5%;
+  right: 2%;
+}
+
+.deleteButton div {
+  font-size: 1.3em;
+}
+
+/* Save Button */
+.saveButton{
+    position: relative;
+    left: 66%;
+    padding: 1em 4em 1em 4em;
+    border-radius: 0.5em;
+    background-color: #0057FF;
+    color: white;
+    margin-top: 1.5em;
+}

@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--secondaryFont), serif;
+    font-family: var(--primaryFont), sans-serif;
+}
+
+.sellerContainer{
+    position: absolute;
+    top: 15%;
+    left: 23%;
+    height: 20vh;
+    width: 70vw;
+    border: 1.5px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Table */
+table {
+    position: absolute;
+    left: 22%;
+    top:40%;
+    border-collapse: collapse;
+    width: 71%;
+    margin-top: 0.3em;
+    transform: translateX(0.5em);
+  }
+  
+  th,
+  td {
+    text-align: center;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #c22014;
+    color: white;
+  }
+  
+  td:nth-child(odd) {
+    background-color: #eaebed;
+  }
+  
+  /* To make the contact info column smaller */
+  td:nth-child(8){
+      padding:0.5em;
+      text-align: left;
+  }
+  
+  /* To make the button column bigger */
+  td:nth-child(9){
+      width: 20%;
+  }
+  
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  /* Activate and Disable */
+  .btn{
+      height: 3em;
+      width: 43%;
+      border: transparent;
+      border-radius:10px ;
+      color: white;
+  }
+  
+  .activate{
+      background-color:#0057FF ;
+  }
+  
+  .disable{
+      background-color: #C5332D;
+      margin-left: 5%;
+  }

@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--secondaryFont), serif;
+    font-family: var(--primaryFont), sans-serif;
+}
+
+
+/* Adjust the big container position */
+.createAccountContainer{
+ width: 50%;
+ position: absolute;
+ left: 32%;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: flex-start;
+ gap: 3em;
+ margin-top: 3em;
+}
+
+/* To make the header width 100%, to adjust  the successfully created background */
+.createHeader{
+    width: 100%;
+}
+
+/* Create Account Title */
+.createTitle{
+    font-size: 2.25em;
+    color: var(--adminPrimaryColor);
+    font-weight: bolder;
+    text-align: center;
+}
+
+/* The Container of stick + circle for stick + text */
+.successCreated{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background-color:#a2e396;
+    opacity: 1;
+    font-weight: bold;
+}
+
+
+.stick{
+    position: absolute;
+    z-index: 1;
+    top: 30%;
+    transform: translateX(-50%);
+    left: 34%;
+}
+
+.circleForStick{
+    height: 95%;
+    width: 5%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 34%;
+    transform: translateX(-50%);
+}
+
+/* Successfully created text */
+.stext{
+    position: absolute;
+    font-size: 1.5em;
+    top: 7%;  
+    left: 38%;
+}
+
+/* Description */
+.description{
+    font-size: 1.2em;
+    font-weight: bolder;
+    color: var(--adminPrimaryColor);
+}
+
+.createAccountContainer button{
+height: 3em;
+width: 10em;
+background-color: var(--adminPrimaryColor);
+color: white;
+font-weight: bolder;
+font-size: 1em;
+border-radius: 0.9em;
+border-color: transparent;
+margin-left: 50%;
+transform:translateX(-50%);
+}
+
+/* To adjust the input box width */
+.labels{
+    width: 100%;
+}
+
+/* To make the input box border invisible */
+.labels input{
+    width:90%;
+    height: 3em;
+    border: none;
+    border-bottom: 1px solid black;
+}
+

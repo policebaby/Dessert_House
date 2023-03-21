@@ -1,0 +1,33 @@
+/* pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+
+  .pagination li a {
+    text-decoration: none;
+    color: grey;
+    border: 0.7px solid #ccc;
+    font-weight: bold;
+    padding: 0.5em;
+  }
+
+  .pagination li a:hover {
+    background-color: var(--adminPrimaryColor);
+    color: white !important;
+    border-color:var(--adminPrimaryColor);
+  }
+  
+  .pagination .arrowToRed {
+    color:var(--adminPrimaryColor);
+    border-color:var(--adminPrimaryColor);
+  }
+
+  /* Move the pagination to corner */
+  .moveToCorner{
+    position: fixed;
+    top: 90%;
+    right:10%;
+  }

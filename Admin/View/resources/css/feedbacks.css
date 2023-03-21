@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--secondaryFont), serif;
+    font-family: var(--primaryFont), sans-serif;
+}
+
+.blocks{
+    width: 77%;
+    height:auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 3.5em;
+    padding-left: 3em;
+    row-gap: 3em;
+    justify-items:center ;
+}

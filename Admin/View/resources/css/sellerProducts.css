@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--secondaryFont), serif;
+    font-family: var(--primaryFont), sans-serif;
+}
+
+/* Table */
+table {
+    border-collapse: collapse;
+    width: 82%;
+    margin-top: 3.1em;
+    transform: translateX(0.5em);
+  }
+  
+  th,
+  td {
+    text-align: center;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #c22014;
+    color: white;
+  }
+  
+  td:nth-child(odd) {
+    background-color: #eaebed;
+  }
+  
+  /* To make the contact info column smaller */
+  td:nth-child(8){
+      padding:0.5em;
+      text-align: left;
+  }
+  
+  /* To make the button column bigger */
+  td:nth-child(9){
+      width: 20%;
+  }
