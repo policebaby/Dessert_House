@@ -6,7 +6,7 @@ class DBConnection {
     // Setting
     private $hostname = "localhost";
     private $port = 3307;
-    private $dbname = "";
+    private $dbname = "desserthouse_db";
     private $username = "root";
     private $password = "";
 
