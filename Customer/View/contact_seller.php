@@ -49,6 +49,7 @@
         <div class="contactS_logo">
             <img src="../View/resources/img/logo.png" alt="logo" class="seller_logo">
         </div>
+        <div class="main_frame">
         <div class="contact_seller_frame">
             <div>
                 <img src="../View/resources/img/Feedback-ai-1400x788 1.png" alt="" class="seller_pic">
@@ -67,6 +68,7 @@
                 <br>
                 <button class="contactS_btn">Submit</button>
             </div>
+        </div>
         </div>
     </div>
     <!--footer start-->

@@ -33,8 +33,8 @@
     <!--P&P start-->
     <div class="pp_mainbody">
         <div class="pp_herosection">
-    <h4 class="pp_title">Privacy Policy</h4>
             <img src="../View/resources/img/p&p (3).png" alt="" class="pp_img">
+            <h4 class="pp_title">Privacy Policy</h4>
             </div>
             <div class="pp_paragraph">
             <p>Your Privacy Policy will contain a variety of clauses depending on your business type and applicable             

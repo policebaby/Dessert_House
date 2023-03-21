@@ -45,7 +45,7 @@
         <!---->
         <div class="row">
             <!---->
-            <div class="col-md-4 ">
+            <div class="col first_col">
                 <div class="A_table">
                     <button id="a4" class="tables">A4</button>
                     <button id="a2" class="tables">A2</button>
@@ -63,7 +63,7 @@
                 </div>
             </div>
             <!---->
-            <div class="col-md-4 ">
+            <div class="col second_col">
                 <button id="" class="btn shop_btn">SHOP</button>
 
                 <div class="low_tbl">
@@ -93,7 +93,7 @@
                 </div>
             </div>
             <!---->
-            <div class="col-md-4 ">
+            <div class="col third_col">
                 <div class="F_table">
                     <button id="f1" class="tbl_2">F1</button>
                     <button id="f2" class="tables">F2</button>

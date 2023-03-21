@@ -13,7 +13,7 @@
 }
 .contactS-container {
   width: 100%;
-  height: 170vh;
+  height: 100%;
   background-color: var(--userTertiarycolor);
 }
 .contactS_box {
@@ -23,27 +23,31 @@
 }
 .contact_seller_frame {
   width: 40em !important;
-  height: 140vh !important;
+  height: 100vh !important;
   background-color: white;
   border-radius: 1.5em !important;
-  margin-left: 25% !important;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
+}
+.main_frame{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .seller_pic {
   width: 100%;
 }
 .contactS_input {
   width: 20em;
-  height: 3em;
+  height: 2.5em;
   border-radius: 0.7em;
   border-style: none;
-  margin-top: 0.5em;
   background-color: var(--userFourthcolor);
 }
 .contactS_textarea {
   border-radius: 0.7em;
   width: 20em;
   border-style: none;
+  padding-left: 1em;
   background-color: var(--userFourthcolor);
 }
 .contactS_text {
@@ -67,19 +71,37 @@ h5 {
   background-color: var(--userPrimarycolor);
   color: var(--primaryTextcolor);
   border-style: none;
-  margin-left: 1em !important;
   padding-bottom: 0.5em;
 }
-@media (max-width: 1230px) and (min-width: 1022px) {
+ @media (max-width: 500px) and (min-width: 390px) {
   .contact_seller_frame {
-    width: 40em !important;
-    height: 140vh !important;
+    width: 20em !important;
+    height: 90vh !important;
     background-color: white;
     border-radius: 1.5em !important;
-    margin-left: 20% !important;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
+  }
+  .contactS_input {
+    width: 15em;
+    height: 2.5em;
+    border-radius: 0.7em;
+    border-style: none;
+    background-color: var(--userFourthcolor);
+  }
+  .contactS_textarea {
+    border-radius: 0.7em;
+    width: 15em;
+    border-style: none;
+    padding-left: 1em;
+    background-color: var(--userFourthcolor);
+  }
+  .contactS_text {
+    text-align: left;
+    margin-left: 2em;
+    margin-top: 1em;
   }
 }
+/*
 @media (max-width: 1022px) and (min-width: 886px) {
   .contact_seller_frame {
     width: 30em !important;
@@ -194,4 +216,4 @@ h5 {
     height: 130vh !important;
     background-color: var(--userTertiarycolor);
   }
-}
+} */
