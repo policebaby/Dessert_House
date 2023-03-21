@@ -17,6 +17,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Public+Sans&display=swap" rel="stylesheet">
+    <!-- ionic icon link -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
     <title>Feedback Details Page</title>
 </head>
 <body class="feedbackDetails_page">
@@ -28,49 +31,70 @@
             <img src="./resources/images/Ellipse 3.png" alt="logo" class="web_logo mt-5">
             <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
     </div>
-    <div class="ms-md-4">
+    <!-- sidebar nav -->
+    <div class="nav-icons ms-md-4 ms-sm-3 mt-sm-4">
         <!-- profile icon from left nav -->
-        <div class="nav_text text-muted mt-4">
-            <img src="./resources/images/person.png" class="icons">
-            <span class="title ms-1">Profile</span>
+        <div class="nav-text">
+            <span>
+                <iconify-icon icon="bi:people-circle" class="icons"></iconify-icon>
+            </span>
+            <span class="title ms-md-3  mt-2 text-muted">Profile</span>
         </div>
+
         <!-- meun icon from left nav -->
-        <div class="nav_text my-md-1 text-muted">
-            <img src="./resources/images/menu.png" class="my-md-5 icons">
-            <span class="title ms-1">Product Menu</span>
+        <div class="nav-text my-md-5 my-sm-4">
+            <span>
+            <iconify-icon icon="material-symbols:menu-book-sharp" class="icons"></iconify-icon>
+            </span>
+            <span class="title ms-md-3 mt-2 text-muted">Product Menu</span>
         </div>
+
         <!-- order list icon from left nav -->
-        <div class="nav_text text-muted">
-            <img src="./resources/images/orderList.png" class="icons">
-            <span class="title ms-1">Order Lists</span>
+        <div class="nav-text">
+            <span>
+            <iconify-icon icon="material-symbols:order-approve-outline" class="icons"></iconify-icon>
+            </span>
+            <span class="title ms-md-3 mt-2 text-muted">Order Lists</span>
         </div>
+
         <!-- sold history icon from left nav -->
-        <div class="nav_text text-muted">
-            <img src="./resources/images/soldList.png"class="my-md-5 icons">
-            <span class="title ms-1">Sold History</span>
+        <div class="nav-text my-md-5 my-sm-4">
+        <span>
+        <iconify-icon icon="mdi:clipboard-text-clock" class="icons"></iconify-icon>
+        </span>
+            <span class="title ms-md-3 mt-2 text-muted">Sold History</span>
         </div>
+
         <!-- incoming order icon from left nav -->
-        <div class="nav_text text-muted">
-            <img src="./resources/images/incomingOrder.png" class="icons">
-            <span class="title ms-1">Incoming Orders</span>
+        <div class="nav-text">
+            <span>
+            <iconify-icon icon="material-symbols:order-play-outline" class="icons"></iconify-icon>
+            </span>
+            <span class="title ms-md-1 mt-2 text-muted">Incoming Orders</span>
         </div>
+
         <!-- feedback icon -->
-        <div class="nav_text mt-md-5 active feedback_gp">
-            <img src="./resources/images/feedback.png" class="icons cFeedback mt-md-1 mt-sm-1" width="13%" height="5%" >
-            <p class="title feedback_text ms-1">Customer's Feedback</p>
+        <div class="nav-text my-md-5 my-sm-4">
+            <span>
+            <iconify-icon icon="ri:feedback-line" class="feedback-icon"></iconify-icon>
+            </span>
+            <span class="title ms-md-3 active">Customer's Feedback</span>
         </div>
+
         <!-- logout icon from left nav-->
-        <div class="nav_text text-muted my-md-5">
-            <img src="./resources/images/Logout.png" alt="" class="nav_text icons logout">
-            <span class="title ms-1">Logout</span>
-        </div><br>
-        </div><br>
+        <div class="nav-text text-muted">
+            <span>
+            <iconify-icon icon="material-symbols:logout-rounded" class="icons"></iconify-icon>
+            </span>
+            <span class="title ms-md-3 mt-2">Logout</span>
+        </div>
         <div></div>
         <br>
         </nav>
+
         <!-- page -->
         <div class="col-10">
-            <p class="mt-3 mb-4 fw-bold h4 feedback-title">Feedback Details</p>
+            <p class="mt-3 mb-4 fw-bold h4 feedback-title text-center">Feedback Details</p>
             <!-- percent and progress row -->
             <div class="row">
                 <!-- for percent gp -->
@@ -124,7 +148,7 @@
 
             <!-- review cards -->
             <p class="fw-bold mt-2 ms-md-3 ms-sm-3 review-title">Reviews</p>
-            <div>
+            <div class="d-flex flex-direction-column justify-content-center two-cards">
                 <div class="each-review ms-md-3 ms-sm-3">
                     <div class="details mt-2">
                         <div class="dis me-1 mt-md-2 mt-sm-2 ms-2"></div>

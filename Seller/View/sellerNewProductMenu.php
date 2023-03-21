@@ -17,68 +17,89 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Public+Sans&display=swap" rel="stylesheet">
-    <!-- ionic icon link -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- ionify link -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
     <title>Seller New Product Menu Page</title>
 </head>
 <body class="seller_new_product_menu_page">
 <div class="row">
 
         <!-- column1 -->
-        <div class="col-2 edit_nav">
-    <div class="my-md-4 mt-md-3 nav_logo">
-            <img src="./resources/images/Ellipse 3.png" alt="logo" width="35%" class="web_logo mt-5">
-            <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
-    </div>
-        <div class="ms-md-4 ms-sm-4">
+        <nav class="col-2 mt-0 d-flex flex-direction-column">
+                <div class="edit_nav">
+                    <div class="nav_logo">
+                        <img src="./resources/images/Ellipse 3.png" alt="logo" class="web_logo mt-5">
+                        <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
+                    </div>
+                    <!-- sidebar nav -->
+                    <div class="nav-icons ms-md-4 ms-sm-3 mt-sm-4">
         <!-- profile icon from left nav -->
-        <div class="mt-4 nav_text text-muted">
-            <img src="./resources/images/person.png" class="icons">
-            <span class="title ms-1">Profile</span>
+        <div class="nav-text">
+            <span>
+                <iconify-icon icon="bi:people-circle" class="icons"></iconify-icon>
+            </span>
+            <span class="title ms-md-3 mt-2 text-muted">Profile</span>
         </div>
+
         <!-- meun icon from left nav -->
-        <div class="nav_text my-md-5 active">
-            <img src="./resources/images/menu.png" class="my-3 product-logo">
-            <span class="title ms-1">Product Menu</span>
+        <div class="nav-text my-md-4 my-sm-4">
+            <span>
+            <iconify-icon icon="material-symbols:menu-book-sharp" class="menu-icon"></iconify-icon>
+            </span>
+            <span class="title ms-md-3 mt-2 active">Product Menu</span>
         </div>
+
         <!-- order list icon from left nav -->
-        <div class="nav_text text-muted">
-            <img src="./resources/images/orderList.png" class="icons">
-            <span class="title ms-1">Order Lists</span>
+        <div class="nav-text text-muted">
+            <span>
+            <iconify-icon icon="material-symbols:order-approve-outline" class="icons"></iconify-icon>
+            </span>
+            <span class="title ms-md-3 mt-2">Order Lists</span>
         </div>
+
         <!-- sold history icon from left nav -->
-        <div class="nav_text my-md-5 text-muted">
-            <img src="./resources/images/soldList.png"class="my-3 icons">
-            <span class="title ms-1">Sold History</span>
+        <div class="nav-text my-md-4 my-sm-4">
+        <span>
+        <iconify-icon icon="mdi:clipboard-text-clock" class="icons"></iconify-icon>
+        </span>
+            <span class="title ms-md-3 mt-2 text-muted">Sold History</span>
         </div>
+
         <!-- incoming order icon from left nav -->
-        <div class="nav_text text-muted mb-1">
-            <img src="./resources/images/incomingOrder.png" class="icons">
-            <span class="title ms-1">Incoming Orders</span>
+        <div class="nav-text text-muted">
+            <span>
+            <iconify-icon icon="material-symbols:order-play-outline" class="icons"></iconify-icon>
+            </span>
+            <span class="title ms-md-2 mt-2">Incoming Orders</span>
         </div>
+
         <!-- feedback icon -->
-        <div class="nav_text mt-md-5 text-muted feedback_gp">
-            <img src="./resources/images/feedback.png" class="icons cFeedback mt-md-1 mt-sm-1 mb-3" width="13%" height="5%">
-            <p class="title feedback_text ms-1 mt-0">Customer's Feedback</p>
+        <div class="nav-text my-md-4 my-sm-4">
+            <span>
+            <iconify-icon icon="ri:feedback-line" class="icons"></iconify-icon>
+            </span>
+            <span class="title ms-md-3 text-muted">Customer's Feedback</span>
         </div>
+
         <!-- logout icon from left nav-->
-        <div class="nav_text text-muted mb-5 my-md-5">
-            <img src="./resources/images/Logout.png" alt="" class="nav_text icons logout">
-            <span class="title ms-1">Logout</span>
+        <div class="nav-text text-muted">
+            <span>
+            <iconify-icon icon="material-symbols:logout-rounded" class="icons"></iconify-icon>
+            </span>
+            <span class="title ms-md-3 mt-2">Logout</span>
         </div>
-        </div>
-    </div>
+        </nav>
 
     <div class="col-10">
         <div class="first-row row mb-5 me-5">
-            <div class="first-row-first col-md-5 ms-sm-5">
+            <div class="first-row-first col-md-5">
                 <div class="seller-photo mb-2"></div>
-                <input class="form-control mt-2 ms-md-3" type="file" id="formFile">
+                <input class="form-control mt-2 ms-md-3 ms-sm-0" type="file" id="formFile">
             </div>
 
             <div class="first-row-second col-md-5 mt-md-4 mt-sm-5">
-                <p class="fw-bold insert-title">Insert New Product's Information</p>
+                <p class="fw-bold h5 insert-title">Insert New Product's Information</p>
                 <div class="label-box">
                     <label for="new-product-name texts" class="fw-bold">New Product Name</label>
                     <input type="text" class="input-box">
@@ -98,11 +119,11 @@
             </div>
         </div>
 
-        <div class="second-row mt-5">
-            <p class="product-menu-text fw-bold">Product Menu</p>
-            <div class="mt-3 text-center me-md-2 row">
-                <div class="blue-width me-md-4 me-sm-1">
-                    <table class="table table-borderless ms-sm-1 ms-md-1">
+        <div class="second-row mt-md-5 mt-sm-2 ms-sm-4">
+            <p class="product-menu-text h5 fw-bold">Product Menu</p>
+            <div class="mt-3 text-center me-md-2 me-sm-0 row d-flex flex-direction-column justify-content-center">
+                <div class="blue-width d-flex flex-direction-column justify-content-center">
+                    <table class="table table-borderless ms-md-3 ms-sm-3">
                         <tr class="t-head">
                             <td class="col-md-3">Dessert Name</td>
                             <td class="col-md-2">Price</td>
@@ -161,29 +182,23 @@
             </div>
 
             <!-- for pagination -->
-            <nav aria-label="">
-                <ul class="pagination mb-sm-5">
-                    <li class="page-item disabled">
-                        <a class="page-link great" href="#" tabindex="-1" aria-disabled="true">
-                            <ion-icon name="chevron-back-outline"></ion-icon>
-                        </a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link p-one" href="#">1</a>
-                    </li>
-                    <li class="page-item" aria-current="page">
-                        <a class="page-link text-muted" href="#">2</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link text-muted" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link less" href="#">
-                            <ion-icon name="chevron-forward-outline"></ion-icon>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <nav aria-label="Page navigation example">
+            <ul class="pagination  justify-content-center">
+                <li class="page-item ">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span class="great" aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link beat" href="#">1</a></li>
+                <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
+                <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span class="less " aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
             <!-- </div> -->
         </div>

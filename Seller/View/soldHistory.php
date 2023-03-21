@@ -21,63 +21,82 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <!-- ionic icon link -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- ionify link -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
     <title>Sold History Page</title>
 </head>
 <body class="sold_history">
     <div class="main-page">
         <div class="row">
-            <nav class="col-2 mt-0">
-                <div class="me-0 ms-0 edit_nav">
+            <nav class="col-2 mt-0 d-flex flex-direction-column">
+                <div class="edit_nav">
                     <div class="nav_logo">
-                        <img src="./resources/images/Ellipse 3.png" alt="logo" width="35%" class="web_logo mt-5">
+                        <img src="./resources/images/Ellipse 3.png" alt="logo" class="web_logo mt-5">
                         <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
                     </div>
-                    <div class="ms-md-4">
-                        <!-- profile icon from left nav -->
-                        <div class="nav_text text-muted mt-4">
-                            <img src="./resources/images/person.png" class="icons">
-                            <span class="title ms-1">Profile</span>
-                        </div>
-                        <!-- meun icon from left nav -->
-                        <div class="nav_text my-md-1 text-muted">
-                            <img src="./resources/images/menu.png" class="my-md-5 icons">
-                            <span class="title ms-1">Product Menu</span>
-                        </div>
-                        <!-- order list icon from left nav -->
-                        <div class="nav_text text-muted">
-                            <img src="./resources/images/orderList.png" class="icons">
-                            <span class="title ms-1">Order Lists</span>
-                        </div>
-                        <!-- sold history icon from left nav -->
-                        <div class="nav_text active">
-                            <img src="./resources/images/soldList.png"class="my-md-5 ">
-                            <span class="title ms-1">Sold History</span>
-                        </div>
-                        <!-- incoming order icon from left nav -->
-                        <div class="nav_text text-muted">
-                            <img src="./resources/images/incomingOrder.png" class="icons">
-                            <span class="title ms-1">Incoming Orders</span>
-                        </div>
-                        <!-- feedback icon -->
-                        <div class="nav_text mt-md-5 text-muted feedback_gp">
-                            <img src="./resources/images/feedback.png" class="icons cFeedback mt-1" width="13%" height="5%" >
-                            <p class="title feedback_text ms-1">Customer's Feedback</p>
-                        </div>
-                        <!-- logout icon from left nav-->
-                        <div class="nav_text text-muted my-md-5">
-                            <img src="./resources/images/Logout.png" alt="" class="nav_text icons logout">
-                            <span class="title ms-1">Logout</span>
-                        </div><br>
-                    </div><br>
-                </nav>
+                    <!-- sidebar nav -->
+                    <div class="nav-icons ms-md-4 ms-sm-3 mt-sm-4">
+        <!-- profile icon from left nav -->
+        <div class="nav-text">
+            <span>
+                <iconify-icon icon="bi:people-circle" class="icons"></iconify-icon>
+            </span>
+            <span class="title ms-md-1 mt-2 text-muted">Profile</span>
+        </div>
 
+        <!-- meun icon from left nav -->
+        <div class="nav-text my-md-4 my-sm-4">
+            <span>
+            <iconify-icon icon="material-symbols:menu-book-sharp" class="icons"></iconify-icon>
+            </span>
+            <span class="title ms-md-1 mt-2 text-muted">Product Menu</span>
+        </div>
+
+        <!-- order list icon from left nav -->
+        <div class="nav-text text-muted">
+            <span>
+            <iconify-icon icon="material-symbols:order-approve-outline" class="icons"></iconify-icon>
+            </span>
+            <span class="title ms-md-1 mt-2">Order Lists</span>
+        </div>
+
+        <!-- sold history icon from left nav -->
+        <div class="nav-text my-md-4 my-sm-4">
+        <span>
+        <iconify-icon icon="mdi:clipboard-text-clock" class="sold-icon"></iconify-icon>
+        </span>
+            <span class="title ms-md-1 mt-2 active">Sold History</span>
+        </div>
+
+        <!-- incoming order icon from left nav -->
+        <div class="nav-text text-muted">
+            <span>
+            <iconify-icon icon="material-symbols:order-play-outline" class="icons"></iconify-icon>
+            </span>
+            <span class="title ms-md-1 mt-2">Incoming Orders</span>
+        </div>
+
+        <!-- feedback icon -->
+        <div class="nav-text my-md-4 my-sm-4">
+            <span>
+            <iconify-icon icon="ri:feedback-line" class="icons"></iconify-icon>
+            </span>
+            <span class="title ms-md-1 text-muted">Customer's Feedback</span>
+        </div>
+
+        <!-- logout icon from left nav-->
+        <div class="nav-text text-muted">
+            <span>
+            <iconify-icon icon="material-symbols:logout-rounded" class="icons"></iconify-icon>
+            </span>
+            <span class="title ms-md-1 mt-2">Logout</span>
+        </div>
+        </nav>
                 <!-- for page -->
                 <div class="col-10">
                 <p class="h4 my-4 text-center fw-bold">Sold History</p>
-                <div class="blue-width me-4">
+                <div class="blue-width me-4 d-flex justify-content-center ">
                 <table class="table table-borderless ms-md-2">
             <tr class="t-head">
             <td>No.</td>
@@ -150,29 +169,23 @@
         </div>
 
         <!-- for pagination -->
-        <nav aria-label="">
-                <ul class="pagination mb-sm-5">
-                    <li class="page-item disabled">
-                        <a class="page-link great" href="#" tabindex="-1" aria-disabled="true">
-                            <ion-icon name="chevron-back-outline"></ion-icon>
-                        </a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link p-one" href="#">1</a>
-                    </li>
-                    <li class="page-item" aria-current="page">
-                        <a class="page-link text-muted" href="#">2</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link text-muted" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link less" href="#">
-                            <ion-icon name="chevron-forward-outline"></ion-icon>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination d-flex justify-content-center p-0">
+                <li class="page-item ">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span class="great" aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link beat" href="#">1</a></li>
+                <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
+                <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span class="less " aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
         </div>
         </div>
     </div>

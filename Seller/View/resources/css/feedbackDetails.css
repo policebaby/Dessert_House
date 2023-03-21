@@ -11,7 +11,24 @@ body{
     max-height:100%;
     background-color:var(--secondary-skyblue)!important;
 }
-/* nav css */
+/* for sidebar nav */
+.icons{
+    font-size:2.2em !important;
+    color:white;
+    opacity:0.6;
+}
+.feedback-icon{
+    font-size:2.2em !important;
+}
+.web_logo{
+    width:4.5em !important;
+}
+.web_name,.nav-text{
+    color:var(--text-color-white);
+}
+.nav-text{
+    display:flex;
+}
 .edit_nav{
     max-height:100% !important;
     background-color:var(--primary-blue);
@@ -22,30 +39,13 @@ body{
     justify-content: center;
     align-items: center;
 }
-.web_logo{
-    width:4em;
-}
-.nav_text,.web_name{
-    color:var(--text-color-white);
-}
 .web_name{
     font-family:"DM Serif Display","sans-serif";
     font-size: 1.2em;
 }
-.feedback_gp{
-    display:flex;
-}
-.icons{
-    opacity:0.6;
-}
-
 /* page css */
 .feedback-title{
     color:var(--primary-blue);
-    margin-left:25%;
-}
-.per-average{
-    margin-left:2em !important;
 }
 .each-progress{
     display:flex;
@@ -56,6 +56,10 @@ body{
 .each-review{
     display:flex;
     flex-direction: column;
+}
+.two-cards{
+    display:flex;
+    flex-direction:column;
 }
 .dis{
     width:1.5em;
@@ -89,29 +93,20 @@ body{
     body{
         overflow-x: hidden;
     }
+    .icons{
+        font-size:2em !important;
+    }
     .web_name,.title{
         display:none !important;
     }
     .web_logo{
-        width:55%;
-        margin-left:6%;
-    }
-    .nav_text{
-        text-align: center;
-        margin-top:15%;
-    }
-    .icons{
-        width:2em;
-        margin:0.3em;
+        width:3em !important;
     }
     .edit_nav{
         position:fixed;
+        width:5em !important;
         height:100vh !important;
         background-color: var(--primary-blue)!important ;
-    }
-    .cFeedback{
-        margin-left:32%;
-        margin-top:2em !important;
     }
     /* for page */
     .per-text{
@@ -149,19 +144,30 @@ body{
 /* for mobile view */
 @media screen and (max-width:468px){
     .edit_nav{
-        width:2.7em !important;
-        max-height:100% !important;
+        position:fixed;
+        width:3.3em !important;
+        height:100% !important;
     }
     .web_logo{
-        width:2em;
+        width:2em !important;
+        margin-top:0.8em !important;
     }
-    .icons{
-        width:1em;
-        margin-top:1.3em;
+    .nav-icons{
+        position:relative !important;
+        margin-left:28% !important;
+    }
+    .icons,.feedback-icon{
+        margin-top:2em !important;
+        font-size:1.2em !important;
     }
     .feedback-title{
         font-size:0.8em !important;
-        margin-left:4em !important;
+    }
+    .per-average{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
     }
     .per-text{
         font-size:1em !important;
@@ -171,10 +177,6 @@ body{
     }
     .above-text{
         font-size:0.7em !important;
-        margin-left:1em;
-    }
-    .per-average{
-        margin-left:3.5em !important;
     }
     .progress{
         height:0.8em !important;
@@ -186,19 +188,17 @@ body{
     }
     .review-title{
         font-size:0.7em;
-        margin-left:-1em;
+        margin-left:1em;
     }
     .each-progress{
         width:13.5em;
-        margin-left:1em;
     }
     .each-review{
         width:25em !important;
         font-size:0.6em;
-        margin-left:-1.5em !important;
     }
     .ha-face{
-        margin-left:12em ;
+        margin-left:14.7em ;
     }
     .date{
         margin-left:2em;
@@ -217,5 +217,14 @@ body{
     }
     .space-bottom{
         margin-top:1em;
+    }
+    .col-10{
+        width:80% !important;
+    }
+    .progress-gp,.two-cards{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
     }
 }

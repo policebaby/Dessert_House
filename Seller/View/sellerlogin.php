@@ -22,32 +22,31 @@
 </head>
 <body>
   <div class="seller_login row mt-0 back-blue">
+    <div class="col-md-5 col-md-12 me-0 text-center mb-sm-5 col-sm-12 box-1">
+      <div class = "mt-md-5 mt-sm-5">
+        <img src="./resources/images/Ellipse 3.png" alt="logo" class="web-logo">
+      </div>
+      <p class="text-center login-text mt-md-4 mt-sm-4">Log in</p>
+      <br>
+      <input type="text" placeholder="Seller Name" class="seller_name box1 my-md-2 my-sm-2">
+      <br><br>
+      <input type="email" placeholder="Email" class = "email box1 my-md-2 my-sm-2">
+      <br><br>
+      <input type="password" placeholder="Password" class="password box1 my-md-2 my-sm-2">
+      <br><br>
+      <button class="loginBtn mt-md-3 mt-sm-3">Login</button>
+      <!-- text between two lines -->
+      <div class="redLine mt-5 mb-4">
+        <div class="header__center">Login with other</div>
+      </div>
+      <div class = "mt-5 mb-5 social3">
+        <img src="./resources/images/logos_facebook.png" alt="" class="me-md-5 me-sm-5">
+        <img src="./resources/images/Group.png" alt="" class="mx-5">
+        <img src="./resources/images/logos_google-icon.png" alt="" class="ms-md-5 ms-sm-5">
+      </div>
+    </div>
 
-  <div class="col-md-5 me-0 text-center mb-sm-5 col-sm-12">
-    <div class = "mt-md-5 mt-sm-5">
-    <img src="./resources/images/Ellipse 3.png" alt="logo" class="web-logo">
-    </div>
-    <p class="text-center login-text mt-md-4 mt-sm-4">Log in</p>
-    <br>
-    <input type="text" placeholder="Seller Name" class="seller_name box1 my-md-2 my-sm-2">
-    <br><br>
-    <input type="email" placeholder="Email" class = "email box1 my-md-2 my-sm-2">
-    <br><br>
-    <input type="password" placeholder="Password" class="password box1 my-md-2 my-sm-2">
-    <br><br>
-    <button class="loginBtn mt-3">Login</button>
-    <!-- text between two lines -->
-    <div class="redLine mt-5 mb-4">
-      <div class="header__center">Login with other</div>
-  </div>
-    <div class = "mt-5 mb-5 social3">
-      <img src="./resources/images/logos_facebook.png" alt="" class="me-md-5 me-sm-5">
-      <img src="./resources/images/Group.png" alt="" class="mx-5">
-      <img src="./resources/images/logos_google-icon.png" alt="" class="ms-md-5 ms-sm-5">
-    </div>
-    </div>
-
-    <div class="col-md-7 mt-0 ms-0  login-bg-photo">
+    <div class="col-md-7 col-sm-0 mt-0 ms-0  login-bg-photo">
     <img src="./resources/images/Rectangle 174.png" alt="seller-login-photo" class="ms-0" width="100%">
     </div>
   </div>
