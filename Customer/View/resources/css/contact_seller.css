@@ -62,7 +62,8 @@ h5 {
   margin-top: 1em;
 }
 .S_icons {
-  margin: 1.5em;
+  margin-top:.5em;
+  font-size: 2.5em;
 }
 .contactS_btn {
   width: 10em !important;
@@ -72,6 +73,9 @@ h5 {
   color: var(--primaryTextcolor);
   border-style: none;
   padding-bottom: 0.5em;
+}
+#gold{
+  color: #FFD233;
 }
  @media (max-width: 500px) and (min-width: 390px) {
   .contact_seller_frame {

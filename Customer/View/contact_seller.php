@@ -40,6 +40,7 @@
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
     <!-- icon link end -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
 
 <body>
@@ -64,7 +65,12 @@
                 <h5 class="contactS_text">Your Message</h5>
                 <textarea name="comment" id="" cols="40" rows="6" class="contactS_textarea" placeholder="Suggest or comment"></textarea>
                 <br>
-                <img src="../View/resources/img/Face.png" alt="satisfity" class="S_icons">
+                <div class="S_icons">
+                <iconify-icon icon="ph:smiley-x-eyes-bold"></iconify-icon>
+                <iconify-icon icon="gg:smile-sad"></iconify-icon>
+                <iconify-icon icon="gg:smile-neutral"></iconify-icon>
+                <iconify-icon icon="gg:smile-mouth-open" id="gold"></iconify-icon>
+                </div>
                 <br>
                 <button class="contactS_btn">Submit</button>
             </div>
