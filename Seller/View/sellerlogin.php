@@ -22,7 +22,7 @@
 </head>
 <body>
   <div class="seller_login row mt-0 back-blue">
-    <div class="col-md-5 col-md-12 me-0 text-center mb-sm-5 col-sm-12 box-1">
+    <div class="col-md-5 me-0 text-center mb-sm-5 col-sm-12 box-1">
       <div class = "mt-md-5 mt-sm-5">
         <img src="./resources/images/Ellipse 3.png" alt="logo" class="web-logo">
       </div>
