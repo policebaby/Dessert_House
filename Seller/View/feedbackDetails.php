@@ -147,7 +147,7 @@
             </div>
 
             <!-- review cards -->
-            <p class="fw-bold mt-2 ms-md-3 ms-sm-3 review-title">Reviews</p>
+            <p class="fw-bold mt-2 ms-md-3 ms-sm-3 review-title text-center">Reviews</p>
             <div class="d-flex flex-direction-column justify-content-center two-cards">
                 <div class="each-review ms-md-3 ms-sm-3">
                     <div class="details mt-2">
