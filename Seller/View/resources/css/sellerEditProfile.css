@@ -11,6 +11,25 @@ body{
     max-height:100vh;
     background-color:var(--secondary-skyblue)!important;
 }
+
+/* for side bar */
+.icons{
+    font-size:2.2em !important;
+    color:white;
+    opacity:0.6;
+}
+.profile-icon{
+    font-size:2.2em !important;
+}
+.web_logo{
+    width:4.5em !important;
+}
+.web_name,.nav-text{
+    color:var(--text-color-white);
+}
+.nav-text{
+    display:flex;
+}
 .edit_nav{
     max-height:100% !important;
     background-color:var(--primary-blue);
@@ -21,15 +40,9 @@ body{
     justify-content: center;
     align-items: center;
 }
-.nav_text,.web_name{
-    color:var(--text-color-white);
-}
 .web_name{
     font-family:"DM Serif Display","sans-serif";
     font-size: 1.2em;
-}
-.feedback_gp{
-    display:flex;
 }
 /* page */
 .box2{
@@ -110,22 +123,18 @@ body{
     body{
         overflow-x: hidden;
     }
+    .icons,.profile-icon{
+        font-size:1.8em !important;
+    }
     .web_name,.title{
         display:none !important;
     }
     .web_logo{
-        width:65% !important;
-        margin-left:15%;
-    }
-    .nav_text{
-        text-align: center;
-        margin-top:15%;
-    }
-    .cFeedback{
-        margin-left:17%;
+        width:3em !important;
     }
     .edit_nav{
         position:fixed;
+        width:5em !important;
         height:100vh !important;
         background-color: var(--primary-blue)!important ;
     }
@@ -156,17 +165,25 @@ body{
 
 /* for mobile view */
 @media screen and (max-width:468px){
+    body{
+        overflow-x:hidden !important;
+    }
     .edit_nav{
-        width:2.7em !important;
-        max-height:100% !important;
+        position:fixed;
+        width:3.3em !important;
+        height:100% !important;
     }
     .web_logo{
-        width:2em;
-        margin-top:1em !important;
+        width:2em !important;
+        margin-top:0.8em !important;
     }
-    .icons{
-        width:1em;
-        margin-top:1.3em;
+    .nav-icons{
+        position:relative !important;
+        margin-left:28% !important;
+    }
+    .icons,.profile-icon{
+        margin-top:2em !important;
+        font-size:1.2em !important;
     }
     .profile_banner{
         width:1em;
@@ -213,5 +230,11 @@ body{
         margin-top:1.5em;
         margin-left:-2em;
         font-size:0.7em;
+    }
+    .profile_banner{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top:2em !important;
     }
 }

@@ -10,8 +10,26 @@ body{
     height:100%;
     background-color:var(--secondary-skyblue)!important;
 }
+/* for side bar */
+.icons{
+    font-size:2.2em !important;
+    color:white;
+    opacity:0.6;
+}
+.profile-icon{
+    font-size:2.2em !important;
+}
+.web_logo{
+    width:4.5em !important;
+}
+.web_name,.nav-text{
+    color:var(--text-color-white);
+}
+.nav-text{
+    display:flex;
+}
 .edit_nav{
-    height:100%;
+    max-height:100% !important;
     background-color:var(--primary-blue);
 }
 .nav_logo{
@@ -20,8 +38,9 @@ body{
     justify-content: center;
     align-items: center;
 }
-.nav_text,.web_name{
-    color:var(--text-color-white);
+.web_name{
+    font-family:"DM Serif Display","sans-serif";
+    font-size: 1.2em;
 }
 .subject_text,.message{
     font-size:1.2em;
@@ -37,13 +56,6 @@ body{
 }
 .sub_box{
     width:27em !important;
-    margin-left:0 !important;
-}
-.message{
-    margin-left:0 !important;
-}
-.box2{
-    margin-left:25% !important;
 }
 
 .feedback_gp{
@@ -61,90 +73,100 @@ body{
     border-style:none;
     background-color: var(--primary-blue);
     color:var(--text-color-white);
-    margin-left:10em;
+    margin-left:35% !important;
 }
 .send_btn:hover{
     box-shadow:4px 4px 8px var(--primary-blue) !important;
 }
-
 @media screen and (max-width:720px){
     body{
         overflow-x: hidden;
+    }
+    .icons,.profile-icon{
+        font-size:1.8em !important;
     }
     .web_name,.title{
         display:none !important;
     }
     .web_logo{
-        width:65% !important;
+        width:3em !important;
     }
-    .icons{
-        width:2em;
+    .edit_nav{
+        position:fixed;
+        width:5em !important;
+        height:100vh !important;
+        background-color: var(--primary-blue)!important ;
     }
     .footer_text{
         font-size:0.8em !important;
     }
-    .edit_nav{
-        height:100%;
-    }
-    .box2{
-        margin-left:3% !important;
+    /* .box2{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+    } */
+    .col-10{
+        width:75% !important;
     }
 }
 
 /* for mobile view */
 @media screen and (max-width:468px){
+    body{
+        overflow-x:hidden !important;
+    }
     /* for nav */
     .edit_nav{
-        width:2.7em !important;
-        max-height:100% !important;
         position:fixed;
+        width:3.3em !important;
+        height:100% !important;
     }
     .web_logo{
-        margin-top:2em;
-        width:1.8em !important;
+        width:1.7em !important;
+        margin-top:0.8em !important;
     }
-    .col-2{
-        max-height:100% !important;
+    .nav-icons{
+        position:relative !important;
+        margin-left:28% !important;
     }
-    .icons{
-        width:1em;
-        margin-left:0.8em;
-        margin-top:1.5em;
-    }
-    .cFeedback{
-        margin-left:29%;
+    .icons,.profile-icon{
+        margin-top:2em !important;
+        font-size:1.2em !important;
     }
     /* for page */
+    /* .box2{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+    } */
     .upper_text{
-        font-size:0.6em;
-        font-weight:900;
-        margin-left:1.6em !important;
+        font-size:0.7em !important;
+        margin-left:18%;
     }
     .subject_text,.message{
-        font-size:0.6em;
-        font-weight:600;
+        font-size:0.5em !important;
+        margin-left:30% !important;
+        font-weight:800 !important;
     }
     .sub_box{
-        width:13em !important;
-        height:1.3em !important;
-    }
-    .sub_input{
-        margin-left:1em;
+        width:8.5em !important;
+        height:1.2em !important;
+        margin-left:30%;
     }
     .message-box{
-        width:13em !important;
-        height:5em !important;
-    }
-    .message_input{
-        margin-left:1em;
+        width:9em !important;
+        height:7em !important;
+        margin-left:30%;
     }
     .send_btn{
+        width:7em !important;
         font-size:0.6em !important;
-        margin-left:8em;
+        margin-left:40% !important;
     }
     .footer_text{
-        font-size:0.4em !important;
-        margin-left:1em;
-        font-weight:600;
+        font-size:0.5em !important;
+        margin-left:18%;
     }
 }
