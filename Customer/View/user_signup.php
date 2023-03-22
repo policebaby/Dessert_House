@@ -1,9 +1,8 @@
 <?php
-
-
-
-
+ini_set("display_errors", "1");
+session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,27 +36,39 @@
                 <div class="signup_form ">
                     <p class="text-center text-light fs-3 title">Sign Up</p>
                     <div class="p-3 signup_input">
-                        <form>
+                        <form action="../Controller/user_signupController.php" method="post">
                             <!-- input group start -->
                             <div class="mb-4 ">
-                                <input type="text" class="form-control outlineColor" id="" placeholder="User Name">
+                                <input type="text" class="form-control outlineColor" id="" placeholder="User Name" name="username" required>
                             </div>
                             <div class="mb-4">
-                                <input type="text" class="form-control outlineColor" id="" placeholder="Email">
+                                <input type="email" class="form-control outlineColor" id="" placeholder="Email" name="email" required>
                             </div>
                             <div class="mb-4">
-                                <input type="text" class="form-control outlineColor" id="" placeholder="Password">
+                                <input type="text" class="form-control outlineColor" id="" placeholder="Phone" name="phone" required>
                             </div>
                             <div class="mb-4">
-                                <input type="text" class="form-control outlineColor" id="" placeholder="Confirm Password">
+                                <input type="password" class="form-control outlineColor" id="" placeholder="Password" name="password" required>
                             </div>
+
                             <div class="mb-4">
-                                <input type="text" class="form-control outlineColor" id="" placeholder="Gender">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="M">
+                                <label class="form-check-label" for="inlineRadio1">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="F">
+                                <label class="form-check-label" for="inlineRadio2">Female</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="inlineRadio3" value="others">
+                                <label class="form-check-label" for="inlineRadio3">Others</label>
+                            </div>
                             </div>
                             <!-- input group end -->
                             <div class="ask_bar">
-                            <u>Already Account?</u>
-                            <div class="btn btn_signup"><button type="submit" >Sign Up</button></div>
+                            <a href="./user_login.php">Already Have Account?</a>
+                            <div class="btn btn_signup"><button type="submit" name="signup" >Sign Up</button></div>
                             </div>
                         </form>
                     </div>
