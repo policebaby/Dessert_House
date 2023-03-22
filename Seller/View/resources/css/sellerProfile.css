@@ -19,7 +19,26 @@ body{
 .icons{
     font-size:2.2em !important;
     color:white;
-    opacity:0.6;
+    opacity:0.5;
+}
+.icons:hover{
+    opacity:1 ;
+}
+.profile-text{
+    text-decoration:none;
+    color:var(--text-color-white);
+}
+.profile-text:hover{
+    color:var(--text-color-white);
+}
+.title{
+    opacity:0.5;
+    text-decoration:none;
+    color:var(--text-color-white);
+}
+.title:hover{
+    color:var(--text-color-white);
+    opacity:1;
 }
 .profile-icon{
     font-size:2.2em !important;
