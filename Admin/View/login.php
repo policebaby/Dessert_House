@@ -1,3 +1,17 @@
+<?php
+
+session_start();
+if (isset($_SESSION["error"])) {
+    $error = $_SESSION["error"];
+    unset($_SESSION["error"]);
+}
+
+if(isset($_SESSION["adminId"])){
+    header("Location: ./adminHome.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,9 +42,16 @@
         <div class="lowerContainer">
             <div class="title">DESSERT HOUSE</div>
             <div class="loginText">Log in</div>
-            <input type="text" placeholder="Admin Name" id="adminName" class="nameInputBox">
-            <input type="text" placeholder="Password" id="adminpassword" class="passwordInputBox">
-            <button class="logInButton">Log in</button>
+
+            <!-- Insert form to send data to server -->
+            <form class="form" action="../Controller/adminLoginController.php" method="post">
+                <input type="text" placeholder="Admin Name" id="adminName" class="nameInputBox" name="adminName">
+                <input type="text" placeholder="Password" id="adminpassword" class="passwordInputBox" name="adminPassword">
+                <?php if (isset($error)) { ?>
+                    <br><span style="color: red;"><?php echo $error; ?></span>
+                <?php } ?>
+                <button type="submit" class="logInButton">Log in</button>
+            </form>
         </div>
     </div>
 
