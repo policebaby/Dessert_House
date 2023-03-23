@@ -16,7 +16,7 @@
     <link href="../View/resources/css/contact_seller.css?key=<?php echo time(); ?>" type="text/css" rel="stylesheet" />
     <link href="../View/resources/css/root.css?key=<?php echo time(); ?>" type="text/css" rel="stylesheet" />
     <!--css link end-->
-          <!--font link start-->
+    <!--font link start-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap" rel="stylesheet" />
@@ -44,41 +44,49 @@
 </head>
 
 <body>
-    <?php include "./nav.php"?>
+    <?php include "./nav.php" ?>
     <!--contact seller start-->
     <div class="contactS-container">
         <div class="contactS_logo">
             <img src="../View/resources/img/logo.png" alt="logo" class="seller_logo">
         </div>
         <div class="main_frame">
-        <div class="contact_seller_frame">
-            <div>
-                <img src="../View/resources/img/Feedback-ai-1400x788 1.png" alt="" class="seller_pic">
-            </div>
-            <div class="contactS_box">
-                <h5 class="contactS_text">User Name</h5>
-                <input type="text" class="contactS_input">
-
-                <h5 class=" contactS_text">Phone</h5>
-                <input type="text" class="contactS_input">
-
-                <h5 class="contactS_text">Your Message</h5>
-                <textarea name="comment" id="" cols="40" rows="6" class="contactS_textarea" placeholder="Suggest or comment"></textarea>
-                <br>
-                <div class="S_icons">
-                <iconify-icon icon="ph:smiley-x-eyes-bold"></iconify-icon>
-                <iconify-icon icon="gg:smile-sad"></iconify-icon>
-                <iconify-icon icon="gg:smile-neutral"></iconify-icon>
-                <iconify-icon icon="gg:smile-mouth-open" id="gold"></iconify-icon>
+            <div class="contact_seller_frame">
+                <div>
+                    <img src="../View/resources/img/Feedback-ai-1400x788 1.png" alt="" class="seller_pic">
                 </div>
-                <br>
-                <button class="contactS_btn">Submit</button>
+                <form action="../Controller/contact_sellerController.php" method="post">
+                    <div class="contactS_box">
+                        <h5 class="contactS_text">User Name</h5>
+                        <input type="text" class="contactS_input" name="username">
+
+                        <div class="form-floating choose my-4">
+                                <select class="form-select" name="selectbox" id="floatingSelect" aria-label="Floating label select example">
+                                for ($i=0; $i < ; $i++) {
+                                <option value="1">YKKO</option>
+                                </select>
+                            } 
+                                <label for="floatingSelect">Select Shop</label>
+                        </div>
+
+                        <h5 class="contactS_text">Your Message</h5>
+                        <textarea name="comment" id="" cols="40" rows="6" class="contactS_textarea" placeholder="Suggest or comment"></textarea>
+                        <br>
+                        <div class="S_icons">
+                            <iconify-icon icon="ph:smiley-x-eyes-bold"></iconify-icon>
+                            <iconify-icon icon="gg:smile-sad"></iconify-icon>
+                            <iconify-icon icon="gg:smile-neutral"></iconify-icon>
+                            <iconify-icon icon="gg:smile-mouth-open" id="gold"></iconify-icon>
+                        </div>
+                        <br>
+                        <button class="contactS_btn " name="submit_btn">Submit</button>
+                    </div>
+                </form>
             </div>
-        </div>
         </div>
     </div>
     <!--footer start-->
- <?php  include "./footer.php" ?>
+    <?php include "./footer.php" ?>
     <!--footer end-->
 </body>
 
