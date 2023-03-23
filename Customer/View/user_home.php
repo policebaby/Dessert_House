@@ -1,3 +1,17 @@
+<?php
+ini_set("display_errors", "1");
+session_start();
+
+if (isset($_SESSION["username"])) {
+    // already success login or sign up
+    $name = $_SESSION["username"];
+    // echo $name;
+} else {
+    header("Location: ./user_login.php");
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,8 +37,8 @@
 
 <body>
     <!-- nav start -->
-    <?php 
-    include "./nav.php" 
+    <?php
+    include "./nav.php"
     ?>
     <!-- nav end -->
     <!-- hero section start -->

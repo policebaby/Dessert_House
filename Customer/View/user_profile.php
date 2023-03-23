@@ -96,7 +96,7 @@
             <button id="change_btn">Change Password</button>
             <button id="pf_logout">
             <iconify-icon icon="material-symbols:logout" id="logout_icon"></iconify-icon>
-            <p class="logout_text">Log Out</p>
+            <a class="logout_text" href="../View/user_login.php">Log Out</a>
             </button>
             </div>
   
