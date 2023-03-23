@@ -165,6 +165,10 @@
   margin-left: 22em !important;
   color: var(--primaryTextcolor);
 }
+.nav_icons{
+  color: white !important;
+  opacity: 100% !important;
+}
 /* media screen start */
 @media (max-width: 960px) and (min-width: 930px) {
   #pf_logout {

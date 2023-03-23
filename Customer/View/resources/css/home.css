@@ -180,7 +180,6 @@
 
 .dot {
     margin: 0.3em 0em 0em 2.6em;
-
     width: 0.8em;
     height: 0.8em;
     border-radius: 50%;
@@ -197,4 +196,14 @@
 }
 
 /* guide end */
+}
+@media (max-width:720px) and (min-width:390px){
+    a, a:link, a:visited {
+        color: black !important;
+        opacity: 100%;
+      }
+}
+#home{
+        color: white !important;
+        opacity: 100% !important;
 }

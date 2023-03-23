@@ -95,3 +95,9 @@
   }
 }
 /* about us end */
+@media (max-width:720px) and (min-width:390px){
+  a, a:link, a:visited {
+      color: black !important;
+      opacity: 100%;
+    }
+}

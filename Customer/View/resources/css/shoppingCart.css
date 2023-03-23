@@ -47,6 +47,10 @@ body{
     font-size: 1.2em !important;
     background-color: white;
 }
+.cart_icon{
+    color: white !important;
+    opacity: 100% !important;
+}
 /* cart table end */
 /* checkout start */
 .checkoutBorder{
@@ -74,4 +78,10 @@ body{
 /* checkout end */
 @media (max-width:390px) {
   
+}
+@media (max-width:720px) and (min-width:390px){
+    a, a:link, a:visited {
+        color: black !important;
+        opacity: 100%;
+      }
 }

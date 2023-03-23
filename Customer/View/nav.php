@@ -71,7 +71,7 @@
         </a>
 
         <a href="./shoppingCart.php">
-            <iconify-icon icon="material-symbols:shopping-bag" class="nav_icons"></iconify-icon>
+            <iconify-icon icon="material-symbols:shopping-bag" class="cart_icon"></iconify-icon>
         </a>
 
         <!--bento menu start-->
