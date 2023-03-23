@@ -1,5 +1,7 @@
 <?php
-
+ini_set("display_errors", "1");
+session_start();
+unset($_SESSION["username"]);
 
 
 
@@ -37,35 +39,49 @@
                 <div class="frame">
                     <p class="text-center text-light fs-3 title">Log in</p>
                     <div class="p-3 login_input login_form ">
-                        <form>
+                        <form action="../Controller/user_loginController.php" method="post" >
                             <!-- input group start -->
                             <div class="mb-4 ">
-                                <input type="text" class="form-control outlineColor" id="" placeholder="User Name">
+                                <input type="text" class="form-control outlineColor" id="" placeholder="User Name" name="username">
                             </div>
                             <div class="mb-4">
-                                <input type="text" class="form-control outlineColor" id="" placeholder="Password">
+                                <input type="password" class="form-control outlineColor" id="" placeholder="Password" name="password">
                             </div>
                             <!-- input group end -->
-                            <button type="submit" class="btn btnlogin mt-3">log in</button>
+                            <p class="text-danger">
+                                    <?php
+                                    if (isset($_SESSION["error"])) {
+                                        echo  $_SESSION["error"];
+                                    }
+                                    ?></p>
+                            <button type="submit" class="btn btnlogin mt-3 mb-4" name="login">Login</button>
+                            <br>
+                            <a href="./user_signup.php" class="mb-4">Don't Have Account? Sign Up!</a>
+                            <br>
+                            <a href="./forget_password.php" class="mt-4">Forget Password</a>
                             <!-- line start -->
-        <!-- text between two lines -->
-        <div class="lastbar">
-        <div class="two_lines">
-                    <div class="row">
-                        <div class="col-3"><div class="line_left line"></div></div>
-                        <div class="col-6 "><span>login with other</span></div>
-                        <div class="col-3"><div class="line_right line"></div></div>
-                    </div>
-        </div>
-        </div>
-        <!-- Three icons -->
-        <div class="lastbar_icon">
-        <div class="login_icons mt-4 fs-6 align-center">
-        <iconify-icon icon="logos:facebook" class="login_icon"></iconify-icon>
-        <iconify-icon icon="skill-icons:twitter" class="login_icon mx-5"></iconify-icon>
-        <iconify-icon icon="logos:google-icon" class="login_icon"></iconify-icon>
-        </div>
-        </div>
+                            <!-- text between two lines -->
+                            <!-- <div class="lastbar">
+                                <div class="two_lines">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <div class="line_left line"></div>
+                                        </div>
+                                        <div class="col-6 "><span>login with other</span></div>
+                                        <div class="col-3">
+                                            <div class="line_right line"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <!-- Three icons -->
+                            <!-- <div class="lastbar_icon">
+                                <div class="login_icons mt-4 fs-6 align-center">
+                                    <iconify-icon icon="logos:facebook" class="login_icon"></iconify-icon>
+                                    <iconify-icon icon="skill-icons:twitter" class="login_icon mx-5"></iconify-icon>
+                                    <iconify-icon icon="logos:google-icon" class="login_icon"></iconify-icon>
+                                </div>
+                            </div> -->
                             <!-- line end -->
                         </form>
                     </div>

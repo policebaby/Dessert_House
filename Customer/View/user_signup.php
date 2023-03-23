@@ -35,6 +35,13 @@ session_start();
                 <img src="../View/resources/img/logo.png" alt="logo" class="logo" />
                 <div class="signup_form ">
                     <p class="text-center text-light fs-3 title">Sign Up</p>
+                    <p class="text-center text-warning">
+                                    <?php
+                                    if (isset($_SESSION["errorsignup"])) {
+                                        echo $_SESSION["errorsignup"];
+                                    }
+                                    ?>
+                                </p>
                     <div class="p-3 signup_input">
                         <form action="../Controller/user_signupController.php" method="post">
                             <!-- input group start -->
@@ -53,15 +60,15 @@ session_start();
 
                             <div class="mb-4">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="M">
+                                <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="M" required>
                                 <label class="form-check-label" for="inlineRadio1">Male</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="F">
+                                <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="F" required>
                                 <label class="form-check-label" for="inlineRadio2">Female</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gender" id="inlineRadio3" value="others">
+                                <input class="form-check-input" type="radio" name="gender" id="inlineRadio3" value="others" required>
                                 <label class="form-check-label" for="inlineRadio3">Others</label>
                             </div>
                             </div>
