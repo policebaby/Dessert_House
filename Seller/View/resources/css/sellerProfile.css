@@ -5,11 +5,64 @@
 }
 body{
     overflow-x: hidden;
+    height:100vh;
 }
 .seller_profile_page{
     height:100vh;
     background-color:var(--secondary-skyblue);
 }
+/* sidebar */
+.web_name{
+    font-family:"DM Serif Display","sans-serif";
+    font-size:1.2em;
+}
+.icons{
+    font-size:2.2em !important;
+    color:white;
+    opacity:0.5;
+}
+.icons:hover{
+    opacity:1 ;
+}
+.profile-text{
+    text-decoration:none;
+    color:var(--text-color-white);
+}
+.profile-text:hover{
+    color:var(--text-color-white);
+}
+.title{
+    opacity:0.5;
+    text-decoration:none;
+    color:var(--text-color-white);
+}
+.title:hover{
+    color:var(--text-color-white);
+    opacity:1;
+}
+.profile-icon{
+    font-size:2.2em !important;
+}
+.web_logo{
+    width:4.5em !important;
+}
+.web_name,.nav-text{
+    color:var(--text-color-white);
+}
+.nav-text{
+    display:flex;
+}
+.edit_nav{
+    max-height:100% !important;
+    background-color:var(--primary-blue);
+}
+.nav_logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* page */
 .shopLogo{
     width:5em ;
     border-radius:0.3em;
@@ -40,41 +93,25 @@ body{
 .edit_profile_btn:hover{
     box-shadow:4px 4px 8px var(--primary-blue) !important;
 }
-.edit_nav{
-    background-color:var(--primary-blue);
-}
-.nav_text,.web_name{
-    color:var(--text-color-white);
-}
-.web_name{
-    font-family:"DM Serif Display","sans-serif";
-    font-size:1.2em;
-}
+
 @media screen and (max-width:720px){
     body{
         overflow-x: hidden;
     }
+    .icons{
+        font-size:2em !important;
+    }
     .web_name,.title{
         display:none !important;
     }
-    .nav_logo{
-        width:5em !important;
-    }
-    .nav_text{
-        text-align: center;
-        margin-top:15%;
-    }
-    .cFeedback{
-        margin-left:17%;
+    .web_logo{
+        width:3em !important;
     }
     .edit_nav{
         position:fixed;
+        width:5em !important;
         height:100vh !important;
         background-color: var(--primary-blue)!important ;
-    }
-    .icons{
-        width:1.8em;
-        margin:0.3em;
     }
     .profile-page{
         margin-left:15% !important;
@@ -90,27 +127,35 @@ body{
 
 @media screen and (max-width:468px){
     .edit_nav{
-        width:3.5em !important;
-        max-height:100% !important;
+        position:fixed;
+        width:3.3em !important;
+        height:100% !important;
     }
-    .nav_logo{
-        margin-left:0.3em;
-        width:2.2em !important;
+    .web_logo{
+        width:2em !important;
+        margin-top:0.8em !important;
     }
-    .icons{
-        width:1.4em;
-        margin-left:0.6em;
-        margin-top:1em !important;
+    .nav-icons{
+        position:relative !important;
+        margin-left:28% !important;
+    }
+    .icons,.profile-icon{
+        margin-top:2em !important;
+        font-size:1.2em !important;
+    }
+    .profile-page{
+    /* margin-left:0 !important; */
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
     }
     .MaryCafe{
-        width:6.6em !important;
-        margin-left:1.5em;
+        width:6.5em !important;
+        font-size:0.8em !important;
+        margin:0.5em !important;
     }
-    .edit{
-        width:15em !important;
-        margin-left:1.5em;
+    .col-10{
+        width:40% !important;
     }
-    .shopLogo{
-        margin-left:1.2em;
-    }
+
 }

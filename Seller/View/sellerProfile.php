@@ -17,52 +17,74 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Public+Sans&display=swap" rel="stylesheet">
+    <!-- iconify link -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
     <title>Seller Profile Page</title>
 </head>
-<body>
-    <div class=" row mt-0 seller_profile_page">
-
-    <div class="col-2 edit_nav">
-    <div class="mt-3 mb-3 text-center">
-            <img src="./resources/images/Ellipse 3.png" alt="logo" width="33%" class="nav_logo">
-            <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
-        </div>
-        <div class="ms-md-4 ms-sm-4">
-        <!-- profile icon from left nav -->
-        <div class="mt-4 nav_text">
-            <img src="./resources/images/person.png" class="icons">
-            <span class="title">Profile</span>
-        </div>
-        <!-- meun icon from left nav -->
-        <div class="nav_text my-3 text-muted">
-            <img src="./resources/images/menu.png" alt="" class="my-3 icons">
-            <span class="title">Product Menu</span>
-        </div>
-        <!-- order list icon from left nav -->
-        <div class="nav_text text-muted">
-            <img src="./resources/images/orderList.png" class="icons">
-            <span class="title">Order Lists</span>
-        </div>
-        <!-- sold history icon from left nav -->
-        <div class="nav_text my-3 text-muted">
-            <img src="./resources/images/soldList.png" alt="" class="my-3 icons">
-            <span class="title">Sold History</span>
-        </div>
-        <!-- incoming order icon from left nav -->
-        <div class="nav_text text-muted">
-            <img src="./resources/images/incomingOrder.png" class="icons">
-            <span class="title">Incoming Orders</span>
-        </div>
-        <!-- logout icon from left nav-->
-        <div class="nav_text my-3 text-muted">
-            <img src="./resources/images/Logout.png" alt="" class="my-3 nav_text icons">
-            <span class="title">Logout</span>
-        </div>
-        </div>
-    </div>
+<body class="seller_profile_page">
+    <div class=" row">
+    <nav class="col-2 d-flex flex-direction-column">
+        <div class="edit_nav">
+                    <div class="nav_logo">
+                        <img src="./resources/images/Ellipse 3.png" alt="logo" class="web_logo mt-md-5 mt-sm-4">
+                        <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
+                    </div>
+                    <!-- sidebar nav -->
+                    <div class="nav-icons ms-md-3 ms-sm-3 mt-sm-4">
+                        <!-- profile icon from left nav -->
+                        <div class="nav-text">
+                            <span>
+                                <iconify-icon icon="bi:people-circle" class="profile-icon"></iconify-icon>
+                            </span>
+                            <a href="./sellerProfile.php" class="profile-text ms-md-3 mt-2">Profile</a>
+                        </div>
+                        <!-- meun icon from left nav -->
+                        <div class="nav-text my-md-4 my-sm-4">
+                            <span>
+                                <iconify-icon icon="material-symbols:menu-book-sharp" class="icons"></iconify-icon>
+                            </span>
+                            <a href="./sellerNewProductMenu.php" class="title ms-md-3 mt-2">Product Menu</a>
+                        </div>
+                        <!-- order list icon from left nav -->
+                        <div class="nav-text">
+                            <span>
+                                <iconify-icon icon="material-symbols:order-approve-outline" class="icons"></iconify-icon>
+                            </span>
+                            <a href="./orderList.php" class="title ms-md-3 mt-2">Order Lists</a>
+                        </div>
+                        <!-- sold history icon from left nav -->
+                        <div class="nav-text my-md-4 my-sm-4">
+                            <span>
+                                <iconify-icon icon="mdi:clipboard-text-clock" class="icons"></iconify-icon>
+                            </span>
+                            <a href="./soldHistory.php" class="title ms-md-3 mt-2">Sold History</a>
+                        </div>
+                        <!-- incoming order icon from left nav -->
+                        <div class="nav-text">
+                            <span>
+                                <iconify-icon icon="material-symbols:order-play-outline" class="icons"></iconify-icon>
+                            </span>
+                            <a href="./incomingOrder.php" class="title ms-md-2 mt-2">Incoming Orders</a>
+                        </div>
+                        <!-- feedback icon -->
+                        <div class="nav-text my-md-4 my-sm-4">
+                            <span>
+                                <iconify-icon icon="ri:feedback-line" class="icons"></iconify-icon>
+                            </span>
+                            <a href="./feedbackDetails.php" class="title ms-md-3">Customer's Feedback</a>
+                        </div>
+                        <!-- logout icon from left nav-->
+                        <div class="nav-text">
+                            <span>
+                                <iconify-icon icon="material-symbols:logout-rounded" class="icons"></iconify-icon>
+                            </span>
+                            <a href="./sellerlogin.php" class="title ms-md-3 mt-2">Logout</a>
+                        </div>
+                    </nav>
 
     <!-- fill input box -->
-    <div class="col-10 mt-3 ms-0 profile-page">
+    <div class="col-10 mt-3 profile-page d-flex justify-content-center">
         <div class="profile-page">
         <div class="mt-2 profileLogo">
             <img src="./resources/images/shopLogo.jpg" alt="" class="shopLogo mb-2">
@@ -82,22 +104,22 @@
 
         <!-- email -->
         <div class="profileLogo mt-4">
-                <input type="email" placeholder="cafe@gmail.com" class="edit edit_center">
+                <input type="email" placeholder="cafe@gmail.com" class="edit edit_center sm-box">
         </div>
 
         <!-- password -->
             <div class="profileLogo my-4">
-                <input type="password" placeholder="password" class="edit edit_center">
+                <input type="password" placeholder="password" class="edit edit_center sm-box">
         </div>
 
         <!-- phone number -->
         <div class="profileLogo">
-                <input type="text" placeholder="09777777777" class="edit edit_center">
+                <input type="text" placeholder="09777777777" class="edit edit_center sm-box">
             </div>
 
             <!-- edit button -->
             <div class="profileLogo my-4">
-                <button type="button" class="edit_profile_btn edit edit_center mt-sm-4">Edit Profile</button>
+                <button type="button" class="edit_profile_btn edit edit_center mt-sm-4 sm-box">Edit Profile</button>
             </div>
         </div>
     </div>

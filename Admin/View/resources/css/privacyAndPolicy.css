@@ -1,6 +1,161 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: var(--secondaryFont), serif;
-    font-family: var(--primaryFont), sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: var(--secondaryFont), serif;
+  font-family: var(--primaryFont), sans-serif;
+}
+
+
+/* Rules Big Container */
+.rulesContainer {
+  height: 35vh;
+  width: 70%;
+  margin-left: 17%;
+}
+
+/* title of the rules */
+.rulesTitle {
+  height: 9%;
+  width: 100%;
+  background-color: #710c05;
+  color: rgb(255, 255, 255, 1);
+  padding: 1em;
+  font-size: 1.5em;
+  opacity: 0.7;
+}
+
+/* Insert a bigger bullet in front of li text */
+.rulesList li:before {
+    content: "●";
+    font-size: 1.5em;
+    color: rgb(113,12,5,0.7);
+    padding-right: 0.5em;
+  
   }
+
+/* make one list into container and list-style-none to insert the new bigger bullet in front of text  */
+.rulesList {
+  list-style-type: none;
+  height: 50%;
+}
+
+.rulesList li {
+  margin: 2em 0 0 2em;
+}
+
+
+/* because margin can't be distanced a span element, here we use inline-block to make it distaceable */
+.ruleText span{
+  display: inline-block;
+  margin-right: 38%;
+}
+
+/* Edit and Delete link */
+.ruleText a:nth-child(2){
+    font-size: 1em;
+    margin-right: 2%;
+    display: inline-block;
+}
+
+.ruleText a:nth-child(3){
+  font-size: 1em;
+  color: red;
+}
+
+.ruleText{
+  white-space: nowrap;
+}
+
+/* Write rules title */
+.writeRulesTitle{
+  background-color: rgb(113,12,5,0.7);
+  display: inline-block;
+  color: white;
+  padding: 2em;
+  margin-left: 3%;
+}
+
+/* Textarea for writing new rules */
+.newRulesBox{
+  margin: 4em;
+  width: 80%;
+  border: 2px solid var(--adminPrimaryColor);
+  border-radius: 1em;
+}
+
+.newRulesBox::placeholder{
+text-align: center;
+padding-top: 5em;
+}
+
+/* First pagination */
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.pagination li a {
+  text-decoration: none;
+  color: grey;
+  border: 0.7px solid #ccc;
+  font-weight: bold;
+  padding: 0.5em;
+}
+
+.pagination li a:hover {
+  background-color: var(--adminPrimaryColor);
+  color: white !important;
+  border-color:var(--adminPrimaryColor);
+}
+
+.pagination .arrowToRed {
+  color:var(--adminPrimaryColor);
+  border-color:var(--adminPrimaryColor);
+}
+
+.moveToRight{
+  margin-left: 15%;
+  display: inline-block;
+}
+
+
+/* Buttons */
+.buttons{
+  display: inline-block;
+  margin-left: 40%;
+}
+
+.btn{
+  height: 3em;
+  width: 8em;
+  border-radius: 1em;
+  border: transparent;
+  color: white;
+}
+
+.add{
+  background-color: #0057FF;
+}
+
+.cancel{
+  background-color: #C22014;
+  margin-left: 1em;
+}
+
+/* Seller Compliance Big Container */
+.complianceContainer {
+  height: 30%;
+  width: 70%;
+  margin-left: 17%;
+  margin-top: 15%;
+}
+
+
+.complianceContainer .buttons{
+  margin-bottom: 5em;
+}
+
+.complianceContainer .rulesList{
+  margin-bottom: 3em;
+}

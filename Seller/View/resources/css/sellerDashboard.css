@@ -11,6 +11,30 @@ body{
     max-height:100vh;
     background-color:var(--secondary-skyblue)!important;
 }
+/* for side bar */
+.icons{
+    font-size:2.2em !important;
+    color:var(--text-color-white);
+    opacity:0.5;
+}
+.icons:hover{
+    opacity:1 ;
+}
+.title{
+    opacity:0.5;
+    text-decoration:none;
+    color:var(--text-color-white);
+}
+.title:hover{
+    color:var(--text-color-white);
+    opacity:1;
+}
+.web_name,.nav-text{
+    color:var(--text-color-white);
+}
+.nav-text{
+    display:flex;
+}
 .edit_nav{
     max-height:100% !important;
     background-color:var(--primary-blue);
@@ -21,16 +45,12 @@ body{
     justify-content: center;
     align-items: center;
 }
-.nav_text,.web_name{
-    color:var(--text-color-white);
-}
 .web_name{
     font-family:"DM Serif Display","sans-serif";
     font-size: 1.2em;
 }
-.feedback_gp{
-    display:flex;
-}
+
+
 /* page */
 .first-row{
     display:flex;
@@ -48,18 +68,16 @@ body{
     background-color:var(--primary-blue);
 }
 .second_row_first{
-    width:25em;
+    width:23em !important;
     height:21em;
     border-radius:0.5em;
     background-color:var(--primary-blue);
     color:var(--text-color-white);
     font-size:1em;
 }
-.icons{
-    opacity:0.6;
-}
+
 .second_row_second{
-    width:33.5em !important;
+    width:31.7em !important;
     height:34em;
     border-radius:0.5em;
     background-color:var(--primary-blue);
@@ -97,7 +115,7 @@ body{
 .feedback_card{
     width:28em;
     height:7.5em;
-    margin-left:-2em !important;
+    margin-left:0.8em !important;
     border-style:none;
     border-radius:0.5em;
     background-color:var(--secondary-skyblue);
@@ -145,34 +163,30 @@ body{
     body{
         overflow-x: hidden;
     }
+    .icons{
+        font-size:2em !important;
+    }
     .web_name,.title{
         display:none !important;
     }
     .web_logo{
-        width:55% !important;
-        margin-left:6%;
-    }
-    .nav_text{
-        text-align: center;
-        margin-top:15%;
-    }
-    .icons{
-        width:25%;
-        margin:0.3em;
+        width:3em !important;
     }
     .edit_nav{
         position:fixed;
+        width:5em !important;
         height:100vh !important;
         background-color: var(--primary-blue)!important ;
     }
-    .cFeedback{
-        margin-left:32%;
-    }
     .first-row{
-        margin-left:15% !important;
+        margin-left:5% !important;
     }
     .second-row{
-        margin-left:25% !important;
+        margin-left:8% !important;
+    }
+    .second_row_first{
+        width:26em !important;
+        margin-left:1em;
     }
     .second_row_second{
         width:26em !important;
@@ -199,7 +213,7 @@ body{
     }
     .bs-1{
         display:flex;
-        margin-left:7.6em;
+        margin-left:5em;
     }
     .bs-2{
         display:flex;
@@ -212,17 +226,25 @@ body{
 
 /* for mobile view */
 @media screen and (max-width:468px){
+    body{
+        overflow-x:hidden !important;
+    }
     .edit_nav{
         position:fixed;
-        width:2.7em !important;
+        width:3.3em !important;
         height:100% !important;
     }
     .web_logo{
-        width:2em;
+        width:2em !important;
+        margin-top:0.8em !important;
     }
-    .icons{
-        width:1.2em;
-        margin-top:1.3em;
+    .nav-icons{
+        position:relative !important;
+        margin-left:28% !important;
+    }
+    .icons,.feedback-icon{
+        margin-top:2em !important;
+        font-size:1.2em !important;
     }
     .blue_squares{
         width:15em !important;
@@ -232,17 +254,18 @@ body{
     }
     .bs-2{
         margin-left:-3.5em;
+        margin-top:1em;
     }
     .icon21{
-        margin-top:1em;
+        margin-top:2em !important;
     }
     .text_21{
         margin-top:0.3em;
     }
     .second_row_first{
-        width:15.5em !important;
+        width:16em !important;
         height:10em !important;
-        margin-left:-2em;
+        margin-left:-1.5em;
     }
     .user-per-text{
         font-size:0.4em;
@@ -262,7 +285,7 @@ body{
     .second_row_second{
         width:15.5em !important;
         height:25em !important;
-        margin-left:-1.8em;
+        margin-left:-2em;
         margin-top:1em !important;
     }
     .feedback_header{
@@ -293,6 +316,6 @@ body{
     .view{
         width:5em !important;
         font-size:0.5em;
-        margin-left:9em;
+        margin-left:10.2em;
     }
 }

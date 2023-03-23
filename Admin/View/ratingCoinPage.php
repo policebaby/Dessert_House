@@ -15,6 +15,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans&display=swap" rel="stylesheet">
 
+   
+
     <title>Rating Coin</title>
 </head>
 
@@ -49,7 +51,7 @@
                         <td data-label="Exchange Amount">$ 10240</td>
                         <td data-label="Status">Pending</td>
                         <td data-label="Contact Info">+959 888888888<br>frostgoddess@gmail.com</td>
-                        <td data-label="Uploaded Receipt"><a href="">View</a></td>
+                        <td data-label="Uploaded Receipt" id="myBtn">View</td>
                         <td data-label="Buttons"><button class="btn activate">Activate</button><button class="btn disable">Disable</button></td>
                     </tr>
                     <tr>
@@ -60,24 +62,23 @@
                         <td data-label="Exchange Amount">$ 10240</td>
                         <td data-label="Status">Pending</td>
                         <td data-label="Contact Info">+959 888888888<br>frostgoddess@gmail.com</td>
-                        <td data-label="Uploaded Receipt"><a href="">View</a></td>
+                        <td data-label="Uploaded Receipt" id="myBtn">View</td>
                         <td data-label="Buttons"><button class="btn activate">Activate</button><button class="btn disable">Disable</button></td>
                     </tr>
                 </tbody>
             </table>
-
-            <!-- Pagination (NOT SURE IF USED) -->
-            <!-- <div class="moveToCorner">
-                <ul class="pagination">
-                    <li class="page-item"><a class="page-link arrowToRed" href="#">&lt;</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">...</a></li>
-                    <li class="page-item"><a class="page-link arrowToRed" href="#">&gt;</a></li>
-                </ul>
-            </div> -->
         </div>
+    </div>
+
+    <!-- Click View More and Pop Up Screen Appear (THE POPUP SCREEN) -->
+    <div id="popUp" class="popUp">
+
+        <!-- PopUp content -->
+        <div class="popUpContent">
+            <span class="close">&times;</span>
+            <img src="./resources/img/receiptTest.jpg" alt="Receipt Picture" width="80%" height="80%">
+        </div>
+
     </div>
 
 
@@ -185,6 +186,8 @@
 
 
 
+ <!-- Link with Javascript -->
+ <script src="./resources/js/ratingCoinPage.js"></script>
 </body>
 
 </html>
