@@ -1,5 +1,5 @@
 <?php
-
+ini_set("display_errors", "1");
 
 
 
@@ -41,7 +41,8 @@
             <iconify-icon icon="material-symbols:check-circle-rounded" class="circle_icon"></iconify-icon>
             <p> Your password has been reset successfully! </p>
             <p> Now login with your new password. </p>
-            <button type="button" class="btn btn-lg" id="continue_btn">Login</button>
+            <form action="./user_login.php">
+            <button type="submit" class="btn btn-lg" id="continue_btn">Login</button></form>
         </div>
     </div>
     <!-- forget password start -->

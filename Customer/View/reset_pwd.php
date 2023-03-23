@@ -1,5 +1,6 @@
 <?php
-
+ini_set("display_errors", "1");
+session_start();
 
 
 ?>
@@ -36,10 +37,18 @@
             <iconify-icon icon="ion:lock-closed-sharp" class="lock_icon"></iconify-icon>
             <p class="title">Reset your password?</p>
             <p>We have send four digits on your email.</p>
-            <input type="text" placeholder="Four digit code" class="input_code">
-            <input type="text" placeholder="New password" class="input_new">
-            <input type="text" placeholder="Confirm password" class="input_confirm">
-            <button type="button" class="btn btn-lg" id="reset_btn">Reset password</button>
+            <!-- <a href="../Controller/.php" class="text-dark">Resend code.</a> -->
+            <p class="text-danger">
+                <?php
+                if (isset($_SESSION["digitIncorrect"])) {
+                    echo  $_SESSION["digitIncorrect"];
+                }
+                ?></p>
+            <form action="../Controller/reset_pwdController.php" method="post" >
+                <input type="text" placeholder="Four digit code" class="input_code" name="fourdigit">
+                <input type="password" placeholder="New password" class="input_new" name="newpwd">
+                <button type="submit" class="btn btn-lg" id="reset_btn" name="reset">Reset password</button>
+            </form>
         </div>
     </div>
     <!-- reset password start -->

@@ -1,5 +1,6 @@
 <?php
-
+ini_set("display_errors", "1");
+session_start();
 
 
 
@@ -42,8 +43,16 @@
         <div class="white_card">
             <iconify-icon icon="bx:question-mark" class="q_icon"></iconify-icon>
             <p class="title">Forget Password?</p>
-            <input type="text" placeholder="Enter Your Email" class="input_email">
-            <button type="button" class="btn btn-lg" id="continue_btn">Continue</button>
+            <p class="text-danger">
+                <?php
+                if (isset($_SESSION["emailcheck"])) {
+                    echo  $_SESSION["emailcheck"];
+                }
+                ?></p>
+            <form action="../Controller/forget_pwdController.php" method="post">
+                <input type="text" placeholder="Enter Your Email" class="input_email" name="email" required>
+                <button type="submit" class="btn btn-lg" id="continue_btn" name="forgetpwd">Continue</button>
+            </form>
         </div>
     </div>
     <!-- forget password start -->
