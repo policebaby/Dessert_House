@@ -29,6 +29,9 @@ body{
     color:var(--text-color-white);
     opacity:1;
 }
+.web_logo{
+    width:4.7em !important;
+}
 .web_name,.nav-text{
     color:var(--text-color-white);
 }

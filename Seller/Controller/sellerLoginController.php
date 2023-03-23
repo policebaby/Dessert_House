@@ -16,10 +16,11 @@ if(isset($_POST["loginBtn"])){
     $sql = $pdo->prepare
     (
         "
-        SELECT * FROM m_seller WHERE email = :email
+        SELECT * FROM m_seller WHERE email = :email AND seller_name = :sellerName
         "
     );
     $sql->bindValue(":email",$email);
+    $sql->bindValue(":sellerName", $sellerName);
     $sql->execute();
 
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -35,9 +36,17 @@ if(isset($_POST["loginBtn"])){
         // login success state
         $dbpwd = $result[0]["password"];
         if($dbpwd == $pwd){
+
         //if(password_verify($pwd,$dbpwd)){
+
             // success state
+
             $_SESSION["error"] = "";
+
+            $_SESSION["sellerName"] = $sellerName;
+            $_SESSION["sellerID"]   = $result[0]["seller_id"];
+
+
             header("Location: ../View/sellerDashboard.php");
         }else{
             // fail state

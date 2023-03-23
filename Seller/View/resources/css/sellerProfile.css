@@ -18,30 +18,28 @@ body{
 }
 .icons{
     font-size:2.2em !important;
-    color:white;
-    opacity:0.5;
 }
-.icons:hover{
-    opacity:1 ;
-}
-.profile-text{
-    text-decoration:none;
+.profile-text,.profile-icon{
+    text-decoration:none !important;
     color:var(--text-color-white);
 }
+
 .profile-text:hover{
     color:var(--text-color-white);
 }
-.title{
+.nav-text{
+    text-decoration: none;
     opacity:0.5;
-    text-decoration:none;
-    color:var(--text-color-white);
 }
-.title:hover{
-    color:var(--text-color-white);
+.nav-text:hover{
     opacity:1;
+    color:var(--text-color-white);
 }
 .profile-icon{
     font-size:2.2em !important;
+}
+.profile-icon:hover{
+    color:var(--text-color-white);
 }
 .web_logo{
     width:4.5em !important;
@@ -64,7 +62,7 @@ body{
 }
 /* page */
 .shopLogo{
-    width:5em ;
+    width:8.5em !important;
     border-radius:0.3em;
 }
 .profileLogo{
@@ -101,7 +99,7 @@ body{
     .icons{
         font-size:2em !important;
     }
-    .web_name,.title{
+    .web_name,.title,.profile-text{
         display:none !important;
     }
     .web_logo{
@@ -113,14 +111,10 @@ body{
         height:100vh !important;
         background-color: var(--primary-blue)!important ;
     }
-    .profile-page{
-        margin-left:15% !important;
-    }
     .edit_center{
         height:2.3em;
     }
     .name,.shop_name{
-        width:8.7em !important;
         height:2em;
     }
 }
@@ -144,18 +138,16 @@ body{
         font-size:1.2em !important;
     }
     .profile-page{
-    /* margin-left:0 !important; */
+    margin-left:0 !important;
     display:flex;
     flex-direction:column;
     justify-content:center;
     }
-    .MaryCafe{
-        width:6.5em !important;
+    .edit,.name,.shop_name{
         font-size:0.8em !important;
-        margin:0.5em !important;
     }
-    .col-10{
-        width:40% !important;
+    .shopLogo{
+        width:7em !important;
     }
 
 }

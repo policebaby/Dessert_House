@@ -39,7 +39,7 @@
             <span>
                 <iconify-icon icon="bi:people-circle" class="icons"></iconify-icon>
             </span>
-            <span class="title ms-md-3 mt-2 text-muted">Profile</span>
+            <a href="./sellerProfile.php" class="title ms-md-3 mt-2">Profile</a>
         </div>
 
         <!-- meun icon from left nav -->
@@ -47,15 +47,15 @@
             <span>
             <iconify-icon icon="material-symbols:menu-book-sharp" class="menu-icon"></iconify-icon>
             </span>
-            <span class="title ms-md-3 mt-2 active">Product Menu</span>
+            <a href="./sellerNewProductMenu.php" class="product-text ms-md-3 mt-2">Product Menu</a>
         </div>
 
         <!-- order list icon from left nav -->
-        <div class="nav-text text-muted">
+        <div class="nav-text">
             <span>
             <iconify-icon icon="material-symbols:order-approve-outline" class="icons"></iconify-icon>
             </span>
-            <span class="title ms-md-3 mt-2">Order Lists</span>
+            <a href="./orderList.php" class="title ms-md-3 mt-2">Order Lists</a>
         </div>
 
         <!-- sold history icon from left nav -->
@@ -63,15 +63,15 @@
         <span>
         <iconify-icon icon="mdi:clipboard-text-clock" class="icons"></iconify-icon>
         </span>
-            <span class="title ms-md-3 mt-2 text-muted">Sold History</span>
+            <a href="./soldHistory.php" class="title ms-md-3 mt-2">Sold History</a>
         </div>
 
         <!-- incoming order icon from left nav -->
-        <div class="nav-text text-muted">
+        <div class="nav-text">
             <span>
             <iconify-icon icon="material-symbols:order-play-outline" class="icons"></iconify-icon>
             </span>
-            <span class="title ms-md-2 mt-2">Incoming Orders</span>
+            <a href="./incomingOrder.php" class="title ms-md-2 mt-2">Incoming Orders</a>
         </div>
 
         <!-- feedback icon -->
@@ -79,15 +79,15 @@
             <span>
             <iconify-icon icon="ri:feedback-line" class="icons"></iconify-icon>
             </span>
-            <span class="title ms-md-3 text-muted">Customer's Feedback</span>
+            <a href="./feedbackDetails.php" class="title ms-md-3">Customer's Feedback</a>
         </div>
 
         <!-- logout icon from left nav-->
-        <div class="nav-text text-muted">
+        <div class="nav-text">
             <span>
             <iconify-icon icon="material-symbols:logout-rounded" class="icons"></iconify-icon>
             </span>
-            <span class="title ms-md-3 mt-2">Logout</span>
+            <a href="./sellerlogin.php" class="title ms-md-3 mt-2">Logout</a>
         </div>
         </nav>
 
@@ -101,7 +101,7 @@
             <div class="first-row-second col-md-5 mt-md-4 mt-sm-5">
                 <p class="fw-bold h5 insert-title">Insert New Product's Information</p>
                 <div class="label-box">
-                    <label for="new-product-name texts" class="fw-bold">New Product Name</label>
+                    <label for="new-product-name texts" class="fw-bold mt-3">New Product Name</label>
                     <input type="text" class="input-box">
                 </div>
                 <div class="label-box my-md-3 my-sm-3">
