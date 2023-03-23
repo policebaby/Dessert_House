@@ -32,61 +32,56 @@
                     </div>
                     <!-- sidebar nav -->
                     <div class="nav-icons ms-md-3 ms-sm-3 mt-sm-4">
-        <!-- profile icon from left nav -->
-        <div class="nav-text">
-            <span>
-                <iconify-icon icon="bi:people-circle" class="profile-icon"></iconify-icon>
-            </span>
-            <span class="title ms-md-3 mt-2 active">Profile</span>
-        </div>
-
-        <!-- meun icon from left nav -->
-        <div class="nav-text my-md-4 my-sm-4">
-            <span>
-            <iconify-icon icon="material-symbols:menu-book-sharp" class="icons"></iconify-icon>
-            </span>
-            <span class="title ms-md-3 mt-2 text-muted">Product Menu</span>
-        </div>
-
-        <!-- order list icon from left nav -->
-        <div class="nav-text text-muted">
-            <span>
-            <iconify-icon icon="material-symbols:order-approve-outline" class="icons"></iconify-icon>
-            </span>
-            <span class="title ms-md-3 mt-2">Order Lists</span>
-        </div>
-
-        <!-- sold history icon from left nav -->
-        <div class="nav-text my-md-4 my-sm-4">
-        <span>
-        <iconify-icon icon="mdi:clipboard-text-clock" class="icons"></iconify-icon>
-        </span>
-            <span class="title ms-md-3 mt-2 text-muted">Sold History</span>
-        </div>
-
-        <!-- incoming order icon from left nav -->
-        <div class="nav-text text-muted">
-            <span>
-            <iconify-icon icon="material-symbols:order-play-outline" class="icons"></iconify-icon>
-            </span>
-            <span class="title ms-md-2 mt-2">Incoming Orders</span>
-        </div>
-        <!-- feedback icon -->
-        <div class="nav-text my-md-4 my-sm-4">
-            <span>
-            <iconify-icon icon="ri:feedback-line" class="icons"></iconify-icon>
-            </span>
-            <span class="title ms-md-3 text-muted">Customer's Feedback</span>
-        </div>
-
-        <!-- logout icon from left nav-->
-        <div class="nav-text text-muted">
-            <span>
-            <iconify-icon icon="material-symbols:logout-rounded" class="icons"></iconify-icon>
-            </span>
-            <span class="title ms-md-3 mt-2">Logout</span>
-        </div>
-    </nav>
+                        <!-- profile icon from left nav -->
+                        <div class="nav-text">
+                            <span>
+                                <iconify-icon icon="bi:people-circle" class="profile-icon"></iconify-icon>
+                            </span>
+                            <a href="./sellerProfile.php" class="profile-text ms-md-3 mt-2">Profile</a>
+                        </div>
+                        <!-- meun icon from left nav -->
+                        <div class="nav-text my-md-4 my-sm-4">
+                            <span>
+                                <iconify-icon icon="material-symbols:menu-book-sharp" class="icons"></iconify-icon>
+                            </span>
+                            <a href="./sellerNewProductMenu.php" class="title ms-md-3 mt-2">Product Menu</a>
+                        </div>
+                        <!-- order list icon from left nav -->
+                        <div class="nav-text">
+                            <span>
+                                <iconify-icon icon="material-symbols:order-approve-outline" class="icons"></iconify-icon>
+                            </span>
+                            <a href="./orderList.php" class="title ms-md-3 mt-2">Order Lists</a>
+                        </div>
+                        <!-- sold history icon from left nav -->
+                        <div class="nav-text my-md-4 my-sm-4">
+                            <span>
+                                <iconify-icon icon="mdi:clipboard-text-clock" class="icons"></iconify-icon>
+                            </span>
+                            <a href="./soldHistory.php" class="title ms-md-3 mt-2">Sold History</a>
+                        </div>
+                        <!-- incoming order icon from left nav -->
+                        <div class="nav-text">
+                            <span>
+                                <iconify-icon icon="material-symbols:order-play-outline" class="icons"></iconify-icon>
+                            </span>
+                            <a href="./incomingOrder.php" class="title ms-md-2 mt-2">Incoming Orders</a>
+                        </div>
+                        <!-- feedback icon -->
+                        <div class="nav-text my-md-4 my-sm-4">
+                            <span>
+                                <iconify-icon icon="ri:feedback-line" class="icons"></iconify-icon>
+                            </span>
+                            <a href="./feedbackDetails.php" class="title ms-md-3">Customer's Feedback</a>
+                        </div>
+                        <!-- logout icon from left nav-->
+                        <div class="nav-text">
+                            <span>
+                                <iconify-icon icon="material-symbols:logout-rounded" class="icons"></iconify-icon>
+                            </span>
+                            <a href="./sellerlogin.php" class="title ms-md-3 mt-2">Logout</a>
+                        </div>
+                    </nav>
 
     <!-- fill input box -->
     <div class="col-10 mt-3 profile-page d-flex justify-content-center">

@@ -14,9 +14,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nav</title>
     <!--css link start-->
-    <link rel="stylesheet" href="../View/resources/css/nav.css">
-    <link rel="stylesheet" href="../View/resources/css/root.css">
+    <link href="../View/resources/css/nav.css?key=<?php echo time(); ?>" type="text/css" rel="stylesheet" />
+    <link href="../View/resources/css/root.css?key=<?php echo time(); ?>" type="text/css" rel="stylesheet" />
     <!--css link edn-->
+    <script src="./lib/jquery3.6.0.js"></script>
+    <script src="../View/resources/js/nab.js"></script>
     <!--font link start-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -52,9 +54,9 @@
         <img src="../View/resources/img/logo.png" alt="logo" class="nav_logo" />
 
         <ul class="nav_desktop">
-            <li class="nav_name">Home</li>
-            <li class="nav_name">Shop</li>
-            <li class="nav_name">Coin Shop</li>
+            <li class="nav_name "  id="home" ><a href="./user_home.php">Home</a></li>
+            <li class="nav_name " id="shop" ><a href="./shopProfile.php"> Shop</a></li>
+            <li class="nav_name "  id="coin_shop" ><a href="./coin_exchange.php">Coin Shop</a> </li>
         </ul>
 
         <!--search box start-->
@@ -64,12 +66,12 @@
         </div>
         <!--search box end-->
 
-        <a href="#">
+        <a href="./user_profile.php">
             <iconify-icon icon="healthicons:ui-user-profile" class="nav_icons nav_pf"></iconify-icon>
         </a>
 
-        <a href="#">
-            <iconify-icon icon="material-symbols:shopping-bag" class="nav_icons"></iconify-icon>
+        <a href="./shoppingCart.php">
+            <iconify-icon icon="material-symbols:shopping-bag" class="cart_icon"></iconify-icon>
         </a>
 
         <!--bento menu start-->
@@ -84,10 +86,10 @@
     <!--flex text start-->
     <input type="checkbox" id="nav_check">
     <ul class="nav_mobile">
-        <li class="nav_mvname">Home</li>
-        <li class="nav_mvname">Shop</li>
-        <li class="nav_mvname">Coin Shop</li>
-        <li class="nav_mvname">Profile</li>
+        <li class="nav_mvname"><a href="./user_home.php"> Home</a></li>
+        <li class="nav_mvname"><a href="./shopProfile.php">Shop</a></li>
+        <li class="nav_mvname"><a href="./coin_exchange.php"> Coin Shop</a></li>
+        <li class="nav_mvname"><a href="./user_profile.php"> Profile</a></li>
     </ul>
     <!--flex text end-->
     <!--Nav bar end-->

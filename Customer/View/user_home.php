@@ -105,7 +105,7 @@
             </div>
         </div>
         <div class="text-center ">
-            <button class="btn btnCoffee my-3">View More</button>
+            <a href="./shops.php"><button class="btn btnCoffee my-3">View More</button></a>
         </div>
     </div>
     <!-- shops profiles end -->

@@ -39,7 +39,7 @@
         <div class="">
             <button class="btn btnBack px-3 ms-5 mt-5">
                 <iconify-icon icon="material-symbols:arrow-back-ios-new-rounded" class="backIcon"></iconify-icon>
-                <span class="textBack ">Back</span>
+                <span class="textBack "><a href="./shops.php"> Back</a></span>
             </button>
             <div>
                 <div class="shopLogo ms-5 mt-5">
@@ -232,7 +232,7 @@
     <!-- booking seat start-->
     <p class="text-center bookSeatText"> Finish Choosing Food? Book Your Seat.</p>
     <div class="text-center">
-        <button class="btn btnBooking">Booking Seat</button>
+        <a href="./seat_selection.php"><button class="btn btnBooking">Booking Seat</button></a>
     </div>
     <!-- booking seat end-->
     <!-- footer start -->

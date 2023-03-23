@@ -113,9 +113,9 @@ body {
     background-color: transparent;
 
 }
-.menuImg {
-    /* margin: 2.5em 0em 0em 4.5em; */
-}
+/* .menuImg {
+    margin: 2.5em 0em 0em 4.5em;
+} */
 
 .price {
     position: relative;
@@ -177,7 +177,10 @@ body {
     border-radius: 0.6em;
     margin: 1em;
 }
-
+#shop{
+    color: white !important;
+    opacity: 100% !important;
+}
 /* media screen */
 @media (max-width: 390px) {
     .menu {

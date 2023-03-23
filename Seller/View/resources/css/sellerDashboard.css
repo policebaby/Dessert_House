@@ -14,11 +14,20 @@ body{
 /* for side bar */
 .icons{
     font-size:2.2em !important;
-    color:white;
-    opacity:0.6;
+    color:var(--text-color-white);
+    opacity:0.5;
 }
-.feedback-icon{
-    font-size:2.2em !important;
+.icons:hover{
+    opacity:1 ;
+}
+.title{
+    opacity:0.5;
+    text-decoration:none;
+    color:var(--text-color-white);
+}
+.title:hover{
+    color:var(--text-color-white);
+    opacity:1;
 }
 .web_name,.nav-text{
     color:var(--text-color-white);

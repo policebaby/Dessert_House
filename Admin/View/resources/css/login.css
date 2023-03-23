@@ -63,6 +63,18 @@ body{
     font-weight: var(--fontWeightSemi);
 }
 
+/* Form */
+.form{
+    height: 100%;
+    width: 100%;
+}
+
+/* If user does not match, appear error message */
+.form span{
+    margin-top: 0.5em;
+    display: block;
+}
+
 /* Adjust name input box, password input box and button */
 .nameInputBox, .passwordInputBox,.logInButton{
     margin-top: 2em;

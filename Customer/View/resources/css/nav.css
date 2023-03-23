@@ -46,9 +46,17 @@ body {
 }
 .nav_icons {
   color: var(--userSecondarycolor);
-  font-size: 1.8em !important;
+  font-size: 1.8em !important; 
   margin-top: 0.8em !important;
   margin-bottom: 0.7em !important;
+  opacity: 70%;
+}
+.cart_icon{
+  color: var(--userSecondarycolor);
+  font-size: 1.8em !important; 
+  margin-top: 0.8em !important;
+  margin-bottom: 0.7em !important;
+  opacity: 70%;
 }
 .nav_desktop {
   display: flex;
@@ -60,11 +68,25 @@ body {
   font-size: var(--dsFontweightSemi);
   color: var(--userSecondarycolor);
   padding-left: 3em !important;
+  opacity: 70%;
 }
 .nav_mobile > .nav_mvname {
   display: inline;
 }
-
+.nav_name{
+  cursor: pointer !important;
+}
+#home{
+  text-decoration: none !important;
+}
+a:link{
+  text-decoration: none!important;
+  color: white !important;
+}
+a, a:link, a:visited {
+  color: white;
+  opacity: 70%;
+}
 .search_icon {
   color: black;
   width: 1.2em;
@@ -77,8 +99,13 @@ body {
   margin-bottom: 0.7em;
   display: none;
 }
+.active{
+  color: white !important;
+  opacity: 100% !important;
+}
 .nav_mobile {
   display: none;
+  
 }
 #nav_check {
   display: none;
@@ -87,6 +114,13 @@ body {
   .nav_menu {
     display: block;
     cursor: pointer;
+  }
+  a:link{
+    text-decoration: none!important;
+    color: white !important;
+  }
+  a, a:link, a:visited {
+    color: white;
   }
   .nav_logo {
     margin-left: 2em !important;
