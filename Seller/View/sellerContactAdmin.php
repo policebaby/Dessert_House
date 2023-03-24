@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,100 +23,104 @@
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
     <title>Seller Contact Admin Page</title>
 </head>
+
 <body class="seller_contact_admin_page">
     <div class="row">
-    <nav class="col-2 mt-0 d-flex flex-direction-column">
-    <div class="me-0 ms-0 edit_nav">
-    <div class="nav_logo">
-            <img src="./resources/images/Ellipse 3.png" alt="logo" width="35%" class="web_logo mt-md-5 mt-sm-5">
-            <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
-    </div>
+        <nav class="col-2 mt-0 d-flex flex-direction-column">
+            <div class="me-0 ms-0 edit_nav">
+                <a href="./sellerDashboard.php" class="nav_logo text-decoration-none">
+                    <img src="./resources/images/Ellipse 3.png" alt="logo" width="35%" class="web_logo mt-md-5 mt-sm-5">
+                    <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
+                </a>
 
-    <!-- sidebar nav -->
-    <div class="nav-icons ms-md-2 mt-sm-4 ms-sm-4 ">
-        <!-- profile icon from left nav -->
-        <div class="nav-text">
-            <span>
-                <iconify-icon icon="bi:people-circle" class="profile-icon"></iconify-icon>
-            </span>
-            <span class="title mt-2 active ms-md-3">Profile</span>
-        </div>
+                <!-- sidebar nav -->
+                <div class="nav-icons ms-md-2 mt-sm-4 ms-sm-4 ">
+                    <!-- profile icon from left nav -->
+                    <a href="./sellerProfile.php" class="nav-text">
+                        <span>
+                            <iconify-icon icon="bi:people-circle" class="profile-icon"></iconify-icon>
+                        </span>
+                        <span class="profile-text mt-2 ms-md-3">Profile</span>
+                    </a>
 
-        <!-- meun icon from left nav -->
-        <div class="nav-text my-md-4 my-sm-3">
-            <span>
-            <iconify-icon icon="material-symbols:menu-book-sharp" class="icons"></iconify-icon>
-            </span>
-            <span class="title ms-md-3 mt-2 text-muted">Product Menu</span>
-        </div>
+                    <!-- meun icon from left nav -->
+                    <a href="./sellerNewProductMenu.php" class="nav-text my-md-4 my-sm-3">
+                        <span>
+                            <iconify-icon icon="material-symbols:menu-book-sharp" class="icons"></iconify-icon>
+                        </span>
+                        <span class="title ms-md-3 mt-2">Product Menu</span>
+                    </a>
 
-        <!-- order list icon from left nav -->
-        <div class="nav-text text-muted">
-            <span>
-            <iconify-icon icon="material-symbols:order-approve-outline" class="icons"></iconify-icon>
-            </span>
-            <span class="title ms-md-3 mt-2">Order Lists</span>
-        </div>
+                    <!-- order list icon from left nav -->
+                    <a href="./orderList.php" class="nav-text">
+                        <span>
+                            <iconify-icon icon="material-symbols:order-approve-outline" class="icons"></iconify-icon>
+                        </span>
+                        <span class="title ms-md-3 mt-2">Order Lists</span>
+                    </a>
 
-        <!-- sold history icon from left nav -->
-        <div class="nav-text my-md-4 my-sm-3">
-        <span>
-        <iconify-icon icon="mdi:clipboard-text-clock" class="icons"></iconify-icon>
-        </span>
-            <span class="title ms-md-3 mt-2 text-muted">Sold History</span>
-        </div>
+                    <!-- sold history icon from left nav -->
+                    <a href="./soldHistory.php" class="nav-text my-md-4 my-sm-3">
+                        <span>
+                            <iconify-icon icon="mdi:clipboard-text-clock" class="icons"></iconify-icon>
+                        </span>
+                        <span class="title ms-md-3 mt-2">Sold History</span>
+                    </a>
 
-        <!-- incoming order icon from left nav -->
-        <div class="nav-text text-muted">
-            <span>
-            <iconify-icon icon="material-symbols:order-play-outline" class="icons"></iconify-icon>
-            </span>
-            <span class="title ms-md-2 mt-2">Incoming Orders</span>
-        </div>
+                    <!-- incoming order icon from left nav -->
+                    <a href="./incomingOrder.php" class="nav-text">
+                        <span>
+                            <iconify-icon icon="material-symbols:order-play-outline" class="icons"></iconify-icon>
+                        </span>
+                        <span class="title ms-md-2 mt-2">Incoming Orders</span>
+                    </a>
 
-        <!-- feedback icon -->
-        <div class="nav-text my-md-4 my-sm-3">
-            <span>
-            <iconify-icon icon="ri:feedback-line" class="icons"></iconify-icon>
-            </span>
-            <span class="title ms-md-3 text-muted">Customer's Feedback</span>
-        </div>
+                    <!-- feedback icon -->
+                    <a href="./feedbackDetails.php" class="nav-text my-md-4 my-sm-3">
+                        <span>
+                            <iconify-icon icon="ri:feedback-line" class="icons"></iconify-icon>
+                        </span>
+                        <span class="title ms-md-3">Customer's Feedback</span>
+                    </a>
 
-        <!-- logout icon from left nav-->
-        <div class="nav-text text-muted">
-            <span>
-            <iconify-icon icon="material-symbols:logout-rounded" class="icons"></iconify-icon>
-            </span>
-            <span class="title ms-md-3 mt-2">Logout</span>
-        </div>
-        <br>
-    </nav>
-    <!-- fill boxes -->
-    <div class="col-10 mt-4 d-flex justify-content-center">
-        <div class="box2">
-        <p class="upper_text fw-bold mt-4">Send us a message and we'll get right back to you!</p>
-        <div class="sub_input mt-4">
-            <!-- <p class="subject mb-0">Subject</p> -->
-            <p class="mb-0 subject_text">Subject</p>
-            <input type="text" class="sub_box">
-        </div>
+                    <!-- logout icon from left nav-->
+                    <a href="./sellerlogin.php" class="nav-text">
+                        <span>
+                            <iconify-icon icon="material-symbols:logout-rounded" class="icons"></iconify-icon>
+                        </span>
+                        <span class="title ms-md-3 mt-2">Logout</span>
+                    </a>
+                    <br>
+        </nav>
+        <!-- fill boxes -->
+        <div class="col-10 mt-4 d-flex justify-content-center">
+            <div class="box2">
+                <form action="../Controller/sellerContactAdminController.php" method="post">
+                    <p class="upper_text fw-bold mt-4">Send us a message and we'll get right back to you!</p>
+                    <div class="sub_input mt-4">
+                        <!-- <p class="subject mb-0">Subject</p> -->
+                        <p class="mb-0 subject_text">Subject</p>
+                        <input type="text" class="sub_box" name="subjectText">
+                    </div>
 
-        <!-- for message box -->
-        <div class="message_input mt-md-4 mt-sm-4">
-        <p class="message mb-0">Message</p>
-        <textarea name="" id="" cols="50" rows="8" class="message-box"></textarea>
-        </div>
+                    <!-- for message box -->
+                    <div class="message_input mt-md-4 mt-sm-4">
+                        <p class="message mb-0">Message</p>
+                        <textarea name="messageText" id="" cols="50" rows="8" class="message-box"></textarea>
+                    </div>
 
-        <div>
-            <button class="send_btn mt-2">Send</button>
-        </div>
+                    <div>
+                        <button class="send_btn mt-2" name="sendAdmin">Send</button>
+                    </div>
 
-        <div class="mt-5 ">
-            <p class="footer_text">If you need immediate assistance, please contact +95 9777777777 directly. </p>
+                    <div class="mt-5 ">
+                        <p class="footer_text">If you need immediate assistance, please contact +95 9777777777 directly. </p>
+                    </div>
+            </div>
+            </form>
+
         </div>
-        </div>
-        
-    </div>
 
 </body>
+
 </html>

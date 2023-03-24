@@ -131,7 +131,7 @@ if (isset($_SESSION["sellerID"])) {
                             
                             <!-- to show choose profile photo -->
                             <?php
-                        if ($result[0]["shop_profilepic"] == NULL){
+                        if ($result[0]["shop_profilepic"] == "noprofile"){
                             echo '<img src="./resources/images/default.png" class="editPhoto mb-3" id="profileImg" > ';
                         } else {
                             echo '<img src= "../Controller/'.$result[0]["shop_profilepic"].' " class="editPhoto mb-3" id="profileImg" >';
@@ -161,7 +161,7 @@ if (isset($_SESSION["sellerID"])) {
                             </span>
                             <span class="label_box ms-md-5">
                                 <label for="newPassword" class="coner_label fw-bold">New Password</label>
-                                <input type="password" placeholder="enter your new password" class="input_box">
+                                <input type="password" placeholder="enter your new password" class="input_box" id="new-password" name="newPassword">
                             </span>
                         </div>
                         <!-- phone and confirm password box -->
@@ -172,7 +172,7 @@ if (isset($_SESSION["sellerID"])) {
                             </span>
                             <span class="label_box ms-md-5">
                                 <label for="newPassword" class="coner_label fw-bold">Confirm Password</label>
-                                <input type="password" placeholder="confirm your new password" class="input_box">
+                                <input type="password" placeholder="confirm your new password" class="input_box" id="confirm-password" name="confirmPassword">
                             </span>
                         </div>
                         <!-- email box -->
@@ -186,6 +186,7 @@ if (isset($_SESSION["sellerID"])) {
                                 <input type="text" placeholder="enter shop address" class="input_box" name="shopAddress" value="<?php echo $result[0]["shopAddress"]; ?>">
                             </span>
                         </div>
+                        <p id="message" class="fw-bold text-danger text-center"></p>
                         <!-- button -->
                         <div class="mt-md-4 mt-sm-4 mb-sm-5">
                             <span>
@@ -202,6 +203,8 @@ if (isset($_SESSION["sellerID"])) {
 
         <!-- seller edit profile page js link -->
         <script src="./resources/js/sellerEditProfilePage.js"></script>
+        <!-- confirm password js link -->
+        <script src="./resources/js/confirmPassword.js"></script>
 </body>
 
 </html>
