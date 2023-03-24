@@ -11,6 +11,8 @@ if (isset($_SESSION["username"])) {
 }
 // userprofile data 
 $userprofile = $_SESSION["userprofile"];
+// echo "<pre>";
+// print_r($userprofile) ;
 ?>
 
 
@@ -58,49 +60,54 @@ $userprofile = $_SESSION["userprofile"];
                 <p class="title1">Profile</p>
                 <hr class="left_line">
             </div>
+
             <div class="col-md-8">
+                <!-- userdata insert -->
                 <div class="sec_pf_title">
-                    <iconify-icon icon="healthicons:ui-user-profile-outline" class="pf_pic2"></iconify-icon>
-                    <p class="title2">Profile</p>
+                    <?php
+                    if ($userprofile[0]["user_profilepic"] == "noprofile") {
+                        echo '<img src="./resources/img/default.jpg" class="rounded float-start" alt="..." width="15%">';
+                    } else {
+                        echo '<img src="../storages/' . $userprofile[0]["user_profilepic"] . '" class="rounded float-start" alt="" width="15%">';
+                    }
+                    ?>
+
+                    <p class="title2 ms-3"><?= $userprofile[0]["user_name"] ?></p>
                 </div>
                 <hr class="right_line">
                 <div class="profile_name">
                     <!-- first name -->
                     <div class="first_name">
-                        <h6>First Name</h6>
-                        <input type="text" placeholder="Alexis">
+                        <h6>User Name</h6>
+                        <input type="text" placeholder="" value="<?= $userprofile[0]["user_name"] ?>" readonly>
                     </div>
-
                 </div>
                 <!-- email -->
                 <div class="email">
                     <h6>Email</h6>
-                    <input type="text" placeholder="alexisvankrik@gmail.com">
-                </div>
-                <!-- password -->
-                <div class="desk_mobile">
-                    <div class="password">
-                        <h6>Password</h6>
-                        <input type="text" placeholder=".........">
-                    </div>
-
+                    <input type="text" placeholder="" value="<?= $userprofile[0]["user_email"] ?>" readonly>
                 </div>
                 <!-- phone number -->
                 <div class="phone_number">
                     <h6>Phone Number</h6>
-                    <input type="text" placeholder="+95 9777777777">
+                    <input type="text" placeholder="" value="<?= $userprofile[0]["user_phone"] ?>" readonly>
                 </div>
                 <br>
                 <div class="buy_coin">
                     <iconify-icon icon="healthicons:coins" class="coin_icon"></iconify-icon>
                     <p>Coins</p>
-                    <input type="text" placeholder="100">
-                    <button id="buycoin_btn">Buy Coins</button>
+                    <input type="text" placeholder="" value="<?= $userprofile[0]["user_coin"] ?>" readonly>
+                    <form action="./coin_exchange.php">
+                        <button type="submit" id="buycoin_btn">Buy Coins</button>
+                    </form>
                 </div>
                 <div class="last_role">
-                    <button class="btn edit_btn ">Edit Profile</button>
-                    <button class="btn change_btn ">Change Password</button>
-
+                    <form action="./edit_profile.php">
+                        <button type="submit" class="btn edit_btn ">Edit Profile</button>
+                    </form>
+                    <form action="./user_change_pwd.php">
+                    <button type="submit" class="btn change_btn ">Change Password</button>
+                    </form>
                 </div>
                 <button class="btn" id="pf_logout">
                     <!-- <iconify-icon icon="material-symbols:logout" id="logout_icon"></iconify-icon> -->

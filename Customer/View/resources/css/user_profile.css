@@ -284,6 +284,10 @@
     margin-left: 3em !important;
   }
 
+  #changeProfile{
+    margin-left: 3em !important;
+
+  }
   /* #pf_logout {
     display: flex;
     margin-top: 2em !important;
@@ -310,7 +314,7 @@
     margin-left: 3em ;
   }
   .change_btn {
-    margin-left: 2em !important;
+    margin-left: 3em !important;
     /* display: none; */
   }
 
@@ -421,7 +425,10 @@
     margin-top: 1em !important;
     margin-left: 0em !important;
   }
+  #changeProfile{
+    margin-left: 3em !important;
 
+  }
   .profile_name {
     margin-left: 3em !important;
   }
@@ -449,7 +456,7 @@
   }
 .edit_btn{
     margin-left: 3em !important;
-  width: 8em !important;
+  width: 9em !important;
 
 }
   .change_btn {
