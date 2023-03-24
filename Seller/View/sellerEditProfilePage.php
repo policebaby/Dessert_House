@@ -128,7 +128,15 @@ if (isset($_SESSION["sellerID"])) {
                     <div class="box2 mt-4">
                         <div class="profile_banner text-center mb-5">
                             <div class="mt-2 edit_photo_bg d-flex flex-direction-column justify-content-center">
-                                <img src="./resources/images/default.png" alt="profile" class="editPhoto mb-3" name="profilePic" id="profileImg">
+                            
+                            <!-- to show choose profile photo -->
+                            <?php
+                        if ($result[0]["shop_profilepic"] == NULL){
+                            echo '<img src="./resources/images/default.png" class="editPhoto mb-3" id="profileImg" > ';
+                        } else {
+                            echo '<img src= "../Controller/'.$result[0]["shop_profilepic"].' " class="editPhoto mb-3" id="profileImg" >';
+                        };
+                        ?>
                             </div>
                             <div class="mb-3 mt-md-3 mt-sm-3 d-flex flex-direction-column justify-content-center">
                                 <input class="form-control" type="file" id="formFile" name="profile">
@@ -183,9 +191,9 @@ if (isset($_SESSION["sellerID"])) {
                             <span>
                                 <button class="btns saveBtn" type="submit" name="saveBtn">Save Profile</button>
                             </span>
-                            <span>
+                            <a href="./sellerProfile.php">
                                 <button class="btns cancelBtn ms-3">Cancel</button>
-                            </span>
+                            </a>
                         </div>
                     </div>
             </div>

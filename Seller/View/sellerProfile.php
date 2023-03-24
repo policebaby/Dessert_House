@@ -1,12 +1,11 @@
 <?php
 
+// call database
+include "../Model/dbConnection.php";
 session_start();
 if (isset($_SESSION["sellerID"])) {
 
     $sellerId = $_SESSION["sellerID"];
-
-    // call database
-    include "../Model/dbConnection.php";
 
     // call connection db
     $db  = new DBConnection();
@@ -119,7 +118,13 @@ if (isset($_SESSION["sellerID"])) {
             <form action="./sellerEditProfilePage.php" method="post">
                 <div class="profile-page">
                     <div class="mt-2 profileLogo">
-                    <img src="./resources/images/default.png" alt="profile" class="shopLogo mb-3" name="profilePic">
+                        <?php
+                        if ($result[0]["shop_profilepic"] == NULL){
+                            echo '<img src="./resources/images/default.png" class="shopLogo mb-3" id="profileImg">';
+                        } else {
+                            echo '<img src= "../Controller/'.$result[0]["shop_profilepic"].' " class="shopLogo mb-3" id="profileImg">';
+                        };
+                        ?>
                     </div>
                     <div class="seller_name mt-4 profileLogo">
                         <!-- name -->
@@ -157,6 +162,7 @@ if (isset($_SESSION["sellerID"])) {
             </form>
         </div>
     </div>
+    <script src="./resources/js/sellerEditProfilePage.js"></script>
 </body>
 
 </html>

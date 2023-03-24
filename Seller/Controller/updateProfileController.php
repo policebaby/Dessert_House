@@ -1,5 +1,7 @@
 <?php
 
+// call database
+include "../Model/dbConnection.php";
 session_start();
 // post data
 if (isset($_POST["saveBtn"])) {
@@ -12,47 +14,48 @@ if (isset($_POST["saveBtn"])) {
     $phone        = $_POST["seller_phone"];
 
     // profile data
-    $file      = $_FILES['profile']['name'];
-    $sellerID  = $_SESSION["sellerID"];
-    $Location  = $_FILES['profile']['tmp_name'];
-    $extension = pathinfo($file)['extension'];
+    $file=$_FILES['profile']['name'];
+    if($file != "") {
 
-    if (move_uploaded_file($Location, "profile/" . $sellerID . "." . $extension)) {
+        $sellerId  = $_SESSION["sellerID"];
+        $Location  = $_FILES['profile']['tmp_name'];
+        $extension = pathinfo($file)['extension'];
 
-        // call database
-        include "../Model/dbConnection.php";
-        // call connection db
-        $db  = new DBConnection();
-        $pdo = $db->connect();
-        $sql = $pdo->prepare(
+        if (move_uploaded_file($Location, "profile/" . $sellerId . "." . $extension)) {
+
+            // call connection db
+            $db  = new DBConnection();
+            $pdo = $db->connect();
+
+            $sql = $pdo->prepare(
                 "
-            UPDATE m_seller 
-            SET
-            seller_name      = :sellerName,
-            shop_name        = :shopName,
-            shopAddress      = :shopAddress,
-            password         = :pwd,
-            email            = :email,
-            seller_phone     = :phone,
-            shop_profilepic  = :profile
+            UPDATE m_seller SET
+                seller_name      = :sellerName,
+                shop_name        = :shopName,
+                shopAddress      = :shopAddress,
+                password         = :pwd,
+                email            = :email,
+                seller_phone     = :phone,
+                shop_profilepic  = :photo
             WHERE seller_id  = :id
             "
             );
 
-        $sql->bindValue(":sellerName", $sellerName);
-        $sql->bindValue(":shopName", $shopName);
-        $sql->bindValue(":shopAddress", $shopAddress);
-        $sql->bindValue(":pwd", $pwd);
-        $sql->bindValue(":email", $email);
-        $sql->bindValue(":phone", $phone);
-        $sql->bindValue(":profile", "profile/" . $sellerID . "." . $extension);
-        $sql->bindValue(":id", $sellerID);
+            $sql->bindValue(":sellerName", $sellerName);
+            $sql->bindValue(":shopName", $shopName);
+            $sql->bindValue(":shopAddress", $shopAddress);
+            $sql->bindValue(":pwd", $pwd);
+            $sql->bindValue(":email", $email);
+            $sql->bindValue(":phone", $phone);
+            $sql->bindValue(":photo", "profile/" . $sellerId . "." . $extension);
+            $sql->bindValue(":id", $sellerId);
 
-        $sql->execute();
-        header("Location: ../View/sellerProfile.php");
+            $sql->execute();
+            header("Location: ../View/sellerProfile.php");
+        }
     } else {
         echo "file upload fail!";
     }
 } else {
-    echo "error";
+    header("Location: ../View/sellerProfile.php");
 }
