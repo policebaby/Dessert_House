@@ -66,7 +66,7 @@
         </div>
         <!--search box end-->
 
-        <a href="./user_profile.php">
+        <a href="../Controller/user_profileViewController.php">
             <iconify-icon icon="healthicons:ui-user-profile" class="nav_icons nav_pf"></iconify-icon>
         </a>
 
