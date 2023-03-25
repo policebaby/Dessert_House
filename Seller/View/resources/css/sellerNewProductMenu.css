@@ -70,8 +70,8 @@ body{
     font-size: 1.2em;
 }
 .seller-photo{
-    width:8.5em;
-    height:8.5em;
+    width:12em;
+    height:10em;
     background-color:aliceblue;
 }
 .form-control{
@@ -128,10 +128,17 @@ tr{
     color:var(--text-color-white);
     background-color:var(--primary-blue) !important;
 }
-.color-tr{
-    background-color:var(--primary-blue);
-    opacity:0.2;
+table tr:nth-child(even) {
+    background-color: transparent;
 }
+
+table tr:nth-child(odd) {
+    background-color:#0b00332a ;
+}
+
+/* .color-tr{
+    background-color:#0b00332a;
+} */
 .table{
     margin-right:5em !important;
 }
@@ -162,7 +169,7 @@ tr{
     .icons{
         font-size:2em !important;
     }
-    .web_name,.title{
+    .web_name,.title,.product-text{
         display:none !important;
     }
     .web_logo{

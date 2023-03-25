@@ -1,3 +1,9 @@
+<?php
+
+include "../Controller/menuTableController.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +51,7 @@
                     </a>
 
                     <!-- meun icon from left nav -->
-                    <a href="./sellerNewProductMenu.php" class="nav-text my-md-4 my-sm-4">
+                    <a href="./sellerNewProductMenu.php" class="nav-text my-md-5 my-sm-4">
                         <span>
                             <iconify-icon icon="material-symbols:menu-book-sharp" class="menu-icon"></iconify-icon>
                         </span>
@@ -61,7 +67,7 @@
                     </a>
 
                     <!-- sold history icon from left nav -->
-                    <a href="./soldHistory.php" class="nav-text my-md-4 my-sm-4">
+                    <a href="./soldHistory.php" class="nav-text my-md-5 my-sm-4">
                         <span>
                             <iconify-icon icon="mdi:clipboard-text-clock" class="icons"></iconify-icon>
                         </span>
@@ -77,7 +83,7 @@
                     </a>
 
                     <!-- feedback icon -->
-                    <a href="./feedbackDetails.php" class="nav-text my-md-4 my-sm-4">
+                    <a href="./feedbackDetails.php" class="nav-text my-md-5 my-sm-4">
                         <span>
                             <iconify-icon icon="ri:feedback-line" class="icons"></iconify-icon>
                         </span>
@@ -95,95 +101,76 @@
 
         <div class="col-10">
             <!-- form start -->
-            <form action="../Controller/productMenuController.php" method="post">
-                <div class="first-row row mb-5 me-5">
-
+            <form action="../Controller/productMenuController.php" method="post" enctype="multipart/form-data">
+                <div class="first-row row mb-3 me-5">
                     <div class="first-row-first col-md-5">
-                        <div class="seller-photo mb-2"></div>
-                        <input class="form-control mt-2 ms-md-3 ms-sm-0" type="file" id="formFile">
+                        <div class="mb-2">
+                        <p class=" fw-bold h4 mt-3 text-center"><?= $shopName[0]["shop_name"]?></p>
+                            <img src="./resources/images/default_product_image.png" class="seller-photo" id="productImg" required>
+                        </div>
+                        <input type="file"  class="form-control mt-2 ms-md-3 ms-sm-0" id="formFile" name="productPhoto">
                     </div>
 
                     <div class="first-row-second col-md-5 mt-md-4 mt-sm-5">
                         <p class="fw-bold h5 insert-title">Insert New Product's Information</p>
                         <div class="label-box">
                             <label for="new-product-name texts" class="fw-bold mt-3">New Product Name</label>
-                            <input type="text" class="input-box" name="newProductName">
+                            <input type="text" class="input-box" name="newProductName" required>
                         </div>
                         <div class="label-box my-md-3 my-sm-3">
-                            <label for="product-type" class="fw-bold">Product Type</label>
-                            <input type="text" class="input-box" name="productType">
+                            <label for="productType" class="fw-bold">Product Type</label>
+                            <input type="text" class="input-box" name="productType" required>
                         </div>
-                        <div class="label-box mb-md-5 mb-sm-5">
+                        <div class="label-box">
                             <label for="price-of-each-product" class="fw-bold">Price Of Each Product</label>
-                            <input type="text" class="input-box" name="priceOfeach">
+                            <input type="text" class="input-box" name="priceOfeach" required>
                         </div>
-                        <div class="mb-md-5 mb-sm-5">
+                        <div class="label-box my-md-3 my-sm-3">
+                            <label for="instock" class="fw-bold">instock</label>
+                            <input type="text" class="input-box" name="instock" required>
+                        </div>
+                        <div class="mb-md-5 mb-sm-5 mt-4">
                             <button class="btns add-btn" name="addBtn">Add</button>
-                            <button class="btns ms-4 cancel-btn">Cancel</button>
+                            <button class="btns ms-4 cancel-btn" id="cancelBtn">Cancel</button>
                         </div>
 
                     </div>
             </form>
         </div>
 
-        <div class="second-row mt-md-5 mt-sm-2 ms-sm-4">
+        <div class="second-row mt-md-3 mt-sm-2 ms-sm-4">
             <p class="product-menu-text h5 fw-bold">Product Menu</p>
             <div class="mt-3 text-center me-md-2 me-sm-0 row d-flex flex-direction-column justify-content-center">
                 <div class="blue-width d-flex flex-direction-column justify-content-center">
                     <table class="table table-borderless ms-md-3 ms-sm-3">
                         <tr class="t-head">
-                            <td class="col-md-3">Dessert Name</td>
-                            <td class="col-md-2">Price</td>
-                            <td class="col-md-3">Product Type</td>
-                            <td class="col-md-2">
-                                <a href="">Edit</a>
+                            <td>No.</td>
+                            <td>Dessert Name</td>
+                            <td>Product Type</td>
+                            <td>Price</td>
+                            <td>instock</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <?php 
+                        $count =1;
+                        for ($i=0; $i < count($productList); $i++) { ?>
+                            
+                            <tr>
+                                <td><?= $count++?></td>
+                            <td><?= $productList[$i]["product_name"]?></td>
+                            <td><?= $productList[$i]["product_type"]?></td>
+                            <td><?= number_format($productList[$i]["product_price"])?></td>
+                            <td><?= $productList[$i]["product_instock"]?></td>
+                            <td>
+                            <a href="../Controller/productEditController.php?id=<?= $productList[$i]["id"]?>" name="editLink">Edit</a>
                             </td>
-                            <td class="col-2">
-                                <a href="" class="text-danger">Delete</a>
+                            <td>
+                            <a href="" class="text-danger">Delete</a>
                             </td>
                         </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr class="color-tr">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr class="color-tr">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr class="color-tr">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+
+                        <?php }?>
                     </table>
                 </div>
             </div>
@@ -211,7 +198,8 @@
         </div>
     </div>
     </div>
-
+    <script src="./resources/js/productMenu.js"></script>
+    <script src="./resources/js/cancelBtn.js"></script>
 </body>
 
 </html>

@@ -22,23 +22,24 @@ if(isset($_POST["sendAdmin"])){
         "
         INSERT INTO t_seller_contact_admin 
         (
-            id,
             seller_id,
             subject,
-            message
+            message,
+            create_date
         ) 
         VALUES 
         (
-            id,
             :sellerID,
             :subject,
-            :message
+            :message,
+            :date
         )
         "
     );
     $sql->bindValue(':sellerID',$sellerId);
     $sql->bindValue(':subject',$subject);
     $sql->bindValue(':message',$message);
+    $sql->bindValue(':date',date("Y-m-d"));
     $sql->execute();
 
     header("Location: ../View/sellerContactAdmin.php");

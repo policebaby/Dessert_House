@@ -36,15 +36,15 @@ if(isset($_POST["loginBtn"])){
         // login success state
         $dbpwd = $result[0]["password"];
         if($dbpwd == $pwd){
-
         //if(password_verify($pwd,$dbpwd)){
 
             // success state
 
             $_SESSION["error"] = "";
 
-            $_SESSION["sellerName"] = $sellerName;
-            $_SESSION["sellerID"]   = $result[0]["seller_id"];
+            $_SESSION["sellerName"]=$sellerName;
+            $_SESSION["sellerID"]=$result[0]["seller_id"];
+            $_SESSION["shopID"]=$result[0]["shop_id"];
 
 
             header("Location: ../View/sellerDashboard.php");

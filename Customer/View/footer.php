@@ -62,7 +62,7 @@
             <br />
             <p class="text-white">
               Contact Admin <br />
-              Contact Seller <br />
+              <a href="../View/contact_seller.php"> Contact Seller</a> <br />
               Guide <br />
               About us <br />
               Privacy Policy
