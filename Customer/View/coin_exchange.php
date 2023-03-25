@@ -1,3 +1,18 @@
+<?php
+ini_set("display_errors", "1");
+session_start();
+
+if (isset($_SESSION["coinprice"])) {
+    $coinprice = $_SESSION["coinprice"];
+    // echo "<pre>";
+    // print_r($coinprice);
+} else {
+    echo "error";
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +39,7 @@
     <title>Coin Exchange</title>
 </head>
 
-<body>
+<body >
     <!-- nav start -->
     <?php
     include "./nav.php"
@@ -37,41 +52,45 @@
             <div class="col-md-5 rateBg ">
                 <div class=" currencyRates ">
                     <iconify-icon class="coinIcon coinPosition" icon="healthicons:coins"></iconify-icon>
-                    <span class="coinCurrency">x 1 = 1000 MMK</span>
+                    <span class="coinCurrency">x 1 = <?= $coinprice[0]["to_mmk"] ?> MMK</span>
                 </div>
                 <div class=" currencyRates ">
                     <iconify-icon class="coinIcon coinPosition" icon="healthicons:coins"></iconify-icon>
-                    <span class="coinCurrency">x 1 = 10 USD</span>
+                    <span class="coinCurrency">x 1 = <?= $coinprice[0]["to_usd"] ?>USD</span>
                 </div>
                 <div class=" currencyRates ">
                     <iconify-icon class="coinIcon coinPosition" icon="healthicons:coins"></iconify-icon>
-                    <span class="coinCurrency">x 1 = 0.94 Euro</span>
+                    <span class="coinCurrency">x 1 = <?= $coinprice[0]["to_euro"] ?> Euro</span>
                 </div>
                 <div class=" currencyRates ">
                     <iconify-icon class="coinIcon coinPosition" icon="healthicons:coins"></iconify-icon>
-                    <span class="coinCurrency">x 1 = 0.94 Pound</span>
+                    <span class="coinCurrency">x 1 = <?= $coinprice[0]["to_pound"] ?> Pound</span>
                 </div>
             </div>
             <div class="col-md-7 exchangeBg ">
                 <p class=" exchangeSubheader">Exchange Coin</p>
-                <form action="">
+                <form action="../Controller/coin_exchangeController.php" method="post" enctype="multipart/form-data">
                     <div class="input-group mb-3 inputWidth">
-                        <input type="text" class="form-control coinInput" aria-label="Amount (to the nearest dollar)" placeholder="Coin">
-                        <select class="form-select currencySelect" id="inputGroupSelect01">
-                            <option value="1" selected>MMK</option>
-                            <option value="2">USD</option>
-                            <option value="3">Euro</option>
-                            <option value="4">Pound</option>
+                        <!-- coin amount -->
+                        <input type="text" id="coinAmount" class="form-control coinInput" value="1" aria-label="Amount (to the nearest dollar)" placeholder="Coin" name="coinAmount" >
+                        <!-- currency type -->
+                        <select class="form-select currencySelect" id="currency">
+                            <option value="<?= $coinprice[0]["to_mmk"] ?>" selected>MMK</option>
+                            <option value="<?= $coinprice[0]["to_usd"] ?>">USD</option>
+                            <option value="<?= $coinprice[0]["to_euro"] ?>">Euro</option>
+                            <option value="<?= $coinprice[0]["to_pound"] ?>">Pound</option>
                         </select>
-                        <div class="calculated"> = MMK</div>
+                        <!-- calculated  -->
+                        <input id="calculated" class="calculated text-light bg-transparent border-0" value="= 2500 MMK" name="calculated">
                     </div>
-                    <p class="mbCalculated "> =MMK</p>
+                    <p id="calculated1" class="mbCalculated "> =MMK</p>
+                    <!-- attach reciept -->
                     <p class="exchangeSubheader"> Attach Screenshot of bank transition</p>
                     <div class="input-group mb-3 inputWidth2">
-                        <input type="file" class="form-control" id="inputGroupFile02" >
+                        <input type="file" class="form-control" id="inputGroupFile02" name="receipt">
                     </div>
                     <div class="mt-4">
-                        <button type="button" id="submitBtn" class="btn btnSubmit">Submit</button>
+                        <button type="submit" id="submitBtn" class="btn btnSubmit" name="request">Submit</button>
                         <button class="btn btnCancel"> Cancel</button>
                     </div>
                 </form>
@@ -80,7 +99,7 @@
     </div>
     <!-- coin exchange end -->
     <!-- footer start -->
-    <?php 
+    <?php
     include "./footer.php";
     ?>
     <!-- footer end -->

@@ -1,7 +1,14 @@
 <?php
+ini_set("display_errors", "1");
+session_start();
 
+if (isset($_SESSION["userprofile"])) {
+    $userprofile = $_SESSION["userprofile"];
 
-
+    // echo "ok";
+} else {
+    echo "error";
+}
 
 
 ?>
@@ -38,51 +45,66 @@
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
 </head>
-    <body>
-        <!-- navbar  start -->
-        <?php include "./nav.php"  ?>
-        <!-- navbar end -->
-        <!-- user_change_pwd start -->
-        <div class="ch_pwd_container">
-            <div class="row ">
-                <div class="col-md-4 first_pwd_title">
-                    <iconify-icon icon="healthicons:ui-user-profile-outline" class="pwd_pic1"></iconify-icon>
-                    <p class="pw_title1">Profile</p>
-                    <hr class="left_line">
-                </div>
-                <div class="col-md-8">
-                    <div class="sec_pwd_title">
-                        <iconify-icon icon="healthicons:ui-user-profile-outline" class="pwd_pic2"></iconify-icon>
-                        <p class="pw_title2">Profile</p>
-                    </div>
-                    <hr class="right_line">
 
+<body>
+    <!-- navbar  start -->
+    <?php include "./nav.php"  ?>
+    <!-- navbar end -->
+    <!-- user_change_pwd start -->
+    <div class="ch_pwd_container mt-5">
+        <div class="row ">
+            <div class="col-md-4 first_pwd_title">
+                <iconify-icon icon="healthicons:ui-user-profile-outline" class="pwd_pic1"></iconify-icon>
+                <p class="pw_title1">Profile</p>
+                <hr class="left_line">
+            </div>
+            <div class="col-md-8">
+                <div class="sec_pwd_title">
+                    <?php
+                    if ($userprofile[0]["user_profilepic"] == "noprofile") {
+                        echo '<img src="./resources/img/default.jpg" id="profileimg" class="rounded float-start" alt="..." width="15%">';
+                    } else {
+                        echo '<img src="../storages/' . $userprofile[0]["user_profilepic"] . '" id="profileimg" class="rounded float-start" alt="" width="15%">';
+                    }
+                    ?>
+                    <p class="pw_title2 ms-3"><?= $userprofile[0]["user_name"] ?></p>
+                </div>
+                <!-- inputs -->
+                <hr class="right_line">
+                <form action="../Controller/user_changepwdController.php" method="post">
                     <!-- Old password  -->
                     <div class="old">
                         <h6>Old password</h6>
-                        <input type="text" placeholder="Please input your old password">
+                        <input type="password" placeholder="Please input your old password" name="oldpwd">
                     </div>
-
+                    <p class="text-danger">
+                        <?php
+                        if (isset($_SESSION["incorrectoldpwd"])) {
+                            echo  $_SESSION["incorrectoldpwd"];
+                        }
+                        ?></p>
                     <!-- Create new password -->
                     <div class="create_new">
                         <h6>Create new password</h6>
-                        <input type="text" placeholder="Please input your new password">
+                        <input type="password" placeholder="Please input your new password" name="newpwd">
                     </div>
 
                     <!-- Confirm new password-->
-                    <div class="confirm_new">
+                    <!-- <div class="confirm_new">
                         <h6>Confirm new password</h6>
                         <input type="text" placeholder="Please confirm your new password">
-                    </div>
-                    <button id="change_btn">Confirm</button>
-                </div>
+                    </div> -->
+
+                    <button type="submit" name="changepwd" id="change_btn" class="mb-5">Confirm</button>
+                </form>
             </div>
         </div>
-        </div>
-        <!-- user_change_pwd end -->
-        <!-- footer start -->
-        <?php include "./footer.php"   ?>
-        <!-- footer end -->
-    </body>
+    </div>
+    </div>
+    <!-- user_change_pwd end -->
+    <!-- footer start -->
+    <?php include "./footer.php"   ?>
+    <!-- footer end -->
+</body>
 
 </html>

@@ -66,12 +66,12 @@ $userprofile = $_SESSION["userprofile"];
                 <div class="sec_pf_title">
                     <?php
                     if ($userprofile[0]["user_profilepic"] == "noprofile") {
-                        echo '<img src="./resources/img/default.jpg" class="rounded float-start" alt="..." width="15%">';
+                        echo '<img src="./resources/img/default.jpg" id="profileimg" class="rounded float-start" alt="..." width="15%">';
                     } else {
-                        echo '<img src="../storages/' . $userprofile[0]["user_profilepic"] . '" class="rounded float-start" alt="" width="15%">';
+                        echo '<img src="../storages/'.$userprofile[0]["user_profilepic"].'" id="profileimg" class="rounded float-start" alt="" width="15%">';
                     }
                     ?>
-
+                    <!-- <img src="../storages/profile/23.jpg" class="rounded float-start" alt="..." width="15%"> -->
                     <p class="title2 ms-3"><?= $userprofile[0]["user_name"] ?></p>
                 </div>
                 <hr class="right_line">
@@ -97,7 +97,7 @@ $userprofile = $_SESSION["userprofile"];
                     <iconify-icon icon="healthicons:coins" class="coin_icon"></iconify-icon>
                     <p>Coins</p>
                     <input type="text" placeholder="" value="<?= $userprofile[0]["user_coin"] ?>" readonly>
-                    <form action="./coin_exchange.php">
+                    <form action="../Controller/coin_exchangeViewController.php">
                         <button type="submit" id="buycoin_btn">Buy Coins</button>
                     </form>
                 </div>

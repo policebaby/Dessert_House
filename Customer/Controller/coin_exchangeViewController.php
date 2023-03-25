@@ -12,15 +12,14 @@ if (isset($_SESSION["userID"])) {
 
     //check id exist or not 
     $sql = $pdo->prepare(
-        "SELECT * FROM M_user WHERE user_id = :id"
+        "SELECT * FROM M_coin"
     );
-    $sql->bindValue(":id", $id);
     $sql->execute();
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
-    // echo "<pre>";
-    // print_r($result);
-    $_SESSION["userprofile"]= $result;
-    header("Location: ../View/user_profile.php");
+    echo "<pre>";
+    print_r($result);
+    $_SESSION["coinprice"]= $result;
+    header("Location: ../View/coin_exchange.php");
 } else {
     // error
     header("Location: ./user_login.php");
