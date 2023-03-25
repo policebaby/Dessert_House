@@ -3,11 +3,6 @@
 session_start();
 unset($_SESSION["sellerName"]);
 
-
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -41,9 +36,9 @@ unset($_SESSION["sellerName"]);
       <!-- form start -->
       <form action="../Controller/sellerLoginController.php" method="post">
       <p class="text-center login-text mt-md-4 mt-sm-4">Log in</p>
-      <input type="text" placeholder="Seller Name" class="seller_name box1 my-md-2 my-sm-4" required name="sellerName">
-      <input type="email" placeholder="Email" class = "email box1 my-md-3 my-sm-2" required name="email">
-      <input type="password" placeholder="Password" class="password box1 my-md-2 my-sm-2" required name="password">
+      <input type="text" placeholder="Seller Name" class="seller_name box1 my-md-2 my-sm-4 text-center" required name="sellerName">
+      <input type="email" placeholder="Email" class = "email box1 my-md-3 my-sm-2 text-center" required name="email">
+      <input type="password" placeholder="Password" class="password box1 my-md-2 my-sm-2 text-center" required name="password">
       <button class="loginBtn mt-md-3 mt-sm-3" type="submit" name="loginBtn">Login</button>
 
       <!-- To show login fail state -->

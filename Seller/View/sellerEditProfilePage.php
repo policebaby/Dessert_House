@@ -128,7 +128,15 @@ if (isset($_SESSION["sellerID"])) {
                     <div class="box2 mt-4">
                         <div class="profile_banner text-center mb-5">
                             <div class="mt-2 edit_photo_bg d-flex flex-direction-column justify-content-center">
-                                <img src="./resources/images/default.png" alt="profile" class="editPhoto mb-3" name="profilePic" id="profileImg">
+                            
+                            <!-- to show choose profile photo -->
+                            <?php
+                        if ($result[0]["shop_profilepic"] == "noprofile"){
+                            echo '<img src="./resources/images/default.png" class="editPhoto mb-3" id="profileImg" > ';
+                        } else {
+                            echo '<img src= "../Controller/'.$result[0]["shop_profilepic"].' " class="editPhoto mb-3" id="profileImg" >';
+                        };
+                        ?>
                             </div>
                             <div class="mb-3 mt-md-3 mt-sm-3 d-flex flex-direction-column justify-content-center">
                                 <input class="form-control" type="file" id="formFile" name="profile">
@@ -153,7 +161,7 @@ if (isset($_SESSION["sellerID"])) {
                             </span>
                             <span class="label_box ms-md-5">
                                 <label for="newPassword" class="coner_label fw-bold">New Password</label>
-                                <input type="password" placeholder="enter your new password" class="input_box">
+                                <input type="password" placeholder="enter your new password" class="input_box" id="new-password" name="newPassword">
                             </span>
                         </div>
                         <!-- phone and confirm password box -->
@@ -164,7 +172,7 @@ if (isset($_SESSION["sellerID"])) {
                             </span>
                             <span class="label_box ms-md-5">
                                 <label for="newPassword" class="coner_label fw-bold">Confirm Password</label>
-                                <input type="password" placeholder="confirm your new password" class="input_box">
+                                <input type="password" placeholder="confirm your new password" class="input_box" id="confirm-password" name="confirmPassword">
                             </span>
                         </div>
                         <!-- email box -->
@@ -178,14 +186,15 @@ if (isset($_SESSION["sellerID"])) {
                                 <input type="text" placeholder="enter shop address" class="input_box" name="shopAddress" value="<?php echo $result[0]["shopAddress"]; ?>">
                             </span>
                         </div>
+                        <p id="message" class="fw-bold text-danger text-center"></p>
                         <!-- button -->
                         <div class="mt-md-4 mt-sm-4 mb-sm-5">
                             <span>
                                 <button class="btns saveBtn" type="submit" name="saveBtn">Save Profile</button>
                             </span>
-                            <span>
+                            <a href="./sellerProfile.php">
                                 <button class="btns cancelBtn ms-3">Cancel</button>
-                            </span>
+                            </a>
                         </div>
                     </div>
             </div>
@@ -194,6 +203,8 @@ if (isset($_SESSION["sellerID"])) {
 
         <!-- seller edit profile page js link -->
         <script src="./resources/js/sellerEditProfilePage.js"></script>
+        <!-- confirm password js link -->
+        <script src="./resources/js/confirmPassword.js"></script>
 </body>
 
 </html>

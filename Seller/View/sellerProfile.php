@@ -1,12 +1,11 @@
 <?php
 
+// call database
+include "../Model/dbConnection.php";
 session_start();
 if (isset($_SESSION["sellerID"])) {
 
     $sellerId = $_SESSION["sellerID"];
-
-    // call database
-    include "../Model/dbConnection.php";
 
     // call connection db
     $db  = new DBConnection();
@@ -119,44 +118,52 @@ if (isset($_SESSION["sellerID"])) {
             <form action="./sellerEditProfilePage.php" method="post">
                 <div class="profile-page">
                     <div class="mt-2 profileLogo">
-                    <img src="./resources/images/default.png" alt="profile" class="shopLogo mb-3" name="profilePic">
+                        <?php
+                        if ($result[0]["shop_profilepic"] == "noprofile"){
+                            echo '<img src="./resources/images/default.png" class="shopLogo mb-3" id="profileImg">';
+                        } else {
+                            echo '<img src= "../Controller/' .$result[0]["shop_profilepic"].' " class="shopLogo mb-3" id="profileImg">';
+                        };
+                        ?>
                     </div>
                     <div class="seller_name mt-4 profileLogo">
                         <!-- name -->
                         <div class="">
-                            <input type="text" class="name edit_center MaryCafe text-center" placeholder="Seller name" name="sellerName" value="<?php echo $result[0]["seller_name"]; ?>">
+                            <input type="text" class="name edit_center MaryCafe text-center" placeholder="Seller name" name="sellerName" value="<?php echo $result[0]["seller_name"]; ?>" readonly>
                         </div>
 
                         <!-- cafe name -->
                         <div class="ms-3">
-                            <input type="text" class="shop_name edit_center MaryCafe text-center" placeholder="Cafe name" name="shopName" value="<?php echo $result[0]["shop_name"]; ?>">
+                            <input type="text" class="shop_name edit_center MaryCafe text-center" placeholder="Cafe name" name="shopName" value="<?php echo $result[0]["shop_name"]; ?>" readonly>
                         </div>
 
                     </div>
 
                     <!-- email -->
                     <div class="profileLogo mt-4">
-                        <input type="email" placeholder="cafe@gmail.com" class="edit edit_center sm-box text-center" name="email" value="<?php echo $result[0]["email"]; ?>">
+                        <input type="email" placeholder="cafe@gmail.com" class="edit edit_center sm-box text-center" name="email" value="<?php echo $result[0]["email"]; ?>" readonly>
                     </div>
 
                     <!-- password -->
                     <div class="profileLogo my-4">
-                        <input type="text" placeholder="Shop Address" class="edit edit_center sm-box text-center" name="shopAddress" value="<?php echo $result[0]["shopAddress"]; ?>">
+                        <input type="text" placeholder="Shop Address" class="edit edit_center sm-box text-center" name="shopAddress" value="<?php echo $result[0]["shopAddress"]; ?>" readonly>
                     </div>
 
                     <!-- phone number -->
                     <div class="profileLogo">
-                        <input type="text" placeholder="seller phone number" class="edit edit_center sm-box text-center" name="phone" value="<?php echo $result[0]["seller_phone"]; ?>">
+                        <input type="text" placeholder="seller phone number" class="edit edit_center sm-box text-center" name="phone" value="<?php echo $result[0]["seller_phone"]; ?>" readonly>
                     </div>
 
                     <!-- edit button -->
-                    <div class="profileLogo my-4">
+                    <div class="profileLogo my-3">
                         <button type="submit" class="edit_profile_btn edit edit_center mt-sm-4 sm-box text-center" name="editBtn">Edit Profile</button>
                     </div>
                 </div>
+                <p class="mt-3">If you have any problem <a href="./sellerContactAdmin.php" class="text-danger">Contact Admin.</a></p>
             </form>
         </div>
     </div>
+    <script src="./resources/js/sellerEditProfilePage.js"></script>
 </body>
 
 </html>

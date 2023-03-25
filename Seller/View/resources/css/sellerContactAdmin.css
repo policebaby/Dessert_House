@@ -13,8 +13,19 @@ body{
 /* for side bar */
 .icons{
     font-size:2.2em !important;
-    color:white;
-    opacity:0.6;
+    color:var(--text-color-white);
+    opacity:0.5;
+}
+.icons:hover{
+    opacity:1;
+    color:var(--text-color-white) !important;
+}
+.title{
+    opacity:0.5;
+}
+.title:hover{
+    opacity:1;
+    color:var(--text-color-white);
 }
 .profile-icon{
     font-size:2.2em !important;
@@ -24,10 +35,19 @@ body{
 }
 .web_name,.nav-text{
     color:var(--text-color-white);
+    text-decoration:none !important;
 }
 .nav-text{
     display:flex;
 }
+.nav-text:hover{
+    opacity:1;
+    color:var(--text-color-white);
+}
+.profile-text{
+    opacity:1;
+}
+
 .edit_nav{
     max-height:100% !important;
     background-color:var(--primary-blue);

@@ -29,6 +29,13 @@ body{
     color:var(--text-color-white);
     opacity:1;
 }
+.nav-text{
+    display:flex;
+    text-decoration:none;
+}
+.nav-text:hover{
+    color:var(--text-color-white);
+}
 .product-text{
     opacity:1;
     color:var(--text-color-white);
@@ -46,9 +53,7 @@ body{
 .web_name,.nav-text{
     color:var(--text-color-white);
 }
-.nav-text{
-    display:flex;
-}
+
 .edit_nav{
     max-height:100% !important;
     background-color:var(--primary-blue);
@@ -58,6 +63,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-decoration:none;
 }
 .web_name{
     font-family:"DM Serif Display","sans-serif";

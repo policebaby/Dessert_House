@@ -85,7 +85,7 @@ a:link{
 }
 a, a:link, a:visited {
   color: white;
-  opacity: 70%;
+  /* opacity: 70%; */
 }
 .search_icon {
   color: black;
