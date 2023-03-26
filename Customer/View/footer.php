@@ -62,7 +62,7 @@
             <br />
             <p class="text-white">
               <a href="../View/contact-admin.php"> Contact Admin </a><br />
-              <a href="../View/contact_seller.php"> Contact Seller</a> <br />
+              <a href="../Controller/contactSviewController.php"> Contact Seller</a> <br />
               <a href="../View/guide.php"> Guide </a><br />
               <a href="../View/about_us.php">About us</a> <br />
               <a href="../View/privacy&policy.php">Privacy Policy</a>

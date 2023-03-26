@@ -1,5 +1,5 @@
 <?php
-
+include "../Controller/shopProfileViewController.php";
 
 
 
