@@ -134,7 +134,7 @@ if (isset($_SESSION["sellerID"])) {
                         if ($result[0]["shop_profilepic"] == "noprofile"){
                             echo '<img src="./resources/images/default.png" class="editPhoto mb-3" id="profileImg" > ';
                         } else {
-                            echo '<img src= "../Controller/'.$result[0]["shop_profilepic"].' " class="editPhoto mb-3" id="profileImg" >';
+                            echo '<img src= "../Controller/' .$result[0]["shop_profilepic"]. ' " class="editPhoto mb-3" id="profileImg" >';
                         };
                         ?>
                             </div>

@@ -85,8 +85,11 @@ body{
     border-radius:0.2em;
 }
 .btns{
+    display:inline-block;
+    padding:10px 20px !important;
     width:10em !important;
-    height:2.2em;
+    text-align:center;
+    vertical-align: middle !important;
     border-radius:0.3em;
     border-style:none;
     color:var(--text-color-white);
@@ -98,6 +101,7 @@ body{
     box-shadow:4px 4px 8px var(--primary-blue) !important;
 }
 .cancel-btn{
+    color:white !important;
     background-color:var(--red-color);
 }
 .cancel-btn:hover{
@@ -124,7 +128,7 @@ body{
     .icons{
         font-size:2em !important;
     }
-    .web_name,.title{
+    .web_name,.title,.product-text{
         display:none !important;
     }
     .web_logo{
