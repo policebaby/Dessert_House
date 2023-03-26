@@ -55,19 +55,21 @@
         <div class="col-md-6">
             <img src="../View/resources/img/conact admin (4).png" alt="contact admin" class="contactA_pic">
         </div>
+        <form action="../Controller/contact_adminController.php" method="post">
         <div class="col-md-6   mt-4">
             <h4 class="mt-4 contact_text_header">Have Some Questions?</h4>
             <h5 class="mt-5  contact_text">User Name</h5>
-            <input type="text" class="contactA_input ms-md-5">
+            <input type="text" class="contactA_input ms-md-5" name="username" required>
 
-            <h5 class="mt-4  contact_text">Phone</h5>
-            <input type="text" class="contactA_input ms-md-5">
+            <h5 class="mt-4  contact_text">Shop</h5>
+            <input type="text" class="contactA_input ms-md-5" name="phone" required>
 
             <h5 class="mt-4 contact_text">Your Message</h5>
-            <textarea name="comment" id="" cols="41" rows="6" class="contactA_textarea ms-md-5"></textarea>
+            <textarea name="comment" id="" cols="41" rows="6" class="contactA_textarea ms-md-5" name="message" required></textarea>
             <br>
-            <button class="send_btn mt-4 mb-5">Send</button>
+            <button class="send_btn mt-4 mb-5" name="send_btn">Send</button>
         </div>
+        </form>
     </div>
     <!--contact admin end-->
 

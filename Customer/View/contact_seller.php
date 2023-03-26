@@ -73,8 +73,10 @@ if (isset($_SESSION["username"])) {
                         <!--shopname-->
                         <div class="form-floating choose my-4">
                             <select class="form-select" name="shopname" id="floatingSelect" aria-label="Floating label select example">
-
-                                    <option value="1">YKKO</option>
+                                    <option value="ykko">YKKO</option>
+                                    <option value="amazon">Amazon</option>
+                                    <option value="shopmyanmar">Shop Myanmar</option>
+                                    <option value="alibaba">Alibaba</option>
 
                             </select>
                             <label for="floatingSelect">Select Shop</label>
@@ -85,10 +87,14 @@ if (isset($_SESSION["username"])) {
                         <br>
                         <!--icons-->
                         <div class="S_icons">
-                            <iconify-icon icon="ph:smiley-x-eyes-bold"></iconify-icon>
-                            <iconify-icon icon="gg:smile-sad"></iconify-icon>
-                            <iconify-icon icon="gg:smile-neutral"></iconify-icon>
-                            <iconify-icon icon="gg:smile-mouth-open" id="gold"></iconify-icon>
+                        <input type="radio" name="i" id="icon1" class="box" required>
+                            <label for="icon1"><iconify-icon icon="ph:smiley-x-eyes-bold" id="i_1" required  value="1"></iconify-icon></label>
+                            <input type="radio" name="i" id="icon2" class="box" required>
+                            <label for="icon2"><iconify-icon icon="gg:smile-sad" id="i_2" required></iconify-icon></label>
+                            <input type="radio" name="i" id="icon3" class="box" required>
+                            <label for="icon3"><iconify-icon icon="gg:smile-neutral" id="i_3" required></iconify-icon></label>
+                            <input type="radio" name="i" id="icon4" class="box" required>
+                            <label for="icon4"><iconify-icon icon="gg:smile-mouth-open" id="i_4" required></iconify-icon></label>
                         </div>
                         <br>
                         <!--btn-->

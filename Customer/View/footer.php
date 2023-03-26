@@ -61,13 +61,13 @@
             <h4 class="footer_subHeader text-white">Need Help?</h4>
             <br />
             <p class="text-white">
-              Contact Admin <br />
+              <a href="../View/contact-admin.php"> Contact Admin </a><br />
               <a href="../View/contact_seller.php"> Contact Seller</a> <br />
-              Guide <br />
-              About us <br />
-              Privacy Policy
+              <a href="../View/guide.php"> Guide </a><br />
+              <a href="../View/about_us.php">About us</a> <br />
+              <a href="../View/privacy&policy.php">Privacy Policy</a>
             </p>
-          </div>
+          </div>                                  
         </div>
         <!-- needHelp col end -->
 
@@ -77,9 +77,9 @@
             <h4 class="footer_subHeader text-white">Navigate</h4>
             <br />
             <p class="text-white">
-              Coin Shop <br />
-              Product Page <br />
-              Seat booking
+            <a href="../View/coin_exchange.php">Coin Shop</a> <br />
+            <a href="../View/shops.php">Product Page </a><br />
+            <a href="../View/seat_selection.php">Seat booking</a>
             </p>
           </div>
         </div>

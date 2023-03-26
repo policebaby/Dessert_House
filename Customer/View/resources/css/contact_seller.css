@@ -113,3 +113,18 @@ h5 {
     margin-top: 1em;
   }
 }
+.box{
+  display: none !important;
+}
+#icon1:checked+label{
+color: #FFD233 !important;
+}
+#icon2:checked+label{
+  color: #FFD233 !important;
+}
+#icon3:checked+label{
+  color: #FFD233 !important;
+}
+#icon4:checked+label{
+   color: #FFD233 !important;
+}

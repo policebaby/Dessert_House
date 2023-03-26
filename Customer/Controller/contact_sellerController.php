@@ -9,46 +9,42 @@ if(isset($_POST["submit_btn"])){
 
 }
 
-$db = new DBConnection();
+
+try{
+    $db = new DBConnection();
     $pdo = $db->connect();
 
-    $sql = $pdo->prepare(
-        "
-        INSERT INTO t_rating
-        (
-            shop_id,
-            user_id,
-            rating_id,
-            create_date
-        )
-        VALUES
-        (
-            :shopname,
-            :username,
-            :message,
-            :date
-        );
-        "
-    );
+    // $sql = "INSERT INTO t_rating(shop_id, user_id, rating_id, create_date)VALUES (:shopname, :username, :message,:date)";
+    $sql = "INSERT INTO t_contact_seller( user_name, shop_name, message, created_at) VALUES ('$username', '$shopname', '$message', NOW())";
 
-    $sql->bindValue(":shopname",$shopname);
-    $sql->bindValue(":username",$username);
-    $sql->bindValue(":message",$message);
-    $sql->bindValue(":date",date("Y-m-d"));
+    $st = $pdo->prepare($sql);    
 
-    $sql->execute();
-    $result = $sql->fetchAll(PDO::FETCH_ASSOC);
+    // $st->bindValue(":shopname",$shopname,PDO::PARAM_STR);
+    // $st->bindValue(":username",$username,PDO::PARAM_STR);
+    // $st->bindValue(":message",$message,PDO::PARAM_STR);
+    // $st->bindValue(":date",date("Y-m-d"),PDO::PARAM_STR);
 
-    $sql = $pdo->prepare(
-        "
-        SELECT shop_name FROM m_shop WHERE del_flg = 0;
-        "
-    );
+    $st->execute();
+    echo "success ";
+    echo "<br>";
+    // $result = $st->fetchAll(PDO::FETCH_ASSOC);
 
+    $select = "SELECT * FROM contact_seller";
+    // $st = $pdo->prepare(
+    //     "
+    //     SELECT shop_name FROM m_shop WHERE del_flg = 0;
+    //     "
+    // );
 
-    $sql->bindValue(":shopname",$shopname);
-    $sql->execute();
-    $shopname = $sql->fetchAll(PDO::FETCH_ASSOC);
+    $result = $pdo->query($select);
+
+    // $se->bindValue(":shopname",$shopname);
+    while($row = $result->fetch(PDO::FETCH_ASSOC)){
+        $shopname = $row['shop_name'];
+    }
 
     echo $shopname;
+}catch(PDOException $e) {
+    echo $sql . "<br>" . $e->getMessage();
+  }
 ?>
