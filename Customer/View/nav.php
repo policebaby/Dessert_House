@@ -55,7 +55,7 @@
 
         <ul class="nav_desktop">
             <li class="nav_name "  id="home" ><a href="./user_home.php">Home</a></li>
-            <li class="nav_name " id="shop" ><a href="./shopProfile.php"> Shop</a></li>
+            <li class="nav_name " id="shop" ><a href="./shops.php"> Shop</a></li>
             <li class="nav_name "  id="coin_shop" ><a href="../Controller/coin_exchangeViewController.php">Coin Shop</a> </li>
         </ul>
 
