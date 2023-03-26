@@ -31,5 +31,4 @@ $sql->bindValue(":shopId",$_SESSION["shopID"]);
 $sql->execute();
 $shopName = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-
 ?>

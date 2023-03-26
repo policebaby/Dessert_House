@@ -8,9 +8,13 @@ if (isset($_SESSION["username"])) {
     // echo $name;
 } else {
     header("Location: ./user_login.php");
-
 }
-
+if (isset($_SESSION["shops"])) {
+    $shops =$_SESSION["shops"];
+    // echo "ok";
+}else {
+    echo "error";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -79,42 +83,26 @@ if (isset($_SESSION["username"])) {
         <div class="flex">
             <div class="row justify-content-center mx-5 ">
                 <!-- profile block start -->
-                <div class="boxborder m-5  col-4">
+                <?php for ($i=0; $i < count($shops) ; $i++) { ?>
+                    
+                
+                <a href="./shopProfile.php" class="boxborder m-5  col-4">
                     <div class="box ">
-                        <p class="text-center mt-5 fs-4">Starbuck</p>
+                        <p class="text-center mt-5 fs-4"><?= $shops[$i]["shop_name"] ?></p>
                     </div>
-                    <div class="circle"> <img class="position-relative rounded-circle " src="./resources/img/Ellipse 180.png" alt="" width="100%"> </div>
+                    <div class="circle"> <img class="position-relative rounded-circle " src="../../storages/<?= $shops[$i]["shop_profilepic"] ?>" alt="" width="100%"> </div>
                     <!-- had to put both width and height 100% because of sample picture -->
-                    <div class="pic"> <img src="./resources/img/Rectangle 381.png" alt="" width="100%" height="100%"></div>
+                    <!-- <div class="pic"> <img src="../View/resources/img/Rectangle 381.png" alt="" width="100%" height="100%"></div> -->
+                    <?php
+                    if ($shops[$i]["shop_coverpic"] == "nocover") {
+                        echo '<div class="pic"> <img src="../View/resources/img/Rectangle 381.png" alt="" width="100%" height="100%"></div>';
+                    } else {
+                        echo '<div class="pic"> <img src="../../storages/'.$shops[$i]["shop_coverpic"].'" alt="" width="100%" height="100%"></div>';
+                    }
+                    ?>
                     <div class="newItem ">New</div>
-                </div>
-                <div class="boxborder m-5 col-4">
-                    <div class="box ">
-                        <p class="text-center mt-5 fs-4">Starbuck</p>
-                    </div>
-                    <div class="circle"> <img class="position-relative rounded-circle " src="./resources/img/Ellipse 180.png" alt="" width="100%"> </div>
-                    <!-- had to put both width and height 100% because of sample picture -->
-                    <div class="pic"> <img src="./resources/img/Rectangle 381.png" alt="" width="100%" height="100%"></div>
-                    <div class="newItem ">New</div>
-                </div>
-                <div class="boxborder m-5 col-4">
-                    <div class="box ">
-                        <p class="text-center mt-5 fs-4">Starbuck</p>
-                    </div>
-                    <div class="circle"> <img class="position-relative rounded-circle " src="./resources/img/Ellipse 180.png" alt="" width="100%"> </div>
-                    <!-- had to put both width and height 100% because of sample picture -->
-                    <div class="pic"> <img src="./resources/img/Rectangle 381.png" alt="" width="100%" height="100%"></div>
-                    <div class="newItem ">New</div>
-                </div>
-                <div class="boxborder m-5 col-4">
-                    <div class="box ">
-                        <p class="text-center mt-5 fs-4">Starbuck</p>
-                    </div>
-                    <div class="circle"> <img class="position-relative rounded-circle " src="./resources/img/Ellipse 180.png" alt="" width="100%"> </div>
-                    <!-- had to put both width and height 100% because of sample picture -->
-                    <div class="pic"> <img src="./resources/img/Rectangle 381.png" alt="" width="100%" height="100%"></div>
-                    <div class="newItem ">New</div>
-                </div>
+                </a>
+            <?php } ?>
                 <!-- profile block end -->
             </div>
         </div>

@@ -41,7 +41,7 @@ if (isset($_POST["login"])) {
             $_SESSION["userID"] = $userid;
             if ($verify == 1 && $del_flg == 0) {
                 echo "email & pwd correct!";
-                header("Location: ../View/user_home.php");
+                header("Location: ./user_homeViewController.php");
             } else {
                 // verification needed or banned
                 if($verify == 0){
