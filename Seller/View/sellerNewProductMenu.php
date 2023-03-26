@@ -2,6 +2,7 @@
 
 include "../Controller/menuTableController.php";
 
+
 ?>
 
 <!DOCTYPE html>
@@ -166,7 +167,7 @@ include "../Controller/menuTableController.php";
                             <a href="../Controller/productEditController.php?id=<?= $productList[$i]["id"]?>" name="editLink">Edit</a>
                             </td>
                             <td>
-                            <a href="" class="text-danger">Delete</a>
+                            <a href="../Controller/deleteLinkController.php?id=<?= $productList[$i]["id"]?>" class="text-danger">Delete</a>
                             </td>
                         </tr>
 
