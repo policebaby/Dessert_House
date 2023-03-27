@@ -1,9 +1,6 @@
 <?php
 
 
-
-
-
 ?>
 
 
@@ -45,32 +42,34 @@
     <!-- icon link end -->
 </head>
 
-<body class=" ">
+<body >
     <!--Nav bar start-->
       <?php include "./nav.php" ?>
     <!--Nav bar end-->
 
     <!--contact admin start-->
+    <form action="../Controller/contact_adminController.php" method="post">
     <div class="row contactA_ctn">
         <div class="col-md-6">
             <img src="../View/resources/img/conact admin (4).png" alt="contact admin" class="contactA_pic">
         </div>
-        <form action="../Controller/contact_adminController.php" method="post">
-        <div class="col-md-6   mt-4">
-            <h4 class="mt-4 contact_text_header">Have Some Questions?</h4>
+        
+        <div class="col-md-6  mt-5 box">
+            <h4 class="mt-4 contact_text_header">Speak With An Admin</h4>
             <h5 class="mt-5  contact_text">User Name</h5>
             <input type="text" class="contactA_input ms-md-5" name="username" required>
 
-            <h5 class="mt-4  contact_text">Shop</h5>
-            <input type="text" class="contactA_input ms-md-5" name="phone" required>
+            <h5 class="mt-4  contact_text">Email</h5>
+            <input type="text" class="contactA_input ms-md-5" name="email" required>
 
             <h5 class="mt-4 contact_text">Your Message</h5>
             <textarea name="comment" id="" cols="41" rows="6" class="contactA_textarea ms-md-5" name="message" required></textarea>
             <br>
-            <button class="send_btn mt-4 mb-5" name="send_btn">Send</button>
+            <button class="send_btn mt-4 mb-5" type="submit" name="send_btn">Send</button>
         </div>
-        </form>
+        
     </div>
+    </form>
     <!--contact admin end-->
 
     <!-- footer start -->
