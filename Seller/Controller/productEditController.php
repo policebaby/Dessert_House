@@ -17,7 +17,7 @@ $sql= $pdo->prepare
 (
     "
     SELECT * FROM m_product 
-    WHERE id = :id
+    WHERE product_id = :id
     "
 );
 $sql->bindValue(":id",$updateID);

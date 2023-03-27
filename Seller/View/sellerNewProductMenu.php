@@ -105,8 +105,8 @@ include "../Controller/menuTableController.php";
             <form action="../Controller/productMenuController.php" method="post" enctype="multipart/form-data">
                 <div class="first-row row mb-3 me-5">
                     <div class="first-row-first col-md-5">
-                        <div class="mb-2">
-                        <p class=" fw-bold h4 mt-3 text-center"><?= $shopName[0]["shop_name"]?></p>
+                        <div class="mb-2 product-photo">
+                        <p class=" fw-bold h5 mt-3 text-center shop-name"><?= $shopName[0]["shop_name"]?></p>
                             <img src="./resources/images/default_product_image.png" class="seller-photo" id="productImg" required>
                         </div>
                         <input type="file"  class="form-control mt-2 ms-md-3 ms-sm-0" id="formFile" name="productPhoto">
@@ -164,10 +164,10 @@ include "../Controller/menuTableController.php";
                             <td><?= number_format($productList[$i]["product_price"])?></td>
                             <td><?= $productList[$i]["product_instock"]?></td>
                             <td>
-                            <a href="../Controller/productEditController.php?id=<?= $productList[$i]["id"]?>" name="editLink">Edit</a>
+                            <a href="../Controller/productEditController.php?id=<?= $productList[$i]["product_id"]?>" name="editLink">Edit</a>
                             </td>
                             <td>
-                            <a href="../Controller/deleteLinkController.php?id=<?= $productList[$i]["id"]?>" class="text-danger">Delete</a>
+                            <a href="../Controller/deleteLinkController.php?id=<?= $productList[$i]["product_id"]?>" class="text-danger">Delete</a>
                             </td>
                         </tr>
 

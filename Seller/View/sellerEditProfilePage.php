@@ -142,48 +142,37 @@ if (isset($_SESSION["sellerID"])) {
                                 <input class="form-control" type="file" id="formFile" name="profile">
                             </div>
                         </div>
-                        <!-- sellerName and old password input box -->
+                        <!-- sellerName and password input box -->
                         <div class="mt-md-4 mt-sm-4 label_box_row">
                             <span class="label_box mb-sm-3 lbox1">
                                 <label for="sellerName" class="coner_label fw-bold">Seller Name</label>
                                 <input type="text" placeholder="enter your name" class="input_box" name="sellerName" value="<?php echo $result[0]["seller_name"]; ?>">
                             </span>
                             <span class="label_box ms-md-5">
-                                <label for="oldPassword" class="coner_label fw-bold">Old Password</label>
+                                <label for="oldPassword" class="coner_label fw-bold">Password</label>
                                 <input type="password" placeholder="enter your old password" class="input_box" name="password" value="<?php echo $result[0]["password"]; ?>">
                             </span>
                         </div>
-                        <!-- shopName and new password box -->
-                        <div class="label_box_row mt-md-3 mt-sm-3">
+                        <!-- shopName and shop address -->
+                        <div class="label_box_row mt-md-1 mt-sm-3">
                             <span class="label_box mb-sm-3 lbox2">
                                 <label for="shopName" class="coner_label fw-bold">Shop Name</label>
                                 <input type="text" placeholder="enter your shop name" class="input_box" name="shop_name" value="<?php echo $result[0]["shop_name"]; ?>">
                             </span>
                             <span class="label_box ms-md-5">
-                                <label for="newPassword" class="coner_label fw-bold">New Password</label>
-                                <input type="password" placeholder="enter your new password" class="input_box" id="new-password" name="newPassword">
+                                <label for="address" class="email fw-bold">Shop Address</label>
+                                <input type="text" placeholder="enter shop address" class="input_box" name="shopAddress" value="<?php echo $result[0]["shopAddress"]; ?>">
                             </span>
                         </div>
-                        <!-- phone and confirm password box -->
-                        <div class="label_box_row mt-md-3 mt-sm-3">
+                        <!-- phone and email -->
+                        <div class="label_box_row mt-md-1 mt-sm-3">
                             <span class="label_box mb-sm-3 lbox2">
                                 <label for="phone" class="coner_label fw-bold">Phone</label>
                                 <input type="text" placeholder="enter your phone number" class="input_box" name="seller_phone" value="<?php echo $result[0]["seller_phone"]; ?>">
                             </span>
                             <span class="label_box ms-md-5">
-                                <label for="newPassword" class="coner_label fw-bold">Confirm Password</label>
-                                <input type="password" placeholder="confirm your new password" class="input_box" id="confirm-password" name="confirmPassword">
-                            </span>
-                        </div>
-                        <!-- email box -->
-                        <div class="label_box_row mt-md-3 mt-sm-3">
-                            <span class="label_box mb-sm-3 lbox2">
                                 <label for="email" class="email fw-bold">Email</label>
                                 <input type="email" placeholder="enter your email" class="input_box" name="email" value="<?php echo $result[0]["email"]; ?>">
-                            </span>
-                            <span class="label_box ms-md-5">
-                                <label for="address" class="email fw-bold">Shop Address</label>
-                                <input type="text" placeholder="enter shop address" class="input_box" name="shopAddress" value="<?php echo $result[0]["shopAddress"]; ?>">
                             </span>
                         </div>
                         <p id="message" class="fw-bold text-danger text-center"></p>

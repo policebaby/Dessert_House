@@ -33,7 +33,7 @@ if (move_uploaded_file($Location, "products/".$rowId.".".$extension)) {
         product_price   = :price,
         product_instock = :instock,
         product_picture = :photo
-    WHERE id = :id
+    WHERE product_id = :id
     "
     );
     $sql->bindValue(":pname",$pname);
@@ -59,7 +59,7 @@ if (move_uploaded_file($Location, "products/".$rowId.".".$extension)) {
         product_type    = :type,
         product_price   = :price,
         product_instock = :instock
-    WHERE id = :id
+    WHERE product_id = :id
     "
     );
     $sql->bindValue(":pname",$pname);
