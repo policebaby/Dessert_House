@@ -111,10 +111,10 @@ if(isset($_SESSION["editMenu"])){
                 <form action="../Controller/productUpdateController.php" method="post" enctype="multipart/form-data">
                 <input type="hidden" value="<?= $result[0]["product_id"]?>" name="id">
                 <div class="edit-photo-gp">
-                    <div class="seller-photo mb-2">
+                    <div class="mb-2">
                         <!-- to show choose profile photo -->
                         <?php
-                            echo '<img src= "../Controller/' .$result[0]["product_picture"].' " class="seller-photo mb-3" id="productImg">';
+                            echo '<img src= "../storages/' .$result[0]["product_picture"].' " class="seller-photo mb-3" id="productImg">';
                         ?>
                     </div>
                     <input class="form-control mt-2" type="file" id="formFile" name="productImg">

@@ -118,15 +118,6 @@
                             <td class="td-text fw-bold title-name">2023/03/06 14:30:00</td>
                             <td class="td-text fw-bold">Accept</td>
                         </tr>
-                        <tr class="color-tr">
-                            <td class=" td-text fw-bold">2</td>
-                            <td class=" td-text fw-bold">2023/03/05</td>
-                            <td class=" td-text fw-bold">DS_030001</td>
-                            <td class=" td-text fw-bold">Americano coffee x 2</td>
-                            <td class=" td-text fw-bold title-name">$12</td>
-                            <td class=" td-text fw-bold title-name">2023/03/05 15:30:00</td>
-                            <td class=" td-text fw-bold">Reject</td>
-                        </tr>
                     </table>
                     <!-- popup screen-->
                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

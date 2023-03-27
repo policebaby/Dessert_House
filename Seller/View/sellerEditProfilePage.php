@@ -24,6 +24,25 @@ if (isset($_SESSION["sellerID"])) {
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
 }
 
+// for shop data
+
+if (isset($_SESSION["shopID"])) {
+
+    $shopId = $_SESSION["shopID"];
+
+
+    $sql = $pdo->prepare(
+        "
+        SELECT * FROM m_shop WHERE shop_id = :id
+        "
+    );
+
+    $sql->bindValue(":id", $shopId);
+    $sql->execute();
+
+    $shopResult = $sql->fetchAll(PDO::FETCH_ASSOC);
+}
+
 
 ?>
 
@@ -131,10 +150,10 @@ if (isset($_SESSION["sellerID"])) {
                             
                             <!-- to show choose profile photo -->
                             <?php
-                        if ($result[0]["shop_profilepic"] == "noprofile"){
+                        if ($shopResult[0]["shop_profilepic"] == "noprofile"){
                             echo '<img src="./resources/images/default.png" class="editPhoto mb-3" id="profileImg" > ';
                         } else {
-                            echo '<img src= "../Controller/' .$result[0]["shop_profilepic"]. ' " class="editPhoto mb-3" id="profileImg" >';
+                            echo '<img src= " ' .$shopResult[0]["shop_profilepic"]. ' " class="editPhoto mb-3" id="profileImg" >';
                         };
                         ?>
                             </div>
@@ -157,11 +176,11 @@ if (isset($_SESSION["sellerID"])) {
                         <div class="label_box_row mt-md-1 mt-sm-3">
                             <span class="label_box mb-sm-3 lbox2">
                                 <label for="shopName" class="coner_label fw-bold">Shop Name</label>
-                                <input type="text" placeholder="enter your shop name" class="input_box" name="shop_name" value="<?php echo $result[0]["shop_name"]; ?>">
+                                <input type="text" placeholder="enter your shop name" class="input_box" name="shop_name" value="<?php echo $shopResult[0]["shop_name"]; ?>">
                             </span>
                             <span class="label_box ms-md-5">
                                 <label for="address" class="email fw-bold">Shop Address</label>
-                                <input type="text" placeholder="enter shop address" class="input_box" name="shopAddress" value="<?php echo $result[0]["shopAddress"]; ?>">
+                                <input type="text" placeholder="enter shop address" class="input_box" name="shopAddress" value="<?php echo $shopResult[0]["shopAddress"]; ?>">
                             </span>
                         </div>
                         <!-- phone and email -->

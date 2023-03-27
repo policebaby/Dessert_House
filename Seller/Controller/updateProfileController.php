@@ -13,15 +13,19 @@ if (isset($_POST["saveBtn"])) {
     $email           = $_POST["email"];
     $phone           = $_POST["seller_phone"];
 
+
     // profile data
     $file = $_FILES['profile']['name'];
-    //print_r($file);
+    // print_r($file);
     if ($file != "") {
         $sellerId  = $_SESSION["sellerID"];
+        $shopId     = $_SESSION["shopID"];
+        // echo $sellerId;
+        // echo $shopId;
         $Location  = $_FILES['profile']['tmp_name'];
         $extension = pathinfo($file)['extension'];
 
-        if (move_uploaded_file($Location, "profile/".$sellerId.".".$extension)) {
+        if (move_uploaded_file($Location, "../storages/profile/" .$shopId. "." .$extension)) {
 
             // call connection db
             $db  = new DBConnection();
@@ -31,40 +35,54 @@ if (isset($_POST["saveBtn"])) {
                 "
             UPDATE m_seller SET
                 seller_name      = :sellerName,
-                shop_name        = :shopName,
-                shopAddress      = :shopAddress,
                 password         = :pwd,
                 email            = :email,
-                seller_phone     = :phone,
-                shop_profilepic  = :photo
+                seller_phone     = :phone
             WHERE seller_id  = :id
             "
             );
 
             $sql->bindValue(":sellerName", $sellerName);
-            $sql->bindValue(":shopName", $shopName);
-            $sql->bindValue(":shopAddress", $shopAddress);
             $sql->bindValue(":pwd", $pwd);
             $sql->bindValue(":email", $email);
-            $sql->bindValue(":phone", $phone);
-            $sql->bindValue(":photo", "profile/" .$sellerId. "." .$extension);
+            $sql->bindValue(":phone", $phone); 
             $sql->bindValue(":id", $sellerId);
-
             $sql->execute();
+
+            $sql = $pdo->prepare(
+                "
+            UPDATE m_shop SET
+                shop_name        = :shopName,
+                shopAddress      = :shopAddress,
+                shop_profilepic  = :photo
+            WHERE shop_id  = :id
+            "
+            );
+            $sql->bindValue(":shopName", $shopName);
+            $sql->bindValue(":shopAddress", $shopAddress);
+            $sql->bindValue(":photo", "../storages/profile/" .$shopId. "." .$extension);
+            $sql->bindValue(":id", $shopId);
+            $sql->execute();
+
+
+
             header("Location: ../View/sellerProfile.php");
         }
     } else {
-        //echo "OK";
+        // echo "OK";
         $sellerId  = $_SESSION["sellerID"];
-        // call connection db
+        $shopId  = $_SESSION["shopID"];
+        // echo $sellerId,$shopId;
+
+        // // call connection db
         $db  = new DBConnection();
         $pdo = $db->connect();
+
+
         $sql = $pdo->prepare(
             "
             UPDATE m_seller SET
             seller_name      = :sellerName,
-            shop_name        = :shopName,
-            shopAddress      = :shopAddress,
             password         = :pwd,
             email            = :email,
             seller_phone     = :phone
@@ -73,14 +91,26 @@ if (isset($_POST["saveBtn"])) {
         );
 
         $sql->bindValue(":sellerName", $sellerName);
-        $sql->bindValue(":shopName", $shopName);
-        $sql->bindValue(":shopAddress", $shopAddress);
         $sql->bindValue(":pwd", $pwd);
         $sql->bindValue(":email", $email);
         $sql->bindValue(":phone", $phone);
         $sql->bindValue(":id", $sellerId);
-
         $sql->execute();
+
+        $sql = $pdo->prepare(
+            "
+        UPDATE m_shop SET
+            shop_name        = :shopName,
+            shopAddress      = :shopAddress
+        WHERE shop_id  = :id
+        "
+        );
+        $sql->bindValue(":shopName", $shopName);
+        $sql->bindValue(":shopAddress", $shopAddress);
+        $sql->bindValue(":id", $shopId);
+        $sql->execute();
+
+
         header("Location: ../View/sellerProfile.php");
     }
 } else {

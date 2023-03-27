@@ -19,7 +19,7 @@ if (isset($_POST["addBtn"])) {
     if ($file != "") {
         $Location  = $_FILES['productPhoto']['tmp_name'];
         $extension = pathinfo($file)['extension'];
-        if (move_uploaded_file($Location, "products/".$file.".".$extension)) {
+        if (move_uploaded_file($Location, "../storages/products/".$file.".".$extension)) {
             //call database connection
             $db  = new DBConnection();
             $pdo = $db->connect();
@@ -51,7 +51,7 @@ if (isset($_POST["addBtn"])) {
             $sql->bindValue(":product_name", $newName);
             $sql->bindValue(":product_type",$type);
             $sql->bindValue(":product_price", $price);
-            $sql->bindValue(":product_picture", "products/" . $file . "." . $extension);
+            $sql->bindValue(":product_picture", "../storages/products/" . $file . "." . $extension);
             $sql->bindValue(":product_instock", $instock);
             $sql->bindValue(":date", date("Y-m-d"));
             $sql->execute();

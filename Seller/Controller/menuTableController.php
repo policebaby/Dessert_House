@@ -21,7 +21,7 @@ $productList = $sql->fetchAll(PDO::FETCH_ASSOC);
 $sql=$pdo->prepare
 (
     "
-    SELECT shop_name FROM m_seller 
+    SELECT shop_name FROM m_shop 
     WHERE 
     shop_id = :shopId 
     AND del_flg = 0 

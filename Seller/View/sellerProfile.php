@@ -23,6 +23,26 @@ if (isset($_SESSION["sellerID"])) {
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
 }
 
+if (isset($_SESSION["shopID"])) {
+
+    $shopId = $_SESSION["shopID"];
+
+    // call connection db
+    $db  = new DBConnection();
+    $pdo = $db->connect();
+
+    $sql = $pdo->prepare(
+        "
+        SELECT * FROM m_shop WHERE shop_id = :id
+        "
+    );
+
+    $sql->bindValue(":id", $shopId);
+    $sql->execute();
+
+    $shopResult = $sql->fetchAll(PDO::FETCH_ASSOC);
+}
+
 ?>
 
 
@@ -119,10 +139,10 @@ if (isset($_SESSION["sellerID"])) {
                 <div class="profile-page">
                     <div class="mt-2 profileLogo">
                         <?php
-                        if ($result[0]["shop_profilepic"] == "noprofile"){
+                        if ($shopResult[0]["shop_profilepic"] == "noprofile"){
                             echo '<img src="./resources/images/default.png" class="shopLogo mb-3" id="profileImg">';
                         } else {
-                            echo '<img src= "../Controller/' .$result[0]["shop_profilepic"].' " class="shopLogo mb-3" id="profileImg">';
+                            echo '<img src= "'.$shopResult[0]["shop_profilepic"].' " class="shopLogo mb-3" id="profileImg">';
                         };
                         ?>
                     </div>
@@ -134,7 +154,7 @@ if (isset($_SESSION["sellerID"])) {
 
                         <!-- cafe name -->
                         <div class="ms-3">
-                            <input type="text" class="shop_name edit_center MaryCafe text-center" placeholder="Cafe name" name="shopName" value="<?php echo $result[0]["shop_name"]; ?>" readonly>
+                            <input type="text" class="shop_name edit_center MaryCafe text-center" placeholder="Cafe name" name="shopName" value="<?php echo $shopResult[0]["shop_name"]; ?>" readonly>
                         </div>
 
                     </div>
@@ -146,7 +166,7 @@ if (isset($_SESSION["sellerID"])) {
 
                     <!-- password -->
                     <div class="profileLogo my-4">
-                        <input type="text" placeholder="Shop Address" class="edit edit_center sm-box text-center" name="shopAddress" value="<?php echo $result[0]["shopAddress"]; ?>" readonly>
+                        <input type="text" placeholder="Shop Address" class="edit edit_center sm-box text-center" name="shopAddress" value="<?php echo $shopResult[0]["shopAddress"]; ?>" readonly>
                     </div>
 
                     <!-- phone number -->

@@ -19,7 +19,7 @@ if($file != ""){
 // print_r($Location);
 $extension = pathinfo($file)['extension'];
 
-if (move_uploaded_file($Location, "products/".$rowId.".".$extension)) {
+if (move_uploaded_file($Location, "../storages/products/".$rowId.".".$extension)) {
 
     //call database connection
     $db  = new DBConnection();
@@ -40,7 +40,7 @@ if (move_uploaded_file($Location, "products/".$rowId.".".$extension)) {
     $sql->bindValue(":type",$type);
     $sql->bindValue(":price",$price);
     $sql->bindValue(":instock",$instock);
-    $sql->bindValue(":photo","products/".$rowId.".".$extension);
+    $sql->bindValue(":photo","../storages/products/".$rowId.".".$extension);
     $sql->bindValue(":id",$rowId);
     
     $sql->execute();
