@@ -27,7 +27,7 @@ if (isset($_SESSION["coinprice"])) {
 
     <!-- css link end -->
     <!-- js link start -->
-    <script src="./resources/js/coin_exchange.js" defer></script>
+    <script src="./resources/js/coin_exchange.js?v=<?=time()?>" defer ></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="sweetalert2.min.js"></script>
     <link rel="stylesheet" href="sweetalert2.min.css">
@@ -72,7 +72,7 @@ if (isset($_SESSION["coinprice"])) {
                 <form action="../Controller/coin_exchangeController.php" method="post" enctype="multipart/form-data">
                     <div class="input-group mb-3 inputWidth">
                         <!-- coin amount -->
-                        <input type="text" id="coinAmount" class="form-control coinInput" value="1" aria-label="Amount (to the nearest dollar)" placeholder="Coin" name="coinAmount" >
+                        <input type="text" id="coinAmount" class="form-control coinInput" value="" aria-label="Amount (to the nearest dollar)" placeholder="Coin" name="coinAmount" >
                         <!-- currency type -->
                         <select class="form-select currencySelect" id="currency">
                             <option value="<?= $coinprice[0]["to_mmk"] ?>" selected>MMK</option>
@@ -81,7 +81,7 @@ if (isset($_SESSION["coinprice"])) {
                             <option value="<?= $coinprice[0]["to_pound"] ?>">Pound</option>
                         </select>
                         <!-- calculated  -->
-                        <input id="calculated" class="calculated text-light bg-transparent border-0" value="= 2500 MMK" name="calculated">
+                        <input id="calculated" class="calculated text-light bg-transparent border-0" value="" name="calculated" readonly>
                     </div>
                     <p id="calculated1" class="mbCalculated "> =MMK</p>
                     <!-- attach reciept -->

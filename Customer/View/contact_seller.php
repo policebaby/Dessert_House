@@ -9,9 +9,19 @@ if (isset($_SESSION["username"])) {
     // echo $name;
 } else {
     header("Location: ./user_login.php");
-
 }
-
+if (isset($_SESSION["shops"])) {
+    $shops = $_SESSION["shops"];
+    // echo "ok";
+} else {
+    echo "error";
+}
+ if (isset($_SESSION["ratingTypes"])) {
+    $rating = $_SESSION["ratingTypes"];
+    // echo "ok";
+} else {
+    echo "error";
+}
 ?>
 
 <!DOCTYPE html>
@@ -69,30 +79,38 @@ if (isset($_SESSION["username"])) {
                     <div class="contactS_box">
                         <!--username-->
                         <h5 class="contactS_text">User Name</h5>
-                        <input type="text" class="contactS_input" name="username">
+                        <input type="text" class="contactS_input p-3" name="username" value='<?= $name ?>' readonly>
                         <!--shopname-->
                         <div class="form-floating choose my-4">
-                            <select class="form-select" name="shopname" id="floatingSelect" aria-label="Floating label select example">
-
-                                    <option value="1">YKKO</option>
-
+                            <select class="form-select" name="shopid" id="floatingSelect" aria-label="Floating label select example">
+                                <?php for ($i = 0; $i < count($shops); $i++) { ?>
+                                    <option value="<?= $shops[$i]["shop_id"] ?>"><?= $shops[$i]["shop_name"] ?></option>
+                                <?php } ?>
                             </select>
                             <label for="floatingSelect">Select Shop</label>
                         </div>
                         <!--message-->
                         <h5 class="contactS_text">Your Message</h5>
-                        <textarea name="message" id="" cols="40" rows="6" class="contactS_textarea" placeholder="Suggest or comment"></textarea>
+                        <textarea name="message" id="" cols="40" rows="6" class="contactS_textarea" placeholder="Suggest or comment" required></textarea>
                         <br>
                         <!--icons-->
                         <div class="S_icons">
-                            <iconify-icon icon="ph:smiley-x-eyes-bold"></iconify-icon>
-                            <iconify-icon icon="gg:smile-sad"></iconify-icon>
-                            <iconify-icon icon="gg:smile-neutral"></iconify-icon>
-                            <iconify-icon icon="gg:smile-mouth-open" id="gold"></iconify-icon>
+                            <input type="radio" name="rating" value="<?= $rating[3]["rating_id"] ?>" id="icon1" class="box" required>
+                            <label for="icon1"><iconify-icon icon="ph:smiley-x-eyes-bold" id="i_1" required value="1"></iconify-icon></label>
+
+                            <input type="radio" name="rating" value="<?= $rating[2]["rating_id"] ?>" id="icon2" class="box" required>
+                            <label for="icon2"><iconify-icon icon="gg:smile-sad" id="i_2" required></iconify-icon></label>
+
+                            <input type="radio" name="rating" value="<?= $rating[1]["rating_id"] ?>" id="icon3" class="box" required>
+                            <label for="icon3"><iconify-icon icon="gg:smile-neutral" id="i_3" required></iconify-icon></label>
+
+                            <input type="radio" name="rating" value="<?= $rating[0]["rating_id"] ?>" id="icon4" class="box" required>
+                            <label for="icon4"><iconify-icon icon="gg:smile-mouth-open" id="i_4" required></iconify-icon></label>
+
                         </div>
                         <br>
                         <!--btn-->
-                        <button class="contactS_btn " name="submit_btn">Submit</button>
+                        <button type="submit" class="contactS_btn " name="submit_btn">Submit</button>
                     </div>
                 </form>
             </div>

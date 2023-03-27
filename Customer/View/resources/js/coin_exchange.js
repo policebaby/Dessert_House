@@ -11,23 +11,23 @@
 // })
 
 // calculate coin exchange
-// document.addEventListener('keyup',function(){
-//     let coin= document.getElementById("coinAmount").value;
-//     let currency = document.getElementById("currency").value;
-//     let calculate = coin * currency;
-//     console.log(calculate);
-// })
-
-function cal(params) {
+document.addEventListener('keyup',function(){
     let coin= document.getElementById("coinAmount").value;
     let currency = document.getElementById("currency").value;
     let calculate = coin * currency;
+    document.getElementById("calculated").value = "= "+ calculate.toLocaleString("en-US")+ " MMK";
+})
 
-    document.getElementById("calculated").value = calculated;
-    console.log(calculate)
-}
+// function cal(params) {
+//     let coin= document.getElementById("coinAmount").value;
+//     let currency = document.getElementById("currency").value;
+//     let calculate = coin * currency;
 
-let recal = setInterval(() => {
-    cal();
-    console.log("restarted");
-}, 0);
+//     document.getElementById("calculated").value = calculate;
+//     console.log(calculate)
+// }
+
+// let recal = setInterval(() => {
+//     cal();
+//     console.log("restarted");
+// }, 0);

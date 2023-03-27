@@ -1,54 +1,67 @@
 <?php
+ini_set("display_errors", "1");
 session_start();
 include "../Model/dbConnection.php";
 
 if(isset($_POST["submit_btn"])){
-    $username = $_SESSION["username"];
-    $shopname = $_POST["shopname"];
+    $userid = $_SESSION["userID"];
+    $shopid = $_POST["shopid"];
     $message = $_POST["message"];
-
-}
-
-$db = new DBConnection();
+    $rating =$_POST["rating"];
+    
+    echo $userid, $shopid,$message,$rating;
+    $db = new DBConnection();
     $pdo = $db->connect();
-
     $sql = $pdo->prepare(
         "
-        INSERT INTO t_rating
+        INSERT INTO T_review 
         (
-            shop_id,
             user_id,
-            rating_id,
+            shop_id,
+            user_review,
             create_date
         )
         VALUES
         (
-            :shopname,
-            :username,
-            :message,
-            :date
+            :userid,
+            :shopid,
+            :userReview,
+            :createDate
+        )"
         );
-        "
-    );
+        $sql->bindValue(":userid",$userid);
+        $sql->bindValue(":shopid",$shopid);
+        $sql->bindValue(":userReview",$message);
+        $sql->bindValue(":createDate",date('y-m-d'));
+        $sql->execute();
 
-    $sql->bindValue(":shopname",$shopname);
-    $sql->bindValue(":username",$username);
-    $sql->bindValue(":message",$message);
-    $sql->bindValue(":date",date("Y-m-d"));
+        $sql = $pdo->prepare(
+            "
+            INSERT INTO T_rating
+            (
+                user_id,
+                shop_id,
+                rating_id,
+                create_date
+            )
+            VALUES
+            (
+                :userid,
+                :shopid,
+                :rating,
+                :createDate
+            )"
+            );
+            $sql->bindValue(":userid",$userid);
+            $sql->bindValue(":shopid",$shopid);
+            $sql->bindValue(":rating",$rating);
+            $sql->bindValue(":createDate",date('y-m-d'));
+            $sql->execute();
 
-    $sql->execute();
-    $result = $sql->fetchAll(PDO::FETCH_ASSOC);
-
-    $sql = $pdo->prepare(
-        "
-        SELECT shop_name FROM m_shop WHERE del_flg = 0;
-        "
-    );
+            header("Location: ../View/user_home.php");
+}else{
+    echo "error"; 
+}
 
 
-    $sql->bindValue(":shopname",$shopname);
-    $sql->execute();
-    $shopname = $sql->fetchAll(PDO::FETCH_ASSOC);
-
-    echo $shopname;
 ?>
