@@ -11,7 +11,7 @@ $sql=$pdo->prepare
     SELECT * FROM m_product 
     WHERE 
     shop_id = :shopId 
-    AND del_flg = 0 ORDER BY id DESC LIMIT 5 
+    AND del_flg = 0 ORDER BY product_id DESC LIMIT 5 
     "
 );
 $sql->bindValue(":shopId",$_SESSION["shopID"]);

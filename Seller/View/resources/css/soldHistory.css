@@ -15,10 +15,17 @@ body{
 .icons{
     font-size:2.2em !important;
     color:white;
-    opacity:0.6;
+    opacity:0.5;
+}
+.icons:hover{
+    opacity:1;
 }
 .sold-icon{
     font-size:2.2em !important;
+    color:var(--text-color-white);
+}
+.sold-text{
+    color:var(--text-color-white);
 }
 .web_logo{
     width:4.5em !important;
@@ -28,6 +35,14 @@ body{
 }
 .nav-text{
     display:flex;
+    text-decoration:none !important;
+}
+.title:hover{
+    opacity:1;
+}
+.title{
+    opacity:0.5;
+    color:white;
 }
 .edit_nav{
     max-height:100% !important;
@@ -38,6 +53,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-decoration:none !important;
 }
 .web_name{
     font-family:"DM Serif Display","sans-serif";
@@ -80,7 +96,10 @@ td{
 .modal-header{
     border-style:none !important;
 }
-
+.items{
+    display:flex;
+    flex-direction:column;
+}
 /* for page */
 tr{
     width:6em !important;
@@ -125,7 +144,7 @@ td{
     .icons{
         font-size:2em !important;
     }
-    .web_name,.title{
+    .web_name,.title,.sold-text{
         display:none !important;
     }
     .web_logo{
@@ -179,6 +198,9 @@ td{
     }
     .col-10{
         width:75% !important;
+    }
+    .history-text{
+        font-size:0.7em !important;
     }
     .sold-title{
         font-size:0.8em !important;

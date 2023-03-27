@@ -109,7 +109,7 @@ if(isset($_SESSION["editMenu"])){
             <div class="first-row mb-5 me-5 mt-4">
                 <!-- form start -->
                 <form action="../Controller/productUpdateController.php" method="post" enctype="multipart/form-data">
-                <input type="hidden" value="<?= $result[0]["id"]?>" name="id">
+                <input type="hidden" value="<?= $result[0]["product_id"]?>" name="id">
                 <div class="edit-photo-gp">
                     <div class="seller-photo mb-2">
                         <!-- to show choose profile photo -->

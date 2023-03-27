@@ -190,11 +190,18 @@ table tr:nth-child(odd) {
     tr{
         font-size:0.7em !important;
     }
+    td{
+        padding:0 !important;
+        vertical-align: middle;
+    }
     .blue-width{
         width:100% !important;
     }
+    .shop-name,.insert-title,.product-menu-text{
+        font-size:1.2em !important;
+    }
     .pagination > li a {
-        font-size:0.5em !important;
+        font-size:0.7em !important;
         padding:5px !important;
     }
     
@@ -224,6 +231,12 @@ table tr:nth-child(odd) {
         width:6em;
         height:6em;
     }
+    .product-photo{
+        display:flex !important;
+        flex-direction:column !important;
+        justify-content:center !important;
+        align-items:center !important;
+    }
     .form-control{
         width:17em !important;
         font-size:0.6em !important;
@@ -237,7 +250,7 @@ table tr:nth-child(odd) {
         font-size:0.6em !important;
     }
     .btns{
-        margin-top:1.5em;
+        margin-top:1em !important;
         width:9em !important;
         font-size:0.6em;
     }
@@ -255,5 +268,9 @@ table tr:nth-child(odd) {
     }
     .product-menu-text{
         margin-left:30% !important;
+    }
+    .pagination > li a {
+        font-size:0.5em !important;
+        padding:5px !important;
     }
 }

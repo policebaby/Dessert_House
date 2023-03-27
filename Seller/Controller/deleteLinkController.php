@@ -15,7 +15,7 @@ if(isset($_GET["id"])){
         "
         UPDATE m_product SET
         del_flg = 1 
-        WHERE id = :id
+        WHERE product_id = :id
         "
     );
     $sql->bindValue(":id",$deleteID);

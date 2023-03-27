@@ -15,7 +15,20 @@ body{
 .icons{
     font-size:2.2em !important;
     color:white;
-    opacity:0.6;
+    opacity:0.5;
+}
+.icons:hover{
+    opacity:1;
+}
+.title{
+    color:var(--text-color-white) !important;
+    opacity:0.5;
+}
+.title:hover{
+    opacity:1;
+}
+.incoming-text,.incoming-icon{
+    color:var(--text-color-white) !important;
 }
 .incoming-icon{
     font-size:2.2em !important;
@@ -25,6 +38,7 @@ body{
 }
 .web_name,.nav-text{
     color:var(--text-color-white);
+    text-decoration:none;
 }
 .nav-text{
     display:flex;
@@ -38,24 +52,19 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-decoration:none;
 }
 .web_name{
     font-family:"DM Serif Display","sans-serif";
     font-size: 1.2em;
 }
 /* for page */
-tr{
-    width:6em !important;
-    line-height:2.5em;
-}
 .t-head{
     color:var(--text-color-white);
     background-color:var(--primary-blue) !important;
+    padding:0 !important;
 }
-.color-tr{
-    background-color:var(--tr-second-color);
-    height:2em !important;
-}
+
 .aBtn{
     background-color:#0057FF !important;
 }
@@ -121,11 +130,16 @@ td{
     .icons{
         font-size:2em !important;
     }
-    .web_name,.title{
+    .web_name,.title,.incoming-text{
         display:none !important;
     }
     .web_logo{
         width:3em !important;
+    }
+    .nav-icons{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .edit_nav{
         position:fixed;
@@ -152,6 +166,10 @@ td{
     .btn2{
         padding:0 !important;
     }
+    .pagination > li a {
+        font-size:0.7em !important;
+        padding:5px !important;
+    }
 }
 
 /* for mobile view */
@@ -174,7 +192,7 @@ td{
         font-size:1.2em !important;
     }
     td{
-        padding:0 !important;
+        padding-left:2px !important;
         font-size:0.6em;
     }
     .td-text{
@@ -195,10 +213,10 @@ td{
         margin-right:4em !important;
     }
     .pagination > li a {
-        font-size:0.5em !important;
+        font-size:0.3em !important;
         padding:5px !important;
     }
     .col-10{
-        width:80%;
+        width:80% !important;
     }
 }

@@ -15,10 +15,24 @@ body{
 .icons{
     font-size:2.2em !important;
     color:white;
-    opacity:0.6;
+    opacity:0.5;
+}
+.icons:hover{
+    opacity:1;
+}
+.title{
+    color:var(--text-color-white);
+    opacity:0.5;
+}
+.title:hover{
+    opacity:1;
 }
 .feedback-icon{
+    color:var(--text-color-white);
     font-size:2.2em !important;
+}
+.cf-text{
+    color:var(--text-color-white);
 }
 .web_logo{
     width:4.5em !important;
@@ -28,6 +42,7 @@ body{
 }
 .nav-text{
     display:flex;
+    text-decoration:none;
 }
 .edit_nav{
     max-height:100% !important;
@@ -38,6 +53,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-decoration:none;
 }
 .web_name{
     font-family:"DM Serif Display","sans-serif";
@@ -96,7 +112,7 @@ body{
     .icons{
         font-size:2em !important;
     }
-    .web_name,.title{
+    .web_name,.title,.cf-text{
         display:none !important;
     }
     .web_logo{
