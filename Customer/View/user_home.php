@@ -84,8 +84,6 @@ if (isset($_SESSION["shops"])) {
             <div class="row justify-content-center mx-5 ">
                 <!-- profile block start -->
                 <?php for ($i=0; $i < count($shops) ; $i++) { ?>
-                    
-                
                 <a href="./shopProfile.php?id=<?=$shops[$i]["shop_id"]?>" class="boxborder m-5  col-4">
                     <div class="box ">
                         <p class="text-center mt-5 fs-4"><?= $shops[$i]["shop_name"] ?></p>

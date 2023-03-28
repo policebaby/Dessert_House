@@ -3,31 +3,37 @@
 //         title: 'Request send successfully!',
 //         text: "Please wait for a moment",
 //         icon: 'success',
-        
+
 //         confirmButtonColor: '#3085d6',
-        
+
 //         confirmButtonText: 'back to home'
 //     })
 // })
 
 // calculate coin exchange
-document.addEventListener('keyup',function(){
-    let coin= document.getElementById("coinAmount").value;
-    let currency = document.getElementById("currency").value;
-    let calculate = coin * currency;
-    document.getElementById("calculated").value = "= "+ calculate.toLocaleString("en-US")+ " MMK";
+let ctype = "MMK";
+
+$("#currency").change(function () {
+    ctype = $("#currency option:selected").text();
+    // console.log(typeof ctype)
+    change();
+    insertC();
 })
 
-// function cal(params) {
-//     let coin= document.getElementById("coinAmount").value;
-//     let currency = document.getElementById("currency").value;
-//     let calculate = coin * currency;
+document.addEventListener('keyup', function () {
+    change();
+})
 
-//     document.getElementById("calculated").value = calculate;
-//     console.log(calculate)
-// }
+function change(params) {
+    let coin = document.getElementById("coinAmount").value;
+    let currency = document.getElementById("currency").value;
+    let calculate = coin * currency;
+    document.getElementById("calculated").value =  calculate.toLocaleString("en-US") + ctype;
+    document.getElementById("calculated1").innerText=  calculate.toLocaleString("en-US") + ctype;
+}
 
-// let recal = setInterval(() => {
-//     cal();
-//     console.log("restarted");
-// }, 0);
+function insertC(){
+    $("#currencytype").val(ctype) ;
+    console.log(ctype)
+
+}

@@ -57,9 +57,9 @@ include "../Controller/shopProfileViewController.php";
     <!-- hero section end -->
     <!-- menu section start -->
     <div class="container-fluid d-flex justify-content-center menuBG">
-        <div class="menu  text-center">Main Menu</div>
-        <div class="menu text-center  opacity70">Cold Drink</div>
-        <div class="menu text-center opacity70">Dessert Menu</div>
+        <div class="menu  text-center">Menu</div>
+        <!-- <div class="menu text-center  opacity70">Cold Drink</div>
+        <div class="menu text-center opacity70">Dessert Menu</div> -->
     </div>
     <!-- menu section end -->
     <!-- menublocks start -->
