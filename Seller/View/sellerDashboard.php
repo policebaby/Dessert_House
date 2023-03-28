@@ -1,6 +1,6 @@
 <?php
 
-
+include "../Controller/sellerDashboardController.php";
 
 
 ?>
@@ -104,24 +104,32 @@
                     <div class="bs-1 d-flex justify-content-center">
                         <div class="blue_squares">
                             <img src="./resources/images/itemCount.png" class="mt-md-3 mt-sm-3 icon21">
-                            <p class="text_21 mt-md-2 mt-sm-2">21</p>
+                            <?php
+                            echo '<p class="text_21 mt-md-2 mt-sm-2">' . $itemCount . '</p>';
+                            ?>
                             <span class="blue_name">Item Count</span>
                         </div>
                         <div class="blue_squares ms-sm-5 ms-md-0">
                             <img src="./resources/images/total.png" class="mt-md-3 mt-sm-3 icon21">
-                            <p class="text_21 mt-md-2 mt-sm-2">21</p>
+                            <?php
+                            echo '<p class="text_21 mt-md-2 mt-sm-2">' . $totalOrder . '</p>';
+                            ?>
                             <p class="blue_name">Total Order</p>
                         </div>
                     </div>
                     <div class="bs-1 d-flex justify-content-center">
                         <div class="blue_squares">
                             <img src="./resources/images/soldCount.png" class="mt-md-3 mt-sm-3 icon21">
-                            <p class="text_21 mt-md-2 mt-sm-2">21</p>
+                            <?php
+                            echo '<p class="text_21 mt-md-2 mt-sm-2">' . $soldCount . '</p>';
+                            ?>
                             <p class="blue_name">Sold Item Count</p>
                         </div>
                         <div class="blue_squares ms-sm-5 ms-md-0">
                             <img src="./resources/images/pendingOrder.png" class="mt-md-3 mt-sm-3 icon21">
-                            <p class="text_21 mt-md-2 mt-sm-2">21</p>
+                            <?php
+                            echo '<p class="text_21 mt-md-2 mt-sm-2">' . $pendingOrder . '</p>';
+                            ?>
                             <p class="blue_name">Pending Orders</p>
                         </div>
                     </div>
@@ -131,8 +139,36 @@
                     <span class="second_row_first mt-2 col-md-4 col-sm-10">
                         <p class="mt-3 ms-md-3 ms-sm-4 user-per-text">Customers' Satisfactory Percentage</p>
                         <div class="text-center">
-                            <img src="./resources/images/smile.png" class="smile">
-                            <span class="cent">100%</span>
+                            <span class="cent">
+                                <?php
+                                $maxPercent = 0;
+                                $selectedRating = null;
+                                foreach ($result as $row) {
+                                    $ratingType = $row['rating_type'];
+                                    $ratingPercent = round($row['rating_percent']);
+                                    if ($ratingPercent > $maxPercent) {
+                                        $maxPercent = $ratingPercent;
+                                        $selectedRating = $row;
+                                    }
+                                }
+
+                                if ($selectedRating !== null) {
+                                    $ratingType = $selectedRating['rating_type'];
+                                    $ratingPercent = round($selectedRating['rating_percent']);
+                                    if ($ratingType == '0' && $ratingPercent > '65%') {
+                                        echo '<img src="./resources/images/smile.png" class="smile me-2">';
+                                        echo $ratingPercent . "%<br>";
+                                    } else if ($ratingType == '1' && $ratingPercent < '65%') {
+                                        echo '<img src="./resources/images/simple.png" class="smile me-2">';
+                                        echo $ratingPercent . "%<br>";
+                                    } else if ($ratingType == '2' && $ratingPercent < '45%') {
+                                        echo '<img src="./resources/images/sad.png" class="smile me-2">';
+                                        echo $ratingPercent . "%<br>";
+                                    }
+                                }
+                                ?>
+
+                            </span>
                         </div>
                         <div class="ms-md-3 ms-sm-3 mt-md-4 mt-sm-4">
                             <img src="./resources/images/smile.png" class="emoji">
@@ -151,39 +187,24 @@
                     <span class="second_row_second mb-sm-5 mt-md-2 mt-sm-4 ms-md-3 col-md-6 col-sm-6 mb-5">
                         <p class="mt-3 ms-4 feedback_header">Customers' Feedbacks</p>
                         <div>
-                            <div class="feedback_card">
-                                <div class="detail ms-3 mt-3 mb-0">
-                                    <div class="dis me-3 mt-2"></div>
-                                    <p class="user_name mt-1 mb-0">username</p>
+                            <?php
+                            // Assume $feedbacks is an array of feedback data
+                            foreach ($reviewResult as $feedback) {
+                                $username = $feedback['user_name'];
+                                $feedback_text = $feedback['user_review'];
+                            ?>
+
+                                <div class="feedback_card">
+                                    <div class="detail ms-3 mt-3 mb-0">
+                                        <div class="dis me-3 mt-2"></div>
+                                        <p class="user_name mt-1 mb-0"><?= $username ?></p>
+                                    </div>
+                                    <p class="ms-md-5 ms-sm-5 user_text mt-0"><?= $feedback_text ?></p>
+                                    <button class="replyBtn">Reply this feedback</button>
                                 </div>
-                                <p class="ms-md-5 ms-sm-5 user_text mt-0">
-                                    “The way you gave that presentation listened to what I said
-                                    about the snafu last month. I appreciate application of feedback.”
-                                </p>
-                                <button class="replyBtn">Reply this feedback</button>
-                            </div>
-                            <div class="feedback_card">
-                                <div class="detail ms-3 mt-3 mb-0">
-                                    <div class="dis me-3 mt-2"></div>
-                                    <p class="user_name mt-1 mb-0">username</p>
-                                </div>
-                                <p class="ms-md-5 ms-sm-5 user_text mt-0">
-                                    “The way you gave that presentation listened to what I said
-                                    about the snafu last month. I appreciate application of feedback.”
-                                </p>
-                                <button class="replyBtn">Reply this feedback</button>
-                            </div>
-                            <div class="feedback_card">
-                                <div class="detail ms-3 mt-3 mb-0">
-                                    <div class="dis me-3 mt-2"></div>
-                                    <p class="user_name mt-1 mb-0">username</p>
-                                </div>
-                                <p class="ms-md-5 ms-sm-5 user_text">
-                                    “The way you gave that presentation listened to what I said
-                                    about the snafu last month. I appreciate application of feedback.”
-                                </p>
-                                <button class="replyBtn">Reply this feedback</button>
-                            </div>
+
+                            <?php } ?>
+
                         </div>
                         <button class="view mt-md-4 mt-sm-4">View All</button>
                     </span>

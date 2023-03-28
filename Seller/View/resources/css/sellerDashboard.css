@@ -115,32 +115,36 @@ body{
     font-size:0.8em;
     opacity:0.8;
 }
+.user_text,.user_name{
+    color:var(--text-color-black) !important;
+}
 .feedback_card{
+    position:relative !important;
     width:28em;
-    height:7.5em;
+    height:7.8em;
+    z-index: 1 !important;
     margin-left:0.8em !important;
     border-style:none;
     border-radius:0.5em;
     background-color:var(--secondary-skyblue);
 
 }
-.user_text,.user_name{
-    color:var(--text-color-black) !important;
-}
 .replyBtn{
+    position:absolute;
     width:11em;
     height:1.8em;
+    z-index: 2 !important;
     border-radius:0.5em;
     border-style:none;
     background-color:#0057FF;
-    /* background-color:var(--skyblue-btn); */
     color:var(--text-color-white);
     margin-left:60%;
+    bottom: 5px !important;
     font-size:0.9em;
 }
-.replyBtn:hover{
+/* .replyBtn:hover{
     box-shadow:4px 4px 8px var(--primary-blue) !important;
-}
+} */
 .view{
     width:5.5em;
     height:2.3em;
