@@ -29,11 +29,11 @@
     <nav class="navbar">
         <ul>
             <li><img src="./resources/img/logo.png" class="dessertHouseLogo" alt="Unable to load logo"></li>
-            <li><a href="">Seller Controller</a></li>
-            <li><a href="">User Controller</a></li>
-            <li><a href="">System Management</a></li>
+            <li><a href="./adminSellerAccountList.php">Seller Controller</a></li>
+            <li><a href="./userAccountList.php">User Controller</a></li>
+            <li><a href="./adminHome.php">System Management</a></li>
             <li>
-                <img src="./resources/img/profilelogo.png" class="profileLogo" alt="Unable to load Profile Logo" srcset="">
+                <a href="./adminProfile.php"><img src="./resources/img/profilelogo.png" class="profileLogo" alt="Unable to load Profile Logo" srcset=""></a>
             </li>
         </ul>
     </nav>
@@ -115,8 +115,8 @@
                 <div>
                     <div class="icon">
                         <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path  fill-rule="evenodd" clip-rule="evenodd" d="M30.5615 24.0723C33.0732 25.7773 34.8332 28.0873 34.8332 31.1673V36.6673H42.1665V31.1673C42.1665 27.1706 35.6215 24.8056 30.5615 24.0723Z" fill="white" />
-                            <path  d="M16.5003 22.0007C20.5504 22.0007 23.8337 18.7174 23.8337 14.6673C23.8337 10.6172 20.5504 7.33398 16.5003 7.33398C12.4502 7.33398 9.16699 10.6172 9.16699 14.6673C9.16699 18.7174 12.4502 22.0007 16.5003 22.0007Z" fill="white" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M30.5615 24.0723C33.0732 25.7773 34.8332 28.0873 34.8332 31.1673V36.6673H42.1665V31.1673C42.1665 27.1706 35.6215 24.8056 30.5615 24.0723Z" fill="white" />
+                            <path d="M16.5003 22.0007C20.5504 22.0007 23.8337 18.7174 23.8337 14.6673C23.8337 10.6172 20.5504 7.33398 16.5003 7.33398C12.4502 7.33398 9.16699 10.6172 9.16699 14.6673C9.16699 18.7174 12.4502 22.0007 16.5003 22.0007Z" fill="white" />
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M27.4997 22.0007C31.5513 22.0007 34.833 18.719 34.833 14.6673C34.833 10.6157 31.5513 7.33398 27.4997 7.33398C26.638 7.33398 25.8313 7.51732 25.0613 7.77398C26.639 9.72505 27.4996 12.1582 27.4996 14.6673C27.4996 17.1764 26.639 19.6096 25.0613 21.5607C25.8313 21.8173 26.638 22.0007 27.4997 22.0007ZM16.4997 23.834C11.6047 23.834 1.83301 26.2907 1.83301 31.1673V36.6673H31.1663V31.1673C31.1663 26.2907 21.3947 23.834 16.4997 23.834Z" fill="white" />
                         </svg>
                     </div>

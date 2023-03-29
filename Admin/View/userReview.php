@@ -28,11 +28,11 @@
     <nav class="navbar">
         <ul>
             <li><img src="./resources/img/logo.png" class="dessertHouseLogo" alt="Unable to load logo"></li>
-            <li><a href="">Seller Controller</a></li>
-            <li><a href="">User Controller</a></li>
-            <li><a href="">System Management</a></li>
+            <li><a href="./adminSellerAccountList.php">Seller Controller</a></li>
+            <li><a href="./userAccountList.php">User Controller</a></li>
+            <li><a href="./adminHome.php">System Management</a></li>
             <li>
-                <img src="./resources/img/profilelogo.png" class="profileLogo" alt="Unable to load Profile Logo" srcset="">
+                <a href="./adminProfile.php"><img src="./resources/img/profilelogo.png" class="profileLogo" alt="Unable to load Profile Logo" srcset=""></a>
             </li>
         </ul>
     </nav>
@@ -86,8 +86,8 @@
         </div>
     </div>
 
-      <!-- Review Box-->
-      <div class="reviewBoxContainer">
+    <!-- Review Box-->
+    <div class="reviewBoxContainer">
         <!-- Left Upper user details -->
         <div class="userDetails">
             <div class="userProfile"></div>

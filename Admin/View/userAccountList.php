@@ -1,3 +1,12 @@
+<?php
+
+include "../Controller/userAccountListController.php";
+$userListResult = $_SESSION["userListResult"];
+$userReviews = $_SESSION["userReviews"];
+$allUsersSpentTotal = $_SESSION["allUsersSpentTotal"];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +20,7 @@
     <link rel="stylesheet" href="./resources/css/navbar.css">
     <link rel="stylesheet" href="./resources/css/adminDashboardforUserController.css">
     <link rel="stylesheet" href="./resources/css/userAccountList.css">
+    <link rel="stylesheet" href="./resources/css/pagination.css">
 
 
     <!-- Import google fonts: public display & dm sen serif -->
@@ -18,20 +28,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans&display=swap" rel="stylesheet">
 
-    <title>Seller Ratings</title>
+    <title>User Account List</title>
 </head>
 
 <body>
-
     <!-- Nav Bar -->
     <nav class="navbar">
         <ul>
             <li><img src="./resources/img/logo.png" class="dessertHouseLogo" alt="Unable to load logo"></li>
-            <li><a href="">Seller Controller</a></li>
-            <li><a href="">User Controller</a></li>
-            <li><a href="">System Management</a></li>
+            <li><a href="./adminSellerAccountList.php">Seller Controller</a></li>
+            <li><a href="./userAccountList.php">User Controller</a></li>
+            <li><a href="./adminHome.php">System Management</a></li>
             <li>
-                <img src="./resources/img/profilelogo.png" class="profileLogo" alt="Unable to load Profile Logo" srcset="">
+                <a href="./adminProfile.php"><img src="./resources/img/profilelogo.png" class="profileLogo" alt="Unable to load Profile Logo" srcset=""></a>
             </li>
         </ul>
     </nav>
@@ -82,39 +91,63 @@
                         <th>Amt Spent</th>
                         <th>Status</th>
                         <th>Contact Info</th>
-                        <th>None</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td data-label="No">1</td>
-                        <td data-label="Id">001</td>
-                        <td data-label="Email">davidcallaway1993@gmail.com</td>
-                        <td data-label="Name">David Callaway</td>
-                        <td data-label="Registered Date">2023/03/01</td>
-                        <td data-label="Reviews Given"><a href="">4</a></td>
-                        <td data-label="Amt Spent"><b>$ 820</b></td>
-                        <td data-label="Status">Active</td>
-                        <td data-label="Contact Info">+95 9333333333</td>
-                        <td data-label="Buttons"><button class="btn activate">Activate</button><button class="btn disable">Disable</button></td>
-                    </tr>
-                    <tr>
-                        <td data-label="No">1</td>
-                        <td data-label="Id">001</td>
-                        <td data-label="Email">davidcallaway1993@gmail.com</td>
-                        <td data-label="Name">David Callaway</td>
-                        <td data-label="Registered Date">2023/03/01</td>
-                        <td data-label="Reviews Given"><a href="">4</a></td>
-                        <td data-label="Amt Spent"><b>$ 820</b></td>
-                        <td data-label="Status">Active</td>
-                        <td data-label="Contact Info">+95 9333333333</td>
-                        <td data-label="Buttons"><button class="btn activate">Activate</button><button class="btn disable">Disable</button></td>
-                    </tr>
+                    <?php
+                    // To calculate the row number            
+                        $rowNumber = ($currentPage - 1) * $perPage +1;
+                    
+                    for ($i = 0; $i < count($userListResult); $i++) { ?>
+                        <tr>
+                            <td><?= $rowNumber++ ?></td>
+                            <td><?= $userListResult[$i]["user_id"] ?></td>
+                            <td><?= $userListResult[$i]["user_email"] ?></td>
+                            <td><?= $userListResult[$i]["user_name"] ?></td>
+                            <td><?= $userListResult[$i]["create_date"] ?></td>
+                            <td><a href=""><?= count($userReviews[$i]) ?></a></td>
+
+                            <td><?= $allUsersSpentTotal[$i]["total_spent"] ?></td>
+                            <td><?php
+                                if ($userListResult[$i]["del_flg"] == 0) {
+                                    echo "Active";
+                                } else {
+                                    echo "Disabled";
+                                }
+                                ?></td>
+                            <td><?= $userListResult[$i]["user_phone"] ?></td>
+
+                            <td data-label="Buttons" class="buttons">
+
+                                <form method="post" action="../Controller/activateUserController.php">
+                                    <input type="hidden" name="userId" value="<?= $userListResult[$i]["user_id"] ?>">
+                                    <button class="btn activate">Activate</button>
+                                </form>
+
+                                <form method="post" action="../Controller/disableUserController.php">
+                                    <input type="hidden" name="userId" value="<?= $userListResult[$i]["user_id"] ?>">
+                                    <button class="btn disable">Disable</button>
+                                </form>
+                            </td>
+                        </tr>
+
+                    <?php }
+                    ?>
+
+
                 </tbody>
             </table>
         </div>
     </div>
 
+
+    <!-- Pagination -->
+    <div class="moveToCorner">
+        <ul class="pagination">
+            <?= $paginationLinks ?>
+        </ul>
+    </div>
 
 </body>
 

@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans&display=swap" rel="stylesheet">
 
-    
+
     <title>Seller Account List</title>
 </head>
 
@@ -27,11 +27,11 @@
     <nav class="navbar">
         <ul>
             <li><img src="./resources/img/logo.png" class="dessertHouseLogo" alt="Unable to load logo"></li>
-            <li><a href="">Seller Controller</a></li>
-            <li><a href="">User Controller</a></li>
-            <li><a href="">System Management</a></li>
+            <li><a href="./adminSellerAccountList.php">Seller Controller</a></li>
+            <li><a href="./userAccountList.php">User Controller</a></li>
+            <li><a href="./adminHome.php">System Management</a></li>
             <li>
-                <img src="./resources/img/profilelogo.png" class="profileLogo" alt="Unable to load Profile Logo" srcset="">
+                <a href="./adminProfile.php"><img src="./resources/img/profilelogo.png" class="profileLogo" alt="Unable to load Profile Logo" srcset=""></a>
             </li>
         </ul>
     </nav>
@@ -146,16 +146,16 @@
 
     <!-- Pagination -->
     <div class="moveToCorner">
-    <ul class="pagination">
-      <li class="page-item"><a class="page-link arrowToRed" href="#">&lt;</a></li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item"><a class="page-link" href="#">...</a></li>
-      <li class="page-item"><a class="page-link arrowToRed" href="#">&gt;</a></li>
-    </ul>
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link arrowToRed" href="#">&lt;</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">...</a></li>
+            <li class="page-item"><a class="page-link arrowToRed" href="#">&gt;</a></li>
+        </ul>
     </div>
-    
+
 </body>
 
 </html>

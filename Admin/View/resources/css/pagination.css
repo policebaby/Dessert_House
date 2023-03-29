@@ -31,3 +31,9 @@
     top: 90%;
     right:10%;
   }
+
+  /* Current Page */
+  .current{
+    background-color: var(--adminPrimaryColor) !important;
+    color: white !important;
+  }

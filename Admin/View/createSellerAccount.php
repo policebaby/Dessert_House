@@ -1,3 +1,31 @@
+<?php
+session_start();
+
+//if admin has not logged in and entered url directly, will direct to log in page.
+if (!isset($_SESSION["adminId"])) {
+    header("Location:./login.php");
+}
+
+if (isset($_SESSION["shopNameErr"])) {
+    $shopNameErr = $_SESSION["shopNameErr"];
+    unset($_SESSION["shopNameErr"]);
+}
+
+if (isset($_SESSION["emailErr"])) {
+    $emailErr = $_SESSION["emailErr"];
+    unset($_SESSION["emailErr"]);
+}
+
+
+if (isset($_SESSION["createDisplay"])) {
+    $block = $_SESSION["createDisplay"];
+    unset($_SESSION["createDisplay"]);
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +47,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans&display=swap" rel="stylesheet">
 
-    <title>Seller Ratings</title>
+    <title>Generate Shop Account</title>
 </head>
 
 <body>
@@ -28,11 +56,11 @@
     <nav class="navbar">
         <ul>
             <li><img src="./resources/img/logo.png" class="dessertHouseLogo" alt="Unable to load logo"></li>
-            <li><a href="">Seller Controller</a></li>
-            <li><a href="">User Controller</a></li>
-            <li><a href="">System Management</a></li>
+            <li><a href="./adminSellerAccountList.php">Seller Controller</a></li>
+            <li><a href="./userAccountList.php">User Controller</a></li>
+            <li><a href="./adminHome.php">System Management</a></li>
             <li>
-                <img src="./resources/img/profilelogo.png" class="profileLogo" alt="Unable to load Profile Logo" srcset="">
+                <a href="./adminProfile.php"><img src="./resources/img/profilelogo.png" class="profileLogo" alt="Unable to load Profile Logo" srcset=""></a>
             </li>
         </ul>
     </nav>
@@ -102,10 +130,10 @@
     <!-- Create Account Body -->
     <div class="createAccountContainer">
 
-    <!-- Create Account title and successfully created line container -->
+        <!-- Create Account title and successfully created line container -->
         <div class="createHeader">
             <div class="createTitle">Create Account</div>
-            <div class="successCreated">
+            <div class="successCreated" style="display:<?php if (isset($block)) echo $block ?>">
                 <svg class="stick" width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_588_352" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="17">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M2 8.69643L4.02546 6.46429L8.07639 10.9286L16.1782 2L18.2037 4.23214L8.07639 15.3929L2 8.69643Z" fill="white" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -115,32 +143,45 @@
                     </g>
                 </svg>
                 <div class="circleForStick"></div>
+
+                <div class="stext">Successfully created</div>
             </div>
-            <div class="stext">Successfully created</div>
         </div>
 
         <!-- titles and input boxes -->
-        <div class="labels">
-            <div class="description">SHOP NAME</div>
-            <input type="text">
-        </div>
-        <div class="labels">
-            <div class="description">EMAIL</div>
-            <input type="text">
-        </div>
-        <div class="labels">
-            <div class="description">PASSWORD</div>
-            <input type="text">
-        </div>
-        <div class="labels">
-            <div class="description">Contact Ph</div>
-            <input type="text">
-        </div>
-        <div class="labels">
-            <div class="description">ADDRESS</div>
-            <input type="text">
-        </div>
-        <button>CREATE</button>
+        <form action="../Controller/createSellerController.php" method="post">
+            <div class="labels">
+                <div class="description">SHOP NAME</div>
+                <input type="text" name="shopName" required>
+                <?php if (isset($shopNameErr)) { ?>
+                    <br><span style="color: red;"><?php echo $shopNameErr; ?></span>
+                <?php } ?>
+            </div>
+            <div class="labels">
+                <div class="description">SELLER NAME</div>
+                <input type="text" name="sellerName" required>
+            </div>
+            <div class="labels">
+                <div class="description">EMAIL</div>
+                <input type="email" name="email" required>
+                <?php if (isset($emailErr)) { ?>
+                    <br><span style="color: red;"><?php echo $emailErr; ?></span>
+                <?php } ?>
+            </div>
+            <div class="labels">
+                <div class="description">PASSWORD</div>
+                <input type="text" name="password" required>
+            </div>
+            <div class="labels">
+                <div class="description">Contact Ph</div>
+                <input type="text" name="phone" required>
+            </div>
+            <div class="labels">
+                <div class="description">ADDRESS</div>
+                <input type="text" name="address" required>
+            </div>
+            <button type="submit" name="register">CREATE</button>
+        </form>
     </div>
 
 

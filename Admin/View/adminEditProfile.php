@@ -1,3 +1,18 @@
+<?php 
+
+session_start();
+
+$adminFirstName =$_SESSION["adminFirstName"];
+$adminLastName =$_SESSION["adminLastName"];
+$adminEmail=$_SESSION["adminEmail"];
+$adminPassword=$_SESSION["adminPassword"];
+$adminPhone = $_SESSION["adminPhone"];
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,35 +41,37 @@
     <nav class="navbar">
         <ul>
             <li><img src="./resources/img/logo.png" class="dessertHouseLogo" alt="Unable to load logo"></li>
-            <li><a href="">Seller Controller</a></li>
-            <li><a href="">User Controller</a></li>
-            <li><a href="">System Management</a></li>
-            <li>       
-                <img src="./resources/img/profilelogo.png" class="profileLogo" alt="Unable to load Profile Logo" srcset="">
+            <li><a href="./adminSellerAccountList.php">Seller Controller</a></li>
+            <li><a href="./userAccountList.php">User Controller</a></li>
+            <li><a href="./adminHome.php">System Management</a></li>
+            <li>
+                <a href="./adminProfile.php"><img src="./resources/img/profilelogo.png" class="profileLogo" alt="Unable to load Profile Logo" srcset=""></a>
             </li>
         </ul>
     </nav>
 
     <!-- Body -->
+    <form action="../Controller/adminEditProfileController.php" method="post">
     <div class="container">
         <img class="logoWithBorder" src="./resources/img/logoWithBorder.png" alt="Unable to load Logo">
         <div class="filesButton">
-        <button>Choose file</button>
-        <button>No file choosen</button>
+            <button>Choose file</button>
+            <button>No file choosen</button>
         </div>
         <div class="twoInputBoxes">
-            <input type="text" placeholder="First Name">
-            <input type="text" placeholder="Last Name">
+            <input type="text" value="<?=$adminFirstName?>" name="adminFirstName">
+            <input type="text" value="<?=$adminLastName?>" name="adminLastName">
         </div>
-        <input type="text" placeholder="Password">
-        <input type="text" placeholder="Phone Number">
-        <input type="email" placeholder="Email">
+        <input type="text" placeholder="Please Insert New Password" name="adminPassword">
+        <input type="text" value="<?=$adminPhone?>" name="adminPhone">    
+        <input type="email" value="<?=$adminEmail?>" name="adminEmail">
         <div class="twoButtons">
-            <button>Save Profile</button>
+            <button type="submit" name="save">Save Profile</button>
             <button>Cancel</button>
         </div>
 
     </div>
+    </form>
 
     <!-- background circles -->
     <div class="upperLeftOuterCircle"></div>

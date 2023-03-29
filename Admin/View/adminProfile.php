@@ -1,3 +1,18 @@
+<?php 
+
+session_start();
+
+$adminFirstName =$_SESSION["adminFirstName"];
+$adminLastName =$_SESSION["adminLastName"];
+$adminEmail=$_SESSION["adminEmail"];
+$adminPassword=$_SESSION["adminPassword"];
+$adminPhone = $_SESSION["adminPhone"];
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,11 +40,11 @@
     <nav class="navbar">
         <ul>
             <li><img src="./resources/img/logo.png" class="dessertHouseLogo" alt="Unable to load logo"></li>
-            <li><a href="">Seller Controller</a></li>
-            <li><a href="">User Controller</a></li>
-            <li><a href="">System Management</a></li>
+            <li><a href="./adminSellerAccountList.php">Seller Controller</a></li>
+            <li><a href="./userAccountList.php">User Controller</a></li>
+            <li><a href="./adminHome.php">System Management</a></li>
             <li>
-                <a><img src="./resources/img/profilelogo.png" class="profileLogo" alt="Unable to load Profile Logo" srcset=""></a>
+                <a href="./adminProfile.php"><img src="./resources/img/profilelogo.png" class="profileLogo" alt="Unable to load Profile Logo" srcset=""></a>
             </li>
         </ul>
     </nav>
@@ -38,15 +53,15 @@
     <div class="container">
         <img class="logoWithBorder" src="./resources/img/logoWithBorder.png" alt="Unable to load Logo">
         <div class="twoInputBoxes">
-            <input type="text" placeholder="John Smith">
-            <input type="text" placeholder="Dessert House">
+            <input type="text" placeholder="<?=$adminFirstName?>" disabled>
+            <input type="text" placeholder="<?=$adminLastName?>" disabled>
         </div>
-        <input type="text" placeholder="desserthouse@gmail.com">
-        <input type="password" placeholder="●●●●●">
-        <input type="text" placeholder="+95 9777777777">
+        <input type="text" placeholder="<?=$adminEmail?>" disabled>
+        <input type="password" placeholder="●●●●●" disabled>
+        <input type="text" placeholder="<?=$adminPhone?>" disabled>
         <div class="twoButtons">
-            <button>Edit Profile</button>
-            <button>Cancel</button>
+            <button><a href="./adminEditProfile.php">Edit Profile</a></button>
+            <button><a href="./adminHome.php">Cancel</a></button>
         </div>
 
     </div>

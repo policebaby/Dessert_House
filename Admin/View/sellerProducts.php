@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./resources/css/adminDashboardforSellerController.css">
     <link rel="stylesheet" href="./resources/css/sellerProducts.css">
     <link rel="stylesheet" href="./resources/css/pagination.css">
-   
+
 
 
     <!-- Import google fonts: public display & dm sen serif -->
@@ -30,11 +30,11 @@
     <nav class="navbar">
         <ul>
             <li><img src="./resources/img/logo.png" class="dessertHouseLogo" alt="Unable to load logo"></li>
-            <li><a href="">Seller Controller</a></li>
-            <li><a href="">User Controller</a></li>
-            <li><a href="">System Management</a></li>
+            <li><a href="./adminSellerAccountList.php">Seller Controller</a></li>
+            <li><a href="./userAccountList.php">User Controller</a></li>
+            <li><a href="./adminHome.php">System Management</a></li>
             <li>
-                <img src="./resources/img/profilelogo.png" class="profileLogo" alt="Unable to load Profile Logo" srcset="">
+                <a href="./adminProfile.php"><img src="./resources/img/profilelogo.png" class="profileLogo" alt="Unable to load Profile Logo" srcset=""></a>
             </li>
         </ul>
     </nav>
@@ -102,8 +102,8 @@
     </div>
 
 
-     <!-- Table  -->
-     <div class="container">
+    <!-- Table  -->
+    <div class="container">
         <div class="table-responsive">
             <table class="table">
                 <thead>
@@ -121,23 +121,23 @@
                         <td data-label="Id">001</td>
                         <td data-label="Name"><a href="">Frost Goddess</a></td>
                         <td data-label="Seller Account">Pedri</td>
-                        <td data-label="Contact Info">+959 888888888</br>frostgoddess@gmail.com</td>                      
+                        <td data-label="Contact Info">+959 888888888</br>frostgoddess@gmail.com</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 
-     <!-- Pagination -->
-     <div class="moveToCorner">
-    <ul class="pagination">
-      <li class="page-item"><a class="page-link arrowToRed" href="#">&lt;</a></li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item"><a class="page-link" href="#">...</a></li>
-      <li class="page-item"><a class="page-link arrowToRed" href="#">&gt;</a></li>
-    </ul>
+    <!-- Pagination -->
+    <div class="moveToCorner">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link arrowToRed" href="#">&lt;</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">...</a></li>
+            <li class="page-item"><a class="page-link arrowToRed" href="#">&gt;</a></li>
+        </ul>
     </div>
 
 

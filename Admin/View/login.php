@@ -1,11 +1,14 @@
 <?php
 
 session_start();
-if (isset($_SESSION["error"])) {
-    $error = $_SESSION["error"];
-    unset($_SESSION["error"]);
+//If the username and password does not match, will have this session
+if (isset($_SESSION["logInError"])) {
+    $logInError = $_SESSION["logInError"];
+    unset($_SESSION["logInError"]);
 }
 
+
+// After logged in onced, there will be adminid in session, which can help direct to admin Home page directly when visiting login url
 if(isset($_SESSION["adminId"])){
     header("Location: ./adminHome.php");
 }
@@ -47,8 +50,8 @@ if(isset($_SESSION["adminId"])){
             <form class="form" action="../Controller/adminLoginController.php" method="post">
                 <input type="text" placeholder="Admin Name" id="adminName" class="nameInputBox" name="adminName">
                 <input type="text" placeholder="Password" id="adminpassword" class="passwordInputBox" name="adminPassword">
-                <?php if (isset($error)) { ?>
-                    <br><span style="color: red;"><?php echo $error; ?></span>
+                <?php if (isset($logInError)) { ?>
+                    <br><span style="color: red;"><?php echo $logInError; ?></span>
                 <?php } ?>
                 <button type="submit" class="logInButton">Log in</button>
             </form>

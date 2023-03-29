@@ -75,3 +75,8 @@ input{
     border-radius: 0.625em;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+

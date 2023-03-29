@@ -29,7 +29,9 @@
             <li><a href="">User Controller</a></li>
             <li><a href="">System Management</a></li>
             <li>
+                <a href="../Controller/adminProfileController.php">
                 <img src="./resources/img/profilelogo.png" class="profileLogo" alt="Unable to load Profile Logo" srcset="">
+                </a>
             </li>
         </ul>
     </nav>

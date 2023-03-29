@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./resources/css/adminDashboardforSellerController.css">
     <link rel="stylesheet" href="./resources/css/sellerProductDetails.css">
     <link rel="stylesheet" href="./resources/css/pagination.css">
-   
+
 
 
     <!-- Import google fonts: public display & dm sen serif -->
@@ -29,11 +29,11 @@
     <nav class="navbar">
         <ul>
             <li><img src="./resources/img/logo.png" class="dessertHouseLogo" alt="Unable to load logo"></li>
-            <li><a href="">Seller Controller</a></li>
-            <li><a href="">User Controller</a></li>
-            <li><a href="">System Management</a></li>
+            <li><a href="./adminSellerAccountList.php">Seller Controller</a></li>
+            <li><a href="./userAccountList.php">User Controller</a></li>
+            <li><a href="./adminHome.php">System Management</a></li>
             <li>
-                <img src="./resources/img/profilelogo.png" class="profileLogo" alt="Unable to load Profile Logo" srcset="">
+                <a href="./adminProfile.php"><img src="./resources/img/profilelogo.png" class="profileLogo" alt="Unable to load Profile Logo" srcset=""></a>
             </li>
         </ul>
     </nav>
@@ -110,8 +110,8 @@
     </div>
 
 
-     <!-- Table  -->
-     <div class="container">
+    <!-- Table  -->
+    <div class="container">
         <div class="table-responsive">
             <table class="table">
                 <thead>
@@ -129,7 +129,7 @@
                         <td data-label="Date">2023/03/06</td>
                         <td data-label="All Products Name">Banana Tea Milk</td>
                         <td data-label="Sold Out Products">Banana Bubble Tea</td>
-                        <td data-label="Rating Percentage">80%</td> 
+                        <td data-label="Rating Percentage">80%</td>
                 </tbody>
             </table>
         </div>
@@ -138,16 +138,16 @@
 
 
 
-     <!-- Pagination -->
-     <div class="moveToCorner">
-    <ul class="pagination">
-      <li class="page-item"><a class="page-link arrowToRed" href="#">&lt;</a></li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item"><a class="page-link" href="#">...</a></li>
-      <li class="page-item"><a class="page-link arrowToRed" href="#">&gt;</a></li>
-    </ul>
+    <!-- Pagination -->
+    <div class="moveToCorner">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link arrowToRed" href="#">&lt;</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">...</a></li>
+            <li class="page-item"><a class="page-link arrowToRed" href="#">&gt;</a></li>
+        </ul>
     </div>
 
 
