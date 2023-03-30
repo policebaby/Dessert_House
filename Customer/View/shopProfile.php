@@ -19,6 +19,8 @@ include "../Controller/shopProfileViewController.php";
     <link rel="stylesheet" href="./resources/css/shopProfile.css">
     <!-- css link end -->
     <!-- js link start -->
+    <script src="./lib/jquery3.6.0.js"></script>
+    <script src="./resources/js/shopProfile.js" defer></script>
     <!-- js link end -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,8 +45,8 @@ include "../Controller/shopProfileViewController.php";
             </button>
             <div>
                 <div class="shopLogo ms-5 mt-5">
-                    <img src="./resources/img/shopProfileLogo.jpg " alt="" class="shopProfileLogo">
-                    <span class="shopName">Shop Name</span>
+                    <img src="../../storages/<?= $shopinfo[0]["shop_profilepic"] ?>" alt="" class="shopProfileLogo">
+                    <span class="shopName"><?=$shopinfo[0]["shop_name"]?></span>
                     <div class="text-light ms-5 position-relative">
                         <iconify-icon icon="gg:smile-mouth-open" class="smileIcon"></iconify-icon>
                         <span class="cusRating ">Customers’ satisfactory 95%</span>
@@ -63,149 +65,37 @@ include "../Controller/shopProfileViewController.php";
     </div>
     <!-- menu section end -->
     <!-- menublocks start -->
+
     <div class="menuBlockBg">
         <div class="container-fluid d-flex justify-content-center  row ">
-
+            <?php for ($i=0; $i < count($products) ; $i++) { ?>
             <!-- single menu block start -->
             <div class="menublock col-md-3  justify-content-center">
                 <div class="newItem ">New</div>
                 <div class="  d-flex justify-content-center imgBorder">
-                <img src="./resources/img/americano1.png" alt="" width="80%" class="menuImg ">
+                <img src="../../storages/<?= $products[$i]["product_picture"]?>" alt="" width="80%" class="menuImg ">
                 </div>
                 <div class="price ">
                     <iconify-icon class="priceCoin" icon="healthicons:coins"></iconify-icon>
-                    <span class="priceNum">34</span>
+                    <span class="priceNum"><?=$products[$i]["product_price"]?></span>
                 </div>
                 <div class="line "></div>
-                <p class="productName text-center">Black Coffee</p>
+                <p class="productName text-center"><?=$products[$i]["product_name"]?></p>
                 <div class="line"></div>
                 <div class=" d-flex justify-content-center">
                     <div class="btn-group btn-group-sm itemCount" role="group" aria-label="Basic outlined example">
-                        <button type="button" class="btn btnOutline">-</button>
-                        <button type="button" class="btn btnOutline">5</button>
-                        <button type="button" class="btn btnOutline">+</button>
+                        <button type="button"  class="btn btnOutline minus">-</button>
+                        <button type="button"  class="btn btnOutline qty">1</button>
+                        <button type="button"  class="btn btnOutline plus">+</button>
                     </div>
+                    <button type="" data="<?=$products[$i]["product_id"]?>" class="btnhidden addcart ">
                     <iconify-icon icon="material-symbols:add-shopping-cart" class="productCart"></iconify-icon>
+                </button>
                 </div>
             </div>
             <!-- single menu block end -->
+            <?php } ?>
             
-            <!-- single menu block start -->
-            <div class="menublock col-md-3  justify-content-center">
-                <div class="newItem ">New</div>
-                <div class="  d-flex justify-content-center imgBorder">
-                <img src="./resources/img/oneset.png" alt="" width="80%" class="menuImg ">
-                </div>
-                <div class="price ">
-                    <iconify-icon class="priceCoin" icon="healthicons:coins"></iconify-icon>
-                    <span class="priceNum">34</span>
-                </div>
-                <div class="line "></div>
-                <p class="productName text-center">Black Coffee</p>
-                <div class="line"></div>
-                <div class=" d-flex justify-content-center">
-                    <div class="btn-group btn-group-sm itemCount" role="group" aria-label="Basic outlined example">
-                        <button type="button" class="btn btnOutline">-</button>
-                        <button type="button" class="btn btnOutline">5</button>
-                        <button type="button" class="btn btnOutline">+</button>
-                    </div>
-                    <iconify-icon icon="material-symbols:add-shopping-cart" class="productCart"></iconify-icon>
-                </div>
-            </div>
-            <!-- single menu block end -->
-
-            <!-- single menu block start -->
-            <div class="menublock col-md-3  justify-content-center">
-                <div class="newItem ">New</div>
-                <div class="  d-flex justify-content-center imgBorder">
-                <img src="./resources/img/coffeeheart.png" alt="" width="80%" class="menuImg ">
-                </div>
-                <div class="price ">
-                    <iconify-icon class="priceCoin" icon="healthicons:coins"></iconify-icon>
-                    <span class="priceNum">34</span>
-                </div>
-                <div class="line "></div>
-                <p class="productName text-center">Black Coffee</p>
-                <div class="line"></div>
-                <div class=" d-flex justify-content-center">
-                    <div class="btn-group btn-group-sm itemCount" role="group" aria-label="Basic outlined example">
-                        <button type="button" class="btn btnOutline">-</button>
-                        <button type="button" class="btn btnOutline">5</button>
-                        <button type="button" class="btn btnOutline">+</button>
-                    </div>
-                    <iconify-icon icon="material-symbols:add-shopping-cart" class="productCart"></iconify-icon>
-                </div>
-            </div>
-            <!-- single menu block end -->
-            <!-- single menu block start -->
-            <div class="menublock col-md-3  justify-content-center">
-                <div class="newItem ">New</div>
-                <div class="  d-flex justify-content-center imgBorder">
-                <img src="./resources/img/blackcoffee.png" alt="" width="80%" class="menuImg ">
-                </div>
-                <div class="price ">
-                    <iconify-icon class="priceCoin" icon="healthicons:coins"></iconify-icon>
-                    <span class="priceNum">34</span>
-                </div>
-                <div class="line "></div>
-                <p class="productName text-center">Black Coffee</p>
-                <div class="line"></div>
-                <div class=" d-flex justify-content-center">
-                    <div class="btn-group btn-group-sm itemCount" role="group" aria-label="Basic outlined example">
-                        <button type="button" class="btn btnOutline">-</button>
-                        <button type="button" class="btn btnOutline">5</button>
-                        <button type="button" class="btn btnOutline">+</button>
-                    </div>
-                    <iconify-icon icon="material-symbols:add-shopping-cart" class="productCart"></iconify-icon>
-                </div>
-            </div>
-            <!-- single menu block end -->
-            <!-- single menu block start -->
-            <div class="menublock col-md-3  justify-content-center">
-                <div class="newItem ">New</div>
-                <div class="  d-flex justify-content-center imgBorder">
-                <img src="./resources/img/.png" alt="" width="80%" class="menuImg ">
-                </div>
-                <div class="price ">
-                    <iconify-icon class="priceCoin" icon="healthicons:coins"></iconify-icon>
-                    <span class="priceNum">34</span>
-                </div>
-                <div class="line "></div>
-                <p class="productName text-center">Black Coffee</p>
-                <div class="line"></div>
-                <div class=" d-flex justify-content-center">
-                    <div class="btn-group btn-group-sm itemCount" role="group" aria-label="Basic outlined example">
-                        <button type="button" class="btn btnOutline">-</button>
-                        <button type="button" class="btn btnOutline">5</button>
-                        <button type="button" class="btn btnOutline">+</button>
-                    </div>
-                    <iconify-icon icon="material-symbols:add-shopping-cart" class="productCart"></iconify-icon>
-                </div>
-            </div>
-            <!-- single menu block end -->
-            <!-- single menu block start -->
-            <div class="menublock col-md-3  justify-content-center">
-                <div class="newItem ">New</div>
-                <div class="  d-flex justify-content-center imgBorder">
-                <img src="./resources/img/americano1.png" alt="" width="80%" class="menuImg ">
-                </div>
-                <div class="price ">
-                    <iconify-icon class="priceCoin" icon="healthicons:coins"></iconify-icon>
-                    <span class="priceNum">34</span>
-                </div>
-                <div class="line "></div>
-                <p class="productName text-center">Black Coffee</p>
-                <div class="line"></div>
-                <div class=" d-flex justify-content-center">
-                    <div class="btn-group btn-group-sm itemCount" role="group" aria-label="Basic outlined example">
-                        <button type="button" class="btn btnOutline">-</button>
-                        <button type="button" class="btn btnOutline">5</button>
-                        <button type="button" class="btn btnOutline">+</button>
-                    </div>
-                    <iconify-icon icon="material-symbols:add-shopping-cart" class="productCart"></iconify-icon>
-                </div>
-            </div>
-            <!-- single menu block end -->
             
         </div>
         <!-- pagination start -->
