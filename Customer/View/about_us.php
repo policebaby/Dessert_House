@@ -1,8 +1,23 @@
 <?php
+ini_set("display_errors", "1");
+session_start();
 
+// print_r($_SESSION);
+if (isset($_SESSION["description"])) {
+    $description = $_SESSION["description"];
+    // echo "<pre>";
+    // print_r($description);
+} else {
+    echo "error";
+}
 
-
-
+if (isset($_SESSION["title"])) {
+    $title = $_SESSION["title"];
+    // echo "<pre>";
+    // print_r($title);
+} else {
+    echo "error";
+}
 ?>
 
 
@@ -47,14 +62,24 @@
     <div class="about_us_body">
         <div class="row first_para">
             <div class="col-md-12">
-                <h4 class="title">About Us</h4>
+
+            <?php for ($i = 0; $i < count($title); $i++) {  ?>
+                <h4 class="title"><?= $title[$i]["title"] ?></h4>
+                <br>
+            <?php } ?>
+
+                
                 <div class="about_text">
-                <p class="text paragraph ">
+                <?php for ($i = 0; $i < count($description); $i++) {  ?>
+                <p class="text paragraph "><?= $description[$i]["description"] ?></p>
+                <br>
+            <?php } ?>
+                <!-- <p class="text paragraph ">
                     This information is essential and is not collected more than necessary. This is very different from
                     a website  that collects users'names and addresses and then sells it to a third party for marketing
                     purposes.Our Shop  just uses a crisp drain  and similar Mocha Italia mix as our shops to make the
                     ideal.You haven’t tasted cafe  until the point when you’ve tasted Costa.
-                </p>
+                </p> -->
                 </div>
             </div>
         </div>
