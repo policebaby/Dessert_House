@@ -1,9 +1,16 @@
 <?php
+ini_set("display_errors", "1");
+session_start();
 
-
-
+// print_r($_SESSION);
+if (isset($_SESSION["paragraph"])) {
+    $paragraph = $_SESSION["paragraph"];
+    // echo "<pre>";
+    // print_r($paragraph);
+} else {
+    echo "error";
+}
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,24 +41,21 @@
     <div class="pp_mainbody">
         <div class="pp_herosection">
             <img src="../View/resources/img/p&p (3).png" alt="" class="pp_img">
-            <h4 class="pp_title">Privacy Policy</h4>
-            </div>
-            <div class="pp_paragraph">
-            <p>Your Privacy Policy will contain a variety of clauses depending on your business type and applicable             
-                law.Accordingly, there are certain clauses that every website, which collects personal data from           
-                visitors, should include in their Privacy Policies.</p>
-            <br>
-            <p>A website might collect information such as a user's address and name in order to ship products          
-                purchased online. This information is essential and is not collected more than necessary.This is        
-                very different from a website that collects users' names and addresses and then sells it to a  third        
-                party for marketing purposes.
-            </p>
+            <h4 class="pp_title" name="title">Privacy Policy</h4>
+        </div>
+        <div class="pp_paragraph">
+            <!--loop-->
+            <?php for ($i = 0; $i < count($paragraph); $i++) {  ?>
+                <p><?= $paragraph[$i]["paragraph"] ?></p>
+                <br>
+            <?php } ?>
+            <!--loop-->
         </div>
     </div>
-        <!--P&P end-->
-        <!--footer start-->
-        <?php include "../View/footer.php"?>
-        <!--footer end-->
+    <!--P&P end-->
+    <!--footer start-->
+    <?php include "../View/footer.php" ?>
+    <!--footer end-->
 </body>
 
 </html>
