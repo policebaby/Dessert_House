@@ -54,9 +54,9 @@
         <img src="../View/resources/img/logo.png" alt="logo" class="nav_logo" />
 
         <ul class="nav_desktop">
-            <li class="nav_name "  id="home" ><a href="./user_home.php">Home</a></li>
-            <li class="nav_name " id="shop" ><a href="./shops.php"> Shop</a></li>
-            <li class="nav_name "  id="coin_shop" ><a href="../Controller/coin_exchangeViewController.php">Coin Shop</a> </li>
+            <li class="nav_name " id="home"><a href="./user_home.php">Home</a></li>
+            <li class="nav_name " id="shop"><a href="./shops.php"> Shop</a></li>
+            <li class="nav_name " id="coin_shop"><a href="../Controller/coin_exchangeViewController.php">Coin Shop</a> </li>
         </ul>
 
         <!--search box start-->
@@ -69,11 +69,13 @@
         <a href="../Controller/user_profileViewController.php">
             <iconify-icon icon="healthicons:ui-user-profile" class="nav_icons nav_pf"></iconify-icon>
         </a>
-
-        <a href="./shoppingCart.php">
-            <iconify-icon icon="material-symbols:shopping-bag" class="cart_icon"></iconify-icon>
-        </a>
-
+        <!-- cart -->
+        <form action="./shoppingCart.php" method="post">
+            <input type="hidden" name="cartItems" id="cartLists" value="">
+            <button type="submit" class="cartbtn btn-link ">
+                <iconify-icon icon="material-symbols:shopping-bag" class="cart_icon"></iconify-icon>
+            </button>
+        </form>
         <!--bento menu start-->
         <a href="#">
             <label for="nav_check">

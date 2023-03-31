@@ -1,3 +1,10 @@
+<?php
+ini_set("display_errors", "1");
+include "../Controller/cartViewController.php";
+// echo "<pre>";
+// print_r($cartList);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,9 +16,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- css link start -->
     <link rel="stylesheet" href="./resources/css/shoppingCart.css">
-    <link href="style.css?key=<?php echo time(); ?>" type="text/css" rel="stylesheet" />
+    <!-- <link href="style.css?key=<?php echo time(); ?>" type="text/css" rel="stylesheet" /> -->
     <!-- css link end -->
     <!-- js link start -->
+    <script src="./lib/jquery3.6.0.js"></script>
+    <script src="./resources/js/cart.js" defer></script>
     <!-- js link end -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,90 +46,47 @@
                     <th scope="col">Price</th>
                     <th scope="col">Quantity</th>
                     <th scope="col">Total</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
                 <!-- row start -->
-                <tr class=" text-center align-middle">
-                    <th scope="row" class="itemimg cellCoffee">
-                        <img src="./resources/img/blackcoffee.png" alt="" width="100px" class="">
-                        <p>Coffee</p>
-                    </th>
-                    <td class="cellCoffee">
-                        <div class="price">
-                            <span class="itemprice">2</span>
-                            <span class=""><iconify-icon class="coinIcon coinposition" icon="healthicons:coins"></iconify-icon></span>
-                        </div>
-                    </td>
-                    <td class="cellCoffee">
-                        <div class="btn-group btn-group-sm itemCount" role="group" aria-label="Basic outlined example">
-                            <button type="button" class="btn btnOutline">-</button>
-                            <button type="button" class="btn btnOutline">5</button>
-                            <button type="button" class="btn btnOutline">+</button>
-                        </div>
-                    </td>
-                    <td class="cellCoffee">
-                        <div class="price">
-                            <span class="itemprice">2</span>
-                            <span><iconify-icon class="coinIcon coinposition" icon="healthicons:coins"></iconify-icon></span>
-                        </div>
-                    </td>
-                </tr>
+                <?php for ($i = 0; $i < count($cartItemList); $i++) { ?>
+                    <form action="../Controller/cartViewController.php" id="myform<?=$i?>" method="post" >
+                    <tr class=" text-center align-middle">
+                        <th scope="row" class="itemimg cellCoffee">
+                            <img src="../../storages/<?=$cartItemList[$i]["product_picture"] ?>" alt="" width="100px" class="">
+                            <p><?=$cartItemList[$i]["product_name"]?></p>
+                        </th>
+                        <td class="cellCoffee">
+                            <div class="price">
+                                <span id="itemprice<?=$cartList[$i]['id']?>" class="itemprice"><?=$cartItemList[$i]["product_price"]?></span>
+                                <span class=""><iconify-icon class="coinIcon coinposition" icon="healthicons:coins"></iconify-icon></span>
+                            </div>
+                        </td>
+                        <td class="cellCoffee">
+                            <div class="btn-group btn-group-sm itemCount align-middle" role="group" aria-label="Basic outlined example">
+                                <button type="button" onclick="minus(<?=$cartList[$i]['id']?>)" class="btn btnOutline">-</button>
+                                <button type="button" id="qty<?=$cartList[$i]['id']?>" class="btn btnOutline"><?=$cartList[$i]["qty"] ?></button>
+                                <button type="button" onclick="plus(<?=$cartList[$i]['id']?>)" class="btn btnOutline">+</button>
+                            </div>
+                        </td>
+                        <td class="cellCoffee">
+                            <div class="price">
+                                <span id="total<?=$cartList[$i]['id']?>" class="itemprice"><?= $cartList[$i]["qty"]* $cartItemList[$i]["product_price"] ?></span>
+                                <span><iconify-icon class="coinIcon coinposition" icon="healthicons:coins"></iconify-icon></span>
+                            </div>
+                        </td>
+                        <td class="cellCoffee" >
+                            <input type="hidden" name="hiddenID" value="<?=$i?>">
+                            <button class="btn" id="delete<?=$i?>" onclick="deleteitem(<?=$i?>,event)" name="delete" class="fs-1 align-middle mt-4">
+                            <iconify-icon icon="material-symbols:delete-forever-rounded"></iconify-icon>
+                        </button>
+                        </td>
+                    </tr></form>
+                <?php } ?>
                 <!-- row end -->
-                <!-- row start -->
-                <tr class=" text-center align-middle">
-                    <th scope="row" class="itemimg cellCoffee">
-                        <img src="./resources/img/blackcoffee.png" alt="" width="100px" class="">
-                        <p>Coffee</p>
-                    </th>
-                    <td class="cellCoffee">
-                        <div class="price">
-                            <span class="itemprice">2</span>
-                            <span class=""><iconify-icon class="coinIcon coinposition" icon="healthicons:coins"></iconify-icon></span>
-                        </div>
-                    </td>
-                    <td class="cellCoffee">
-                        <div class="btn-group btn-group-sm itemCount" role="group" aria-label="Basic outlined example">
-                            <button type="button" class="btn btnOutline">-</button>
-                            <button type="button" class="btn btnOutline">5</button>
-                            <button type="button" class="btn btnOutline">+</button>
-                        </div>
-                    </td>
-                    <td class="cellCoffee">
-                        <div class="price">
-                            <span class="itemprice">2</span>
-                            <span><iconify-icon class="coinIcon coinposition" icon="healthicons:coins"></iconify-icon></span>
-                        </div>
-                    </td>
-                </tr>
-                <!-- row end -->
-                <!-- row start -->
-                <tr class=" text-center align-middle">
-                    <th scope="row" class="itemimg cellCoffee">
-                        <img src="./resources/img/blackcoffee.png" alt="" width="100px" class="">
-                        <p>Coffee</p>
-                    </th>
-                    <td class="cellCoffee">
-                        <div class="price">
-                            <span class="itemprice">2</span>
-                            <span class=""><iconify-icon class="coinIcon coinposition" icon="healthicons:coins"></iconify-icon></span>
-                        </div>
-                    </td>
-                    <td class="cellCoffee">
-                        <div class="btn-group btn-group-sm itemCount" role="group" aria-label="Basic outlined example">
-                            <button type="button" class="btn btnOutline">-</button>
-                            <button type="button" class="btn btnOutline">5</button>
-                            <button type="button" class="btn btnOutline">+</button>
-                        </div>
-                    </td>
-                    <td class="cellCoffee">
-                        <div class="price">
-                            <span class="itemprice">2</span>
-                            <span><iconify-icon class="coinIcon coinposition" icon="healthicons:coins"></iconify-icon></span>
-                        </div>
-                    </td>
-                </tr>
-                <!-- row end -->
+
 
 
             </tbody>

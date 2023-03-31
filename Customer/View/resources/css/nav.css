@@ -58,6 +58,10 @@ body {
   margin-bottom: 0.7em !important;
   opacity: 70%;
 }
+.cartbtn{
+  background-color: transparent;
+  border-style: none;
+}
 .nav_desktop {
   display: flex;
 }

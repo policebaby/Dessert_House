@@ -84,11 +84,11 @@ include "../Controller/shopProfileViewController.php";
                 <div class="line"></div>
                 <div class=" d-flex justify-content-center">
                     <div class="btn-group btn-group-sm itemCount" role="group" aria-label="Basic outlined example">
-                        <button type="button"  class="btn btnOutline minus">-</button>
-                        <button type="button"  class="btn btnOutline qty">1</button>
-                        <button type="button"  class="btn btnOutline plus">+</button>
+                        <button type="button"  onclick="minus(<?=$i?>)" class="btn btnOutline minus">-</button>
+                        <button type="button" id="qty<?=$i?>"  class="btn btnOutline qty">1</button>
+                        <button type="button"  onclick="plus(<?=$i?>)" class="btn btnOutline plus">+</button>
                     </div>
-                    <button type="" data="<?=$products[$i]["product_id"]?>" class="btnhidden addcart ">
+                    <button type="" data="<?=$products[$i]["product_id"]?>" onclick="addcart(<?=$i?>)"  class="btnhidden addcart ">
                     <iconify-icon icon="material-symbols:add-shopping-cart" class="productCart"></iconify-icon>
                 </button>
                 </div>
