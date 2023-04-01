@@ -21,6 +21,19 @@ body{
     color: var(--userSecondarycolor);
     background-color: var(--userPrimarycolor);
 }
+.price{
+    position: relative;
+}
+.itemprice{
+    position: relative;
+    top: 0;
+    /* margin: 0em 0em 0em 3em; */
+}
+.coinposition{
+    /* top: 0.3em; */
+    font-size: 2em!important;
+    position: relative;
+}
 @media (max-width:720px) and (min-width:390px){
     a, a:link, a:visited {
         color: black !important;

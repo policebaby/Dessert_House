@@ -44,6 +44,9 @@ body {
   flex: 1;
   padding-left: 10px;
 }
+.btnprofile{
+  border-style: none;
+}
 .nav_icons {
   color: var(--userSecondarycolor);
   font-size: 1.8em !important; 
@@ -138,6 +141,7 @@ a, a:link, a:visited {
   .nav_pf {
     display: none;
   }
+  
   #nav_check:checked + .nav_mobile {
     display: flex;
     flex-direction: column;
