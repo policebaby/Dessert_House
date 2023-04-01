@@ -53,17 +53,17 @@ function minus(id){
 }
 
 function deleteitem(id,e){
-    $(`#delete${id}`).parent().parent().remove()
+   
     e.preventDefault();
 
 
 
-
+    $(`#delete${id}`).parent().parent().remove();
     let newcart= carts.splice(id,1)
     console.log(newcart);
     console.log(carts)
     localStorage.setItem("cart",JSON.stringify(carts))
     $("#cartLists").val(JSON.stringify(carts));
 
-    document.getElementById(`myform${id}`).submit();
+    location.replace(`?del=${id}`);
 }
