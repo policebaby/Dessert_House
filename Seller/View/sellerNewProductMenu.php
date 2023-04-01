@@ -88,7 +88,7 @@ include "../Controller/menuTableController.php";
                         <span>
                             <iconify-icon icon="ri:feedback-line" class="icons"></iconify-icon>
                         </span>
-                        <span class="title ms-md-3">Customer's Feedback</span>
+                        <span class="title ms-md-3">Customers' Feedbacks</span>
                     </a>
 
                     <!-- logout icon from left nav-->
@@ -154,7 +154,7 @@ include "../Controller/menuTableController.php";
                             <td></td>
                         </tr>
                         <?php 
-                        $count =1;
+                        $count =(($page-1)*$rowLimit) + 1;
                         for ($i=0; $i < count($productList); $i++) { ?>
                             
                             <tr>
@@ -178,23 +178,40 @@ include "../Controller/menuTableController.php";
 
             <!-- for pagination -->
             <nav aria-label="Page navigation example">
-                <ul class="pagination  justify-content-center">
-                    <li class="page-item ">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span class="great" aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li class="page-item"><a class="page-link beat" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span class="less " aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
+                    <ul class="pagination  justify-content-center">
+                        <li class="page-item 
+                        <?php
+                        if ($page <= 1) {
+                            echo "disabled";
+                        }
+                        ?>">
+                            <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                                <span class="great" aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <?php
+                        for ($i = 1; $i <= $pageList; $i++) { ?>
+                            <li class="page-item 
+                            <?php
+                            if ($page == $i) {
+                                echo "active";
+                            }
+                            ?>">
+                                <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+                            </li>
+                        <?php } ?>
+                        <li class="page-item 
+                        <?php
+                        if ($page >= $pageList) {
+                            echo "disabled";
+                        }
+                        ?>">
+                            <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
+                                <span class="less " aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             <!-- </div> -->
         </div>
     </div>

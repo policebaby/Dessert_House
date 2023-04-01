@@ -100,11 +100,26 @@ body{
 }
 .reply-text{
     margin-left:92%;
+    cursor: pointer !important;;
 }
 .cFeedback{
     opacity:1;
 }
-
+.card{
+    border-style:none !important;
+}
+#sellerReply{
+    display:none;
+    position:relative;
+}
+div textarea {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+.gold-faces{
+    font-size:3.6em;
+    color:rgb(243, 220, 6);
+}
 @media screen and (max-width:720px){
     body{
         overflow-x: hidden;
@@ -154,6 +169,13 @@ body{
     }
     .ha-face{
         margin-left:55%;
+    }
+    div textarea {
+        box-sizing: border-box;
+        max-width: 80%;
+    }
+    .gold-faces{
+        font-size:3em !important;
     }
 }
 
@@ -242,5 +264,8 @@ body{
         flex-direction:column;
         justify-content:center;
         align-items:center;
+    }
+    .cent{
+        margin-top:0.6em !important;
     }
 }

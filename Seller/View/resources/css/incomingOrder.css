@@ -21,6 +21,7 @@ body{
     opacity:1;
 }
 .title{
+    text-decoration:none;
     color:var(--text-color-white) !important;
     opacity:0.5;
 }
@@ -42,6 +43,10 @@ body{
 }
 .nav-text{
     display:flex;
+    text-decoration:none;
+}
+.nav-text{
+    text-decoration:none !important;
 }
 .edit_nav{
     max-height:100% !important;
@@ -52,12 +57,13 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-decoration:none;
+    text-decoration:none !important;
 }
 .web_name{
     font-family:"DM Serif Display","sans-serif";
     font-size: 1.2em;
 }
+
 /* for page */
 .t-head{
     color:var(--text-color-white);
@@ -84,13 +90,21 @@ body{
     height:2em;
     line-height: initial;
     text-align: center;
-    color:var(--text-color-white);
+    color:var(--text-color-white) !important;
+    text-decoration:none !important;
 }
 td{
     text-align:center;
 }
 .td-text{
     font-size:0.9em !important;
+}
+table tr:nth-child(even) {
+    background-color: transparent;
+}
+
+table tr:nth-child(odd) {
+    background-color:#0b00332a ;
 }
 .down{
     color:white;
@@ -118,10 +132,7 @@ td{
 .great,.less{
     color:var(--primary-blue);
 }
-.beat{
-    background-color:var(--primary-blue) !important;
-    color:var(--text-color-white) !important;
-}
+
 
 @media screen and (max-width:720px){
     body{

@@ -1,6 +1,19 @@
 <?php
 
 session_start();
+
+if(isset($_GET["page"])){
+    $page = $_GET["page"];
+}else{
+    $page = 1;
+}
+
+
+$rowLimit = 5;
+$pageStart = ($page-1) * $rowLimit; 
+$pageStart = ($pageStart<0)? 0 : $pageStart;
+
+
 include "../Model/dbConnection.php";
 if (isset($_SESSION["shopID"])) {
     $shopID = $_SESSION["shopID"];
@@ -14,7 +27,21 @@ if (isset($_SESSION["shopID"])) {
         "
         SELECT * FROM t_order 
         WHERE 
-        shop_id = :shopID
+        shop_id = :shopID AND status = 2
+        "
+    );
+
+    $sql->bindValue("shopID", $shopID);
+    $sql->execute();
+    $totalRecord = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+
+    $sql = $pdo->prepare(
+        "
+        SELECT * FROM t_order 
+        WHERE 
+        shop_id = :shopID AND status = 2
+        LIMIT $pageStart, $rowLimit
         "
     );
 
@@ -25,9 +52,7 @@ if (isset($_SESSION["shopID"])) {
 
     // print_r($result);
 
-    for ($i=0; $i < count($result); $i++) { 
-        
-    }
+    $pageList = ceil(count($totalRecord)/$rowLimit);
 }
 
 

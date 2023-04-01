@@ -27,7 +27,7 @@ unset($_SESSION["sellerName"]);
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Public+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="seller_login row mt-0 back-blue">
+  <div class="seller_login row mt-0 back-blue d-flex flex-direction-column">
     <div class="col-md-5 me-0 text-center mb-sm-5 col-sm-11 box-1">
       <div class = "mt-md-2 mt-sm-5">
         <img src="./resources/images/Ellipse 3.png" alt="logo" class="web-logo">
@@ -48,7 +48,6 @@ unset($_SESSION["sellerName"]);
         if(isset($_SESSION["error"])){
           echo $_SESSION["error"];
         }
-
 
         ?>
       </p>

@@ -67,9 +67,11 @@ tr{
     color:var(--text-color-white);
     background-color:var(--primary-blue) !important;
 }
-.color-tr{
-    background-color:#0b00332a;
-    height:2em !important;
+table tr:nth-child(even) {
+    background-color: transparent;
+}
+table tr:nth-child(odd) {
+    background-color:#0b00332a ;
 }
 td{
     text-align:center;

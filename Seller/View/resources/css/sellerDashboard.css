@@ -80,6 +80,7 @@ body{
 }
 
 .second_row_second{
+    position:relative !important;
     width:31.7em !important;
     height:34em;
     border-radius:0.5em;
@@ -146,17 +147,16 @@ body{
     box-shadow:4px 4px 8px var(--primary-blue) !important;
 } */
 .view{
-    width:5.5em;
-    height:2.3em;
+    padding:1em !important;
     border-radius:0.5em;
-    border-style:none;
     background-color:#0057FF;
     color:var(--text-color-white);
-    font-size:0.9em;
+    font-size:0.8em;
     margin-left:45%;
 
 }
 .view:hover{
+    color:white;
     box-shadow:0 0 8px var(--secondary-skyblue) !important;
 }
 .bs-1{
@@ -227,7 +227,7 @@ body{
         flex-direction:column;
     }
     .view{
-        width:5em !important;
+        padding:0.5em !important;
     }
 }
 
@@ -324,5 +324,6 @@ body{
         width:5em !important;
         font-size:0.5em;
         margin-left:10.2em;
+        margin-top:0 !important;
     }
 }

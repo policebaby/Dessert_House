@@ -1,47 +1,7 @@
 <?php
 
-// call database
-include "../Model/dbConnection.php";
-session_start();
-if (isset($_SESSION["sellerID"])) {
+include "../Controller/sellerProfileController.php";
 
-    $sellerId = $_SESSION["sellerID"];
-
-    // call connection db
-    $db  = new DBConnection();
-    $pdo = $db->connect();
-
-    $sql = $pdo->prepare(
-        "
-        SELECT * FROM m_seller WHERE seller_id = :id
-        "
-    );
-
-    $sql->bindValue(":id", $sellerId);
-    $sql->execute();
-
-    $result = $sql->fetchAll(PDO::FETCH_ASSOC);
-}
-
-if (isset($_SESSION["shopID"])) {
-
-    $shopId = $_SESSION["shopID"];
-
-    // call connection db
-    $db  = new DBConnection();
-    $pdo = $db->connect();
-
-    $sql = $pdo->prepare(
-        "
-        SELECT * FROM m_shop WHERE shop_id = :id
-        "
-    );
-
-    $sql->bindValue(":id", $shopId);
-    $sql->execute();
-
-    $shopResult = $sql->fetchAll(PDO::FETCH_ASSOC);
-}
 
 ?>
 
@@ -74,64 +34,71 @@ if (isset($_SESSION["shopID"])) {
 
 <body class="seller_profile_page">
     <div class=" row">
-        <nav class="col-2 d-flex flex-direction-column">
-            <div class="edit_nav">
-                <a href="./sellerDashboard.php" class="nav_logo text-decoration-none">
-                    <img src="./resources/images/Ellipse 3.png" alt="logo" class="web_logo mt-md-5 mt-sm-4">
-                    <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
-                </a>
-                <!-- sidebar nav -->
-                <div class="nav-icons ms-md-3 ms-sm-3 mt-sm-4">
-                    <!-- profile icon from left nav -->
-                    <a href="./sellerProfile.php" class="text-decoration-none">
-                        <span>
-                            <iconify-icon icon="bi:people-circle" class="profile-icon"></iconify-icon>
-                        </span>
-                        <span class="profile-text ms-md-3 mt-0">Profile</span>
+    <nav class="col-2 d-flex flex-direction-column">
+                <div class="edit_nav">
+                    <a href="./sellerDashboard.php" class="nav_logo text-decoration-none">
+                        <img src="./resources/images/Ellipse 3.png" alt="logo" class="web_logo mt-md-5 mt-sm-3">
+                        <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
                     </a>
-                    <!-- meun icon from left nav -->
-                    <a href="./sellerNewProductMenu.php" class="nav-text my-md-4 my-sm-4">
-                        <span>
-                            <iconify-icon icon="material-symbols:menu-book-sharp" class="icons"></iconify-icon>
-                        </span>
-                        <span class="title ms-md-3 mt-2">Product Menu</span>
-                    </a>
-                    <!-- order list icon from left nav -->
-                    <a href="./orderList.php" class="nav-text">
-                        <span>
-                            <iconify-icon icon="material-symbols:order-approve-outline" class="icons"></iconify-icon>
-                        </span>
-                        <span class="title ms-md-3 mt-2">Order Lists</span>
-                    </a>
-                    <!-- sold history icon from left nav -->
-                    <a href="./soldHistory.php" class="nav-text my-md-4 my-sm-4">
-                        <span>
-                            <iconify-icon icon="mdi:clipboard-text-clock" class="icons"></iconify-icon>
-                        </span>
-                        <span class="title ms-md-3 mt-2">Sold History</span>
-                    </a>
-                    <!-- incoming order icon from left nav -->
-                    <a href="./incomingOrder.php" class="nav-text">
-                        <span>
-                            <iconify-icon icon="material-symbols:order-play-outline" class="icons"></iconify-icon>
-                        </span>
-                        <span class="title ms-md-2 mt-2">Incoming Orders</span>
-                    </a>
-                    <!-- feedback icon -->
-                    <a href="./feedbackDetails.php" class="nav-text my-md-4 my-sm-4">
-                        <span>
-                            <iconify-icon icon="ri:feedback-line" class="icons"></iconify-icon>
-                        </span>
-                        <span class="title ms-md-3">Customer's Feedback</a>
-                    </a>
-                    <!-- logout icon from left nav-->
-                    <a href="./sellerlogin.php" class="nav-text">
-                        <span>
-                            <iconify-icon icon="material-symbols:logout-rounded" class="icons"></iconify-icon>
-                        </span>
-                        <span class="title ms-md-3 mt-2">Logout</span>
-                    </a>
-        </nav>
+                    <!-- sidebar nav -->
+                    <div class="nav-icons ms-md-4 ms-sm-3 mt-sm-4">
+                        <!-- profile icon from left nav -->
+                        <a href="./sellerProfile.php" class="nav-text ms-sm-2 text-decoration-none">
+                            <span>
+                                <iconify-icon icon="bi:people-circle" class="profile-icon"></iconify-icon>
+                            </span>
+                            <span class="profile-text ms-md-3 mt-2">Profile</span>
+                        </a>
+
+                        <!-- meun icon from left nav -->
+                        <a href="./sellerNewProductMenu.php" class="nav-text my-md-4 my-sm-3 text-decoration-none">
+                            <span>
+                                <iconify-icon icon="material-symbols:menu-book-sharp" class="icons"></iconify-icon>
+                            </span>
+                            <span class="title ms-md-3 mt-2">Product Menu</span>
+                        </a>
+
+                        <!-- order list icon from left nav -->
+                        <a href="./sellerlogin.php" class="nav-text text-decoration-none">
+                            <span>
+                                <iconify-icon icon="material-symbols:order-approve-outline" class="icons"></iconify-icon>
+                            </span>
+                            <span class="title ms-md-3 mt-2">Order Lists</span>
+                        </a>
+
+                        <!-- sold history icon from left nav -->
+                        <a href="./soldHistory.php" class="nav-text my-md-4 my-sm-3 text-decoration-none">
+                            <span>
+                                <iconify-icon icon="mdi:clipboard-text-clock" class="icons"></iconify-icon>
+                            </span>
+                            <span class="title ms-md-3 mt-2">Sold History</span>
+                        </a>
+
+                        <!-- incoming order icon from left nav -->
+                        <a href="./incomingOrder.php" class="nav-text text-decoration-none">
+                            <span>
+                                <iconify-icon icon="material-symbols:order-play-outline" class="icons"></iconify-icon>
+                            </span>
+                            <span class="title ms-md-2 mt-2">Incoming Orders</span>
+                        </a>
+
+                        <!-- feedback icon -->
+                        <a href="./feedbackDetails.php" class="nav-text my-md-4 my-sm-3 text-decoration-none">
+                            <span>
+                                <iconify-icon icon="ri:feedback-line" class="icons"></iconify-icon>
+                            </span>
+                            <span class="title ms-md-1">Customers' Feedbacks</span>
+                        </a>
+
+                        <!-- logout icon from left nav-->
+                        <a href="./sellerlogin.php" class="nav-text text-decoration-none">
+                            <span>
+                                <iconify-icon icon="material-symbols:logout-rounded" class="icons"></iconify-icon>
+                            </span>
+                            <span class="title ms-md-3 mt-2">Logout</span>
+                        </a>
+                        <br>
+            </nav>
 
         <!-- fill input box -->
         <div class="col-10 mt-3 profile-page d-flex justify-content-center">
