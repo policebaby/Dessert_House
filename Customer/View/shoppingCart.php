@@ -1,8 +1,7 @@
 <?php
 ini_set("display_errors", "1");
 include "../Controller/cartViewController.php";
-// echo "<pre>";
-// print_r($cartList);
+
 ?>
 
 <!DOCTYPE html>
@@ -50,42 +49,42 @@ include "../Controller/cartViewController.php";
                 </tr>
             </thead>
             <tbody>
-              
-                    <!-- row start -->
-                    <?php for ($i = 0; $i < count($cartItemList); $i++) { ?>
 
-                        <tr class=" text-center align-middle">
-                            <th scope="row" class="itemimg cellCoffee">
-                                <img src="../../storages/<?= $cartItemList[$i]["product_picture"] ?>" alt="" width="100px" class="">
-                                <p><?= $cartItemList[$i]["product_name"] ?></p>
-                            </th>
-                            <td class="cellCoffee">
-                                <div class="price">
-                                    <span id="itemprice<?= $cartList[$i]['id'] ?>" class="itemprice"><?= $cartItemList[$i]["product_price"] ?></span>
-                                    <span class=""><iconify-icon class="coinIcon coinposition" icon="healthicons:coins"></iconify-icon></span>
-                                </div>
-                            </td>
-                            <td class="cellCoffee">
-                                <div class="btn-group btn-group-sm itemCount align-middle" role="group" aria-label="Basic outlined example">
-                                    <button type="button" onclick="minus(<?= $cartList[$i]['id'] ?>)" class="btn btnOutline">-</button>
-                                    <button type="button" id="qty<?= $cartList[$i]['id'] ?>" class="btn btnOutline"><?= $cartList[$i]["qty"] ?></button>
-                                    <button type="button" onclick="plus(<?= $cartList[$i]['id'] ?>)" class="btn btnOutline">+</button>
-                                </div>
-                            </td>
-                            <td class="cellCoffee">
-                                <div class="price">
-                                    <span id="total<?= $cartList[$i]['id'] ?>" class="itemprice"><?= $cartList[$i]["qty"] * $cartItemList[$i]["product_price"] ?></span>
-                                    <span><iconify-icon class="coinIcon coinposition" icon="healthicons:coins"></iconify-icon></span>
-                                </div>
-                            </td>
-                            <td class="cellCoffee">
-                                <button class="btn"  id="delete<?= $i ?>" onclick="deleteitem(<?= $i ?>,event)" name="delete<?= $i ?>" class="fs-1 align-middle mt-4">
-                                    <iconify-icon icon="material-symbols:delete-forever-rounded"></iconify-icon>
-                                </button>
-                            </td>
-                        </tr>
-            <?php } ?>
-            <!-- row end -->
+                <!-- row start -->
+                <?php for ($i = 0; $i < count($cartItemList); $i++) { ?>
+
+                    <tr class=" text-center align-middle">
+                        <th scope="row" class="itemimg cellCoffee">
+                            <img src="../../storages/<?= $cartItemList[$i]["product_picture"] ?>" alt="" width="100px" class="">
+                            <p><?= $cartItemList[$i]["product_name"] ?></p>
+                        </th>
+                        <td class="cellCoffee">
+                            <div class="price">
+                                <span id="itemprice<?= $cartList[$i]['id'] ?>" class="itemprice"><?= $cartItemList[$i]["product_price"] ?></span>
+                                <span class=""><iconify-icon class="coinIcon coinposition" icon="healthicons:coins"></iconify-icon></span>
+                            </div>
+                        </td>
+                        <td class="cellCoffee">
+                            <div class="btn-group btn-group-sm itemCount align-middle" role="group" aria-label="Basic outlined example">
+                                <button type="button" onclick="minus(<?= $cartList[$i]['id'] ?>)" class="btn btnOutline">-</button>
+                                <button type="button" id="qty<?= $cartList[$i]['id'] ?>" class="btn btnOutline"><?= $cartList[$i]["qty"] ?></button>
+                                <button type="button" onclick="plus(<?= $cartList[$i]['id'] ?>)" class="btn btnOutline">+</button>
+                            </div>
+                        </td>
+                        <td class="cellCoffee">
+                            <div class="price">
+                                <span id="total<?= $cartList[$i]['id'] ?>" class="itemprice"><?= $cartList[$i]["qty"] * $cartItemList[$i]["product_price"] ?></span>
+                                <span><iconify-icon class="coinIcon coinposition" icon="healthicons:coins"></iconify-icon></span>
+                            </div>
+                        </td>
+                        <td class="cellCoffee">
+                            <button class="btn" id="delete<?= $i ?>" onclick="deleteitem(<?= $i ?>,event,<?= $cartItemList[$i]['product_id'] ?>)" name="delete<?= $i ?>" class="fs-1 align-middle mt-4">
+                                <iconify-icon icon="material-symbols:delete-forever-rounded"></iconify-icon>
+                            </button>
+                        </td>
+                    </tr>
+                <?php } ?>
+                <!-- row end -->
 
 
 

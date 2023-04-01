@@ -36,9 +36,20 @@ else if (isset($_SESSION["cartLists"])) {
     $cartList = $_SESSION["cartLists"];
 }
 
-if (isset($_GET["del"])) {
-   $del = $_GET["del"];
-   array_splice($_SESSION["cartLists"],$del,1);
+if (isset($_GET["pid"])) {
+   $del = $_GET["pid"];
+
+    $index = -1;
+   foreach ($_SESSION["cartLists"] as $key => $value) {
+    if($value["id"]== $del){
+            $index= $key;
+            break;
+    }
+   }
+
+   if($index != -1){
+    array_splice($_SESSION["cartLists"],$index,1);
+   }
 
     $cartList = $_SESSION["cartLists"];
 

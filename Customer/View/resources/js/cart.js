@@ -52,7 +52,7 @@ function minus(id){
     });
 }
 
-function deleteitem(id,e){
+function deleteitem(id,e,productid){
    
     e.preventDefault();
 
@@ -65,5 +65,5 @@ function deleteitem(id,e){
     localStorage.setItem("cart",JSON.stringify(carts))
     $("#cartLists").val(JSON.stringify(carts));
 
-    location.replace(`?del=${id}`);
+    location.replace(`?pid=${productid}`);
 }
