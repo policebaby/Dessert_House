@@ -1,3 +1,10 @@
+<?php 
+
+include "../Controller/soldHistoryController.php";
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -87,7 +94,7 @@
                             <span>
                                 <iconify-icon icon="ri:feedback-line" class="icons"></iconify-icon>
                             </span>
-                            <span class="title ms-md-1">Customer's Feedback</span>
+                            <span class="title ms-md-1">Customers' Feedbacks</span>
                         </a>
 
                         <!-- logout icon from left nav-->
@@ -111,19 +118,22 @@
                             <td>Total Price</td>
                             <td class="title-none">Reservation Time</td>
                         </tr>
+                        <?php $count = (($page - 1) * $rowLimit) + 1;
+                        for ($i = 0; $i < count($soldResult); $i++) { ?>
                         <tr>
-                            <td class="td-text fw-bold">1</td>
-                            <td class="td-text fw-bold">2023/03/05</td>
-                            <td class="td-text fw-bold">DS_030001</td>
+                            <td class="td-text fw-bold"><?= $count++ ?></td>
+                            <td class="td-text fw-bold"><?= $soldResult[$i]["create_date"] ?></td>
+                            <td class="td-text fw-bold"><?= $soldResult[$i]["order_id"] ?></td>
                             <td class="td-text fw-bold items">
-                                <span>Latte x 2</span>
+                                <span><?= $soldResult[$i]["items"] ?></span>
                                 <span>
-                                    <ion-icon name="chevron-down-outline" class="down" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></ion-icon>
+                                <ion-icon name="chevron-down-outline" class="down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="showItemName('<?= $soldResult[$i]['items'] ?>', '<?= $soldResult[$i]['order_id'] ?>', '<?= $soldResult[$i]['create_date'] ?>', '<?= $soldResult[$i]['reserve_time'] ?>', '<?= $soldResult[$i]['total_price'] ?>')"></ion-icon>
                                 </span>
                             </td>
-                            <td class="td-text fw-bold">$ 80</td>
-                            <td class="td-text fw-bold title-none">2023/03/06 14:30:00</td>
+                            <td class="td-text fw-bold"><?= $soldResult[$i]["total_price"] ?></td>
+                            <td class="td-text fw-bold title-none"><?= $soldResult[$i]["reserve_time"] ?></td>
                         </tr>
+                        <?php } ?>
                     </table>
                 </div>
                 <!-- popup screen -->
@@ -131,7 +141,7 @@
                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="small-pop mt-3 ms-3">
-                                <p class="fw-bold">Reservation Time : <span>2023/03/06 14:30:00 </span></p>
+                                <p class="fw-bold">Reservation Time : <span id="reservation"> </span></p>
                             </div>
                             <div class="modal-header">
                                 <h5 class="modal-title text-decoration-underline" id="staticBackdropLabel">Items</h5>
@@ -139,14 +149,14 @@
                             </div>
                             <div class="modal-body">
                                 <div>
-                                    <span class="items_name">Latte</span>
+                                    <span id="itemName" class="items_name">Latte</span>
                                     <span class="total_items me-5">x 2</span>
                                 </div>
                             </div>
                             <div class="mb-4">
                                 <hr>
                                 <span class="ms-3">Total</span>
-                                <span class="total_items me-5">$80</span>
+                                <span id="totalPrice" class="total_items me-5"></span>
                             </div>
                         </div>
                     </div>
@@ -154,26 +164,45 @@
 
                 <!-- for pagination -->
                 <nav aria-label="Page navigation example">
-                    <ul class="pagination d-flex justify-content-center p-0">
-                        <li class="page-item ">
-                            <a class="page-link" href="#" aria-label="Previous">
+                    <ul class="pagination  justify-content-center">
+                        <li class="page-item 
+                        <?php
+                        if ($page <= 1) {
+                            echo "disabled";
+                        }
+                        ?>">
+                            <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
                                 <span class="great" aria-hidden="true">&laquo;</span>
                             </a>
                         </li>
-                        <li class="page-item"><a class="page-link beat" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
+                        <?php
+                        for ($i = 1; $i <= $pageList; $i++) { ?>
+                            <li class="page-item 
+                            <?php
+                            if ($page == $i) {
+                                echo "active";
+                            }
+                            ?>">
+                                <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+                            </li>
+                        <?php } ?>
+                        <li class="page-item 
+                        <?php
+                        if ($page >= $pageList) {
+                            echo "disabled";
+                        }
+                        ?>">
+                            <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
                                 <span class="less " aria-hidden="true">&raquo;</span>
                             </a>
                         </li>
                     </ul>
-                </nav>
+                </nav>  
             </div>
         </div>
     </div>
     </div>
+    <script src="./resources/js/OrderListModal.js"></script>
 </body>
 
 </html>

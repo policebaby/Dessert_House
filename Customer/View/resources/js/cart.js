@@ -52,18 +52,18 @@ function minus(id){
     });
 }
 
-function deleteitem(id,e){
-    $(`#delete${id}`).parent().parent().remove()
+function deleteitem(id,e,productid){
+   
     e.preventDefault();
 
 
 
-
+    $(`#delete${id}`).parent().parent().remove();
     let newcart= carts.splice(id,1)
     console.log(newcart);
     console.log(carts)
     localStorage.setItem("cart",JSON.stringify(carts))
     $("#cartLists").val(JSON.stringify(carts));
 
-    document.getElementById(`myform${id}`).submit();
+    location.replace(`?pid=${productid}`);
 }

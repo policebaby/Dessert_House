@@ -1,5 +1,6 @@
 <?php
 
+// call database
 include "../Model/dbConnection.php";
 
 session_start();

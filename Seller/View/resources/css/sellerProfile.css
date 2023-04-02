@@ -28,6 +28,8 @@ body{
     color:var(--text-color-white);
 }
 .nav-text{
+    display:flex;
+    flex-wrap: wrap;
     text-decoration: none;
     opacity:0.5;
 }

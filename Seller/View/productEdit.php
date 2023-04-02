@@ -92,7 +92,7 @@ if(isset($_SESSION["editMenu"])){
                         <span>
                             <iconify-icon icon="ri:feedback-line" class="icons"></iconify-icon>
                         </span>
-                        <span class="title ms-md-3">Customer's Feedback</span>
+                        <span class="title ms-md-3">Customers' Feedbacks</span>
                     </a>
 
                     <!-- logout icon from left nav-->

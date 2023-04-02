@@ -55,11 +55,14 @@ $userprofile = $_SESSION["userprofile"];
     <!-- user_profile start -->
     <div class="pf_container">
         <div class="row ">
-            <div class="col-md-4 first_pf_title">
-                <iconify-icon icon="healthicons:ui-user-profile-outline" class="pf_pic1"></iconify-icon>
-                <p class="title1">Profile</p>
-                <hr class="left_line">
+            <div class="col-md-4 ">
+                <div class="first_pf_title">
+                    <iconify-icon icon="healthicons:ui-user-profile-outline" class="pf_pic1"></iconify-icon>
+                    <p class="title1">Profile</p>
+                    <hr class="left_line">
+                </div>
             </div>
+
 
             <div class="col-md-8">
                 <!-- userdata insert -->
@@ -68,7 +71,7 @@ $userprofile = $_SESSION["userprofile"];
                     if ($userprofile[0]["user_profilepic"] == "noprofile") {
                         echo '<img src="./resources/img/default.jpg" id="profileimg" class="rounded float-start" alt="..." width="15%">';
                     } else {
-                        echo '<img src="../storages/'.$userprofile[0]["user_profilepic"].'" id="profileimg" class="rounded float-start" alt="" width="15%">';
+                        echo '<img src="../storages/' . $userprofile[0]["user_profilepic"] . '" id="profileimg" class="rounded float-start" alt="" width="15%">';
                     }
                     ?>
                     <!-- <img src="../storages/profile/23.jpg" class="rounded float-start" alt="..." width="15%"> -->
@@ -106,7 +109,7 @@ $userprofile = $_SESSION["userprofile"];
                         <button type="submit" class="btn edit_btn ">Edit Profile</button>
                     </form>
                     <form action="./user_change_pwd.php">
-                    <button type="submit" class="btn change_btn ">Change Password</button>
+                        <button type="submit" class="btn change_btn ">Change Password</button>
                     </form>
                 </div>
                 <button class="btn" id="pf_logout">

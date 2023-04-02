@@ -1,3 +1,19 @@
+<?php
+
+include "../Controller/feedbackDetailController.php";
+
+if (isset($_SESSION["sellerName"])) {
+    $sellerName = $_SESSION["sellerName"];
+    // echo $sellerName;
+}
+
+//  check if $review variable is set and not null
+    if (isset($_SESSION['review']) && !is_null($_SESSION['review'])) {
+        $review = $_SESSION['review'];
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,6 +37,8 @@
     <!-- ionic icon link -->
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+    <!-- Include jQuery from a CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Feedback Details Page</title>
 </head>
 
@@ -80,7 +98,7 @@
                             <span>
                                 <iconify-icon icon="ri:feedback-line" class="feedback-icon"></iconify-icon>
                             </span>
-                            <span class="ms-md-3 cf-text">Customer's Feedback</span>
+                            <span class="ms-md-3 cf-text">Customers' Feedbacks</span>
                         </a>
 
                         <!-- logout icon from left nav-->
@@ -103,47 +121,86 @@
                     <div class="col-md-3 col-sm-3">
                         <div class="per-average">
                             <div class="per-face-text ms-3 mt-md-3 mt-sm-3">
-                                <span class="h3 fw-bold per-text">75%</span>
-                                <img src="./resources/images/happy-face.png" class="smile-face">
+                                <?php
+                                $Smile = ($smileCount / $shopRatingCount) * 100;
+                                if ($Smile <= 45) {
+                                    echo '<span class="d-flex">
+                                        <iconify-icon icon="ph:smiley-sad-bold" class="gold-faces"></iconify-icon>
+                                        <span class="h3 ms-md-2 mt-md-3 mt-sm-2 cent">' . number_format($Smile, 0) . '%</span><br>
+                                        </span>
+                                        <p class="ms-md-3 ms-sm-3 fw-bold above-text">Below Average</p>';
+                                } else if ($Smile <= 65) {
+                                    echo '<span class="d-flex">
+                                        <iconify-icon icon="charm:face-neutral" class="gold-faces"></iconify-icon>
+                                        <span class="h3 ms-md-2 mt-md-3 mt-sm-2 cent">' . number_format($Smile, 0) . '%</span><br>
+                                        </span>
+                                        <p class="ms-md-3 ms-sm-3 fw-bold above-text">Middle Average</p>';
+                                } else {
+                                    echo '<span class="d-flex">
+                                        <iconify-icon icon="gg:smile-mouth-open" class="gold-faces"></iconify-icon>
+                                        <span class="h3 ms-md-2 mt-md-3 mt-sm-2 cent">' . number_format($Smile, 0) . '%</span><br>
+                                        </span>
+                                        <p class="ms-md-3 ms-sm-3 fw-bold above-text">Above Average</p>';
+                                }
+                                ?>
                             </div>
-                            <p class="ms-md-3 ms-sm-3 fw-bold above-text">Above Average</p>
                         </div>
                     </div>
                     <!-- for progress gp -->
                     <div class="col-md-9 col-sm-9">
                         <div class="progress-gp">
+
                             <!-- progress 1 -->
                             <div class="each-progress">
                                 <img src="./resources/images/happy.png" class="faces">
-                                <div class="progress w-50 mt-2 ms-md-3 ms-sm-3">
-                                    <div class="progress-bar" role="progressbar" style="width: 62%" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <span class="mt-md-2 mt-sm-2 ms-md-3 ms-sm-3 fw-bold total-review">62 reviews</span>
+                                <?php
+                                $Spercent = ($smileCount / $shopRatingCount) * 100;
+                                for ($i = 0; $i < count($Sresult); $i++) { ?>
+                                    <div class="progress w-50 mt-2 ms-md-3 ms-sm-3">
+                                        <div class="progress-bar" role="progressbar" style="width: <?= $Spercent ?>%" aria-valuenow="<?= $Spercent ?>" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span class="mt-md-2 mt-sm-2 ms-md-3 ms-sm-3 fw-bold total-review"><?= $smileCount ?> reviews</span>
                             </div>
-                            <!-- progress 2 -->
-                            <div class="each-progress my-1">
-                                <img src="./resources/images/normal.png" class="faces">
+                        <?php } ?>
+
+                        <!-- progress 2 -->
+                        <div class="each-progress my-1">
+                            <img src="./resources/images/normal.png" class="faces">
+                            <?php
+                            $percent = ($pokerCount / $shopRatingCount) * 100;
+                            for ($i = 0; $i < count($Presult); $i++) { ?>
                                 <div class="progress w-50 mt-2 ms-md-3 ms-sm-3">
-                                    <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" style="width: <?= $percent ?>%" aria-valuenow="<?= $percent ?>" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
-                                <span class="mt-md-2 mt-sm-2 ms-md-3 ms-sm-3 fw-bold total-review">20 reviews</span>
+                                <span class="mt-md-2 mt-sm-2 ms-md-3 ms-sm-3 fw-bold total-review"><?= $pokerCount ?> reviews</span>
+                        </div>
+                    <?php } ?>
+
+                    <!-- progress 3 -->
+                    <div class="each-progress">
+                        <img src="./resources/images/unhappy.png" class="faces">
+                        <?php
+                        $Dpercent = ($sadCount / $shopRatingCount) * 100;
+                        for ($i = 0; $i < count($Dresult); $i++) { ?>
+                            <div class="progress w-50 mt-2 ms-md-3 ms-sm-3">
+                                <div class="progress-bar" role="progressbar" style="width: <?= $Dpercent ?>%" aria-valuenow="<?= $Dpercent ?>" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                            <!-- progress 3 -->
-                            <div class="each-progress">
-                                <img src="./resources/images/unhappy.png" class="faces">
-                                <div class="progress w-50 mt-2 ms-md-3 ms-sm-3">
-                                    <div class="progress-bar" role="progressbar" style="width: 4%" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <span class="mt-md-2 mt-sm-2 ms-md-3 ms-sm-3 fw-bold total-review">4 reviews</span>
-                            </div>
-                            <!-- progress 4 -->
-                            <div class="each-progress my-1">
-                                <img src="./resources/images/unlike.png" class="faces">
-                                <div class="progress w-50 mt-2 ms-md-3 ms-sm-3">
-                                    <div class="progress-bar" role="progressbar" style="width: 1%" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <span class="mt-md-2 mt-sm-2 ms-md-3 ms-sm-3 fw-bold total-review">1 review</span>
-                            </div>
+                            <span class="mt-md-2 mt-sm-2 ms-md-3 ms-sm-3 fw-bold total-review"><?= $sadCount ?> review</span>
+                    </div>
+                <?php } ?>
+                <!-- progress 4 -->
+                <div class="each-progress my-1">
+                    <img src="./resources/images/unlike.png" class="faces">
+                    <?php
+                    $Epercent = ($crossCount / $shopRatingCount) * 100;
+                    for ($i = 0; $i < count($Eresult); $i++) { ?>
+                        <div class="progress w-50 mt-2 ms-md-3 ms-sm-3">
+                            <div class="progress-bar" role="progressbar" style="width: <?= $Epercent ?>%" aria-valuenow="<?= $Epercent ?>" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <span class="mt-md-2 mt-sm-2 ms-md-3 ms-sm-3 fw-bold total-review"><?= $crossCount ?> review</span>
+                </div>
+            <?php } ?>
+
                         </div>
                     </div>
                 </div>
@@ -151,45 +208,67 @@
                 <!-- review cards -->
                 <p class="fw-bold mt-2 ms-md-3 ms-sm-3 review-title text-center">Reviews</p>
                 <div class="d-flex flex-direction-column justify-content-center two-cards">
-                    <div class="each-review ms-md-3 ms-sm-3">
-                        <div class="details mt-2">
-                            <div class="dis me-1 mt-md-2 mt-sm-2 ms-2"></div>
-                            <span class="ms-md-3 ms-sm-3 fw-bold">username</span>
-                            <img src="./resources/images/happy-face.png" class="ha-face">
+                    <?php
+                    
+                    foreach ($reviewResult as $feedback) {
+                        $username = $feedback['user_name'];
+                        $date = $feedback['create_date'];
+                        $replyDate = date('Y-m-d');
+                        $feedback_text = $feedback['user_review'];
+                        $reviewID = $feedback['review_id'];
+                        $userEmail = $feedback['user_email'];
+                        // echo $userEmail;
+                        
+                        
+                    ?>
+                        <div class="each-review ms-md-3 ms-sm-3 mt-md-3" id="<?= $reviewID ?>">
+                            <div class="details mt-2">
+                                <div class="dis me-1 mt-md-2 mt-sm-2 ms-2"></div>
+                                <span class="ms-md-3 ms-sm-3 fw-bold"><?= $username ?></span>
+                                <img src="./resources/images/happy-face.png" class="ha-face">
+                            </div>
+                            <span class="ms-md-5 ms-sm-5 date"><?= $date ?></span>
+                            <p class="ms-md-5 ms-sm-5 user-text">
+                                <?= $feedback_text ?>
+                            </p>
+                            <div id="reply-container">
+                            <span class="reply-text mb-1" id="reply-text">Reply</span>
+                            <input type="hidden" name="reviewID" value="<?= $reviewID ?>">
+                            </div>
+
+                            <div id="sellerReply" >
+                                
+                                <hr class="hr-line">
+                                <!-- seller reply -->
+                                    <div class="details mt-1 reply-card">
+                                        <div class="dis me-1 ms-2"></div>
+                                        <span class="ms-md-3 ms-sm-3 fw-bold " name="sellerName"><?= $sellerName ?></span>
+                                    </div>
+                                    <span class="ms-md-5 ms-sm-5 date"><?= $replyDate ?></span>
+                                    <form action="../Controller/sellerReplyTextController.php" method="post">
+                                    <?php 
+                                    if(isset($_SESSION['review'] )){
+                                        $sellerReplyTexter = $_SESSION['review'];
+                                        
+                                    }?>
+                                    <textarea class="form-control" name="replyText" rows="3"><?php echo isset($sellerReplyTexter["seller_reply"]) ? $sellerReplyTexter["seller_reply"] : '' ?></textarea>
+
+                                    <!-- <textarea class="form-control" name="replyText" rows="3"><?php echo $sellerReplyTexter["seller_reply"] ?></textarea> -->
+
+                                        <div class="mt-auto">
+                                            <button type="submit" class="btn btn-primary send-button mt-2" name="sendReply" id="sendBtn">Send</button>
+                                        </div>
+                                        <input type="hidden" value="<?= $userEmail ?>" name="userEmail">
+                                    </form>
+                            </div>
                         </div>
-                        <span class="ms-md-5 ms-sm-5 date">7 March 2023</span>
-                        <p class="ms-md-5 ms-sm-5 user-text">
-                            Went for the first time with friends. My wife and I shared the Calamari appetizer, Cesar Salad and the Seafood risotto. Service, atmosphere, and food were all top shelf. Manager checked on us himself. Highly recommend to any and all. Great Experience.
-                        </p>
-                        <span class="reply-text mb-1">Reply</span>
-                    </div>
-                    <!-- for reply review -->
-                    <div class="each-review mt-md-4 mt-sm-4 ms-md-3 ms-sm-3 mb-sm-5 space-bottom">
-                        <div class="details mt-2">
-                            <div class="dis me-1 mt-md-2 mt-sm-2 ms-2"></div>
-                            <span class="ms-md-3 ms-sm-3 fw-bold">username</span>
-                            <img src="./resources/images/happy-face.png" class="ha-face">
-                        </div>
-                        <span class="ms-md-5 ms-sm-5 date">7 March 2023</span>
-                        <p class="ms-md-5 ms-sm-5 user-text">
-                            Went for the first time with friends. My wife and I shared the Calamari appetizer, Cesar Salad and the Seafood risotto. Service, atmosphere, and food were all top shelf. Manager checked on us himself. Highly recommend to any and all. Great Experience.
-                        </p>
-                        <hr class="hr-line">
-                        <!-- seller reply -->
-                        <div class="details mt-1">
-                            <div class="dis me-1 ms-2"></div>
-                            <span class="ms-md-3 ms-sm-3 fw-bold">sellername</span>
-                            <img src="./resources/images/happy-face.png" class="ha-face">
-                        </div>
-                        <span class="ms-md-5 ms-sm-5 date">8 March 2023</span>
-                        <p class="ms-md-5 ms-sm-5 seller-text">
-                            We really appreciate you taking the time to share your rating with us. We look forward to seeing you again soon.”
-                        </p>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="./resources/js/sendReply.js"></script>
 </body>
 
 </html>

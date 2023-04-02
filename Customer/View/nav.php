@@ -65,10 +65,26 @@
             <input type="text" class="search" placeholder="Search" />
         </div>
         <!--search box end-->
+        <div class="dropdown">
+            <button class="btn  bg-transparent btnprofile" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                <iconify-icon icon="healthicons:ui-user-profile" class="nav_icons nav_pf"></iconify-icon>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenu2">
+                <li>
+                    <a href="../Controller/user_profileViewController.php">
+                        <button class="dropdown-item" type="button">My Profile</button>
+                    </a>
+                </li>
+                <li><a href="../View/buyHistory.php">
+                        <button class="dropdown-item" type="button">My Orders</button>
+                    </a>
+                </li>
+            </ul>
 
-        <a href="../Controller/user_profileViewController.php">
-            <iconify-icon icon="healthicons:ui-user-profile" class="nav_icons nav_pf"></iconify-icon>
-        </a>
+
+
+        </div>
+
         <!-- cart -->
         <form action="./shoppingCart.php" method="post">
             <input type="hidden" name="cartItems" id="cartLists" value="">

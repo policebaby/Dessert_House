@@ -34,59 +34,35 @@
     <!-- nav end -->
 
     <!-- buyHistory start -->
-    <div class="container-fluid p-5 mb-2 text-center ">
-        <p class="bhHeader"><u> Your Buying History</u></p>
-        <table class="table table-hover  ">
+    <div class="container-fluid p-5 mb-5 text-center ">
+        <p class="bhHeader mb-5"><u> Your Order History</u></p>
+        <table class="table table-hover mb-5 ">
             <thead class="">
                 <tr class="rowCoffee ">
                     <th scope="col">No.</th>
-                    <th scope="col">Item Name</th>
-                    <th scope="col">Amount</th>
-                    <th scope="col">Buying Date</th>
+                    <th scope="col">Item Names</th>
+                    <th scope="col">Grand Total</th>
+                    <th scope="col">Order Date</th>
                 </tr>
             </thead>
-            <tbody >
+            <tbody>
                 <tr>
-                    <th scope="row">1</th>
-                    <td class="cellCoffee">Coffee</td>
-                    <td>5000MMK</td>
-                    <td class="cellCoffee">3/1/2023</td>
+                    <th scope="row" class="align-middle cellCoffee">1</th>
+                    <td class=" align-middle">Coffee</td>
+                    <td class="cellCoffee">
+                        <div class="price ">
+                            <span  class="itemprice align-middle">5</span>
+                            <span><iconify-icon class="coinIcon coinposition align-middle"  icon="healthicons:coins"></iconify-icon></span>
+                        </div>
+                    </td>
+                    <td class="align-middle">3/1/2023</td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td class="cellCoffee">Latte</td>
-                    <td>5000MMK</td>
-                    <td class="cellCoffee">3/1/2023</td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td class="cellCoffee">Coffee</td>
-                    <td>5000MMK</td>
-                    <td class="cellCoffee">3/1/2023</td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td class="cellCoffee">Coffee</td>
-                    <td>5000MMK</td>
-                    <td class="cellCoffee">3/1/2023</td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td class="cellCoffee">Coffee</td>
-                    <td>5000MMK</td>
-                    <td class="cellCoffee">3/1/2023</td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td class="cellCoffee">Coffee</td>
-                    <td>5000MMK</td>
-                    <td class="cellCoffee">3/1/2023</td>
-                </tr>
+
             </tbody>
         </table>
         <!-- pagination start -->
-        <nav aria-label="Page navigation example">
-            <ul class="pagination  justify-content-center">
+        <nav aria-label="Page navigation example ">
+            <ul class="pagination  justify-content-center mb-5 mt-5">
                 <li class="page-item ">
                     <a class="page-link" href="#" aria-label="Previous">
                         <span class="" aria-hidden="true">&laquo;</span>
@@ -104,10 +80,9 @@
         </nav>
 
         <!-- pagination end -->
-        <div class="btnHistory d-flex justify-content-end">
-        <button class="btn btnColor">Update</button>
-        <button class="btn btnColor">Go Home</button>
-
+        <div class="btnHistory d-flex justify-content-end mt-5 mb-5">
+            <button class="btn btnColor">Update</button>
+            <button class="btn btnColor">Go Home</button>
         </div>
     </div>
 
