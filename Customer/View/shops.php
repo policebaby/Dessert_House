@@ -2,10 +2,11 @@
 ini_set("display_errors", "1");
 session_start();
 
-if (isset($_SESSION["shops"])) {
-    $shops =$_SESSION["shops"];
+include "../Controller/shopsViewController.php";
+if (isset($_SESSION["mainshops"])) {
+    $shops = $_SESSION["mainshops"];
     // echo "ok";
-}else {
+} else {
     echo "error";
 }
 ?>
@@ -50,45 +51,54 @@ if (isset($_SESSION["shops"])) {
         <div class=" flex ">
             <div class="row justify-content-center mx-5 ">
                 <!-- profile block start -->
-                <?php for ($i=0; $i < count($shops) ; $i++) { ?>
-                <a href="./shopProfile.php?id=<?=$shops[$i]["shop_id"]?>" class="boxborder m-5  col-4">
-                    <div class="box ">
-                        <p class="text-center mt-5 fs-4"><?= $shops[$i]["shop_name"] ?></p>
-                    </div>
-                    <div class="circle"> <img class="position-relative rounded-circle " src="../../storages/<?= $shops[$i]["shop_profilepic"] ?>" alt="" width="100%"> </div>
-                    <!-- had to put both width and height 100% because of sample picture -->
-                    <!-- <div class="pic"> <img src="../View/resources/img/Rectangle 381.png" alt="" width="100%" height="100%"></div> -->
-                    <?php
-                    if ($shops[$i]["shop_coverpic"] == "nocover") {
-                        echo '<div class="pic"> <img src="../View/resources/img/Rectangle 381.png" alt="" width="100%" height="100%"></div>';
-                    } else {
-                        echo '<div class="pic"> <img src="../../storages/'.$shops[$i]["shop_coverpic"].'" alt="" width="100%" height="100%"></div>';
-                    }
-                    ?>
-                    <div class="newItem ">New</div>
-                </a>
-            <?php } ?>
+                <?php for ($i = 0; $i < count($shops); $i++) { ?>
+                    <a href="./shopProfile.php?id=<?= $shops[$i]["shop_id"] ?>" class="boxborder m-5  col-4">
+                        <div class="box ">
+                            <p class="text-center mt-5 fs-4"><?= $shops[$i]["shop_name"] ?></p>
+                        </div>
+                        <div class="circle"> <img class="position-relative rounded-circle " src="../../storages/<?= $shops[$i]["shop_profilepic"] ?>" alt="" width="100%"> </div>
+                        <!-- had to put both width and height 100% because of sample picture -->
+                        <!-- <div class="pic"> <img src="../View/resources/img/Rectangle 381.png" alt="" width="100%" height="100%"></div> -->
+                        <?php
+                        if ($shops[$i]["shop_coverpic"] == "nocover") {
+                            echo '<div class="pic"> <img src="../View/resources/img/Rectangle 381.png" alt="" width="100%" height="100%"></div>';
+                        } else {
+                            echo '<div class="pic"> <img src="../../storages/' . $shops[$i]["shop_coverpic"] . '" alt="" width="100%" height="100%"></div>';
+                        }
+                        ?>
+                        <div class="newItem ">New</div>
+                    </a>
+                <?php } ?>
                 <!-- profile block end -->
             </div>
         </div>
         <!-- pagination start -->
-            <nav aria-label="Page navigation example">
-                <ul class="pagination  justify-content-center mt-3 mb-5">
-                    <li class="page-item ">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span class="" aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span class=" " aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+        <nav aria-label="Page navigation example ">
+            <ul class="pagination  justify-content-center mb-5 mt-5">
+                <li class="page-item 
+                <?php
+                if ($page <= 1) {
+                    echo "disabled";
+                }
+                ?>
+                "><a class="page-link text-dark" href="?page=<?= $page - 1 ?>">&laquo;</a></li>
+                <?php
+                for ($i = 1; $i <= $pageList; $i++) { ?>
+                    <li class="page-item 
+                    <?php
+                    if ($page == $i) {
+                        echo "active";
+                    }
+                    ?>"><a class="page-link text-dark" href="?page=<?= $i ?>"><?= $i ?></a></li>
+                <?php } ?>
+                <li class="page-item
+                <?php
+                if ($page >= $pageList) {
+                    echo "disabled";
+                }
+                ?>"><a class="page-link text-dark" href="?page=<?= $page + 1 ?>">&raquo;</a></li>
+            </ul>
+        </nav>
 
         <!-- pagination end -->
 
@@ -97,7 +107,7 @@ if (isset($_SESSION["shops"])) {
 
 
     <!-- footer start -->
-    <?php 
+    <?php
     include "./footer.php"
     ?>
     <!-- footer end -->
