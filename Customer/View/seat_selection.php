@@ -19,6 +19,8 @@
     <link href="../View/resources/css/seat_selection.css?key=<?php echo time(); ?>" type="text/css" rel="stylesheet" />
     <link href="../View/resources/css/root.css?key=<?php echo time(); ?>" type="text/css" rel="stylesheet" />
     <!--css link end-->
+    <script src="./lib/jquery3.6.0.js"></script>
+    <script src="./resources/js/seat_selection.js" defer></script>
     <!--font link start-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,19 +49,19 @@
             <!---->
             <div class="col first_col">
                 <div class="A_table">
-                    <button id="a4" class="tables">A4</button>
-                    <button id="a2" class="tables">A2</button>
-                    <button id="a1" class="tbl">A1</button> <br>
-                    <button id="a5" class="tables">A5</button>
-                    <button id="a3" class="tables">A3</button>
+                    <button id="a4" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)"  class="tables a">A4</button>
+                    <button id="a2" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tables a">A2</button>
+                    <button id="a1" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tbl a">A1</button> <br>
+                    <button id="a5" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tables a">A5</button>
+                    <button id="a3" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tables a">A3</button>
                 </div>
 
                 <div class="B_table">
-                    <button id="b4" class="tables">B4</button>
-                    <button id="b2" class="tables">B2</button>
-                    <button id="b1" class="tbl">B1</button> <br>
-                    <button id="b5" class="tables">B5</button>
-                    <button id="b3" class="tables">B3</button>
+                    <button id="b4" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tables b">B4</button>
+                    <button id="b2" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tables b">B2</button>
+                    <button id="b1" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tbl b">B1</button> <br>
+                    <button id="b5" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tables b">B5</button>
+                    <button id="b3" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tables b">B3</button>
                 </div>
             </div>
             <!---->
@@ -68,26 +70,26 @@
 
                 <div class="low_tbl">
                     <div class="C_table">
-                        <button id="c1" class="tbl_1">C1</button> <br>
+                        <button id="c1" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tbl_1 c">C1</button> <br>
                         <div class="c2c3">
-                            <button id="c2" class="tables">C2</button>
-                            <button id="c3" class="tables">C3</button>
+                            <button id="c2" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tables c">C2</button>
+                            <button id="c3" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tables c">C3</button>
                         </div> <br>
                         <div class="c4c5">
-                            <button id="c4" class="tables">C4</button>
-                            <button id="c5" class="tables">C5</button>
+                            <button id="c4" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tables c">C4</button>
+                            <button id="c5" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tables c">C5</button>
                         </div>
                     </div>
 
                     <div class="D_table">
-                        <button id="d1" class="tbl_1">D1</button> <br>
+                        <button id="d1" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tbl_1 d">D1</button> <br>
                         <div class="d2d3">
-                            <button id="d2" class="tables">D2</button>
-                            <button id="d3" class="tables">D3</button>
+                            <button id="d2" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tables d">D2</button>
+                            <button id="d3" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tables d">D3</button>
                         </div> <br>
                         <div class="d4d5">
-                            <button id="d4" class="tables">D4</button>
-                            <button id="d5" class="tables">D5</button>
+                            <button id="d4" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tables d">D4</button>
+                            <button id="d5" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tables d">D5</button>
                         </div>
                     </div>
                 </div>
@@ -95,19 +97,19 @@
             <!---->
             <div class="col third_col">
                 <div class="F_table">
-                    <button id="f1" class="tbl_2">F1</button>
-                    <button id="f2" class="tables">F2</button>
-                    <button id="f3" class="tables">F3</button> <br>
-                    <button id="f4" class="tables">F4</button>
-                    <button id="f5" class="tables">F5</button>
+                    <button id="f1" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tbl_2 f">F1</button>
+                    <button id="f2" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tables f">F2</button>
+                    <button id="f3" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tables f">F3</button> <br>
+                    <button id="f4" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tables f">F4</button>
+                    <button id="f5" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tables f">F5</button>
                 </div>
 
                 <div class="E_table">
-                    <button id="e1" class="tbl_2">E1</button>
-                    <button id="e2" class="tables">E2</button>
-                    <button id="e3" class="tables">E3</button> <br>
-                    <button id="e4" class="tables">E4</button>
-                    <button id="e5" class="tables">E5</button>
+                    <button id="e1" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tbl_2 e">E1</button>
+                    <button id="e2" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tables e">E2</button>
+                    <button id="e3" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tables e">E3</button> <br>
+                    <button id="e4" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tables e">E4</button>
+                    <button id="e5" data="<?=$booking[$i]["booking_id"]?>" onclick="fun(this)" class="tables e">E5</button>
                 </div>
                 <br>
                 <div class="guide">
