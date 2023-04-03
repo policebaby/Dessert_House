@@ -1,6 +1,10 @@
 <?php
 ini_set("display_errors", "1");
+
 include "../Controller/cartViewController.php";
+
+$_SESSION["cartItemList"]= $cartItemList;
+// print_r($cartItemList);
 
 ?>
 
@@ -37,22 +41,31 @@ include "../Controller/cartViewController.php";
 
     <!-- shoppingcart start -->
     <div class=" text-center ">
-        <p class="cartHeader"> Shopping Cart</p>
-        <table class="table table-hover">
+        <p class="cartHeader mb-5"> Shopping Cart</p>
+        <table class="table table-hover my-5">
             <thead>
                 <tr>
                     <th scope="col">Product</th>
                     <th scope="col">Price</th>
                     <th scope="col">Quantity</th>
                     <th scope="col">Total</th>
-                    <th scope="col"></th>
+                    <!-- <th scope="col"></th> -->
                 </tr>
             </thead>
             <tbody>
 
                 <!-- row start -->
-                <?php for ($i = 0; $i < count($cartItemList); $i++) { ?>
-
+                <?php
+                $subtotal = 0;
+                $listofPrice =[];
+                $listofName =[];
+                for ($i = 0; $i < count($cartItemList); $i++) {
+                    $subtotal += $cartList[$i]["qty"] * $cartItemList[$i]["product_price"];
+                    array_push($listofPrice, ($cartList[$i]["qty"]* $cartItemList[$i]["product_price"]));
+                    // echo "<pre>";
+                    // print_r($listofPrice);
+                    array_push($listofName, ($cartItemList[$i]["product_name"]));
+                ?>
                     <tr class=" text-center align-middle">
                         <th scope="row" class="itemimg cellCoffee">
                             <img src="../../storages/<?= $cartItemList[$i]["product_picture"] ?>" alt="" width="100px" class="">
@@ -77,21 +90,18 @@ include "../Controller/cartViewController.php";
                                 <span><iconify-icon class="coinIcon coinposition" icon="healthicons:coins"></iconify-icon></span>
                             </div>
                         </td>
-                        <td class="cellCoffee">
+                        <!-- <td class="cellCoffee">
                             <button class="btn" id="delete<?= $i ?>" onclick="deleteitem(<?= $i ?>,event,<?= $cartItemList[$i]['product_id'] ?>)" name="delete<?= $i ?>" class="fs-1 align-middle mt-4">
                                 <iconify-icon icon="material-symbols:delete-forever-rounded"></iconify-icon>
                             </button>
-                        </td>
+                        </td> -->
                     </tr>
                 <?php } ?>
                 <!-- row end -->
-
-
-
             </tbody>
         </table>
         <!-- pagination start -->
-        <nav aria-label="Page navigation example ">
+        <!-- <nav aria-label="Page navigation example ">
             <ul class="pagination pMargin justify-content-center">
                 <li class="page-item ">
                     <a class="page-link" href="#" aria-label="Previous">
@@ -107,24 +117,29 @@ include "../Controller/cartViewController.php";
                     </a>
                 </li>
             </ul>
-        </nav>
-
+        </nav> -->
         <!-- pagination end -->
     </div>
     <!-- check out start -->
-    <div class="checkoutBorder container-fluid">
+    <div class="checkoutBorder container-fluid ">
         <div class="">
             <div class="p-5">
                 <div class="mb-5">
-                    <span class="checkoutInfo">Subtotal </span>
-                    <span class="itemprice">: 6</span>
+                    <span class="checkoutInfo">Subtotal :</span>
+                    <span id="subtotal" class="itemprice"><?= $subtotal ?></span>
                     <span><iconify-icon class="coinIcon coinposition" icon="healthicons:coins"></iconify-icon></span>
                 </div>
                 <div class="checkoutInfo">Reserved Seat Number : B1</div>
 
                 <div class="d-flex justify-content-end mt-5 btnCheckoutMD">
-                    <button class="btn btnCheckout ">Check Out
-                        <iconify-icon icon="ic:baseline-arrow-circle-right" class="btnArrow"></iconify-icon></button>
+                    <form action="../Controller/checkoutController.php" method="post">
+                        <input id="subtotalinput" type="hidden" value="<?= $subtotal ?>" name="subtotal" >
+                        <input type="hidden" value="<?=implode(",", $listofPrice)?>" name="itemPrice">
+                        <input type="hidden" value="<?=implode(",", $listofName)?>" name="itemName">
+                        <button type="submit" id="checkout" name="checkout" class="btn btnCheckout mb-5">Check Out
+                            <iconify-icon icon="ic:baseline-arrow-circle-right" class="btnArrow"></iconify-icon>
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>

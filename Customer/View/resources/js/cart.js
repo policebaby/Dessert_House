@@ -1,5 +1,7 @@
 
 let quantity= 0;
+
+let newsubtotal;
 $(document).ready(()=>{
     
     // console.log($("#cartLists").val());
@@ -12,7 +14,12 @@ let carts = JSON.parse(localStorage.getItem("cart")) || [];
 
 function plus(id){
     quantity++
-    let itemprice = $("#itemprice"+id).text()
+    let subtotal = Number($("#subtotal").text());
+    let itemprice = Number($("#itemprice"+id).text());
+    newsubtotal= subtotal+itemprice
+    console.log(newsubtotal);
+    $("#subtotal").text(newsubtotal);
+    $("#subtotalinput").val( String(newsubtotal) );
 
     carts.forEach(item => {
         if(Number(item.id)== id){
@@ -28,19 +35,28 @@ function plus(id){
         localStorage.setItem("cart",JSON.stringify(carts))
         $("#cartLists").val(JSON.stringify(carts));
         }
+        totalcount()
     });
 }
 
 function minus(id){
+    let qty = $("#qty"+id).text();
+    if (qty >=2){
     quantity--
-    let itemprice = $("#itemprice"+id).text()
+    let itemprice = Number($("#itemprice"+id).text());
+    let subtotal = Number($("#subtotal").text());
+    newsubtotal= subtotal-itemprice
+    console.log(newsubtotal);
+    $("#subtotal").text(newsubtotal);
+    $("#subtotalinput").val( String(newsubtotal) );
+
 
     carts.forEach(item => {
         if(Number(item.id)== id){
         let itemqty = Number(item.qty)
         let newqty = itemqty+quantity
         let newtotal = newqty* Number(itemprice)
-
+        
         quantity= 0
         $("#qty"+id).text(newqty)
         $("#total"+id).text(newtotal);
@@ -49,21 +65,28 @@ function minus(id){
         localStorage.setItem("cart",JSON.stringify(carts))
         $("#cartLists").val(JSON.stringify(carts));
         }
+        totalcount()
     });
 }
-
-function deleteitem(id,e,productid){
-   
-    e.preventDefault();
-
-
-
-    $(`#delete${id}`).parent().parent().remove();
-    let newcart= carts.splice(id,1)
-    console.log(newcart);
-    console.log(carts)
-    localStorage.setItem("cart",JSON.stringify(carts))
-    $("#cartLists").val(JSON.stringify(carts));
-
-    location.replace(`?pid=${productid}`);
 }
+$("#checkout").click(function(){
+    localStorage.removeItem("cart");
+})
+
+
+
+// function deleteitem(id,e,productid){
+   
+//     e.preventDefault();
+
+
+
+//     $(`#delete${id}`).parent().parent().remove();
+//     let newcart= carts.splice(id,1)
+//     console.log(newcart);
+//     console.log(carts)
+//     localStorage.setItem("cart",JSON.stringify(carts))
+//     $("#cartLists").val(JSON.stringify(carts));
+
+//     location.replace(`?pid=${productid}`);
+// }

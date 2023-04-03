@@ -75,7 +75,7 @@
                         <button class="dropdown-item" type="button">My Profile</button>
                     </a>
                 </li>
-                <li><a href="../View/buyHistory.php">
+                <li><a href="./buyHistory.php">
                         <button class="dropdown-item" type="button">My Orders</button>
                     </a>
                 </li>

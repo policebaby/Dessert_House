@@ -9,8 +9,8 @@ if (isset($_SESSION["username"])) {
 } else {
     header("Location: ./user_login.php");
 }
-if (isset($_SESSION["shops"])) {
-    $shops =$_SESSION["shops"];
+if (isset($_SESSION["homeshops"])) {
+    $shops =$_SESSION["homeshops"];
     // echo "ok";
 }else {
     echo "error";

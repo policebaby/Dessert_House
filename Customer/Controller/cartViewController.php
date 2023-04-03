@@ -31,25 +31,24 @@ if (isset($_POST["cartItems"])) {
     $sql->bindValue(":id", implode(",", $ids));
     $sql->execute();
     $cartItemList = $sql->fetchAll(PDO::FETCH_ASSOC);
-}
-else if (isset($_SESSION["cartLists"])) {
+} else if (isset($_SESSION["cartLists"])) {
     $cartList = $_SESSION["cartLists"];
 }
 
 if (isset($_GET["pid"])) {
-   $del = $_GET["pid"];
+    $del = $_GET["pid"];
 
     $index = -1;
-   foreach ($_SESSION["cartLists"] as $key => $value) {
-    if($value["id"]== $del){
-            $index= $key;
+    foreach ($_SESSION["cartLists"] as $key => $value) {
+        if ($value["id"] == $del) {
+            $index = $key;
             break;
+        }
     }
-   }
 
-   if($index != -1){
-    array_splice($_SESSION["cartLists"],$index,1);
-   }
+    if ($index != -1) {
+        array_splice($_SESSION["cartLists"], $index, 1);
+    }
 
     $cartList = $_SESSION["cartLists"];
 
@@ -74,4 +73,6 @@ if (isset($_GET["pid"])) {
     $sql->bindValue(":id", implode(",", $ids));
     $sql->execute();
     $cartItemList = $sql->fetchAll(PDO::FETCH_ASSOC);
-} 
+   
+
+}

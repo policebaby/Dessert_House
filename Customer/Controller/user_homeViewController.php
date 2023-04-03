@@ -12,7 +12,7 @@ $sql = $pdo->prepare(
 );
 $sql->execute();
 $result = $sql->fetchAll(PDO::FETCH_ASSOC);
-$_SESSION["shops"]= $result;
+$_SESSION["homeshops"]= $result;
 echo "<pre>";
 print_r($result);
 header("Location: ../View/user_home.php");

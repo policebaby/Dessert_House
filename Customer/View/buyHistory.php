@@ -1,5 +1,15 @@
 <?php
+ini_set("display_errors", "1");
 
+
+include "../Controller/orderViewController.php";
+if (isset($_SESSION["orderedList"])) {
+    $orderedList = $_SESSION["orderedList"];
+    // echo "<pre>";
+    // print_r($orderedList);
+} else {
+    echo "error";
+}
 
 ?>
 
@@ -46,43 +56,57 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row" class="align-middle cellCoffee">1</th>
-                    <td class=" align-middle">Coffee</td>
-                    <td class="cellCoffee">
-                        <div class="price ">
-                            <span  class="itemprice align-middle">5</span>
-                            <span><iconify-icon class="coinIcon coinposition align-middle"  icon="healthicons:coins"></iconify-icon></span>
-                        </div>
-                    </td>
-                    <td class="align-middle">3/1/2023</td>
-                </tr>
+                <?php
+                $count = (($page-1) * $rowLimit) +1;
+                for ($i = 0; $i < count($orderedList); $i++) { ?>
+
+                    <tr>
+                        <th scope="row" class="align-middle cellCoffee"><?=$count++?></th>
+                        <td class=" align-middle"><?=$orderedList[$i]["items"]?></td>
+                        <td class="cellCoffee">
+                            <div class="price ">
+                                <span class="itemprice align-middle"><?=$orderedList[$i]["grand_total"]?></span>
+                                <span><iconify-icon class="coinIcon coinposition align-middle" icon="healthicons:coins"></iconify-icon></span>
+                            </div>
+                        </td>
+                        <td class="align-middle"><?=$orderedList[$i]["create_date"]?></td>
+                    </tr>
+                <?php } ?>
 
             </tbody>
         </table>
         <!-- pagination start -->
         <nav aria-label="Page navigation example ">
             <ul class="pagination  justify-content-center mb-5 mt-5">
-                <li class="page-item ">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span class="" aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
-                <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span class=" " aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
+            <li class="page-item 
+                <?php
+                if ($page <= 1) {
+                    echo "disabled";
+                }
+                ?>
+                "><a class="page-link text-dark" href="?page=<?= $page - 1 ?>">&laquo;</a></li>
+                <?php
+                for ($i = 1; $i <= $pageList; $i++) { ?>
+                    <li class="page-item 
+                    <?php
+                        if ($page == $i) {
+                            echo "active";
+                        }
+                        ?>"><a class="page-link text-dark" href="?page=<?= $i ?>"><?= $i ?></a></li>
+                <?php } ?>
+                <li class="page-item
+                <?php
+                if ($page >= $pageList) {
+                    echo "disabled";
+                }
+                ?>"><a class="page-link text-dark" href="?page=<?= $page + 1 ?>">&raquo;</a></li>
             </ul>
         </nav>
 
         <!-- pagination end -->
         <div class="btnHistory d-flex justify-content-end mt-5 mb-5">
-            <button class="btn btnColor">Update</button>
-            <button class="btn btnColor">Go Home</button>
+            <a href="./user_home.php">
+            <button class="btn btnColor">Go Home</button></a>
         </div>
     </div>
 
