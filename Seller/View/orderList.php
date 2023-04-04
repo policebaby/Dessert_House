@@ -59,7 +59,7 @@ include "../Controller/orderListController.php";
                         </a>
 
                         <!-- meun icon from left nav -->
-                        <a href="./sellerNewProductMenu.php" class="nav-text my-md-4 my-sm-4">
+                        <a href="./sellerNewProductMenu.php" class="nav-text my-md-5 my-sm-4">
                             <span>
                                 <iconify-icon icon="material-symbols:menu-book-sharp" class="icons"></iconify-icon>
                             </span>
@@ -75,7 +75,7 @@ include "../Controller/orderListController.php";
                         </a>
 
                         <!-- sold history icon from left nav -->
-                        <a href="./soldHistory.php" class="nav-text my-md-4 my-sm-4">
+                        <a href="./soldHistory.php" class="nav-text my-md-5 my-sm-4">
                             <span>
                                 <iconify-icon icon="mdi:clipboard-text-clock" class="icons"></iconify-icon>
                             </span>
@@ -91,7 +91,7 @@ include "../Controller/orderListController.php";
                         </a>
 
                         <!-- feedback icon -->
-                        <a href="./feedbackDetails.php" class="nav-text my-md-4 my-sm-4">
+                        <a href="./feedbackDetails.php" class="nav-text my-md-5 my-sm-4">
                             <span>
                                 <iconify-icon icon="ri:feedback-line" class="icons"></iconify-icon>
                             </span>
@@ -128,12 +128,16 @@ include "../Controller/orderListController.php";
                                 <td class="td-text fw-bold"><?= $orderResult[$i]["create_date"] ?></td>
                                 <td class="td-text fw-bold"><?= $orderResult[$i]["order_id"] ?></td>
                                 <td class="td-text fw-bold types">
-                                    <span><?= $orderResult[$i]["items"] ?></span>
-                                    <span>
-                                        <ion-icon name="chevron-down-outline" class="down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="showItemName('<?= $orderResult[$i]['items'] ?>', '<?= $orderResult[$i]['order_id'] ?>', '<?= $orderResult[$i]['create_date'] ?>', '<?= $orderResult[$i]['reserve_time'] ?>', '<?= $orderResult[$i]['total_price'] ?>')"></ion-icon>
-                                    </span>
+                                    <span><?= explode(',', $orderResult[$i]['items'])[0] ?></span>
+                                    <?php if (count(explode(',', $orderResult[$i]['items'])) > 1) { ?>
+                                        <span>
+                                        <?php } ?>
+                                        <span>
+                                            <ion-icon name="chevron-down-outline" class="down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" 
+                                            onclick="showItemName('<?= $orderResult[$i]['items'] ?>', '<?= $orderResult[$i]['grand_total'] ?>', '<?= $orderResult[$i]['reserve_time'] ?>')"></ion-icon>
+                                        </span>
                                 </td>
-                                <td class="td-text fw-bold title-name"><?= $orderResult[$i]["total_price"] ?></td>
+                                <td class="td-text fw-bold title-name"><?= $orderResult[$i]["grand_total"] ?></td>
                                 <td class="td-text fw-bold title-name"><?= $orderResult[$i]["reserve_time"] ?></td>
                                 <td class="td-text fw-bold">
                                     <?php
@@ -153,68 +157,68 @@ include "../Controller/orderListController.php";
                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                             <div class="modal-content">
+                            
+                            
                                 <div class="small-pop mt-3 ms-3">
                                     <p class="fw-bold">Reservation Time : <span id="reservation"></span></p>
                                 </div>
                                 <div class="modal-header">
-                                    <h5 class="modal-title text-decoration-underline" id="staticBackdropLabel">Items</h5>
+                                    <h5 class="modal-title text-decoration-underline ms-2" id="staticBackdropLabel">Items</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body">
-                                    <div>
-                                        <span id="itemName" class="items_name"></span>
-                                        <span class="total_items me-5">x 2</span>
-                                    </div>
-                                </div>
-                                <div class="small-pop mb-4">
-                                    <hr>
-                                    <span class="ms-3">Total</span>
-                                    <span id="totalPrice" class="total_items me-5"></span>
-                                </div>
+
+                                <div class="modal-body" id="itemName"></div>
+                            
+                            <div class="small-pop mb-4">
+                                <hr>
+                                <span class="ms-3">Total</span>
+                                <span id="totalPrice" class="total_items me-5"></span>
+                            </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            
 
-                <!-- for pagination -->
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination  justify-content-center">
-                        <li class="page-item 
+            <!-- for pagination -->
+            <nav aria-label="Page navigation example">
+                <ul class="pagination  justify-content-center">
+                    <li class="page-item 
                         <?php
                         if ($page <= 1) {
                             echo "disabled";
                         }
                         ?>">
-                            <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
-                                <span class="great" aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <?php
-                        for ($i = 1; $i <= $pageList; $i++) { ?>
-                            <li class="page-item 
+                        <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                            <span class="great" aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <?php
+                    for ($i = 1; $i <= $pageList; $i++) { ?>
+                        <li class="page-item 
                             <?php
                             if ($page == $i) {
                                 echo "active";
                             }
                             ?>">
-                                <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
-                            </li>
-                        <?php } ?>
-                        <li class="page-item 
+                            <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+                        </li>
+                    <?php } ?>
+                    <li class="page-item 
                         <?php
                         if ($page >= $pageList) {
                             echo "disabled";
                         }
                         ?>">
-                            <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
-                                <span class="less " aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                        <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
+                            <span class="less " aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
             </div>
-
         </div>
+    </div>
     </div>
     </div>
     <script src="./resources/js/OrderListModal.js"></script>

@@ -120,6 +120,9 @@ div textarea {
     font-size:3.6em;
     color:rgb(243, 220, 6);
 }
+.ReplyBtn{
+    border-radius:5px !important;
+}
 @media screen and (max-width:720px){
     body{
         overflow-x: hidden;
@@ -267,5 +270,9 @@ div textarea {
     }
     .cent{
         margin-top:0.6em !important;
+    }
+    .pagination > li a {
+        font-size:0.5em !important;
+        padding:5px !important;
     }
 }

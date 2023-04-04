@@ -187,19 +187,74 @@ include "../Controller/sellerDashboardController.php";
                         <div class="blue-card mb-4">
                             <?php
                             // Assume $feedbacks is an array of feedback data
-                            foreach ($reviewResult as $feedback) {
-                                $username = $feedback['user_name'];
-                                $feedback_text = $feedback['user_review'];
-                            ?>
-                                <div class="feedback_card">
-                                    <div class="detail ms-3 mt-3 mb-0">
+                        //     foreach ($reviewResult as $feedback) {
+                        //         $username = $feedback['user_name'];
+                        //         $date = $feedback['create_date'];
+                        // $replyDate = date('Y-m-d');
+                        // $reviewID = $feedback['review_id'];
+                        // $userEmail = $feedback['user_email'];
+                        // $feedback_text = $feedback['user_review'];
+                        //     ?>
+                                <!-- <div class="feedback_card" id="<?= $reviewID ?>"> -->
+                                    <!-- <div class="detail ms-3 mt-3 mb-0">
                                         <div class="dis me-3 mt-2"></div>
                                         <p class="user_name mt-1 mb-0"><?= $username ?></p>
                                     </div>
                                     <p class="ms-md-5 ms-sm-5 user_text mt-0"><?= $feedback_text ?></p>
-                                    <button class="replyBtn">Reply this feedback</button>
+                                    <button class="replyBtn">Reply thank</button> -->
+                                    <!-- <div class="details mt-2">
+                                <div class="dis me-1 mt-md-2 mt-sm-2 ms-2"></div>
+                                <span class="ms-md-3 ms-sm-3 fw-bold"><?= $username ?></span>
+                            </div>
+                            <span class="ms-md-5 ms-sm-5 date"><?= $date ?></span>
+                            <p class="ms-md-5 ms-sm-5 user-text">
+                                <?= $feedback_text ?>
+                            </p>
+                            <form action="../Controller/replyEmailController.php" method="POST">
+                                <input type="hidden" name="userEmail" value="<?= $userEmail ?>">
+                                <input type="hidden" name="reviewID" value = "<?= $reviewID ?>">
+                                <input type="submit" name="submit" value="Reply Thank" class="ms-5 px-3 bg-primary text-white replyBtn">
+                            </form>
                                 </div>
-                            <?php } ?>
+                            ?php } ?> -->
+                            <?php
+                            
+                    foreach ($reviewResult as $feedback) {
+                        $username = $feedback['user_name'];
+                        $date = $feedback['create_date'];
+                        $replyDate = date('Y-m-d');
+                        $feedback_text = $feedback['user_review'];
+                        $reviewID = $feedback['review_id'];
+                        $userEmail = $feedback['user_email'];
+                    ?>
+                    
+                    <?php 
+                    $limit = 80;
+                            
+                    if (strlen($feedback_text) > $limit) {
+                        $shortString = substr($feedback_text, 0, $limit) . '........';
+                    } else {
+                        $shortString = $feedback_text;
+                    }
+                    
+                    ?>
+                        <div class="feedback_card" id="<?= $reviewID ?>">
+                            <div class="detail ms-3 mt-3 mb-0">
+                                <div class="dis me-3 mt-2"></div>
+                                <span class="user_name mt-1 mb-0"><?= $username ?></span>
+                            </div>
+                            <span class="ms-md-5 ms-sm-5 user_text"><?= $date ?></span>
+                            <p class="ms-md-5 ms-sm-5 user_text mt-0">
+                                <?= $shortString ?>
+                            </p>
+                            <form action="../Controller/replyEmailController.php" method="POST">
+                                <input type="hidden" name="userEmail" value="<?= $userEmail ?>">
+                                <input type="hidden" name="reviewID" value = "<?= $reviewID ?>">
+                                <input type="submit" name="thank" value="Reply Thank" class="ms-5 px-3 bg-primary text-white replyBtn">
+                            </form>
+
+                        </div>
+                    <?php } ?>
                         </div>
                         <a href="../Controller/feedbackDetailController.php" class="view mt-5 text-decoration-none ">View All</a>
                     </span>

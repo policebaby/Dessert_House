@@ -29,7 +29,6 @@ body{
 }
 .nav-text{
     display:flex;
-    flex-wrap: wrap;
     text-decoration: none;
     opacity:0.5;
 }

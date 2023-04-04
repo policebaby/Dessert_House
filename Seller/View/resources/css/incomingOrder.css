@@ -165,7 +165,14 @@ table tr:nth-child(odd) {
         width:100%;
     }
     td{
-        padding:0.1em !important;
+        font-size:0.7em !important;
+        padding:0.2em !important;
+    }
+    .td-text{
+        font-size:0.8em !important;
+        /* padding:0.2em !important; */
+        vertical-align: middle;
+        text-align:center;
     }
     .seeMore,.small-pop{
         display:block;
@@ -204,7 +211,7 @@ table tr:nth-child(odd) {
     }
     td{
         padding-left:2px !important;
-        font-size:0.6em;
+        font-size:0.5em;
     }
     .td-text{
         font-size:0.5em !important;

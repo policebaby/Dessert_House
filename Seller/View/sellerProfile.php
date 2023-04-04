@@ -87,7 +87,7 @@ include "../Controller/sellerProfileController.php";
                             <span>
                                 <iconify-icon icon="ri:feedback-line" class="icons"></iconify-icon>
                             </span>
-                            <span class="title ms-md-1">Customers' Feedbacks</span>
+                            <span class="title ms-md-3">Customers' Feedbacks</span>
                         </a>
 
                         <!-- logout icon from left nav-->

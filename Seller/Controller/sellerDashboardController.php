@@ -16,57 +16,72 @@ if (isset($_SESSION["shopID"])) {
         "
         SELECT COUNT(product_id) FROM m_product 
         WHERE 
-        shop_id = :shopID
+        shop_id = :shopID AND del_flg=0
         "
     );
     $sql->bindValue(":shopID", $shopID);
     $sql->execute();
     $itemResult = $sql->fetchAll(PDO::FETCH_ASSOC);
     $itemCount = $itemResult[0]['COUNT(product_id)'];
-    // print_r( $itemResult);
 
+
+    // total order
     $sql = $pdo->prepare(
         "
-        SELECT COUNT(status) FROM t_order 
-        WHERE 
-        shop_id = :shopID AND status = 1
+        SELECT t_order.status, COUNT(*) AS num_orders
+FROM t_order
+JOIN t_orderdetail ON t_order.user_id = t_orderdetail.user_id
+WHERE t_orderdetail.shop_id = :shopID
+GROUP BY t_order.status;
+
         "
     );
     $sql->bindValue(":shopID", $shopID);
     $sql->execute();
     $orderResult = $sql->fetchAll(PDO::FETCH_ASSOC);
-    $totalOrder = $orderResult[0]['COUNT(status)'];
-    // print_r( $orderResult);
 
+    foreach ($orderResult as $row) {
+        $status = $row['status'];
+        $totalOrder = $row['num_orders'];
+    }
+
+    // for sold count
     $sql = $pdo->prepare(
         "
-        SELECT COUNT(items) FROM t_order 
-        WHERE 
-        shop_id = :shopID AND status = 1
+        SELECT SUM(t_orderdetail.quantity) AS total_quantity
+        FROM t_orderdetail
+        JOIN t_order ON t_orderdetail.user_id = t_order.user_id
+        WHERE t_orderdetail.shop_id = :shopID
+        AND t_order.status = :status;
+        "
+    );
+    $sql->bindValue(":shopID", $shopID);
+    $sql->bindValue(":status", $status);
+    $sql->execute();
+    $result = $sql->fetch(PDO::FETCH_ASSOC);
+    
+    $soldCount = $result['total_quantity'];
+    
+    // pending Order count
+    $sql = $pdo->prepare(
+        "
+        SELECT COUNT(DISTINCT t_order.order_id) AS pending
+    FROM t_order
+    JOIN t_orderdetail ON t_order.user_id = t_orderdetail.user_id
+    WHERE t_orderdetail.shop_id = :shopID AND t_order.status = 2;
+
         "
     );
     $sql->bindValue(":shopID", $shopID);
     $sql->execute();
-    $soldResult = $sql->fetchAll(PDO::FETCH_ASSOC);
-    $soldCount = $soldResult[0]['COUNT(items)'];
-    // print_r( $pendingOrder);
-
-    $sql = $pdo->prepare(
-        "
-        SELECT COUNT(order_id) FROM t_order 
-        WHERE 
-        shop_id = :shopID 
-        "
-    );
-    $sql->bindValue(":shopID", $shopID);
-    $sql->execute();
-    $pendingResult = $sql->fetchAll(PDO::FETCH_ASSOC);
-    $pendingOrder = $pendingResult[0]['COUNT(order_id)'];
-    // print_r( $pendingOrder);
+    $Pendresult = $sql->fetch(PDO::FETCH_ASSOC);
+    
+    $pendingOrder = $Pendresult['pending'];
+    
 
 
 
-    // Calculate the total number of ratings for the shop
+    // // Calculate the total number of ratings for the shop
     $sql = $pdo->prepare(
             "
         SELECT COUNT(user_id) FROM t_rating
@@ -77,8 +92,9 @@ if (isset($_SESSION["shopID"])) {
     $sql->execute();
     $totalResult = $sql->fetch(PDO::FETCH_ASSOC);
     $totalRatings = $totalResult['COUNT(user_id)'];
-    
-    
+
+
+    // rating count
     $sql = $pdo->prepare(
         "SELECT COUNT(DISTINCT t.user_id) AS num_users
         FROM t_rating AS t
@@ -89,7 +105,8 @@ if (isset($_SESSION["shopID"])) {
     $sql->execute();
     $ShopRating = $sql->fetchAll(PDO::FETCH_ASSOC);
     $shopRatingCount = $ShopRating[0]['num_users'];
-    
+
+    // smile count
     $sql = $pdo->prepare(
         "SELECT COUNT(DISTINCT t.user_id) AS num_users
         FROM t_rating AS t
@@ -101,15 +118,15 @@ if (isset($_SESSION["shopID"])) {
     $Sresult = $sql->fetchAll(PDO::FETCH_ASSOC);
     // print_r($Sresult);
     $smileCount = $Sresult[0]['num_users'];
-    
+
     // generate username from user_id
     $sql = $pdo->prepare(
             "
-    SELECT t_review.review_id, m_user.user_name, t_review.user_review
+    SELECT t_review.review_id, m_user.user_name,m_user.user_email, t_review.create_date, t_review.user_review
     FROM t_review
     JOIN m_user
     ON t_review.user_id = m_user.user_id
-    WHERE shop_id = :shopID 
+    WHERE shop_id = :shopID AND t_review.del_flg = 0
     ORDER BY review_id DESC
     LIMIT 3
     "

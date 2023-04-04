@@ -51,7 +51,7 @@ include "../Controller/incomingOrderController.php";
                         <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
                     </a>
                     <!-- sidebar nav -->
-                    <div class="nav-icons ms-md-4 ms-sm-3 mt-sm-4">
+                    <div class="nav-icons ms-md-2 ms-sm-3 mt-sm-4">
                         <!-- profile icon from left nav -->
                         <a href="./sellerProfile.php" class="nav-text">
                             <span>
@@ -118,10 +118,10 @@ include "../Controller/incomingOrderController.php";
                             <td>No.</td>
                             <td>Date</td>
                             <td>Order No.</td>
-                            <td class="col-md-2 title-name">Items</td>
+                            <td class="col-md-2 col-sm-2">Items</td>
                             <td class="title-name">Total Price</td>
                             <td class="title-name">Reservation Time</td>
-                            <td class="title-name">Status</td>
+                            <td>Status</td>
                             <td class="col-3"></td>
                             <td class="seeMore"></td>
                         </tr>
@@ -132,17 +132,17 @@ include "../Controller/incomingOrderController.php";
                                 <td class="td-text fw-bold"><?= $count++ ?></td>
                                 <td class="td-text fw-bold"><?= $result[$i]["create_date"] ?></td>
                                 <td class="td-text fw-bold"><?= $result[$i]["order_id"] ?></td>
-                                <td class="td-text fw-bold title-name">
-                                    <span class="types">
-                                        <span><?= $result[$i]["items"] ?></span>
-                                    </span>
+                                <td class="td-text fw-bold types">
+                                <span><?= explode(',', $result[$i]['items'])[0] ?></span>
+                                    <?php if (count(explode(',', $result[$i]['items'])) > 1) { ?>
+                                        <span>
+                                        <?php } ?>
+                                        
                                     <ion-icon name="chevron-down-outline" class="down" data-bs-toggle="modal" 
-                                    data-bs-target="#staticBackdrop" onclick="showItemName(
-                                        '<?= $result[$i]['items'] ?>',
-                                        '<?= $result[$i]['total_price'] ?>'
-                                        )"></ion-icon>
+                                    data-bs-target="#staticBackdrop" onclick="showItemName('<?= $result[$i]['items'] ?>','<?= $result[$i]['grand_total'] ?>')"></ion-icon>
+                                    
                                 </td>
-                                <td class="td-text fw-bold title-name"><?= $result[$i]["total_price"] ?></td>
+                                <td class="td-text fw-bold title-name"><?= $result[$i]["grand_total"] ?></td>
                                 <td class="td-text fw-bold title-name"><?= $result[$i]["reserve_time"] ?></td>
                                 <td class="td-text fw-bold title-name">Pending</td>
                                 <td class="btn2">
@@ -161,7 +161,7 @@ include "../Controller/incomingOrderController.php";
                                     '<?= $result[$i]['order_id'] ?>',
                                     '<?= $result[$i]['create_date'] ?>',
                                     '<?= $result[$i]['reserve_time'] ?>',
-                                    '<?= $result[$i]['total_price'] ?>')">See More</a>
+                                    '<?= $result[$i]['grand_total'] ?>')">See More</a>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -184,7 +184,6 @@ include "../Controller/incomingOrderController.php";
                                 <div class="modal-body">
                                     <div>
                                         <span id="itemName" class="items_name"></span>
-                                        <span class="total_items me-5">x 2</span>
                                     </div>
                                 </div>
                                 <div class="small-pop">
@@ -197,8 +196,6 @@ include "../Controller/incomingOrderController.php";
                         </div>
                     </div>
                 </div>
-
-
 
                 <!-- for pagination -->
                 <nav aria-label="Page navigation example">

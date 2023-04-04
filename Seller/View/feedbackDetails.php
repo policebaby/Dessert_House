@@ -8,9 +8,9 @@ if (isset($_SESSION["sellerName"])) {
 }
 
 //  check if $review variable is set and not null
-    if (isset($_SESSION['review']) && !is_null($_SESSION['review'])) {
-        $review = $_SESSION['review'];
-    }
+if (isset($_SESSION['review']) && !is_null($_SESSION['review'])) {
+    $review = $_SESSION['review'];
+}
 ?>
 
 
@@ -48,7 +48,7 @@ if (isset($_SESSION["sellerName"])) {
             <nav class="col-2 mt-0">
                 <div class="me-0 ms-0 edit_nav">
                     <a href="./sellerDashboard.php" class="nav_logo">
-                        <img src="./resources/images/Ellipse 3.png" alt="logo" class="web_logo mt-5">
+                        <img src="./resources/images/Ellipse 3.png" alt="logo" class="web_logo mt-md-5 mt-sm-2">
                         <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
                     </a>
                     <!-- sidebar nav -->
@@ -200,16 +200,13 @@ if (isset($_SESSION["sellerName"])) {
                         <span class="mt-md-2 mt-sm-2 ms-md-3 ms-sm-3 fw-bold total-review"><?= $crossCount ?> review</span>
                 </div>
             <?php } ?>
-
                         </div>
                     </div>
                 </div>
-
                 <!-- review cards -->
                 <p class="fw-bold mt-2 ms-md-3 ms-sm-3 review-title text-center">Reviews</p>
                 <div class="d-flex flex-direction-column justify-content-center two-cards">
                     <?php
-                    
                     foreach ($reviewResult as $feedback) {
                         $username = $feedback['user_name'];
                         $date = $feedback['create_date'];
@@ -217,53 +214,62 @@ if (isset($_SESSION["sellerName"])) {
                         $feedback_text = $feedback['user_review'];
                         $reviewID = $feedback['review_id'];
                         $userEmail = $feedback['user_email'];
-                        // echo $userEmail;
-                        
-                        
                     ?>
-                        <div class="each-review ms-md-3 ms-sm-3 mt-md-3" id="<?= $reviewID ?>">
+
+                        <div class="each-review ms-md-3 ms-sm-3 mt-md-3 my-sm-2" id="<?= $reviewID ?>">
                             <div class="details mt-2">
                                 <div class="dis me-1 mt-md-2 mt-sm-2 ms-2"></div>
                                 <span class="ms-md-3 ms-sm-3 fw-bold"><?= $username ?></span>
-                                <img src="./resources/images/happy-face.png" class="ha-face">
                             </div>
                             <span class="ms-md-5 ms-sm-5 date"><?= $date ?></span>
                             <p class="ms-md-5 ms-sm-5 user-text">
                                 <?= $feedback_text ?>
                             </p>
-                            <div id="reply-container">
-                            <span class="reply-text mb-1" id="reply-text">Reply</span>
-                            <input type="hidden" name="reviewID" value="<?= $reviewID ?>">
-                            </div>
+                            <form action="../Controller/replyEmailController.php" method="POST">
+                                <input type="hidden" name="userEmail" value="<?= $userEmail ?>">
+                                <input type="hidden" name="reviewID" value = "<?= $reviewID ?>">
+                                <input type="submit" name="submit" value="Reply Thank" class="ms-5 px-3 bg-primary text-white replyBtn">
+                            </form>
 
-                            <div id="sellerReply" >
-                                
-                                <hr class="hr-line">
-                                <!-- seller reply -->
-                                    <div class="details mt-1 reply-card">
-                                        <div class="dis me-1 ms-2"></div>
-                                        <span class="ms-md-3 ms-sm-3 fw-bold " name="sellerName"><?= $sellerName ?></span>
-                                    </div>
-                                    <span class="ms-md-5 ms-sm-5 date"><?= $replyDate ?></span>
-                                    <form action="../Controller/sellerReplyTextController.php" method="post">
-                                    <?php 
-                                    if(isset($_SESSION['review'] )){
-                                        $sellerReplyTexter = $_SESSION['review'];
-                                        
-                                    }?>
-                                    <textarea class="form-control" name="replyText" rows="3"><?php echo isset($sellerReplyTexter["seller_reply"]) ? $sellerReplyTexter["seller_reply"] : '' ?></textarea>
-
-                                    <!-- <textarea class="form-control" name="replyText" rows="3"><?php echo $sellerReplyTexter["seller_reply"] ?></textarea> -->
-
-                                        <div class="mt-auto">
-                                            <button type="submit" class="btn btn-primary send-button mt-2" name="sendReply" id="sendBtn">Send</button>
-                                        </div>
-                                        <input type="hidden" value="<?= $userEmail ?>" name="userEmail">
-                                    </form>
-                            </div>
                         </div>
                     <?php } ?>
                 </div>
+            <!-- for pagination -->
+            <nav aria-label="Page navigation example" class="mt-2 mb-sm-5">
+                    <ul class="pagination  justify-content-center">
+                        <li class="page-item 
+                        <?php
+                        if ($page <= 1) {
+                            echo "disabled";
+                        }
+                        ?>">
+                            <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                                <span class="great" aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <?php
+                        for ($i = 1; $i <= $pageList; $i++) { ?>
+                            <li class="page-item 
+                            <?php
+                            if ($page == $i) {
+                                echo "active";
+                            }
+                            ?>">
+                                <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+                            </li>
+                        <?php } ?>
+                        <li class="page-item 
+                        <?php
+                        if ($page >= $pageList) {
+                            echo "disabled";
+                        }
+                        ?>">
+                            <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
+                                <span class="less " aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>

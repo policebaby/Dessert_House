@@ -125,12 +125,16 @@ include "../Controller/soldHistoryController.php";
                             <td class="td-text fw-bold"><?= $soldResult[$i]["create_date"] ?></td>
                             <td class="td-text fw-bold"><?= $soldResult[$i]["order_id"] ?></td>
                             <td class="td-text fw-bold items">
-                                <span><?= $soldResult[$i]["items"] ?></span>
+                                <span><?= explode(',', $soldResult[$i]['items'])[0] ?></span>
+                                    <?php if (count(explode(',', $soldResult[$i]['items'])) > 1) { ?>
+                                        <span>
+                                        <?php } ?>
                                 <span>
-                                <ion-icon name="chevron-down-outline" class="down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="showItemName('<?= $soldResult[$i]['items'] ?>', '<?= $soldResult[$i]['order_id'] ?>', '<?= $soldResult[$i]['create_date'] ?>', '<?= $soldResult[$i]['reserve_time'] ?>', '<?= $soldResult[$i]['total_price'] ?>')"></ion-icon>
+                                <ion-icon name="chevron-down-outline" class="down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" 
+                                onclick="showItemName('<?= $soldResult[$i]['items'] ?>', '<?= $soldResult[$i]['grand_total'] ?>','<?= $soldResult[$i]['reserve_time'] ?>')"></ion-icon>
                                 </span>
                             </td>
-                            <td class="td-text fw-bold"><?= $soldResult[$i]["total_price"] ?></td>
+                            <td class="td-text fw-bold"><?= $soldResult[$i]["grand_total"] ?></td>
                             <td class="td-text fw-bold title-none"><?= $soldResult[$i]["reserve_time"] ?></td>
                         </tr>
                         <?php } ?>
@@ -149,8 +153,7 @@ include "../Controller/soldHistoryController.php";
                             </div>
                             <div class="modal-body">
                                 <div>
-                                    <span id="itemName" class="items_name">Latte</span>
-                                    <span class="total_items me-5">x 2</span>
+                                    <span id="itemName" class="items_name"></span>
                                 </div>
                             </div>
                             <div class="mb-4">
@@ -202,7 +205,7 @@ include "../Controller/soldHistoryController.php";
         </div>
     </div>
     </div>
-    <script src="./resources/js/OrderListModal.js"></script>
+    <script src="./resources/js/soldHistory.js"></script>
 </body>
 
 </html>

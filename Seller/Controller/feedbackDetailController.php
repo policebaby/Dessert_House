@@ -3,6 +3,17 @@
 
 session_start();
 
+if(isset($_GET["page"])){
+    $page = $_GET["page"];
+}else{
+    $page = 1;
+}
+
+$rowLimit = 3;
+$pageStart = ($page-1) * $rowLimit; 
+$pageStart = ($pageStart<0)? 0 : $pageStart;
+
+
 // call database
 include("../Model/dbConnection.php");
 
@@ -88,49 +99,45 @@ if(isset($_SESSION["shopID"])){
     // print_r($Sresult);
     $crossCount = $Eresult[0]['num_users'];
     
-    
-    // for review card
+    // for pagination
     $sql = $pdo->prepare
     (
     "
-    SELECT t_review.review_id, m_user.user_name, m_user.user_email, t_review.user_review, t_review.create_date,t_review.update_date, m_user.user_id
+    SELECT *
     FROM t_review
     JOIN m_user
     ON t_review.user_id = m_user.user_id
     WHERE shop_id = :shopID 
     ORDER BY review_id DESC
-    LIMIT 2
+    "
+    );
+    $sql->bindValue(":shopID", $shopID);
+    $sql->execute();
+    $totalResult = $sql->fetchAll(PDO::FETCH_ASSOC);
+    
+    
+    // for review card
+    $sql = $pdo->prepare
+    (
+    "
+    SELECT *
+    FROM t_review
+    JOIN m_user
+    ON t_review.user_id = m_user.user_id
+    WHERE shop_id = :shopID AND t_review.del_flg = 0
+    ORDER BY review_id DESC
+    LIMIT $pageStart , $rowLimit
     "
     );
     $sql->bindValue(":shopID", $shopID);
     $sql->execute();
     $reviewResult = $sql->fetchAll(PDO::FETCH_ASSOC);
-    
-    $_SESSION["userID"] = $reviewResult[0]["user_id"];
-    $userID = $_SESSION["userID"];
 
-    $_SESSION["userEmail"] = $reviewResult[0]["user_email"];
-    $yourEmail = $_SESSION["userEmail"];
-
-    $_SESSION["reviewID"] = $reviewResult[0]["review_id"];
     $reviewID =$_SESSION["reviewID"];
-    // echo "<pre>";
-    // print_r($reviewResult);
 
-    $sql= $pdo->prepare
-(
-    "
-    SELECT seller_reply FROM t_seller_reply 
-    WHERE shop_id = :shopID AND user_id = :userID AND review_id = :reviewID
-    ORDER BY update_date DESC
-    LIMIT 1
-    "
-);
-$sql->bindValue(":shopID", $shopID);
-$sql->bindValue(":userID", $userID);
-$sql->bindValue(":reviewID", $reviewID);
-$sql->execute();
-$review = $sql->fetch(PDO::FETCH_ASSOC);
-$_SESSION['review'] = $review;
+    $pageList = ceil(count($totalResult)/$rowLimit);
 
+
+
+    
 }

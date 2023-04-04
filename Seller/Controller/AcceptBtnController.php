@@ -17,10 +17,10 @@ if (isset($_POST['AcceptBtn'])) {
         "
         UPDATE t_order SET 
         status = 1 
-        WHERE shop_id = :shopID AND order_id = :orderID
+        WHERE order_id = :orderID
         "
     );
-    $sql->bindValue(":shopID",$shopID);
+    
     $sql->bindValue(":orderID",$order_id);
     $sql->execute();
 
@@ -31,11 +31,11 @@ if (isset($_POST['AcceptBtn'])) {
     (
         "
         UPDATE t_order SET 
-        status = 0 
-        WHERE shop_id = :shopID AND order_id = :orderID
+        status = 2 
+        WHERE order_id = :orderID
         "
     );
-    $sql->bindValue(":shopID",$shopID);
+    
     $sql->bindValue(":orderID",$order_id);
     $sql->execute();
     header("Location: ../View/incomingOrder.php");

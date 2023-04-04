@@ -28,9 +28,11 @@ if(isset($_SESSION["shopID"])){
     $sql = $pdo->prepare
     (
         "
-        SELECT * FROM t_order
-        WHERE 
-        shop_id = :shopID AND del_flg = 0 AND status = 1
+        SELECT *
+        FROM t_order o
+        INNER JOIN t_orderdetail d ON o.order_id = d.order_id
+        WHERE d.shop_id = :shopID AND d.del_flg = 0 AND o.status = 1
+        ORDER BY o.order_id
         "
     );
     $sql->bindValue(":shopID",$shopID);
@@ -41,9 +43,11 @@ if(isset($_SESSION["shopID"])){
     $sql = $pdo->prepare
     (
         "
-        SELECT * FROM t_order
-        WHERE 
-        shop_id = :shopID AND del_flg = 0 AND status = 1
+        SELECT o.order_id, o.items, o.grand_total, o.create_date, o.reserve_time, o.status, d.quantity
+        FROM t_order o
+        INNER JOIN t_orderdetail d ON o.order_id = d.order_id
+        WHERE d.shop_id = :shopID AND o.order_id = d.order_id AND status = 1
+        ORDER BY o.order_id
         LIMIT $pageStart , $rowLimit
         "
     );

@@ -116,25 +116,24 @@ include "../Controller/menuTableController.php";
                         <p class="fw-bold h5 insert-title">Insert New Product's Information</p>
                         <div class="label-box">
                             <label for="new-product-name texts" class="fw-bold mt-3">New Product Name</label>
-                            <input type="text" class="input-box" name="newProductName" required>
+                            <input type="text" class="input-box p-3" name="newProductName" required>
                         </div>
                         <div class="label-box my-md-3 my-sm-3">
                             <label for="productType" class="fw-bold">Product Type</label>
-                            <input type="text" class="input-box" name="productType" required>
+                            <input type="text" class="input-box p-3" name="productType" required>
                         </div>
                         <div class="label-box">
                             <label for="price-of-each-product" class="fw-bold">Price Of Each Product</label>
-                            <input type="text" class="input-box" name="priceOfeach" required>
+                            <input type="text" class="input-box p-3" name="priceOfeach" required>
                         </div>
                         <div class="label-box my-md-3 my-sm-3">
                             <label for="instock" class="fw-bold">instock</label>
-                            <input type="text" class="input-box" name="instock" required>
+                            <input type="text" class="input-box p-3" name="instock" required>
                         </div>
                         <div class="mb-md-5 mb-sm-5 mt-4">
                             <button class="btns add-btn" name="addBtn">Add</button>
                             <button class="btns ms-4 cancel-btn" id="cancelBtn">Cancel</button>
                         </div>
-
                     </div>
             </form>
         </div>

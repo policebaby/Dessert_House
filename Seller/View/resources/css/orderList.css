@@ -117,7 +117,11 @@ td{
     background-color:var(--primary-blue) !important;
     color:var(--text-color-white) !important;
 }
-
+ul#itemName li {
+    display: flex;
+    flex-direction:column !important;
+ }
+ 
 
 @media screen and (max-width:720px){
     body{
