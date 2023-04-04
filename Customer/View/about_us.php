@@ -51,14 +51,6 @@ if (isset($_SESSION["sec_description"])) {
     echo "error";
 }
 
-
-if (isset($_SESSION["photo"])) {
-    $photo = $_SESSION["photo"];
-    // echo "<pre>";
-    // print_r($photo);
-} else {
-    echo "error";
-}
 ?>
 
 
@@ -123,7 +115,7 @@ if (isset($_SESSION["photo"])) {
         <div class="mb">
             <div class="paragraph">
             <div class="col-md-5 paragraph pic">
-                <img src="../storages/profile/<?=$photo["paragraph_pic"]?>" alt="about_us" class="para1_pic" >
+                <img src="../View/resources/img/about_us_1.png" alt="about_us" class="para1_pic" >
             </div>
             <div class="col-md-5 paragraph">
                 <div class="first">

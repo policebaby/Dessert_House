@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
-    $(".a").click((event) => {
+    $(".a").click(function(event) {
+        $(this).css('background-color', 'red !important');
         console.log(event.target.attributes[0].value);
     });
     $(".b").click((event) => {
@@ -20,3 +21,14 @@ $(document).ready(function(){
     });
 
   });
+
+  let seats = [
+    { number: 1, status: "Available" },
+    { number: 2, status: "Taken" },
+    { number: 3, status: "Waiting" }
+  ];
+  
+  // Loop through the array and print the status of each seat
+  for (let i = 0; i < seats.length; i++) {
+    console.log("Seat " + seats[i].number + ": " + seats[i].status);
+  }

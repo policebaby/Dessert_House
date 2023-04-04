@@ -71,26 +71,8 @@ $result = $sql->fetchAll(PDO::FETCH_ASSOC);
 $_SESSION["sec_description"]= $result;
 
 
-$sql = $pdo->prepare(
-    "
-    SELECT paragraph_pic FROM t_paragraph ORDER BY paragraph_id DESC LIMIT 1;;
-    "
-);
-$sql->execute();
-$result = $sql->fetchAll(PDO::FETCH_ASSOC);
-// print_r($result);
-$_SESSION["photo"]= $result;
-
-
 
 header("Location: ../View/about_us.php");
-
-
-
-
-
-
-
 
 
 
