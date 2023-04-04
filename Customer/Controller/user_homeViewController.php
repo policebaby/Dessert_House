@@ -17,4 +17,8 @@ echo "<pre>";
 print_r($result);
 header("Location: ../View/user_home.php");
 
+if(isset($_POST["dessertname"])){
+    echo "ok";
+}
+
 

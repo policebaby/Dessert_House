@@ -105,7 +105,7 @@ include "../Controller/shopProfileViewController.php";
                     echo "disabled";
                 }
                 ?>
-                "><a class="page-link text-dark" href="?id=<?=$id?>,page=<?= $page - 1 ?>">&laquo;</a></li>
+                "><a class="page-link text-dark" href="?id=<?=$id?>&page=<?= $page - 1 ?>">&laquo;</a></li>
                 <?php
                 for ($i = 1; $i <= $pageList; $i++) { ?>
                     <li class="page-item 
@@ -113,14 +113,14 @@ include "../Controller/shopProfileViewController.php";
                     if ($page == $i) {
                         echo "active";
                     }
-                    ?>"><a class="page-link text-dark" href="?id=<?=$id?>,page=<?= $i ?>"><?= $i ?></a></li>
+                    ?>"><a class="page-link text-dark" href="?id=<?=$id?>&page=<?= $i ?>"><?= $i ?></a></li>
                 <?php } ?>
                 <li class="page-item
                 <?php
                 if ($page >= $pageList) {
                     echo "disabled";
                 }
-                ?>"><a class="page-link text-dark" href="?id=<?=$id?>,page=<?= $page + 1 ?>">&raquo;</a></li>
+                ?>"><a class="page-link text-dark" href="?id=<?=$id?>&page=<?= $page + 1 ?>">&raquo;</a></li>
             </ul>
         </nav>
 
