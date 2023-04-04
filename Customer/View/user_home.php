@@ -10,9 +10,10 @@ if (isset($_SESSION["username"])) {
     header("Location: ./user_login.php");
 }
 if (isset($_SESSION["homeshops"])) {
-    $shops =$_SESSION["homeshops"];
-    // echo "ok";
-}else {
+    $shops = $_SESSION["homeshops"];
+    // echo "<pre>";
+    // print_r($shops);
+} else {
     echo "error";
 }
 ?>
@@ -28,9 +29,12 @@ if (isset($_SESSION["homeshops"])) {
     <!-- css link start -->
     <link rel="stylesheet" href="./resources/css/root.css">
     <link rel="stylesheet" href="./resources/css/home.css">
+    
 
     <!-- css link end -->
     <!-- js link start -->
+    <script src="../View/lib/jquery3.6.0.js"></script>
+    <script src="./resources/js/user_home.js?v=<?= time() ?>" defer></script>
     <!-- js link end -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,21 +55,23 @@ if (isset($_SESSION["homeshops"])) {
             <div class="col-md-6 ">
                 <div class="orderInputs">
                     <p class="startOrder">Start order now</p>
-                    <form>
-                        <div class="form-row">
-                            <div class="col-md-5 mb-3 me-5">
-                                <label for="validationDefault01">Dessert name</label>
-                                <input type="text" class="form-control" id="validationDefault01" placeholder="Search dessert name" value="" required>
-                            </div>
+                    <div class="form-row">
+                        <div class="col-md-5 mb-3 me-5">
+                            <label for="validationDefault01">Dessert name</label>
+                            <input type="text" class="form-control" id="dessertname" placeholder="Search dessert name" value="" required>
                         </div>
-                        <div class="form-row">
-                            <div class="col-md-5 mb-3 me-5">
-                                <label for="validationDefault01">Shop name</label>
-                                <input type="text" class="form-control" id="validationDefault01" placeholder="Search shop name" value="" required>
-                            </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-5 mb-3 me-5">
+                            <label for="validationDefault01">Shop name</label>
+                            <select class="form-select" id="shopname" placeholder="Search shop name" required>
+                                <?php for ($i = 0; $i < count($shops); $i++) { ?>
+                                    <option value="<?= $shops[$i]["shop_id"] ?>"><?= $shops[$i]["shop_name"] ?></option>
+                                <?php } ?>
+                            </select>
                         </div>
-                        <button class="btn  btnCoffee" type="submit">Search</button>
-                    </form>
+                    </div>
+                    <button id="search" class="btn  btnCoffee" type="button">Search</button>
                 </div>
             </div>
             <div class="col-md-6">
@@ -74,7 +80,9 @@ if (isset($_SESSION["homeshops"])) {
         </div>
     </div>
     <!-- hero section end -->
-
+    <div id="searcheditem" class=" d-flex justify-content-center flex-row shopProfiles">
+              
+        </div>
     <!-- shops profiles start -->
     <div class="shopProfiles ">
         <div class="pt-3">
@@ -83,24 +91,24 @@ if (isset($_SESSION["homeshops"])) {
         <div class="flex">
             <div class="row justify-content-center mx-5 ">
                 <!-- profile block start -->
-                <?php for ($i=0; $i < count($shops) ; $i++) { ?>
-                <a href="./shopProfile.php?id=<?=$shops[$i]["shop_id"]?>" class="boxborder m-5  col-4">
-                    <div class="box ">
-                        <p class="text-center mt-5 fs-4"><?= $shops[$i]["shop_name"] ?></p>
-                    </div>
-                    <div class="circle"> <img class="position-relative rounded-circle " src="../../storages/<?= $shops[$i]["shop_profilepic"] ?>" alt="" width="100%"> </div>
-                    <!-- had to put both width and height 100% because of sample picture -->
-                    <!-- <div class="pic"> <img src="../View/resources/img/Rectangle 381.png" alt="" width="100%" height="100%"></div> -->
-                    <?php
-                    if ($shops[$i]["shop_coverpic"] == "nocover") {
-                        echo '<div class="pic"> <img src="../View/resources/img/Rectangle 381.png" alt="" width="100%" height="100%"></div>';
-                    } else {
-                        echo '<div class="pic"> <img src="../../storages/'.$shops[$i]["shop_coverpic"].'" alt="" width="100%" height="100%"></div>';
-                    }
-                    ?>
-                    <div class="newItem ">New</div>
-                </a>
-            <?php } ?>
+                <?php for ($i = 0; $i < count($shops); $i++) { ?>
+                    <a href="./shopProfile.php?id=<?= $shops[$i]["shop_id"] ?>" class="boxborder m-5  col-4">
+                        <div class="box ">
+                            <p class="text-center mt-5 fs-4"><?= $shops[$i]["shop_name"] ?></p>
+                        </div>
+                        <div class="circle"> <img class="position-relative rounded-circle " src="../../storages/<?= $shops[$i]["shop_profilepic"] ?>" alt="" width="100%"> </div>
+                        <!-- had to put both width and height 100% because of sample picture -->
+                        <!-- <div class="pic"> <img src="../View/resources/img/Rectangle 381.png" alt="" width="100%" height="100%"></div> -->
+                        <?php
+                        if ($shops[$i]["shop_coverpic"] == "nocover") {
+                            echo '<div class="pic"> <img src="../View/resources/img/Rectangle 381.png" alt="" width="100%" height="100%"></div>';
+                        } else {
+                            echo '<div class="pic"> <img src="../../storages/' . $shops[$i]["shop_coverpic"] . '" alt="" width="100%" height="100%"></div>';
+                        }
+                        ?>
+                        <!-- <div class="newItem ">New</div> -->
+                    </a>
+                <?php } ?>
                 <!-- profile block end -->
             </div>
         </div>
