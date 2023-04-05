@@ -2,7 +2,14 @@
 
 include "../Controller/menuTableController.php";
 
-
+session_start();
+if (isset($_SESSION["sellerName"])) {
+    $sellerName = $_SESSION["sellerName"];
+    // echo $sellerName;
+}
+else{
+    header("Location: ../View/sellerlogin.php");
+}
 ?>
 
 <!DOCTYPE html>

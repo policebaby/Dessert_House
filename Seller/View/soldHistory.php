@@ -3,6 +3,15 @@
 include "../Controller/soldHistoryController.php";
 
 
+// session_start();
+if (isset($_SESSION["sellerName"])) {
+    $sellerName = $_SESSION["sellerName"];
+    // echo $sellerName;
+}
+else{
+    header("Location: ../View/sellerlogin.php");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -127,11 +136,11 @@ include "../Controller/soldHistoryController.php";
                             <td class="td-text fw-bold items">
                                 <span><?= explode(',', $soldResult[$i]['items'])[0] ?></span>
                                     <?php if (count(explode(',', $soldResult[$i]['items'])) > 1) { ?>
-                                        <span>
+                                        
                                         <?php } ?>
                                 <span>
                                 <ion-icon name="chevron-down-outline" class="down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" 
-                                onclick="showItemName('<?= $soldResult[$i]['items'] ?>', '<?= $soldResult[$i]['grand_total'] ?>','<?= $soldResult[$i]['reserve_time'] ?>')"></ion-icon>
+                                onclick="showItemName('<?= $soldResult[$i]['items'] ?>','<?= $soldResult[$i]['order_id'] ?>','<?= $soldResult[$i]['create_date'] ?>','<?= $soldResult[$i]['reserve_time'] ?>', '<?= $soldResult[$i]['grand_total'] ?>')"></ion-icon>
                                 </span>
                             </td>
                             <td class="td-text fw-bold"><?= $soldResult[$i]["grand_total"] ?></td>
@@ -145,6 +154,8 @@ include "../Controller/soldHistoryController.php";
                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="small-pop mt-3 ms-3">
+                            <p>Order No. <span id="orderNo"></span></p>
+                                    <p>Date :<span id="date"></span></p>
                                 <p class="fw-bold">Reservation Time : <span id="reservation"> </span></p>
                             </div>
                             <div class="modal-header">

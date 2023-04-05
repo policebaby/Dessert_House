@@ -7,6 +7,14 @@ if(isset($_SESSION["editMenu"])){
     // print_r($result);
 }
 
+if (isset($_SESSION["sellerName"])) {
+    $sellerName = $_SESSION["sellerName"];
+    // echo $sellerName;
+}
+else{
+    header("Location: ../View/sellerlogin.php");
+}
+
 ?>
 
 

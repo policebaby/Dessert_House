@@ -3,6 +3,13 @@
 
 include "../Controller/incomingOrderController.php";
 
+if (isset($_SESSION["sellerName"])) {
+    $sellerName = $_SESSION["sellerName"];
+    // echo $sellerName;
+}
+else{
+    header("Location: ../View/sellerlogin.php");
+}
 
 ?>
 
@@ -173,9 +180,9 @@ include "../Controller/incomingOrderController.php";
                             
                             <div class="modal-content">
                                 <div class="small-pop ms-3 mt-3">
-                                    <p>Order No. <span id="orderNo"></span></p>
-                                    <p>Date :<span id="date"></span></p>
-                                    <p>Reservation Date : <span id="reservation"></span></p>
+                                    <p>Order No. <span id="orderNo" class="orderNo"></span></p>
+                                    <p>Date :<span id="date" class="date"></span></p>
+                                    <p>Reservation Date : <span id="reservation" class="reservation"></span></p>
                                 </div>
                                 <div class="modal-header">
                                     <h5 class="modal-title text-decoration-underline" id="staticBackdropLabel">Items</h5>
@@ -189,7 +196,7 @@ include "../Controller/incomingOrderController.php";
                                 <div class="small-pop">
                                     <hr>
                                     <span class="ms-4">Total</span>
-                                    <span id="totalPrice" class="total_items me-5"></span>
+                                    <span id="totalPrice" class="total_items me-5" class="totalPrice"></span>
                                     <p class="my-4 ms-4 h5 fw-bold">Status : Pending</p>
                                 </div>
                             </div>
@@ -236,6 +243,7 @@ include "../Controller/incomingOrderController.php";
             </div>
         </div>
     </div>
+
     <script src="./resources/js/ModalScreen.js"></script>
 </body>
 

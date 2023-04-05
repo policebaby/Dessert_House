@@ -1,7 +1,14 @@
 <?php
 
+session_start();
 include "../Controller/sellerEditProfileController.php";
-
+if (isset($_SESSION["sellerName"])) {
+    $sellerName = $_SESSION["sellerName"];
+    // echo $sellerName;
+}
+else{
+    header("Location: ../View/sellerlogin.php");
+}
 ?>
 
 <!DOCTYPE html>

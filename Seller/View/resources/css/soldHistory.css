@@ -130,6 +130,7 @@ td{
     color:var(--primary-blue);
     cursor:pointer;
 }
+
 /*for pigination */
 .great,.less{
     color:var(--primary-blue);

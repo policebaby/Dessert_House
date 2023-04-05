@@ -3,7 +3,13 @@
 
 include "../Controller/orderListController.php";
 
-
+if (isset($_SESSION["sellerName"])) {
+    $sellerName = $_SESSION["sellerName"];
+    // echo $sellerName;
+}
+else{
+    header("Location: ../View/sellerlogin.php");
+}
 
 
 ?>
@@ -133,9 +139,9 @@ include "../Controller/orderListController.php";
                                         <span>
                                         <?php } ?>
                                         <span>
-                                            <ion-icon name="chevron-down-outline" class="down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" 
-                                            onclick="showItemName('<?= $orderResult[$i]['items'] ?>', '<?= $orderResult[$i]['grand_total'] ?>', '<?= $orderResult[$i]['reserve_time'] ?>')"></ion-icon>
-                                        </span>
+                                <ion-icon name="chevron-down-outline" class="down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" 
+                                onclick="showItemName('<?= $orderResult[$i]['items'] ?>','<?= $orderResult[$i]['order_id'] ?>', '<?= $orderResult[$i]['grand_total'] ?>','<?= $orderResult[$i]['reserve_time'] ?>')"></ion-icon>
+                                </span>
                                 </td>
                                 <td class="td-text fw-bold title-name"><?= $orderResult[$i]["grand_total"] ?></td>
                                 <td class="td-text fw-bold title-name"><?= $orderResult[$i]["reserve_time"] ?></td>
@@ -155,31 +161,31 @@ include "../Controller/orderListController.php";
                     <!-- popup screen-->
 
                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                            <div class="modal-content">
-                            
-                            
-                                <div class="small-pop mt-3 ms-3">
-                                    <p class="fw-bold">Reservation Time : <span id="reservation"></span></p>
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="small-pop mt-3 ms-3">
+                            <p>Order No. <span id="orderNo"></span></p>
+                                
+                                <p class="fw-bold">Reservation Time : <span id="reservation"> </span></p>
+                            </div>
+                            <div class="modal-header">
+                                <h5 class="modal-title text-decoration-underline" id="staticBackdropLabel">Items</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div>
+                                    <span id="itemName" class="items_name"></span>
                                 </div>
-                                <div class="modal-header">
-                                    <h5 class="modal-title text-decoration-underline ms-2" id="staticBackdropLabel">Items</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-
-                                <div class="modal-body" id="itemName"></div>
-                            
-                            <div class="small-pop mb-4">
+                            </div>
+                            <div class="mb-4">
                                 <hr>
                                 <span class="ms-3">Total</span>
                                 <span id="totalPrice" class="total_items me-5"></span>
                             </div>
-                            </div>
                         </div>
                     </div>
                 </div>
-            
-
+                </div>
             <!-- for pagination -->
             <nav aria-label="Page navigation example">
                 <ul class="pagination  justify-content-center">
