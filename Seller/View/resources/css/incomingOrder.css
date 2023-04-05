@@ -95,6 +95,7 @@ body{
 }
 td{
     text-align:center;
+    line-height:2em !important;
 }
 .td-text{
     font-size:0.9em !important;
@@ -165,7 +166,7 @@ table tr:nth-child(odd) {
         width:100%;
     }
     td{
-        font-size:0.7em !important;
+        font-size:0.8em !important;
         padding:0.2em !important;
     }
     .td-text{
@@ -199,7 +200,7 @@ table tr:nth-child(odd) {
     }
     .web_logo{
         width:2em !important;
-        margin-top:0.8em !important;
+        margin-top:1em !important;
     }
     .nav-icons{
         position:relative !important;
@@ -210,8 +211,8 @@ table tr:nth-child(odd) {
         font-size:1.2em !important;
     }
     td{
+        font-size:0.5em !important;
         padding-left:2px !important;
-        font-size:0.5em;
     }
     .td-text{
         font-size:0.5em !important;
@@ -219,9 +220,11 @@ table tr:nth-child(odd) {
     }
     tr{
         line-height:1.5em !important;
+        vertical-align: middle !important;
     }
-    .incoming-text{
-        font-size:1em !important;
+    .incomingorder-text{
+        font-size:0.8em !important;
+        margin:1em !important;
     }
     .accept-reject{
         width:5.3em ;
@@ -235,6 +238,6 @@ table tr:nth-child(odd) {
         padding:5px !important;
     }
     .col-10{
-        width:80% !important;
+        max-width:82% !important;
     }
 }

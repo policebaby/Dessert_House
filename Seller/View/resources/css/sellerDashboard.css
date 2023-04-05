@@ -1,4 +1,4 @@
-*{
+ *{
     margin:0;
     padding:0;
     font-family:'Public Sans', sans-serif;
@@ -318,7 +318,7 @@ body{
     }
     .replyBtn{
         font-size:0.4em !important;
-        margin-left:18em;
+        /* margin-left:18em; */
     }
     .view{
         width:5em !important;

@@ -86,7 +86,6 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left:9%;
 }
 .first-row{
     display:flex;
@@ -136,15 +135,6 @@ table tr:nth-child(odd) {
     background-color:#0b00332a ;
 }
 
-/* .color-tr{
-    background-color:#0b00332a;
-} */
-.table{
-    margin-right:5em !important;
-}
-.second-row{
-    position:relative;
-}
 .product-menu-text{
     margin-left:35%;
 }
@@ -156,10 +146,7 @@ table tr:nth-child(odd) {
 .great,.less{
     color:var(--primary-blue);
 }
-.beat{
-    background-color:var(--primary-blue) !important;
-    color:var(--text-color-white) !important;
-}
+
 
 
 @media screen and (max-width:720px){
@@ -180,12 +167,29 @@ table tr:nth-child(odd) {
         width:5em !important;
         height:100vh !important;
         background-color: var(--primary-blue)!important ;
+        display:flex !important;
+        flex-direction: column !important;
     }
     .seller-photo{
+        width:6.5em !important;
+        height:6.5em;
         margin-top:1em !important;
     }
-    .first-row-second{
-        margin-left:18% !important;
+    .input-box{
+        width:20em !important;
+        height:1.7em !important;
+    }
+    .btns{
+        width:9em!important;
+    }
+    .cor-label{
+        font-size:0.8em !important;
+    }
+    .first-row-first,.first-row-second{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
     }
     tr{
         font-size:0.7em !important;
@@ -193,9 +197,6 @@ table tr:nth-child(odd) {
     td{
         padding:0 !important;
         vertical-align: middle;
-    }
-    .blue-width{
-        width:100% !important;
     }
     .shop-name,.insert-title,.product-menu-text{
         font-size:1.2em !important;
@@ -219,17 +220,13 @@ table tr:nth-child(odd) {
         width:2em !important;
         margin-top:0.8em !important;
     }
-    .nav-icons{
-        position:relative !important;
-        margin-left:28% !important;
-    }
     .icons,.menu-icon{
         margin-top:2em !important;
         font-size:1.2em !important;
     }
     .seller-photo{
-        width:6em;
-        height:6em;
+        width:5.5em;
+        height:5.5em;
     }
     .product-photo{
         display:flex !important;
@@ -250,18 +247,13 @@ table tr:nth-child(odd) {
         font-size:0.6em !important;
     }
     .btns{
-        margin-top:1em !important;
+        margin-top:0.7em !important;
         width:9em !important;
         font-size:0.6em;
     }
-    .product-menu-text{
-        font-size:0.8em;
+    .product-menu-text,.shop-name{
+        font-size:1em !important;
         font-weight:900;
-    }
-    .blue-width{
-        width:100% !important;
-        font-size:0.7em !important;
-        margin-left:2em !important;
     }
     .insert-title{
         margin-top:2em !important;
@@ -272,5 +264,19 @@ table tr:nth-child(odd) {
     .pagination > li a {
         font-size:0.5em !important;
         padding:5px !important;
+    }
+    .col-10{
+        width:80% !important;
+    }
+    .nav-icons{
+        position:relative !important;
+        margin-left:28% !important;
+    }
+    .input-box{
+        height:1.8em !important;
+        padding-left:0.5em !important;
+    }
+    .first-row-first,.first-row-second{
+        margin-left:8% !important;
     }
 }

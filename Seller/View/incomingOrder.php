@@ -54,7 +54,7 @@ else{
             <nav class="col-2 mt-0 d-flex flex-direction-column">
                 <div class="edit_nav">
                     <a href="./sellerDashboard.php" class="nav_logo">
-                        <img src="./resources/images/Ellipse 3.png" alt="logo" class="web_logo mt-5">
+                        <img src="./resources/images/Ellipse 3.png" alt="logo" class="web_logo mt-md-5 mt-sm-5">
                         <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
                     </a>
                     <!-- sidebar nav -->
@@ -118,24 +118,25 @@ else{
 
             <!-- page -->
             <div class="col-10 ">
-                <p class="h4 fw-bold my-4 incomingorder-text text-center">Incoming Orders</p>
-                <div class="blue-width me-md-4 me-sm-4">
-                    <table class="table table-borderless ms-md-1 ms-sm-1">
-                        <tr class="t-head">
+                
+                <div class="me-md-3 me-sm-3">
+                <p class="h5 fw-bold my-md-4 my-sm-4 incomingorder-text text-center">Incoming Orders</p>
+                    <table class="table table-borderless">
+                        <tr class="t-head text-center">
                             <td>No.</td>
                             <td>Date</td>
                             <td>Order No.</td>
-                            <td class="col-md-2 col-sm-2">Items</td>
+                            <td>Items</td>
                             <td class="title-name">Total Price</td>
                             <td class="title-name">Reservation Time</td>
                             <td>Status</td>
-                            <td class="col-3"></td>
+                            <td class="title-name"></td>
                             <td class="seeMore"></td>
                         </tr>
                         <?php
                         $count = (($page - 1) * $rowLimit) + 1;
                         for ($i = 0; $i < count($result); $i++) { ?>
-                            <tr>
+                            <tr class="text-center">
                                 <td class="td-text fw-bold"><?= $count++ ?></td>
                                 <td class="td-text fw-bold"><?= $result[$i]["create_date"] ?></td>
                                 <td class="td-text fw-bold"><?= $result[$i]["order_id"] ?></td>
@@ -152,6 +153,7 @@ else{
                                 <td class="td-text fw-bold title-name"><?= $result[$i]["grand_total"] ?></td>
                                 <td class="td-text fw-bold title-name"><?= $result[$i]["reserve_time"] ?></td>
                                 <td class="td-text fw-bold title-name">Pending</td>
+                                
                                 <td class="btn2">
                                     <form action="../Controller/AcceptBtnController.php" method="post">
                                         <button class="aBtn accept-reject" name="AcceptBtn" 

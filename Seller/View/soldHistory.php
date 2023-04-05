@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 include "../Controller/soldHistoryController.php";
 
@@ -7,8 +7,7 @@ include "../Controller/soldHistoryController.php";
 if (isset($_SESSION["sellerName"])) {
     $sellerName = $_SESSION["sellerName"];
     // echo $sellerName;
-}
-else{
+} else {
     header("Location: ../View/sellerlogin.php");
 }
 
@@ -116,9 +115,9 @@ else{
             </nav>
             <!-- for page -->
             <div class="col-10">
-                <p class="h4 my-4 text-center fw-bold history-text">Sold History</p>
-                <div class="blue-width me-4 d-flex justify-content-center ">
-                    <table class="table table-borderless ms-md-2">
+                <div class="me-md-3 me-sm-4">
+                    <p class="h4 my-4 text-center fw-bold history-text">Sold History</p>
+                    <table class="table table-borderless">
                         <tr class="t-head">
                             <td>No.</td>
                             <td>Date</td>
@@ -129,33 +128,68 @@ else{
                         </tr>
                         <?php $count = (($page - 1) * $rowLimit) + 1;
                         for ($i = 0; $i < count($soldResult); $i++) { ?>
-                        <tr>
-                            <td class="td-text fw-bold"><?= $count++ ?></td>
-                            <td class="td-text fw-bold"><?= $soldResult[$i]["create_date"] ?></td>
-                            <td class="td-text fw-bold"><?= $soldResult[$i]["order_id"] ?></td>
-                            <td class="td-text fw-bold items">
-                                <span><?= explode(',', $soldResult[$i]['items'])[0] ?></span>
+                            <tr>
+                                <td class="td-text fw-bold"><?= $count++ ?></td>
+                                <td class="td-text fw-bold"><?= $soldResult[$i]["create_date"] ?></td>
+                                <td class="td-text fw-bold"><?= $soldResult[$i]["order_id"] ?></td>
+                                <td class="td-text fw-bold items">
+                                    <span><?= explode(',', $soldResult[$i]['items'])[0] ?></span>
                                     <?php if (count(explode(',', $soldResult[$i]['items'])) > 1) { ?>
-                                        
-                                        <?php } ?>
-                                <span>
-                                <ion-icon name="chevron-down-outline" class="down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" 
-                                onclick="showItemName('<?= $soldResult[$i]['items'] ?>','<?= $soldResult[$i]['order_id'] ?>','<?= $soldResult[$i]['create_date'] ?>','<?= $soldResult[$i]['reserve_time'] ?>', '<?= $soldResult[$i]['grand_total'] ?>')"></ion-icon>
-                                </span>
-                            </td>
-                            <td class="td-text fw-bold"><?= $soldResult[$i]["grand_total"] ?></td>
-                            <td class="td-text fw-bold title-none"><?= $soldResult[$i]["reserve_time"] ?></td>
-                        </tr>
+
+                                    <?php } ?>
+                                    <span>
+                                        <ion-icon name="chevron-down-outline" class="down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="showItemName('<?= $soldResult[$i]['items'] ?>','<?= $soldResult[$i]['order_id'] ?>','<?= $soldResult[$i]['create_date'] ?>','<?= $soldResult[$i]['reserve_time'] ?>', '<?= $soldResult[$i]['grand_total'] ?>')"></ion-icon>
+                                    </span>
+                                </td>
+                                <td class="td-text fw-bold"><?= $soldResult[$i]["grand_total"] ?></td>
+                                <td class="td-text fw-bold title-none"><?= $soldResult[$i]["reserve_time"] ?></td>
+                            </tr>
                         <?php } ?>
                     </table>
+                    <!-- for pagination -->
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination  justify-content-center">
+                            <li class="page-item 
+                        <?php
+                        if ($page <= 1) {
+                            echo "disabled";
+                        }
+                        ?>">
+                                <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                                    <span class="great" aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <?php
+                            for ($i = 1; $i <= $pageList; $i++) { ?>
+                                <li class="page-item 
+                            <?php
+                                if ($page == $i) {
+                                    echo "active";
+                                }
+                            ?>">
+                                    <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+                                </li>
+                            <?php } ?>
+                            <li class="page-item 
+                        <?php
+                        if ($page >= $pageList) {
+                            echo "disabled";
+                        }
+                        ?>">
+                                <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
+                                    <span class="less " aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
                 <!-- popup screen -->
                 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="small-pop mt-3 ms-3">
-                            <p>Order No. <span id="orderNo"></span></p>
-                                    <p>Date :<span id="date"></span></p>
+                                <p>Order No. <span id="orderNo"></span></p>
+                                <p>Date :<span id="date"></span></p>
                                 <p class="fw-bold">Reservation Time : <span id="reservation"> </span></p>
                             </div>
                             <div class="modal-header">
@@ -175,43 +209,6 @@ else{
                         </div>
                     </div>
                 </div>
-
-                <!-- for pagination -->
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination  justify-content-center">
-                        <li class="page-item 
-                        <?php
-                        if ($page <= 1) {
-                            echo "disabled";
-                        }
-                        ?>">
-                            <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
-                                <span class="great" aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <?php
-                        for ($i = 1; $i <= $pageList; $i++) { ?>
-                            <li class="page-item 
-                            <?php
-                            if ($page == $i) {
-                                echo "active";
-                            }
-                            ?>">
-                                <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
-                            </li>
-                        <?php } ?>
-                        <li class="page-item 
-                        <?php
-                        if ($page >= $pageList) {
-                            echo "disabled";
-                        }
-                        ?>">
-                            <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
-                                <span class="less " aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>  
             </div>
         </div>
     </div>

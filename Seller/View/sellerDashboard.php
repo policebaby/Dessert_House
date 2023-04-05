@@ -46,7 +46,7 @@ else{
                         <img src="./resources/images/Ellipse 3.png" alt="logo" class="web_logo mt-md-5 mt-sm-4">
                         <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
                     </a>
-                    <div class="nav-icons ms-md-3 ms-sm-3 mt-sm-4">
+                    <div class="nav-icons ms-md-3 ms-sm-4 mt-sm-4">
                         <!-- profile icon from left nav -->
                         <div class="nav-text">
                             <span>
@@ -165,7 +165,6 @@ else{
                                         </span>';
                                 }
                                 ?>
-
                             </span>
                         </div>
                         <div class="ms-md-3 ms-sm-3 mt-md-4 mt-sm-4">
@@ -219,13 +218,16 @@ else{
                                     <form action="../Controller/replyEmailController.php" method="POST">
                                         <input type="hidden" name="userEmail" value="<?= $userEmail ?>">
                                         <input type="hidden" name="reviewID" value="<?= $reviewID ?>">
-                                        <input type="submit" name="thank" value="Reply Thank" class="ms-5 px-3 bg-primary text-white replyBtn">
+                                        <input type="submit" name="thank" value="Reply Thank" class="ms-md-5 ms-sm-5 px-3 bg-primary text-white replyBtn">
                                     </form>
 
                                 </div>
                             <?php } ?>
+                            
+                            <div class= "mt-md-4 mt-sm-4" >
+                            <a href="./feedbackDetails.php" class="view mt-5 text-decoration-none ">View All</a>
+                            </div>
                         </div>
-                        <a href="../Controller/feedbackDetailController.php" class="view mt-5 text-decoration-none ">View All</a>
                     </span>
                 </div>
 

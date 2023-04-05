@@ -59,6 +59,13 @@ body{
     font-family:"DM Serif Display","sans-serif";
     font-size: 1.2em;
 }
+/* CSS to fix the sidebar navigation */
+.sideBar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
 /* page css */
 .feedback-title{
     color:var(--primary-blue);
@@ -170,9 +177,7 @@ div textarea {
     .reply-text{
         margin-left:85%;
     }
-    .ha-face{
-        margin-left:55%;
-    }
+    
     div textarea {
         box-sizing: border-box;
         max-width: 80%;
@@ -237,15 +242,19 @@ div textarea {
     .each-review{
         width:25em !important;
         font-size:0.6em;
+        margin-top:2em !important;
     }
-    .ha-face{
-        margin-left:14.7em ;
+    .gold-faces{
+        font-size:2em !important;
+    }
+    .cent{
+        font-size:1em !important;
     }
     .date{
-        margin-left:2em;
+        margin-left:4em;
     }
-    .user-text,.seller-text{
-        margin-left:1.5em;
+    .user-text{
+        margin-left:3em;
         margin-top:0.5em;
         padding:0.3em;
     }
@@ -274,5 +283,8 @@ div textarea {
     .pagination > li a {
         font-size:0.5em !important;
         padding:5px !important;
+    }
+    .replyBtn{
+        margin-left:1.5em !important;
     }
 }

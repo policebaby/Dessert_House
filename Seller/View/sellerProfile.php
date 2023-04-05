@@ -2,7 +2,7 @@
 
 include "../Controller/sellerProfileController.php";
 
-session_start();
+// session_start();
 if (isset($_SESSION["sellerName"])) {
     $sellerName = $_SESSION["sellerName"];
     // echo $sellerName;
@@ -49,9 +49,9 @@ else{
                         <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
                     </a>
                     <!-- sidebar nav -->
-                    <div class="nav-icons ms-md-4 ms-sm-3 mt-sm-4">
+                    <div class="nav-icons ms-md-3 ms-sm-4 mt-sm-4">
                         <!-- profile icon from left nav -->
-                        <a href="./sellerProfile.php" class="nav-text ms-sm-2 text-decoration-none">
+                        <a href="./sellerProfile.php" class="nav-text text-decoration-none">
                             <span>
                                 <iconify-icon icon="bi:people-circle" class="profile-icon"></iconify-icon>
                             </span>

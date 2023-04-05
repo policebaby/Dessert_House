@@ -111,10 +111,6 @@ tr{
     color:var(--text-color-white);
     background-color:var(--primary-blue) !important;
 }
-.color-tr{
-    background-color:var(--tr-second-color);
-    height:2em !important;
-}
 td{
     text-align:center;
 }
@@ -200,7 +196,8 @@ td{
         line-height:1.5em !important;
     }
     .col-10{
-        width:75% !important;
+        margin-left:14% !important;
+        width:80% !important;
     }
     .history-text{
         font-size:0.7em !important;

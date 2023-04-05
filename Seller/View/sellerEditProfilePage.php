@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+// session_start();
 include "../Controller/sellerEditProfileController.php";
 if (isset($_SESSION["sellerName"])) {
     $sellerName = $_SESSION["sellerName"];

@@ -56,7 +56,7 @@ if (isset($_SESSION['review']) && !is_null($_SESSION['review'])) {
                         <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
                     </a>
                     <!-- sidebar nav -->
-                    <div class="nav-icons ms-md-4 ms-sm-3 mt-sm-4">
+                    <div class="nav-icons ms-md-2 ms-sm-3 mt-sm-4">
                         <!-- profile icon from left nav -->
                         <a href="./sellerProfile.php" class="nav-text">
                             <span>
@@ -118,7 +118,7 @@ if (isset($_SESSION['review']) && !is_null($_SESSION['review'])) {
 
             <!-- page -->
             <div class="col-10">
-                <p class="mt-3 mb-4 fw-bold h4 feedback-title text-center">Feedback Details</p>
+                <p class="mt-3 mb-md-4 mb-sm-4 fw-bold h4 feedback-title text-center">Feedback Details</p>
                 <!-- percent and progress row -->
                 <div class="row">
                     <!-- for percent gp -->
@@ -128,19 +128,19 @@ if (isset($_SESSION['review']) && !is_null($_SESSION['review'])) {
                                 <?php
                                 $Smile = ($smileCount / $shopRatingCount) * 100;
                                 if ($Smile <= 45) {
-                                    echo '<span class="d-flex">
+                                    echo '<span class="d-flex face-pt">
                                         <iconify-icon icon="ph:smiley-sad-bold" class="gold-faces"></iconify-icon>
                                         <span class="h3 ms-md-2 mt-md-3 mt-sm-2 cent">' . number_format($Smile, 0) . '%</span><br>
                                         </span>
                                         <p class="ms-md-3 ms-sm-3 fw-bold above-text">Below Average</p>';
                                 } else if ($Smile <= 65) {
-                                    echo '<span class="d-flex">
+                                    echo '<span class="d-flex face-pt">
                                         <iconify-icon icon="charm:face-neutral" class="gold-faces"></iconify-icon>
                                         <span class="h3 ms-md-2 mt-md-3 mt-sm-2 cent">' . number_format($Smile, 0) . '%</span><br>
                                         </span>
                                         <p class="ms-md-3 ms-sm-3 fw-bold above-text">Middle Average</p>';
                                 } else {
-                                    echo '<span class="d-flex">
+                                    echo '<span class="d-flex face-pt">
                                         <iconify-icon icon="gg:smile-mouth-open" class="gold-faces"></iconify-icon>
                                         <span class="h3 ms-md-2 mt-md-3 mt-sm-2 cent">' . number_format($Smile, 0) . '%</span><br>
                                         </span>
@@ -220,7 +220,7 @@ if (isset($_SESSION['review']) && !is_null($_SESSION['review'])) {
                         $userEmail = $feedback['user_email'];
                     ?>
 
-                        <div class="each-review ms-md-3 ms-sm-3 mt-md-3 my-sm-2" id="<?= $reviewID ?>">
+                        <div class="each-review ms-md-3 ms-sm-3 my-2" id="<?= $reviewID ?>">
                             <div class="details mt-2">
                                 <div class="dis me-1 mt-md-2 mt-sm-2 ms-2"></div>
                                 <span class="ms-md-3 ms-sm-3 fw-bold"><?= $username ?></span>
@@ -232,7 +232,7 @@ if (isset($_SESSION['review']) && !is_null($_SESSION['review'])) {
                             <form action="../Controller/replyEmailController.php" method="POST">
                                 <input type="hidden" name="userEmail" value="<?= $userEmail ?>">
                                 <input type="hidden" name="reviewID" value = "<?= $reviewID ?>">
-                                <input type="submit" name="submit" value="Reply Thank" class="ms-5 px-3 bg-primary text-white replyBtn">
+                                <input type="submit" name="submit" value="Reply Thank" class="ms-md-5 ms-sm-5 px-3 bg-primary text-white replyBtn">
                             </form>
 
                         </div>

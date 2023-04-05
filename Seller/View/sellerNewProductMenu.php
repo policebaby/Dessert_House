@@ -2,7 +2,7 @@
 
 include "../Controller/menuTableController.php";
 
-session_start();
+// session_start();
 if (isset($_SESSION["sellerName"])) {
     $sellerName = $_SESSION["sellerName"];
     // echo $sellerName;
@@ -49,7 +49,7 @@ else{
                     <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
                 </a>
                 <!-- sidebar nav -->
-                <div class="nav-icons ms-md-4 ms-sm-3 mt-sm-4">
+                <div class="nav-icons ms-md-3 ms-sm-4 mt-sm-4">
                     <!-- profile icon from left nav -->
                     <a href="./sellerProfile.php" class="nav-text">
                         <span>
@@ -99,7 +99,7 @@ else{
                     </a>
 
                     <!-- logout icon from left nav-->
-                    <a href="./sellerlogin.php" class="nav-text">
+                    <a href="./sellerlogin.php" class="nav-text mb-5">
                         <span>
                             <iconify-icon icon="material-symbols:logout-rounded" class="icons"></iconify-icon>
                         </span>
@@ -122,20 +122,20 @@ else{
                     <div class="first-row-second col-md-5 mt-md-4 mt-sm-5">
                         <p class="fw-bold h5 insert-title">Insert New Product's Information</p>
                         <div class="label-box">
-                            <label for="new-product-name texts" class="fw-bold mt-3">New Product Name</label>
-                            <input type="text" class="input-box p-3" name="newProductName" required>
+                            <label for="new-product-name texts" class="fw-bold mt-3 cor-label">New Product Name</label>
+                            <input type="text" class="input-box p-md-2 p-sm-2" name="newProductName" required>
                         </div>
                         <div class="label-box my-md-3 my-sm-3">
-                            <label for="productType" class="fw-bold">Product Type</label>
-                            <input type="text" class="input-box p-3" name="productType" required>
+                            <label for="productType" class="fw-bold cor-label">Product Type</label>
+                            <input type="text" class="input-box p-md-2 p-sm-2" name="productType" required>
                         </div>
                         <div class="label-box">
-                            <label for="price-of-each-product" class="fw-bold">Price Of Each Product</label>
-                            <input type="text" class="input-box p-3" name="priceOfeach" required>
+                            <label for="price-of-each-product" class="fw-bold cor-label">Price Of Each Product</label>
+                            <input type="text" class="input-box p-md-2 p-sm-2" name="priceOfeach" required>
                         </div>
                         <div class="label-box my-md-3 my-sm-3">
                             <label for="instock" class="fw-bold">instock</label>
-                            <input type="text" class="input-box p-3" name="instock" required>
+                            <input type="text" class="input-box p-md-2 p-sm-2" name="instock" required>
                         </div>
                         <div class="mb-md-5 mb-sm-5 mt-4">
                             <button class="btns add-btn" name="addBtn">Add</button>
@@ -145,42 +145,38 @@ else{
             </form>
         </div>
 
-        <div class="second-row mt-md-3 mt-sm-2 ms-sm-4">
-            <p class="product-menu-text h5 fw-bold">Product Menu</p>
-            <div class="mt-3 text-center me-md-2 me-sm-0 row d-flex flex-direction-column justify-content-center">
-                <div class="blue-width d-flex flex-direction-column justify-content-center">
-                    <table class="table table-borderless ms-md-3 ms-sm-3">
-                        <tr class="t-head">
+        <div class="second-row mt-md-3 mt-sm-2 m-md-5 me-sm-4">
+                <p class="product-menu-text h5 fw-bold">Product Menu</p>
+                    <table class="table table-borderless">
+                        <tr class="t-head text-center">
                             <td>No.</td>
                             <td>Dessert Name</td>
                             <td>Product Type</td>
                             <td>Price</td>
                             <td>instock</td>
-                            <td></td>
+                            <td ></td>
                             <td></td>
                         </tr>
                         <?php 
                         $count =(($page-1)*$rowLimit) + 1;
                         for ($i=0; $i < count($productList); $i++) { ?>
                             
-                            <tr>
+                            <tr class = "text-center">
                                 <td><?= $count++?></td>
                             <td><?= $productList[$i]["product_name"]?></td>
                             <td><?= $productList[$i]["product_type"]?></td>
                             <td><?= number_format($productList[$i]["product_price"])?></td>
                             <td><?= $productList[$i]["product_instock"]?></td>
                             <td>
-                            <a href="../Controller/productEditController.php?id=<?= $productList[$i]["product_id"]?>" name="editLink">Edit</a>
+                            <a href="../Controller/productEditController.php?id=<?= $productList[$i]["product_id"]?>" name="editLink"class="fw-bold">Edit</a>
                             </td>
                             <td>
-                            <a href="../Controller/deleteLinkController.php?id=<?= $productList[$i]["product_id"]?>" class="text-danger">Delete</a>
+                            <a href="../Controller/deleteLinkController.php?id=<?= $productList[$i]["product_id"]?>" class="text-danger fw-bold">Delete</a>
                             </td>
                         </tr>
 
                         <?php }?>
                     </table>
-                </div>
-            </div>
 
             <!-- for pagination -->
             <nav aria-label="Page navigation example">

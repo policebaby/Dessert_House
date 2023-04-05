@@ -62,8 +62,7 @@ body{
 }
 /* for page */
 tr{
-    width:6em !important;
-    line-height:2.5em;
+    line-height:2em;
 }
 .t-head{
     color:var(--text-color-white);
@@ -147,6 +146,12 @@ ul#itemName li {
     }
     table{
         width:100%;
+    }
+    tr{
+        line-height:0em !important;
+    }
+    .td-text{
+        font-size:0.3em !important;
     }
     .small-pop{
         display:block;

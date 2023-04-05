@@ -111,7 +111,7 @@ GROUP BY t_order.status;
         "SELECT COUNT(DISTINCT t.user_id) AS num_users
         FROM t_rating AS t
         JOIN m_ratingcategory AS m ON t.rating_id = m.rating_id
-        WHERE t.shop_id = :shopID AND m.rating_type = '0' "
+        WHERE t.shop_id = :shopID AND m.rating_value = '0' "
     );
     $sql->bindValue(":shopID",$shopID);
     $sql->execute();
