@@ -27,6 +27,8 @@ if (isset($_SESSION["mainshops"])) {
     <link rel="stylesheet" href="./resources/css/shop_pblock.css">
     <!-- css link end -->
     <!-- js link start -->
+    <script src="../View/lib/jquery3.6.0.js"></script>
+    <script src="./resources/js/shops.js?= time() ?>" defer></script>
     <!-- js link end -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

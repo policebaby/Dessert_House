@@ -18,12 +18,12 @@ $_SESSION["cartItemList"]= $cartItemList;
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- css link start -->
-    <link rel="stylesheet" href="./resources/css/shoppingCart.css">
-    <!-- <link href="style.css?key=<?php echo time(); ?>" type="text/css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="./resources/css/shoppingCart.css?key=<?=time()?>">
+    <!-- <link href="style.css?key=<?=time()?>" type="text/css" rel="stylesheet" /> -->
     <!-- css link end -->
     <!-- js link start -->
     <script src="./lib/jquery3.6.0.js"></script>
-    <script src="./resources/js/cart.js" defer></script>
+    <script src="./resources/js/cart.js?=time()?>" defer></script>
     <!-- js link end -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,11 +49,10 @@ $_SESSION["cartItemList"]= $cartItemList;
                     <th scope="col">Price</th>
                     <th scope="col">Quantity</th>
                     <th scope="col">Total</th>
-                    <!-- <th scope="col"></th> -->
+                    <th scope="col"></th>
                 </tr>
             </thead>
-            <tbody>
-
+            <tbody id="tbody">
                 <!-- row start -->
                 <?php
                 $subtotal = 0;
@@ -90,11 +89,12 @@ $_SESSION["cartItemList"]= $cartItemList;
                                 <span><iconify-icon class="coinIcon coinposition" icon="healthicons:coins"></iconify-icon></span>
                             </div>
                         </td>
-                        <!-- <td class="cellCoffee">
-                            <button class="btn" id="delete<?= $i ?>" onclick="deleteitem(<?= $i ?>,event,<?= $cartItemList[$i]['product_id'] ?>)" name="delete<?= $i ?>" class="fs-1 align-middle mt-4">
+                        <td class="cellCoffee">
+                            <!-- <button class="btn" id="delete<?= $i ?>" onclick="deleteitem(<?= $i ?>,event,<?= $cartItemList[$i]['product_id'] ?>)" name="delete<?= $i ?>" class="fs-1 align-middle mt-4"> -->
+                            <button class="btn btndelete align-middle" id="delete<?= $i ?>" onclick="deleteitem(<?=$i?>)" name="delete<?= $i ?>" class="fs-1 align-middle mt-4">
                                 <iconify-icon icon="material-symbols:delete-forever-rounded"></iconify-icon>
                             </button>
-                        </td> -->
+                        </td>
                     </tr>
                 <?php } ?>
                 <!-- row end -->
@@ -129,7 +129,7 @@ $_SESSION["cartItemList"]= $cartItemList;
                     <span id="subtotal" class="itemprice"><?= $subtotal ?></span>
                     <span><iconify-icon class="coinIcon coinposition" icon="healthicons:coins"></iconify-icon></span>
                 </div>
-                <div class="checkoutInfo">Reserved Seat Number : B1</div>
+                <div class="checkoutInfo">Reserved Seat Number :</div>
 
                 <div class="d-flex justify-content-end mt-5 btnCheckoutMD">
                     <form action="../Controller/checkoutController.php" method="post">

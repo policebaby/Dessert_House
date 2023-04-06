@@ -73,6 +73,5 @@ if (isset($_GET["pid"])) {
     $sql->bindValue(":id", implode(",", $ids));
     $sql->execute();
     $cartItemList = $sql->fetchAll(PDO::FETCH_ASSOC);
-   
 
 }

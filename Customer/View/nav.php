@@ -19,6 +19,10 @@
     <!--css link edn-->
     <script src="./lib/jquery3.6.0.js"></script>
     <script src="../View/resources/js/nab.js"></script>
+        <!-- js link start -->
+        <script src="../View/lib/jquery3.6.0.js"></script>
+    <script src="./resources/js/nav.js?v=<?= time() ?>" defer></script>
+    <!-- js link end -->
     <!--font link start-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
