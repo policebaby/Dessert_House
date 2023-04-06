@@ -28,8 +28,9 @@ if ($_SERVER["REQUEST_METHOD"]== "POST") {
     $sql->execute();
 
     $result=$sql->fetchAll(PDO::FETCH_ASSOC);
+    print_r($result);
 
-    // if result>1 store adminId to session for further usages. d
+    // if result>1 store adminId to session for further usages. 
 if (count($result)) {
     $_SESSION["adminId"]=$result[0]["admin_id"];
     header("Location:../View/adminHome.php");
