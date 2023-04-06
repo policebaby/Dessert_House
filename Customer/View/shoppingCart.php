@@ -49,7 +49,7 @@ $_SESSION["cartItemList"]= $cartItemList;
                     <th scope="col">Price</th>
                     <th scope="col">Quantity</th>
                     <th scope="col">Total</th>
-                    <th scope="col"></th>
+                    <!-- <th scope="col"></th> -->
                 </tr>
             </thead>
             <tbody id="tbody">
@@ -89,12 +89,11 @@ $_SESSION["cartItemList"]= $cartItemList;
                                 <span><iconify-icon class="coinIcon coinposition" icon="healthicons:coins"></iconify-icon></span>
                             </div>
                         </td>
-                        <td class="cellCoffee">
-                            <!-- <button class="btn" id="delete<?= $i ?>" onclick="deleteitem(<?= $i ?>,event,<?= $cartItemList[$i]['product_id'] ?>)" name="delete<?= $i ?>" class="fs-1 align-middle mt-4"> -->
+                        <!-- <td class="cellCoffee">
                             <button class="btn btndelete align-middle" id="delete<?= $i ?>" onclick="deleteitem(<?=$i?>)" name="delete<?= $i ?>" class="fs-1 align-middle mt-4">
                                 <iconify-icon icon="material-symbols:delete-forever-rounded"></iconify-icon>
                             </button>
-                        </td>
+                        </td> -->
                     </tr>
                 <?php } ?>
                 <!-- row end -->
@@ -129,7 +128,7 @@ $_SESSION["cartItemList"]= $cartItemList;
                     <span id="subtotal" class="itemprice"><?= $subtotal ?></span>
                     <span><iconify-icon class="coinIcon coinposition" icon="healthicons:coins"></iconify-icon></span>
                 </div>
-                <div class="checkoutInfo">Reserved Seat Number :</div>
+                <!-- <div class="checkoutInfo">Reserved Seat Number :</div> -->
 
                 <div class="d-flex justify-content-end mt-5 btnCheckoutMD">
                     <form action="../Controller/checkoutController.php" method="post">

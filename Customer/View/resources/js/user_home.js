@@ -1,7 +1,7 @@
 
 
 $(document).ready(()=>{
-    
+
     $("#search").click(()=>{
         // let dessertname = $("#dessertname").val();
         // let shopname = $("#shopname").val();
@@ -34,7 +34,7 @@ $(document).ready(()=>{
                             <p class="productName text-center">${product.product_name}</p>  
                             <div class="line"></div>
                             <div class=" d-flex justify-content-center">
-                            <a href="./shops.php"><button class="btn btnCoffee my-3">View More</button></a>
+                            <a href="./shopProfile.php?id=${product.shop_id}"><button class="btn btnCoffee my-3">View More</button></a>
                                 
                             </div>
                         </div>

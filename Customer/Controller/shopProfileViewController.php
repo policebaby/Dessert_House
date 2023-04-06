@@ -11,8 +11,9 @@ if(isset($_GET["page"])){
     $page = 1;
 }
 
-$rowLimit = 2;
+$rowLimit = 20;
 $pageStart = ($page - 1) * $rowLimit;
+// echo $pageStart;
 $pageStart = ($pageStart<0)? 0 : $pageStart;
 
 $db = new DBConnection();
@@ -39,8 +40,7 @@ $productcount = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 // product 
 $sql= $pdo->prepare(
-    "
-    SELECT * FROM m_product WHERE shop_id = :id; AND del_flg = 0
+    "SELECT * FROM m_product WHERE shop_id = :id AND del_flg = 0
     LIMIT $pageStart, $rowLimit
     "
 );
