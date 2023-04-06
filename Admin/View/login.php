@@ -1,4 +1,5 @@
 <?php
+ini_set("display_errors", "1");
 
 session_start();
 //If the username and password does not match, will have this session
@@ -49,7 +50,7 @@ if(isset($_SESSION["adminId"])){
             <!-- Insert form to send data to server -->
             <form class="form" action="../Controller/adminLoginController.php" method="post">
                 <input type="text" placeholder="Admin Name" id="adminName" class="nameInputBox" name="adminName">
-                <input type="text" placeholder="Password" id="adminpassword" class="passwordInputBox" name="adminPassword">
+                <input type="password" placeholder="Password" id="adminpassword" class="passwordInputBox" name="adminPassword">
                 <?php if (isset($logInError)) { ?>
                     <br><span style="color: red;"><?php echo $logInError; ?></span>
                 <?php } ?>

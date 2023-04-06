@@ -23,7 +23,7 @@ if(isset($_POST["update"])){
         $location = $_FILES['profilepic']['tmp_name'];
         $extension = pathinfo($file)['extension'];
 
-        if (move_uploaded_file($location, "../storages/profile/" . $userID . "." . $extension)) {
+        move_uploaded_file($location, "../storages/profile/" . $userID . "." . $extension);
         $sql= $pdo->prepare(
             "
             UPDATE M_user SET
@@ -35,7 +35,7 @@ if(isset($_POST["update"])){
             "
         );
         $sql->bindValue(":profilepic", "profile/" . $userID . "." . $extension);
-        }
+        
     }else {
         //no profile pic
         $sql= $pdo->prepare(

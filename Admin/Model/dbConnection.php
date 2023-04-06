@@ -4,8 +4,8 @@ class DBConnection {
 
     // Setting
     private $hostname = "localhost";
-    private $port = 3307;
-    private $dbname = "lwinooVer3_db.sql";
+    private $port = 3306;
+    private $dbname = "desserthouse_db";
     private $username = "root";
     private $password = "";
 

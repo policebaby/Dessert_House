@@ -1,4 +1,6 @@
 <?php
+ini_set("display_errors", "1");
+
 // echo "HELLO" ;
 
 session_start();
@@ -28,17 +30,18 @@ if (isset($_SESSION["shopID"])) {
     // total order
     $sql = $pdo->prepare(
         "
-        SELECT t_order.status, COUNT(*) AS num_orders
+        SELECT t_order.status, COUNT(t_order.order_id) AS num_orders
 FROM t_order
-JOIN t_orderdetail ON t_order.user_id = t_orderdetail.user_id
+LEFT JOIN t_orderdetail ON t_order.order_id = t_orderdetail.order_id
 WHERE t_orderdetail.shop_id = :shopID
-GROUP BY t_order.status;
+
 
         "
     );
     $sql->bindValue(":shopID", $shopID);
     $sql->execute();
     $orderResult = $sql->fetchAll(PDO::FETCH_ASSOC);
+    
 
     foreach ($orderResult as $row) {
         $status = $row['status'];
@@ -51,7 +54,7 @@ GROUP BY t_order.status;
         SELECT SUM(t_orderdetail.quantity) AS total_quantity
         FROM t_orderdetail
         JOIN t_order ON t_orderdetail.user_id = t_order.user_id
-        WHERE t_orderdetail.shop_id = :shopID
+        WHERE t_orderdetail.shop_id = :shopID 
         AND t_order.status = :status;
         "
     );
@@ -68,7 +71,7 @@ GROUP BY t_order.status;
         SELECT COUNT(DISTINCT t_order.order_id) AS pending
     FROM t_order
     JOIN t_orderdetail ON t_order.user_id = t_orderdetail.user_id
-    WHERE t_orderdetail.shop_id = :shopID AND t_order.status = 2;
+    WHERE t_orderdetail.shop_id = :shopID AND t_order.status = 0;
 
         "
     );
