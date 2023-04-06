@@ -201,7 +201,7 @@ if (isset($_SESSION["sellerName"])) {
                                     <span id="itemName" class="items_name"></span>
                                 </div>
                             </div>
-                            <div class="mb-4">
+                            <div class="mb-4 small-pop">
                                 <hr>
                                 <span class="ms-3">Total</span>
                                 <span id="totalPrice" class="total_items me-5"></span>

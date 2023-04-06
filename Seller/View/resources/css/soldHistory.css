@@ -135,6 +135,9 @@ td{
     background-color:var(--primary-blue) !important;
     color:var(--text-color-white) !important;
 }
+.small-pop{
+    display:none;
+}
 
 @media screen and (max-width:720px){
     body{
@@ -163,6 +166,9 @@ td{
     }
     .title-none{
         display:none;
+    }
+    .small-pop{
+        display:block;
     }
 }
 /* for mobile view */

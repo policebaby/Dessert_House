@@ -47,7 +47,7 @@ else{
                         <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
                     </a>
                     <!-- sidebar nav -->
-                    <div class="nav-icons ms-md-4 ms-sm-3 mt-sm-4">
+                    <div class="nav-icons ms-md-2 ms-sm-3 mt-sm-4">
                         <!-- profile icon from left nav -->
                         <a href="./sellerProfile.php" class="nav-text ms-sm-2 text-decoration-none">
                             <span>
@@ -93,7 +93,7 @@ else{
                             <span>
                                 <iconify-icon icon="ri:feedback-line" class="icons"></iconify-icon>
                             </span>
-                            <span class="title ms-md-1 mt-0">Customers' Feedbacks</span>
+                            <span class="title ms-md-3 mt-0">Customers' Feedbacks</span>
                         </a>
 
                         <!-- logout icon from left nav-->
@@ -122,46 +122,46 @@ else{
                         };
                         ?>
                             </div>
+
                             <div class="mb-3 mt-md-3 mt-sm-3 d-flex flex-direction-column justify-content-center">
                                 <input class="form-control" type="file" id="formFile" name="profile">
                             </div>
                         </div>
-                        <!-- sellerName and password input box -->
-                        <div class="mt-md-4 mt-sm-4 label_box_row">
-                            <span class="label_box mb-sm-3 lbox1">
+
+                        <!-- sellerName box -->
+                            <span class="label_box ">
                                 <label for="sellerName" class="coner_label fw-bold">Seller Name</label>
                                 <input type="text" placeholder="enter your name" class="input_box" name="sellerName" value="<?php echo $result[0]["seller_name"]; ?>">
                             </span>
-                            <span class="label_box ms-md-5">
+
+                            <!-- password -->
+                            <span class="label_box my-2">
                                 <label for="oldPassword" class="coner_label fw-bold">Password</label>
                                 <input type="password" placeholder="enter your old password" class="input_box" name="password" value="<?php echo $result[0]["password"]; ?>">
                             </span>
-                        </div>
-                        <!-- shopName and shop address -->
-                        <div class="label_box_row mt-md-1 mt-sm-3">
-                            <span class="label_box mb-sm-3 lbox2">
+                        
+                        <!-- shopName -->
+                        
+                            <span class="label_box">
                                 <label for="shopName" class="coner_label fw-bold">Shop Name</label>
                                 <input type="text" placeholder="enter your shop name" class="input_box" name="shop_name" value="<?php echo $shopResult[0]["shop_name"]; ?>">
                             </span>
-                            <span class="label_box ms-md-5">
-                                <label for="address" class="email fw-bold">Shop Address</label>
-                                <input type="text" placeholder="enter shop address" class="input_box" name="shopAddress" value="<?php echo $shopResult[0]["shopAddress"]; ?>">
-                            </span>
-                        </div>
-                        <!-- phone and email -->
-                        <div class="label_box_row mt-md-1 mt-sm-3">
-                            <span class="label_box mb-sm-3 lbox2">
+                            
+                        <!-- phone -->
+                            <span class="label_box my-2">
                                 <label for="phone" class="coner_label fw-bold">Phone</label>
                                 <input type="text" placeholder="enter your phone number" class="input_box" name="seller_phone" value="<?php echo $result[0]["seller_phone"]; ?>">
                             </span>
-                            <span class="label_box ms-md-5">
+
+                            <!-- email -->
+                            <span class="label_box">
                                 <label for="email" class="email fw-bold">Email</label>
                                 <input type="email" placeholder="enter your email" class="input_box" name="email" value="<?php echo $result[0]["email"]; ?>">
                             </span>
-                        </div>
-                        <p id="message" class="fw-bold text-danger text-center"></p>
+                        
+                        <!-- <p id="message" class="fw-bold text-danger text-center"></p> -->
                         <!-- button -->
-                        <div class="mt-md-4 mt-sm-4 mb-sm-5">
+                        <div class="my-md-5 my-sm-5">
                             <span>
                                 <button class="btns saveBtn" type="submit" name="saveBtn">Save Profile</button>
                             </span>

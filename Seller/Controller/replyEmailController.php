@@ -1,6 +1,5 @@
 <?php 
 
-
 include "../Model/dbConnection.php";
 include "./shared/generateReply.php";
 include "./shared/mailSender.php";
@@ -13,10 +12,11 @@ if(isset($_POST['submit'])){
     $generate = new Generate();
     $sellerReply = $generate->genReply();
 
-    echo $userEmail,$reviewID,$shopID,$sellerReply;
+    // echo $userEmail,$reviewID,$shopID,$sellerReply;
 
     $db = new DBConnection();
     $pdo = $db->connect();
+
 
     $sql = $pdo->prepare
     (
@@ -37,6 +37,7 @@ if(isset($_POST['submit'])){
         )
         "
     );
+    
     $sql->bindValue(":reviewID",$reviewID);
     $sql->bindValue(":userEmail",$userEmail);
     $sql->bindValue(":shopID",$shopID);
@@ -66,6 +67,7 @@ if(isset($_POST['submit'])){
     $sql->bindValue(":shopID",$shopID);
     $sql->bindValue(":reviewID",$reviewID);
     $sql->execute();
+
     header("Location: ../View/feedbackDetails.php");
 }
 

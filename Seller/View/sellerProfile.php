@@ -51,7 +51,7 @@ else{
                     <!-- sidebar nav -->
                     <div class="nav-icons ms-md-3 ms-sm-4 mt-sm-4">
                         <!-- profile icon from left nav -->
-                        <a href="./sellerProfile.php" class="nav-text text-decoration-none">
+                        <a href="./sellerProfile.php" class=" text-decoration-none d-flex">
                             <span>
                                 <iconify-icon icon="bi:people-circle" class="profile-icon"></iconify-icon>
                             </span>
@@ -121,40 +121,32 @@ else{
                         };
                         ?>
                     </div>
-                    <div class="seller_name mt-4 profileLogo">
+
                         <!-- name -->
-                        <div class="">
-                            <input type="text" class="name edit_center MaryCafe text-center" placeholder="Seller name" name="sellerName" value="<?php echo $result[0]["seller_name"]; ?>" readonly>
+                        <div class="mt-4 profileLogo">
+                            <input type="text" class="edit edit_center text-center" placeholder="Seller name" name="sellerName" value="<?php echo $result[0]["seller_name"]; ?>" readonly>
                         </div>
 
-                        <!-- cafe name -->
-                        <div class="ms-3">
-                            <input type="text" class="shop_name edit_center MaryCafe text-center" placeholder="Cafe name" name="shopName" value="<?php echo $shopResult[0]["shop_name"]; ?>" readonly>
-                        </div>
-
+                    <!-- cafe name -->
+                    <div class="profileLogo my-4">
+                        <input type="text" placeholder="Cafe name" class="edit edit_center text-center sm-box" name="shopName" value="<?php echo $shopResult[0]["shop_name"]; ?>" readonly>
                     </div>
 
                     <!-- email -->
-                    <div class="profileLogo mt-4">
+                    <div class="profileLogo">
                         <input type="email" placeholder="cafe@gmail.com" class="edit edit_center sm-box text-center" name="email" value="<?php echo $result[0]["email"]; ?>" readonly>
                     </div>
 
-                    <!-- password -->
-                    <div class="profileLogo my-4">
-                        <input type="text" placeholder="Shop Address" class="edit edit_center sm-box text-center" name="shopAddress" value="<?php echo $shopResult[0]["shopAddress"]; ?>" readonly>
-                    </div>
-
                     <!-- phone number -->
-                    <div class="profileLogo">
+                    <div class="profileLogo my-4">
                         <input type="text" placeholder="seller phone number" class="edit edit_center sm-box text-center" name="phone" value="<?php echo $result[0]["seller_phone"]; ?>" readonly>
                     </div>
 
                     <!-- edit button -->
-                    <div class="profileLogo my-3">
-                        <button type="submit" class="edit_profile_btn edit edit_center mt-sm-4 sm-box text-center" name="editBtn">Edit Profile</button>
+                    <div class="profileLogo ">
+                        <button type="submit" class="edit_profile_btn edit edit_center mt-sm-3 sm-box text-center" name="editBtn">Edit Profile</button>
                     </div>
                 </div>
-                <p class="mt-3">If you have any problem <a href="./sellerContactAdmin.php" class="text-danger">Contact Admin.</a></p>
             </form>
         </div>
     </div>

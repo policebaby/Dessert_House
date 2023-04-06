@@ -6,7 +6,6 @@ include "../Model/dbConnection.php";
 
 if (isset($_POST["addBtn"])) {
     $newName = $_POST["newProductName"];
-    $type    = $_POST["productType"];
     $price   = $_POST["priceOfeach"];
     $instock = $_POST["instock"];
     $shopId = $_SESSION["shopID"];
@@ -29,7 +28,6 @@ if (isset($_POST["addBtn"])) {
         (
             shop_id,
             product_name,
-            product_type,
             product_price,
             product_picture,
             product_instock,
@@ -39,7 +37,7 @@ if (isset($_POST["addBtn"])) {
         (
             :shop_id,
             :product_name,
-            :product_type,
+
             :product_price,
             :product_picture,
             :product_instock,
@@ -49,7 +47,6 @@ if (isset($_POST["addBtn"])) {
                 );
             $sql->bindValue(":shop_id", $shopId);
             $sql->bindValue(":product_name", $newName);
-            $sql->bindValue(":product_type",$type);
             $sql->bindValue(":product_price", $price);
             $sql->bindValue(":product_picture", "../storages/products/" . $file . "." . $extension);
             $sql->bindValue(":product_instock", $instock);

@@ -126,14 +126,10 @@ else{
                             <input type="text" class="input-box p-md-2 p-sm-2" name="newProductName" required>
                         </div>
                         <div class="label-box my-md-3 my-sm-3">
-                            <label for="productType" class="fw-bold cor-label">Product Type</label>
-                            <input type="text" class="input-box p-md-2 p-sm-2" name="productType" required>
-                        </div>
-                        <div class="label-box">
                             <label for="price-of-each-product" class="fw-bold cor-label">Price Of Each Product</label>
                             <input type="text" class="input-box p-md-2 p-sm-2" name="priceOfeach" required>
                         </div>
-                        <div class="label-box my-md-3 my-sm-3">
+                        <div class="label-box">
                             <label for="instock" class="fw-bold">instock</label>
                             <input type="text" class="input-box p-md-2 p-sm-2" name="instock" required>
                         </div>
@@ -151,7 +147,6 @@ else{
                         <tr class="t-head text-center">
                             <td>No.</td>
                             <td>Dessert Name</td>
-                            <td>Product Type</td>
                             <td>Price</td>
                             <td>instock</td>
                             <td ></td>
@@ -164,7 +159,6 @@ else{
                             <tr class = "text-center">
                                 <td><?= $count++?></td>
                             <td><?= $productList[$i]["product_name"]?></td>
-                            <td><?= $productList[$i]["product_type"]?></td>
                             <td><?= number_format($productList[$i]["product_price"])?></td>
                             <td><?= $productList[$i]["product_instock"]?></td>
                             <td>

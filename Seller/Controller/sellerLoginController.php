@@ -36,7 +36,7 @@ if(isset($_POST["loginBtn"])){
         // login success state
         $dbpwd = $result[0]["password"];
         if($dbpwd == $pwd){
-        //if(password_verify($pwd,$dbpwd)){
+        // if(password_verify($pwd,$dbpwd)){
 
             // success state
 
@@ -57,13 +57,4 @@ if(isset($_POST["loginBtn"])){
         }
     }
  }
-
-
-
-
-
-
-
-
-
-?>
+// }

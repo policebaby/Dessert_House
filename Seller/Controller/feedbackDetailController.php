@@ -107,7 +107,7 @@ if(isset($_SESSION["shopID"])){
     FROM t_review
     JOIN m_user
     ON t_review.user_id = m_user.user_id
-    WHERE shop_id = :shopID 
+    WHERE shop_id = :shopID AND t_review.del_flg = 0
     ORDER BY review_id DESC
     "
     );

@@ -150,5 +150,8 @@ body{
     .shopLogo{
         width:7em !important;
     }
+    .col-10{
+        width:78% !important;
+    }
 
 }

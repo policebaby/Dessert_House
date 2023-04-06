@@ -5,7 +5,6 @@ session_start();
 include "../Model/dbConnection.php";
 if(isset($_POST["saveProductBtn"])){
     $pname = $_POST["newProductName"];
-    $type = $_POST["productType"];
     $price= $_POST["priceOfeach"];
     $instock= $_POST["instock"];
     $rowId  = $_POST["id"];
@@ -29,7 +28,6 @@ if (move_uploaded_file($Location, "../../storages/products/".$rowId.".".$extensi
     "
     UPDATE m_product SET 
         product_name    = :pname,
-        product_type    = :type,
         product_price   = :price,
         product_instock = :instock,
         product_picture = :photo
@@ -37,7 +35,6 @@ if (move_uploaded_file($Location, "../../storages/products/".$rowId.".".$extensi
     "
     );
     $sql->bindValue(":pname",$pname);
-    $sql->bindValue(":type",$type);
     $sql->bindValue(":price",$price);
     $sql->bindValue(":instock",$instock);
     $sql->bindValue(":photo","../../storages/products/".$rowId.".".$extension);
@@ -56,14 +53,12 @@ if (move_uploaded_file($Location, "../../storages/products/".$rowId.".".$extensi
     "
     UPDATE m_product SET 
         product_name    = :pname,
-        product_type    = :type,
         product_price   = :price,
         product_instock = :instock
     WHERE product_id = :id
     "
     );
     $sql->bindValue(":pname",$pname);
-    $sql->bindValue(":type",$type);
     $sql->bindValue(":price",$price);
     $sql->bindValue(":instock",$instock);
     $sql->bindValue(":id",$rowId);
