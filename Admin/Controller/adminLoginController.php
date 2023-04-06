@@ -9,12 +9,12 @@ include "../Model/dbConnection.php";
 $adminName = $_POST["adminName"];
 $adminPassword = $_POST["adminPassword"];
 
-//Check if user has already logged in
-if(isset($_SESSION["user_id"])){
-    //If already logged in go to Homepage
-    header("Location:../View/adminHome.php");
-    exit;
-}
+// //Check if user has already logged in
+// if(isset($_SESSION["user_id"])){
+//     //If already logged in go to Homepage
+//     header("Location:../View/adminHome.php");
+//     exit;
+// }
 
 if ($_SERVER["REQUEST_METHOD"]== "POST") {
     // create an instance of DB connection
