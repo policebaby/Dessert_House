@@ -48,56 +48,63 @@ if (isset($_POST['register'])) {
             $_SESSION["emailErr"] = "Email already exists!";
             header("Location: ../View/createSellerAccount.php");
             exit;
-        } 
+        }
     }
 
 
 
     //Insert information shop name into M_shop database
-    $sql = $pdo->prepare("
-INSERT INTO M_shop
-(shop_name,shop_soldCount, total_profit,order_number,del_flg,create_date,shop_profilepic,shop_coverpic)
-VALUES
-(:shopName,:shopSoldCount,:totalProfit,:orderNumber,:delFlg,:createDate,:shopProfilePic,:shopCoverPic)
-");
-
-    $sql->bindValue(':shopName', $shopName);
-    $sql->bindValue(':shopSoldCount', 0);
-    $sql->bindValue(':totalProfit', 0);
-    $sql->bindValue(':orderNumber', 0);
-    $sql->bindValue(':delFlg', 0);
-    $sql->bindValue(':createDate', $date);
-    $sql->bindValue(':shopProfilePic',0);
-    $sql->bindValue(':shopCoverPic',"nocover");
-
-
-    //Insert email, password, contact phone, address into M_seller
-    $sqlSeller = $pdo->prepare("
-INSERT INTO M_seller
-(seller_name,shop_id,password,email,seller_phone,shop_coinOwn,del_flg,create_date)
-VALUES
-(:sellerName,:notsure,:password,:email,:sellerPhone,:shopCoinOwn,:delFlg,:createDate)            
-");
-
-    $sqlSeller->bindValue(':sellerName', $sellerName); //this row shows unexpected variable sql why
-    $sqlSeller->bindValue(':notsure', 1);
-    $sqlSeller->bindValue(':password', $password);
-    $sqlSeller->bindValue(':email', $email);
-    $sqlSeller->bindValue(':sellerPhone', $phone);
-    $sqlSeller->bindValue(':shopCoinOwn', 0);
-    $sqlSeller->bindValue(':delFlg', 0);
-    $sqlSeller->bindValue(':createDate', $date);
-
-    // Will insert into database only if $sql and $sqlSeller executed successfully, start transaction
     try {
         $pdo->beginTransaction();
+
+        // Insert information shop name into M_shop database
+        $sql = $pdo->prepare("
+            INSERT INTO M_shop
+            (shop_name, shop_soldCount, total_profit, order_number, del_flg, create_date, shop_profilepic, shop_coverpic)
+            VALUES
+            (:shopName, :shopSoldCount, :totalProfit, :orderNumber, :delFlg, :createDate, :shopProfilePic, :shopCoverPic)
+        ");
+
+        $sql->bindValue(':shopName', $shopName);
+        $sql->bindValue(':shopSoldCount', 0);
+        $sql->bindValue(':totalProfit', 0);
+        $sql->bindValue(':orderNumber', 0);
+        $sql->bindValue(':delFlg', 0);
+        $sql->bindValue(':createDate', $date);
+        $sql->bindValue(':shopProfilePic', 0);
+        $sql->bindValue(':shopCoverPic', "nocover");
+
         $sql->execute();
+
+        // Retrieve the generated shop_id
+        $shopId = $pdo->lastInsertId();
+
+        // Insert email, password, contact phone, address into M_seller
+        $sqlSeller = $pdo->prepare("
+            INSERT INTO M_seller
+            (seller_name, shop_id, password, email, seller_phone, shop_coinOwn, del_flg, create_date)
+            VALUES
+            (:sellerName, :shopId, :password, :email, :sellerPhone, :shopCoinOwn, :delFlg, :createDate)            
+        ");
+
+        $sqlSeller->bindValue(':sellerName', $sellerName);
+        $sqlSeller->bindValue(':shopId', $shopId);
+        $sqlSeller->bindValue(':password', $password);
+        $sqlSeller->bindValue(':email', $email);
+        $sqlSeller->bindValue(':sellerPhone', $phone);
+        $sqlSeller->bindValue(':shopCoinOwn', 0);
+        $sqlSeller->bindValue(':delFlg', 0);
+        $sqlSeller->bindValue(':createDate', $date);
+
         $sqlSeller->execute();
+
         $pdo->commit();
     } catch (PDOException $e) {
         $pdo->rollback();
+        // handle the exception
     }
 
-$_SESSION["createDisplay"]="block";
-header("Location: ../View/createSellerAccount.php");
+
+    $_SESSION["createDisplay"] = "block";
+    header("Location: ../View/createSellerAccount.php");
 }

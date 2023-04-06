@@ -114,3 +114,7 @@ padding-left: 2em;
   justify-content: space-between;
 }
 
+button:hover{
+  cursor: pointer;
+}
+

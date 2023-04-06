@@ -122,7 +122,7 @@
 
                                                     ?></td>
                             <td data-label="Contact Info"><?= $showRequestResult[$i]["user_phone"] ?><br><?= $showRequestResult[$i]["user_email"] ?></td>
-                            <td data-label="Uploaded Receipt" class="myBtn" data="./resources/img/<?= $showRequestResult[$i]["receipt"] ?>"><?php
+                            <td data-label="Uploaded Receipt" class="myBtn" data="../../storages/<?= $showRequestResult[$i]["receipt"] ?>"><?php
                                                                                                                                             if ($showRequestResult[$i]["receipt"] == "noreceipt") {
                                                                                                                                                 echo '<span style="color: black;">No Receipt</span>';
                                                                                                                                             } else {
@@ -153,7 +153,7 @@
                             <!-- PopUp content -->
                             <div class="popUpContent">
                                 <span class="close">&times;</span>
-                                <img src="./resources/img/<?= $showRequestResult[$i]["receipt"] ?>" alt="Receipt Picture" width="80%" height="80%">
+                                <img src="../../storages/<?= $showRequestResult[$i]["receipt"] ?>" alt="Receipt Picture" width="80%" height="80%">
                             </div>
 
                         </div>
@@ -164,16 +164,7 @@
         </div>
     </div>
 
-    <!-- Click View More and Pop Up Screen Appear (THE POPUP SCREEN) -->
-    <div id="popUp" class="popUp">
-
-        <!-- PopUp content -->
-        <div class="popUpContent">
-            <span class="close">&times;</span>
-            <img src="./resources/img/<?= $showRequestResult[0]["receipt"] ?>" alt="Receipt Picture" width="80%" height="80%">
-        </div>
-
-    </div>
+   
 
     <!-- Pagination -->
     <div class="moveToCornerR">
@@ -285,7 +276,7 @@
             <div class="yesterdayCoinContainer">
                 <div>Today</div>
                 <div class="countAndDownArrow">
-                    <div><?= $todayCoinResult[0]["coins_sold_today"] ?> coins</div>
+                    <div><?= $todayCoinResult[0]["coins_sold_today"] === null ? 0 : $todayCoinResult[0]["coins_sold_today"]; ?> coins</div>
                 </div>
             </div>
 

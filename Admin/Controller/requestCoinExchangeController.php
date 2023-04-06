@@ -12,7 +12,7 @@ if(isset($_GET["page"])){
     $currentPage=1;
   }
   
-  $rowsPerPage = 6;
+  $rowsPerPage = 5;
   $pageStart=($currentPage-1)*$rowsPerPage;
   $pageStart =($pageStart<1)? 0 : $pageStart;
 
@@ -42,6 +42,7 @@ JOIN M_user u ON rce.user_id = u.user_id
 ORDER BY rce.create_date DESC LIMIT $pageStart,$rowsPerPage;");
 $showRequestSql->execute();
 $showRequestResult=$showRequestSql->fetchAll(PDO::FETCH_ASSOC);
+
 
 
 // display today currency

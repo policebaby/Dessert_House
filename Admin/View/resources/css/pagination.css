@@ -38,3 +38,7 @@
     color: white !important;
     height: 100%;
   }
+
+  button:hover{
+    cursor: pointer;
+  }

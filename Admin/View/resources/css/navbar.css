@@ -44,3 +44,7 @@ nav a:hover{
     margin-right:0.43em;
 }
 
+button:hover{
+    cursor: pointer;
+  }
+

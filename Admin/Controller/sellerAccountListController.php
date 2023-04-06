@@ -19,11 +19,12 @@ $pageStart =($pageStart<1)? 0 : $pageStart;
 
 
 // to calcualte total record for pagination
-$sql = $pdo->prepare("SELECT M_shop.shop_id,M_shop.shop_name, M_shop.create_date,
-COALESCE(SUM(T_order.grand_total), 0) AS total_revenue, M_shop.del_flg
+$sql = $pdo->prepare("SELECT M_shop.shop_id, M_shop.shop_name, M_shop.create_date,
+COALESCE(SUM(T_orderdetail.total_price), 0) AS total_revenue, M_shop.del_flg
 FROM M_shop
-LEFT JOIN T_order ON T_order.shop_id = M_shop.shop_id AND T_order.status = 1
-GROUP BY M_shop.shop_id;
+LEFT JOIN T_orderdetail ON T_orderdetail.shop_id = M_shop.shop_id
+GROUP BY M_shop.shop_id
+LIMIT $pageStart, $rowsPerPage;
 
 ");
 $sql->execute();
@@ -32,12 +33,12 @@ $totalResult = count($sql->fetchall(PDO::FETCH_ASSOC));
 $buttonNumber=ceil($totalResult/$rowsPerPage);
 
 // to display all the informations except ratings
-$sql = $pdo->prepare("SELECT M_shop.shop_id,M_shop.shop_name, M_shop.create_date,
-COALESCE(SUM(T_order.total_price), 0) AS total_revenue, M_shop.del_flg
+$sql = $pdo->prepare("SELECT M_shop.shop_id, M_shop.shop_name, M_shop.create_date,
+COALESCE(SUM(T_orderdetail.total_price), 0) AS total_revenue, M_shop.del_flg
 FROM M_shop
-LEFT JOIN T_order ON T_order.shop_id = M_shop.shop_id AND T_order.status = 1
-GROUP BY M_shop.shop_id LIMIT $pageStart,$rowsPerPage;
-
+LEFT JOIN T_orderdetail ON T_orderdetail.shop_id = M_shop.shop_id
+GROUP BY M_shop.shop_id
+LIMIT $pageStart, $rowsPerPage;
 ");
 $sql->execute();
 $result = $sql->fetchall(PDO::FETCH_ASSOC);

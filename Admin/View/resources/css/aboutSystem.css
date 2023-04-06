@@ -172,3 +172,7 @@
     color: white;
     margin-top: 2em;
 }
+
+button:hover{
+  cursor: pointer;
+}

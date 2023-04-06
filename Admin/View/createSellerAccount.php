@@ -144,10 +144,6 @@ if (isset($_SESSION["createDisplay"])) {
                 <div class="description">Contact Ph</div>
                 <input type="text" name="phone" required>
             </div>
-            <div class="labels">
-                <div class="description">ADDRESS</div>
-                <input type="text" name="address" required>
-            </div>
             <button type="submit" name="register">CREATE</button>
         </form>
     </div>

@@ -95,7 +95,7 @@ for ($i = 0; $i < count($userIds); $i++) {
 $_SESSION["userReviews"] = $userReviews;
 
 // To know each user spent amount,this SQL query retrieves the total spent amount for each user from two tables: M_User and T_Order.
-$amtSql = $pdo->prepare("SELECT u.user_id, IFNULL(SUM(o.total_price),0) AS total_spent 
+$amtSql = $pdo->prepare("SELECT u.user_id, IFNULL(SUM(o.grand_total),0) AS total_spent 
 FROM M_User u
 LEFT JOIN T_Order o ON u.user_id = o.user_id
 GROUP BY u.user_id");

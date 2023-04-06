@@ -97,3 +97,7 @@ table {
       margin-left: 8%;
   }
 
+  button:hover{
+    cursor: pointer;
+  }
+
