@@ -11,20 +11,22 @@
 
 /* user box */
 .userDetails{
-    height: 30%;
+    height: 3em;
     display: flex;
+    margin-left: 2em;
 }
 
 .userProfile{
     height: 3em;
     width: 3.5%;
-    background-color: #710C05;
+    /* background-color: #710C05; */
     border-radius: 50%;
     margin: 1%;
 }
 
 .userNameandDate{
     margin-top: 1em;
+    height: 3em;
 }
 
 .userName{

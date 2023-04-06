@@ -5,6 +5,10 @@
     font-family: var(--primaryFont), sans-serif;
 }
 
+button{
+  cursor: pointer;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -44,32 +48,39 @@ td:nth-child(8){
     text-align: left;
 }
 
-/* To make the button column bigger */
-td:nth-child(9){
-    width: 20%;
-}
-
 tr:hover {
   background-color: #f5f5f5;
 }
 
 /* Activate and Disable */
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .btn{
-    height: 3em;
-    width: 43%;
-    border: transparent;
-    border-radius:10px ;
-    color: white;
-}
+      height: 3em;
+      width: 8em;
+      border: transparent;
+      border-radius:10px ;
+      color:white;
+  }
+  
+  .activate{
+      background-color:#0057FF ;
+  }
+  
+  .disable{
+      background-color: #C5332D;
+      margin-left: 8%;
+  } 
 
-.activate{
-    background-color:#0057FF ;
-}
+  /* hide pagination arrow */
+  .hidden{
+    display: none;
+  }
 
-.disable{
-    background-color: #C5332D;
-    margin-left: 5%;
-}
 
 
   

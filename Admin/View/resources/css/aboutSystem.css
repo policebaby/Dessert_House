@@ -35,7 +35,7 @@
 
 /* Greeting Letter Container */
 .greetingLetterContainer {
-  height: 34vh;
+  height: auto;
   width: 70%;
   background-color: #7f241e;
   margin-left: 17.5%;
@@ -56,7 +56,7 @@
 .greetingLetterContainer input {
   margin: 1em;
   width: 98%;
-  height: 10%;
+  height: 3em;
   border-radius: 0.5em;
 }
 
@@ -69,7 +69,7 @@
 
 /* Our Team Container */
 .ourTeamContainer {
-  height: 34vh;
+  height: auto;
   width: 70%;
   background-color: #7f241e;
   margin-left: 17.5%;
@@ -110,16 +110,35 @@
 }
 
 /* Right Side */
+.rightSide{
+  margin-left: 2em;
+  margin-bottom: 2em;
+}
+
 .rightSide input {
   margin: 1em 0 1em 0;
-  width: 44vw;
-  height: 2vw;
+  width: 65vw;
+  height: 3vw;
   border-radius: 0.5em;
+  font-size: 1.7em;
+  padding-left: 0.5em;
+  font-weight: lighter;
 }
 
 .rightSide textarea {
-  width: 44vw;
+  margin-right: 1em;
+  width: 65vw;
   border-radius: 0.5em;
+  font-size: 1.5em;
+  padding: 0.5em;
+}
+
+.rightSide div{
+  font-size: 1.2em;
+}
+
+.ptitle{
+  margin-bottom: -20px;
 }
 
 /* Delete Button */
@@ -136,6 +155,7 @@
   position: absolute;
   top: 5%;
   right: 2%;
+  margin-left:80%;
 }
 
 .deleteButton div {
@@ -145,10 +165,10 @@
 /* Save Button */
 .saveButton{
     position: relative;
-    left: 66%;
+    left: 67%;
     padding: 1em 4em 1em 4em;
     border-radius: 0.5em;
     background-color: #0057FF;
     color: white;
-    margin-top: 1.5em;
+    margin-top: 2em;
 }

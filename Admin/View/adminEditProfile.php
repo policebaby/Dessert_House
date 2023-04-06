@@ -54,10 +54,10 @@ $adminPhone = $_SESSION["adminPhone"];
     <form action="../Controller/adminEditProfileController.php" method="post">
     <div class="container">
         <img class="logoWithBorder" src="./resources/img/logoWithBorder.png" alt="Unable to load Logo">
-        <div class="filesButton">
+        <!-- <div class="filesButton">
             <button>Choose file</button>
             <button>No file choosen</button>
-        </div>
+        </div> -->
         <div class="twoInputBoxes">
             <input type="text" value="<?=$adminFirstName?>" name="adminFirstName">
             <input type="text" value="<?=$adminLastName?>" name="adminLastName">

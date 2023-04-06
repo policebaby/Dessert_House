@@ -12,7 +12,7 @@ body{
 /* Big Container */
 .blocks{
     position: absolute;
-    height: 60vh;
+    height: 70vh;
     width: 80%;
     left: 22%;
     top: 15%;
@@ -23,7 +23,7 @@ body{
 
 /*Adjust the rating block color and sizes */
 .ratingBlock {
-    height: 60%;
+    height: 7em;
     width: 60%;
     background-color:#710C05;
     color: white;
@@ -52,8 +52,12 @@ body{
     margin-left: 46%;
   }
 
+.spercent{
+  margin-top: -0.2em;
+}
+
   .satisfactoryPercentage{
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -98,7 +102,7 @@ padding-left: 2em;
 }
 
 .countAndDownArrow div,.countAndUpArrow div{
- font-size: 2em;
+ font-size: 1.5em;
 }
 
 .yesterdayCoinContainer,.todayCoinContainer{

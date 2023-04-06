@@ -5,7 +5,7 @@ class DBConnection {
     // Setting
     private $hostname = "localhost";
     private $port = 3307;
-    private $dbname = "lwinooVer1_db.sql";
+    private $dbname = "lwinooVer3_db.sql";
     private $username = "root";
     private $password = "";
 

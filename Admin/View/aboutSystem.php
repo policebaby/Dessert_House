@@ -1,3 +1,10 @@
+<?php
+
+include "../Controller/showParagraphTitleController.php";
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,19 +16,78 @@
     <!-- Link with CSS root, rating coin page-->
     <link rel="stylesheet" href="./resources/css/root.css">
     <link rel="stylesheet" href="./resources/css/aboutSystem.css">
+    <link rel="stylesheet" href="./resources/css/dashBoardAndNavForSystemManagement.css">
 
     <!-- Import google fonts: public display & dm sen serif -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans&display=swap" rel="stylesheet">
 
+    <!-- Link with about system javascript -->
+    <script src="./resources/js/jquery3.6.0.js"></script>
+    <script src="./resources/js/aboutSystem.js?v<?=time()?>"></script>
     <title>About System</title>
 </head>
 
 <body>
 
-    <!-- include nav bar and systmen management dashboard  -->
-    <?php include_once "./dashBoardAndNavForSystemManagement.php" ?>
+     <!-- Nav Bar -->
+     <nav class="navbar">
+        <ul>
+            <li><a href="./adminHome.php"><img src="./resources/img/logo.png" class="dessertHouseLogo" alt="Unable to load logo"></a></li>
+            <li><a href="./adminSellerAccountList.php">Seller Controller</a></li>
+            <li><a href="./userAccountList.php">User Controller</a></li>
+            <li><a href="./adminHome.php">System Management</a></li>
+            <li>
+                <a href="../Controller/adminProfileController.php">
+                    <img src="./resources/img/profilelogo.png" class="profileLogo" alt="Unable to load Profile Logo" srcset="">
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Dashboard for Seller Controller-->
+    <div class="dashboard">
+        <!-- Home Icon -->
+        <div>
+
+            <div class="icon">
+                <a href="./adminHome.php">
+                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="path1" d="M7.33334 38.5V16.5L22 5.5L36.6667 16.5V38.5H25.6667V25.6667H18.3333V38.5H7.33334Z" fill="white" />
+                    </svg>
+                </a>
+                <p>Home</p>
+            </div>
+        </div>
+
+        <!-- Rating Coin Icon  -->
+        <div>
+            <div class="icon">
+                <a href="./ratingCoinPage.php">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="path1" fill-rule="evenodd" clip-rule="evenodd" d="M38.4278 35.3906C40.0241 33.2202 40.87 30.6989 40.8653 28.125C40.8653 20.6458 33.8701 14.5833 25.2403 14.5833C22.155 14.5833 19.2788 15.3583 16.8569 16.6948C15.2451 16.7732 13.6498 17.0172 12.1045 17.4219C13.7886 15.8658 15.8234 14.626 18.083 13.7794C20.3425 12.9328 22.7786 12.4973 25.2403 12.5C35.197 12.5 43.2692 19.4958 43.2692 28.125C43.2721 30.2584 42.7696 32.3697 41.7927 34.328C40.8159 36.2862 39.3854 38.0498 37.5901 39.5094C38.048 38.1938 38.3353 36.8146 38.4278 35.3906Z" fill="white" />
+                        <path id="path1" fill-rule="evenodd" clip-rule="evenodd" d="M40.7848 36.0448C39.9145 37.3249 38.8389 38.4914 37.5901 39.5094C38.048 38.1938 38.3353 36.8146 38.4278 35.3906C40.0241 33.2202 40.87 30.6989 40.8653 28.125C40.8653 20.6459 33.8701 14.5834 25.2403 14.5834C22.155 14.5834 19.2788 15.3584 16.8569 16.6948C15.2451 16.7732 13.6498 17.0172 12.1045 17.4219C13.2791 16.3396 14.6251 15.4074 16.1021 14.6531C18.8708 13.2392 22.0267 12.4956 25.2403 12.5C35.197 12.5 43.2692 19.4959 43.2692 28.125C43.2748 30.9102 42.4168 33.6455 40.7848 36.0448Z" fill="white" />
+                        <path id="path1" fill-rule="evenodd" clip-rule="evenodd" d="M36.0577 34.375C36.0577 43.0042 27.9856 50 18.0288 50C8.07211 50 0 43.0042 0 34.375C0 25.7458 8.07211 18.75 18.0288 18.75C27.9856 18.75 36.0577 25.7458 36.0577 34.375ZM16.8269 29.1667C16.1894 29.1667 15.578 29.3862 15.1271 29.7769C14.6763 30.1676 14.4231 30.6975 14.4231 31.25C14.4231 31.8025 14.6763 32.3324 15.1271 32.7231C15.578 33.1138 16.1894 33.3333 16.8269 33.3333V29.1667ZM19.2308 27.0833V26.0417H16.8269V27.0833C15.5518 27.0833 14.329 27.5223 13.4274 28.3037C12.5258 29.0851 12.0192 30.1449 12.0192 31.25C12.0192 32.3551 12.5258 33.4149 13.4274 34.1963C14.329 34.9777 15.5518 35.4167 16.8269 35.4167V39.5833C15.7813 39.5833 14.8906 39.0052 14.5589 38.1948C14.5097 38.0622 14.4303 37.9395 14.3254 37.834C14.2205 37.7285 14.0923 37.6422 13.9483 37.5804C13.8043 37.5186 13.6474 37.4824 13.487 37.474C13.3266 37.4656 13.1659 37.4852 13.0143 37.5316C12.8628 37.578 12.7235 37.6503 12.6048 37.7442C12.4861 37.838 12.3902 37.9516 12.323 38.0781C12.2558 38.2046 12.2185 38.3415 12.2134 38.4807C12.2083 38.6199 12.2355 38.7586 12.2933 38.8885C12.6248 39.701 13.2388 40.4044 14.0507 40.902C14.8626 41.3995 15.8326 41.6667 16.8269 41.6667V42.7083H19.2308V41.6667C20.5058 41.6667 21.7287 41.2277 22.6303 40.4463C23.5319 39.6649 24.0385 38.6051 24.0385 37.5C24.0385 36.3949 23.5319 35.3351 22.6303 34.5537C21.7287 33.7723 20.5058 33.3333 19.2308 33.3333V29.1667C20.2764 29.1667 21.1671 29.7448 21.4988 30.5552C21.548 30.6878 21.6274 30.8105 21.7323 30.916C21.8372 31.0215 21.9654 31.1078 22.1094 31.1696C22.2534 31.2314 22.4103 31.2676 22.5707 31.276C22.7311 31.2844 22.8918 31.2648 23.0434 31.2184C23.1949 31.172 23.3342 31.0997 23.4529 31.0058C23.5716 30.912 23.6675 30.7984 23.7347 30.6719C23.8019 30.5454 23.8392 30.4085 23.8443 30.2693C23.8494 30.1301 23.8222 29.9914 23.7644 29.8615C23.4329 29.049 22.8189 28.3456 22.007 27.848C21.195 27.3505 20.2251 27.0833 19.2308 27.0833ZM19.2308 35.4167V39.5833C19.8683 39.5833 20.4797 39.3638 20.9305 38.9731C21.3814 38.5824 21.6346 38.0525 21.6346 37.5C21.6346 36.9475 21.3814 36.4176 20.9305 36.0269C20.4797 35.6362 19.8683 35.4167 19.2308 35.4167Z" fill="white" />
+                    </svg>
+                </a>
+                <p>Rating Coin</p>
+            </div>
+        </div>
+
+
+         <!-- About System Icon -->
+         <div>
+            <div class="icon generate" style="background:white; border-radius: 10px;">
+                <a href="./aboutSystem.php">
+                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="path1" fill-rule="evenodd" clip-rule="evenodd" d="M18.3482 3.96802C18.4478 3.46948 18.7171 3.02083 19.1101 2.69837C19.5032 2.37591 19.9958 2.19953 20.5042 2.19922H23.4962C24.0046 2.19953 24.4972 2.37591 24.8903 2.69837C25.2833 3.02083 25.5525 3.46948 25.6522 3.96802L26.3012 7.20862C27.3946 7.52542 28.4374 7.96102 29.4164 8.50002L32.1664 6.66522C32.5896 6.38301 33.0976 6.25618 33.6038 6.30632C34.11 6.35646 34.5832 6.58047 34.9428 6.94022L37.0592 9.05662C37.4189 9.41626 37.643 9.88945 37.6931 10.3957C37.7432 10.9019 37.6164 11.4098 37.3342 11.833L35.4994 14.583C36.0384 15.562 36.474 16.6048 36.7908 17.6982L40.0314 18.345C40.5299 18.4447 40.9786 18.7139 41.301 19.107C41.6235 19.5 41.7999 19.9926 41.8002 20.501V23.4952C41.7999 24.0036 41.6235 24.4962 41.301 24.8893C40.9786 25.2823 40.5299 25.5516 40.0314 25.6512L36.7908 26.3002C36.4765 27.3831 36.0434 28.4278 35.4994 29.4154L37.3342 32.1654C37.6164 32.5886 37.7432 33.0966 37.6931 33.6028C37.643 34.109 37.4189 34.5822 37.0592 34.9418L34.9428 37.0582C34.5832 37.418 34.11 37.642 33.6038 37.6921C33.0976 37.7423 32.5896 37.6154 32.1664 37.3332L29.4164 35.4984C28.4288 36.0424 27.384 36.4755 26.3012 36.7898L25.6544 40.0304C25.5547 40.529 25.2855 40.9776 24.8925 41.3001C24.4994 41.6225 24.0068 41.7989 23.4984 41.7992H20.5042C19.9958 41.7989 19.5032 41.6225 19.1101 41.3001C18.7171 40.9776 18.4478 40.529 18.3482 40.0304L17.6992 36.7898C16.6164 36.4754 15.5717 36.0423 14.584 35.4984L11.834 37.3332C11.4108 37.6154 10.9028 37.7423 10.3966 37.6921C9.89042 37.642 9.41723 37.418 9.0576 37.0582L6.9412 34.9418C6.58145 34.5822 6.35744 34.109 6.3073 33.6028C6.25716 33.0966 6.38399 32.5886 6.6662 32.1654L8.501 29.4154C7.9571 28.4278 7.524 27.383 7.2096 26.3002L3.969 25.6534C3.47008 25.5537 3.02116 25.2841 2.69865 24.8906C2.37614 24.4971 2.19999 24.004 2.2002 23.4952V20.5032C2.2005 19.9948 2.37688 19.5022 2.69935 19.1092C3.02181 18.7161 3.47045 18.4469 3.969 18.3472L7.2096 17.6982C7.5264 16.6048 7.962 15.562 8.501 14.583L6.6662 11.833C6.38399 11.4098 6.25716 10.9019 6.3073 10.3957C6.35744 9.88945 6.58145 9.41626 6.9412 9.05662L9.0576 6.94022C9.41737 6.57992 9.89098 6.35557 10.3977 6.30542C10.9044 6.25528 11.4128 6.38244 11.8362 6.66522L14.5862 8.50002C15.5739 7.95612 16.6186 7.52303 17.7014 7.20862L18.3482 3.96802ZM28.6002 21.9992C28.6002 23.7496 27.9048 25.4284 26.6671 26.6661C25.4294 27.9039 23.7506 28.5992 22.0002 28.5992C20.2498 28.5992 18.571 27.9039 17.3333 26.6661C16.0956 25.4284 15.4002 23.7496 15.4002 21.9992C15.4002 20.2488 16.0956 18.5701 17.3333 17.3323C18.571 16.0946 20.2498 15.3992 22.0002 15.3992C23.7506 15.3992 25.4294 16.0946 26.6671 17.3323C27.9048 18.5701 28.6002 20.2488 28.6002 21.9992Z" fill="black" />
+                    </svg>
+                </a>
+                <p style="color:black;">About System</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Add New Paragraph Button -->
     <button class="addNewParagraph">
@@ -33,39 +99,33 @@
 
     <!-- Receiver Options -->
     <select name="" id="" class="receiverOptions">
-        <option value="">Our Team</option>
-        <option value="">User</option>
-        <option value="">Seller</option>
+        <option>Please Select A Paragraph</option>
+    <?php for ($i=0; $i < count($showPresult) ; $i++) { ?>
+        <option value="<?=$showPresult[$i]["title"]?>"><?=$showPresult[$i]["title"]?></option>
+
+    <?php }?>
     </select>
 
     <!-- Greeting Letter Container -->
-    <div class="greetingLetterContainer">
+    <!-- <div class="greetingLetterContainer">
         <div class="greetingTitle">Greeting Letter</div>
         <div>Title</div>
-        <input type="text">
+        <input type="text" class="titleInput">
         <div>Description</div>
         <textarea name="" id="" cols="30" rows="10"></textarea>
-    </div>
+    </div> -->
 
     <!-- Our Team Container -->
     <div class="ourTeamContainer">
-        <div class="ourTeamTitle">Our Team</div>
+        <div class="ourTeamTitle">Announcement</div>
 
         <!-- Want to use display flex to join left and right side -->
         <div class="leftSideAndRightSide">
-            <div class="leftSide">
-                <div class="profilePic"></div>
-                <div class="buttons">
-                    <button>Choose file</button>
-                    <button>Nofile chosen</button>
-                </div>
-            </div>
-
             <div class="rightSide">
-                <div>Title</div>
-                <input type="text">
+                <div class="ptitle">Title</div>
+                <input type="text" id="paragraphTitle">
                 <div>Description</div>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea name="" id="paragraph" cols="40" rows="15"></textarea>
             </div>
         </div>
 

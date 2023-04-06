@@ -3,22 +3,22 @@
     height: auto;
     width: 60%;
     border: 2px solid #c22014;
-    position: absolute;
-    top: 18%;
-    left: 35%;
-    margin-bottom: 2%;
+    margin-left: 35%;
+    position: relative;
+    margin-top: 3.2em;
 }
 
 /* user box */
 .userDetails{
-    height: 30%;
+    /* height: 30%; */
     display: flex;
+    margin-left: 2em;
 }
 
 .userProfile{
     height: 2.5em;
     width: 3.5%;
-    background-color: #710C05;
+    /* background-color: #710C05; */
     border-radius: 50%;
     margin: 1%;
 }
@@ -38,7 +38,7 @@
 
 /* face and message box */
 .faceAndMessage{
-    position: absolute;
+    position:absolute;
     right: 0;
     top: 0;
     padding: 1%;

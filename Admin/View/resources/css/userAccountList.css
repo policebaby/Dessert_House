@@ -45,6 +45,8 @@ table {
     width: 14%;
   }
 
+
+
   /* Status Column */
   td:nth-child(8){
       padding:0.5em;
@@ -64,6 +66,11 @@ table {
   tr:hover {
     background-color: #f5f5f5;
   }
+
+  .reviewBtn{
+    border-style: transparent !important;
+    cursor: pointer !important;
+  }
   
   /* Activate and Disable */
 .buttons{
@@ -78,6 +85,7 @@ table {
       border: transparent;
       border-radius:10px ;
       color: white;
+      cursor: pointer;
   }
   
   .activate{
@@ -88,3 +96,4 @@ table {
       background-color: #C5332D;
       margin-left: 8%;
   }
+

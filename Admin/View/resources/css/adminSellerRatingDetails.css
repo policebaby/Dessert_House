@@ -21,6 +21,7 @@ body{
     background-color: #c22014;
     color: white;
     padding: 0 10px;
+    cursor:pointer;
   }
 
   .back-arrow {
@@ -63,7 +64,6 @@ body{
 
   .faces {
     margin-right: 10px;
-
   }
 
   .satisfactoryLevel {
@@ -99,9 +99,14 @@ body{
 
   /* Seller reply (inline-block means it's parent's height will auto adjust based on the text) */
   .reply{
-   margin-left: 10%;
+   margin-left: 5%;
    display: inline-block;
    margin-bottom: 2em;
+   margin-top: 1em;
   }
 
+  .sellerName{
+    margin: 0.5em 0 0.5em 4.5em;
+  }
   
+

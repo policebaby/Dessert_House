@@ -36,4 +36,5 @@
   .current{
     background-color: var(--adminPrimaryColor) !important;
     color: white !important;
+    height: 100%;
   }

@@ -16,6 +16,7 @@
     align-items: center;
     color: var(--adminPrimaryColor);
     font-weight: bolder;
+    cursor: pointer;
 
   }
 
@@ -56,4 +57,28 @@
 .shopNames div:hover{
     padding: 1em;
     color: var(--adminPrimaryColor);
+}
+
+div .currentIcon{
+    width: 70%;
+    height: 60%;
+}
+
+.currentIcon{
+    background-color:  white;
+    border-radius: 10px;
+}
+
+/* To turn the icon color into black when hovering */
+.currentIcon #path1{
+    fill: black;
+}
+
+.currentIcon p{
+    color: black;
+}
+
+.face{
+    height: 10em;
+    width: 10em;
 }

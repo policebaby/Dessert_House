@@ -4,7 +4,7 @@
 	width: 13%;
 	float: left;
     display: flex;
-    justify-content:center;
+    justify-content:flex-start;
     align-items:flex-end;
     flex-direction: column;
     background-color:var(--adminPrimaryColor);
@@ -34,7 +34,7 @@ div p{
 /* adjust the icons using % unit to make it responsive */
 div .icon{
     width: 70%;
-    height: 60%;
+    height: 70%;
 }
 
 /* .generate{

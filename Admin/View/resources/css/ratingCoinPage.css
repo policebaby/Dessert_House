@@ -46,7 +46,8 @@ td:nth-child(8) {
 
 /* To make the button column bigger */
 td:nth-child(9) {
-  width: 20%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 tr:hover {
@@ -54,15 +55,15 @@ tr:hover {
 }
 
 /*make View appear like link */
-#myBtn{
-  text-decoration: underline;
+.myBtn{
   color: blue;
+  cursor: pointer;
 }
 
 /* Activate and Disable Buttons */
 .btn {
   height: 3em;
-  width: 43%;
+  width: 8em;
   border: transparent;
   border-radius: 10px;
   color: white;
@@ -169,7 +170,7 @@ tr:hover {
 }
 
 .todayCurrencyTitle {
-  margin: 2em;
+  margin: 3em;
 }
 
 .todayCurrencyContainer div {
@@ -197,7 +198,7 @@ tr:hover {
 
 /* Separator */
 .separator {
-  width: 90%;
+  width: 70%;
   height: 0.1em;
   background-color: white;
   margin: auto;
@@ -217,6 +218,14 @@ tr:hover {
 .countAndDownArrow div,
 .countAndUpArrow div {
   font-size: 2em;
+}
+
+.coinPart{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .yesterdayCoinContainer,
@@ -276,4 +285,18 @@ tr:hover {
   color: var(--adminPrimaryColor);
   text-decoration: none;
   cursor: pointer;
+}
+
+/* paginations */
+.moveToCornerR {
+  position: fixed;
+  top: 55%;
+  left: 85%;
+}
+
+ /* Current Page */
+ .current{
+  background-color: var(--adminPrimaryColor) !important;
+  color: white !important;
+  height: 100%;
 }
