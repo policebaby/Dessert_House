@@ -1,8 +1,6 @@
 <?php
 include "../Controller/shopProfileViewController.php";
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +17,8 @@ include "../Controller/shopProfileViewController.php";
     <link rel="stylesheet" href="./resources/css/shopProfile.css">
     <!-- css link end -->
     <!-- js link start -->
+    <script src="./lib/jquery3.6.0.js"></script>
+    <script src="./resources/js/shopProfile.js" defer></script>
     <!-- js link end -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +35,7 @@ include "../Controller/shopProfileViewController.php";
     <!-- nav end -->
     <!-- hero section start -->
     <div class="container-fluid  shopProfile  ">
-            <!-- <img src="./resources/img/shop pic.jpg" alt="" class="shopHSpic"> -->
+        <!-- <img src="./resources/img/shop pic.jpg" alt="" class="shopHSpic"> -->
         <div class="">
             <button class="btn btnBack px-3 ms-5 mt-5">
                 <iconify-icon icon="material-symbols:arrow-back-ios-new-rounded" class="backIcon"></iconify-icon>
@@ -43,8 +43,8 @@ include "../Controller/shopProfileViewController.php";
             </button>
             <div>
                 <div class="shopLogo ms-5 mt-5">
-                    <img src="./resources/img/shopProfileLogo.jpg " alt="" class="shopProfileLogo">
-                    <span class="shopName">Shop Name</span>
+                    <img src="../../storages/<?= $shopinfo[0]["shop_profilepic"] ?>" alt="" class="shopProfileLogo">
+                    <span class="shopName"><?= $shopinfo[0]["shop_name"] ?></span>
                     <div class="text-light ms-5 position-relative">
                         <iconify-icon icon="gg:smile-mouth-open" class="smileIcon"></iconify-icon>
                         <span class="cusRating ">Customers’ satisfactory 95%</span>
@@ -63,169 +63,67 @@ include "../Controller/shopProfileViewController.php";
     </div>
     <!-- menu section end -->
     <!-- menublocks start -->
+
     <div class="menuBlockBg">
         <div class="container-fluid d-flex justify-content-center  row ">
+            <?php for ($i = 0; $i < count($products); $i++) { ?>
+                <!-- single menu block start -->
+                <div class="menublock col-md-3  justify-content-center">
+                    <div class="newItem ">New</div>
+                    <div class="  d-flex justify-content-center imgBorder">
+                        <img src="../../storages/<?= $products[$i]["product_picture"] ?>" alt="" width="80%" class="menuImg ">
+                    </div>
+                    <div class="price ">
+                        <iconify-icon class="priceCoin" icon="healthicons:coins"></iconify-icon>
+                        <span class="priceNum"><?= $products[$i]["product_price"] ?></span>
+                    </div>
+                    <div class="line "></div>
+                    <p class="productName text-center"><?= $products[$i]["product_name"] ?></p>
+                    <div class="line"></div>
+                    <div class=" d-flex justify-content-center">
+                        <div class="btn-group btn-group-sm itemCount" role="group" aria-label="Basic outlined example">
+                            <button type="button" onclick="minus(<?= $i ?>)" class="btn btnOutline minus">-</button>
+                            <button type="button" id="qty<?= $i ?>" class="btn btnOutline qty">1</button>
+                            <button type="button" onclick="plus(<?= $i ?>)" class="btn btnOutline plus">+</button>
+                        </div>
+                        <button type="" data="<?= $products[$i]["product_id"] ?>" onclick="addcart(<?= $i ?>)" class="btnhidden addcart ">
+                            <iconify-icon icon="material-symbols:add-shopping-cart" class="productCart"></iconify-icon>
+                        </button>
+                    </div>
+                </div>
+                <!-- single menu block end -->
+            <?php } ?>
 
-            <!-- single menu block start -->
-            <div class="menublock col-md-3  justify-content-center">
-                <div class="newItem ">New</div>
-                <div class="  d-flex justify-content-center imgBorder">
-                <img src="./resources/img/americano1.png" alt="" width="80%" class="menuImg ">
-                </div>
-                <div class="price ">
-                    <iconify-icon class="priceCoin" icon="healthicons:coins"></iconify-icon>
-                    <span class="priceNum">34</span>
-                </div>
-                <div class="line "></div>
-                <p class="productName text-center">Black Coffee</p>
-                <div class="line"></div>
-                <div class=" d-flex justify-content-center">
-                    <div class="btn-group btn-group-sm itemCount" role="group" aria-label="Basic outlined example">
-                        <button type="button" class="btn btnOutline">-</button>
-                        <button type="button" class="btn btnOutline">5</button>
-                        <button type="button" class="btn btnOutline">+</button>
-                    </div>
-                    <iconify-icon icon="material-symbols:add-shopping-cart" class="productCart"></iconify-icon>
-                </div>
-            </div>
-            <!-- single menu block end -->
-            
-            <!-- single menu block start -->
-            <div class="menublock col-md-3  justify-content-center">
-                <div class="newItem ">New</div>
-                <div class="  d-flex justify-content-center imgBorder">
-                <img src="./resources/img/oneset.png" alt="" width="80%" class="menuImg ">
-                </div>
-                <div class="price ">
-                    <iconify-icon class="priceCoin" icon="healthicons:coins"></iconify-icon>
-                    <span class="priceNum">34</span>
-                </div>
-                <div class="line "></div>
-                <p class="productName text-center">Black Coffee</p>
-                <div class="line"></div>
-                <div class=" d-flex justify-content-center">
-                    <div class="btn-group btn-group-sm itemCount" role="group" aria-label="Basic outlined example">
-                        <button type="button" class="btn btnOutline">-</button>
-                        <button type="button" class="btn btnOutline">5</button>
-                        <button type="button" class="btn btnOutline">+</button>
-                    </div>
-                    <iconify-icon icon="material-symbols:add-shopping-cart" class="productCart"></iconify-icon>
-                </div>
-            </div>
-            <!-- single menu block end -->
 
-            <!-- single menu block start -->
-            <div class="menublock col-md-3  justify-content-center">
-                <div class="newItem ">New</div>
-                <div class="  d-flex justify-content-center imgBorder">
-                <img src="./resources/img/coffeeheart.png" alt="" width="80%" class="menuImg ">
-                </div>
-                <div class="price ">
-                    <iconify-icon class="priceCoin" icon="healthicons:coins"></iconify-icon>
-                    <span class="priceNum">34</span>
-                </div>
-                <div class="line "></div>
-                <p class="productName text-center">Black Coffee</p>
-                <div class="line"></div>
-                <div class=" d-flex justify-content-center">
-                    <div class="btn-group btn-group-sm itemCount" role="group" aria-label="Basic outlined example">
-                        <button type="button" class="btn btnOutline">-</button>
-                        <button type="button" class="btn btnOutline">5</button>
-                        <button type="button" class="btn btnOutline">+</button>
-                    </div>
-                    <iconify-icon icon="material-symbols:add-shopping-cart" class="productCart"></iconify-icon>
-                </div>
-            </div>
-            <!-- single menu block end -->
-            <!-- single menu block start -->
-            <div class="menublock col-md-3  justify-content-center">
-                <div class="newItem ">New</div>
-                <div class="  d-flex justify-content-center imgBorder">
-                <img src="./resources/img/blackcoffee.png" alt="" width="80%" class="menuImg ">
-                </div>
-                <div class="price ">
-                    <iconify-icon class="priceCoin" icon="healthicons:coins"></iconify-icon>
-                    <span class="priceNum">34</span>
-                </div>
-                <div class="line "></div>
-                <p class="productName text-center">Black Coffee</p>
-                <div class="line"></div>
-                <div class=" d-flex justify-content-center">
-                    <div class="btn-group btn-group-sm itemCount" role="group" aria-label="Basic outlined example">
-                        <button type="button" class="btn btnOutline">-</button>
-                        <button type="button" class="btn btnOutline">5</button>
-                        <button type="button" class="btn btnOutline">+</button>
-                    </div>
-                    <iconify-icon icon="material-symbols:add-shopping-cart" class="productCart"></iconify-icon>
-                </div>
-            </div>
-            <!-- single menu block end -->
-            <!-- single menu block start -->
-            <div class="menublock col-md-3  justify-content-center">
-                <div class="newItem ">New</div>
-                <div class="  d-flex justify-content-center imgBorder">
-                <img src="./resources/img/.png" alt="" width="80%" class="menuImg ">
-                </div>
-                <div class="price ">
-                    <iconify-icon class="priceCoin" icon="healthicons:coins"></iconify-icon>
-                    <span class="priceNum">34</span>
-                </div>
-                <div class="line "></div>
-                <p class="productName text-center">Black Coffee</p>
-                <div class="line"></div>
-                <div class=" d-flex justify-content-center">
-                    <div class="btn-group btn-group-sm itemCount" role="group" aria-label="Basic outlined example">
-                        <button type="button" class="btn btnOutline">-</button>
-                        <button type="button" class="btn btnOutline">5</button>
-                        <button type="button" class="btn btnOutline">+</button>
-                    </div>
-                    <iconify-icon icon="material-symbols:add-shopping-cart" class="productCart"></iconify-icon>
-                </div>
-            </div>
-            <!-- single menu block end -->
-            <!-- single menu block start -->
-            <div class="menublock col-md-3  justify-content-center">
-                <div class="newItem ">New</div>
-                <div class="  d-flex justify-content-center imgBorder">
-                <img src="./resources/img/americano1.png" alt="" width="80%" class="menuImg ">
-                </div>
-                <div class="price ">
-                    <iconify-icon class="priceCoin" icon="healthicons:coins"></iconify-icon>
-                    <span class="priceNum">34</span>
-                </div>
-                <div class="line "></div>
-                <p class="productName text-center">Black Coffee</p>
-                <div class="line"></div>
-                <div class=" d-flex justify-content-center">
-                    <div class="btn-group btn-group-sm itemCount" role="group" aria-label="Basic outlined example">
-                        <button type="button" class="btn btnOutline">-</button>
-                        <button type="button" class="btn btnOutline">5</button>
-                        <button type="button" class="btn btnOutline">+</button>
-                    </div>
-                    <iconify-icon icon="material-symbols:add-shopping-cart" class="productCart"></iconify-icon>
-                </div>
-            </div>
-            <!-- single menu block end -->
-            
         </div>
         <!-- pagination start -->
-        <nav aria-label="Page navigation example">
-            <ul class="pagination  justify-content-center">
-                <li class="page-item ">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span class="" aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
-                <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span class=" " aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
+        <nav aria-label="Page navigation example ">
+            <ul class="pagination  justify-content-center mb-5 mt-5">
+                <li class="page-item 
+                <?php
+                if ($page <= 1) {
+                    echo "disabled";
+                }
+                ?>
+                "><a class="page-link text-dark" href="?id=<?=$id?>&page=<?= $page - 1 ?>">&laquo;</a></li>
+                <?php
+                for ($i = 1; $i <= $pageList; $i++) { ?>
+                    <li class="page-item 
+                    <?php
+                    if ($page == $i) {
+                        echo "active";
+                    }
+                    ?>"><a class="page-link text-dark" href="?id=<?=$id?>&page=<?= $i ?>"><?= $i ?></a></li>
+                <?php } ?>
+                <li class="page-item
+                <?php
+                if ($page >= $pageList) {
+                    echo "disabled";
+                }
+                ?>"><a class="page-link text-dark" href="?id=<?=$id?>&page=<?= $page + 1 ?>">&raquo;</a></li>
             </ul>
         </nav>
+
         <!-- pagination end -->
     </div>
     <!-- menublocks end -->
@@ -236,7 +134,7 @@ include "../Controller/shopProfileViewController.php";
     </div>
     <!-- booking seat end-->
     <!-- footer start -->
-    <?php 
+    <?php
     include "./footer.php"
     ?>
     <!-- footer end -->

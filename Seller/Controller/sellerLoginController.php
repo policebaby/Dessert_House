@@ -42,11 +42,13 @@ if(isset($_POST["loginBtn"])){
 
             $_SESSION["error"] = "";
 
+            $_SESSION["sellerName"]=$result[0]["seller_name"];
             $_SESSION["sellerName"]=$sellerName;
+
             $_SESSION["sellerID"]=$result[0]["seller_id"];
             $_SESSION["shopID"]=$result[0]["shop_id"];
 
-
+            $_SESSION["sellerEmail"] = $result[0]["email"];
             header("Location: ../View/sellerDashboard.php");
         }else{
             // fail state
@@ -54,7 +56,9 @@ if(isset($_POST["loginBtn"])){
             header("Location: ../View/sellerlogin.php");
         }
     }
-}
+ }
+
+
 
 
 

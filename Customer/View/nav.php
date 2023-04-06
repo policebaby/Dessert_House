@@ -19,6 +19,10 @@
     <!--css link edn-->
     <script src="./lib/jquery3.6.0.js"></script>
     <script src="../View/resources/js/nab.js"></script>
+        <!-- js link start -->
+        <script src="../View/lib/jquery3.6.0.js"></script>
+    <script src="./resources/js/nav.js?v=<?= time() ?>" defer></script>
+    <!-- js link end -->
     <!--font link start-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -54,9 +58,9 @@
         <img src="../View/resources/img/logo.png" alt="logo" class="nav_logo" />
 
         <ul class="nav_desktop">
-            <li class="nav_name "  id="home" ><a href="./user_home.php">Home</a></li>
-            <li class="nav_name " id="shop" ><a href="./shops.php"> Shop</a></li>
-            <li class="nav_name "  id="coin_shop" ><a href="../Controller/coin_exchangeViewController.php">Coin Shop</a> </li>
+            <li class="nav_name " id="home"><a href="./user_home.php">Home</a></li>
+            <li class="nav_name " id="shop"><a href="./shops.php"> Shop</a></li>
+            <li class="nav_name " id="coin_shop"><a href="../Controller/coin_exchangeViewController.php">Coin Shop</a> </li>
         </ul>
 
         <!--search box start-->
@@ -65,15 +69,33 @@
             <input type="text" class="search" placeholder="Search" />
         </div>
         <!--search box end-->
+        <div class="dropdown">
+            <button class="btn  bg-transparent btnprofile" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                <iconify-icon icon="healthicons:ui-user-profile" class="nav_icons nav_pf"></iconify-icon>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenu2">
+                <li>
+                    <a href="../Controller/user_profileViewController.php">
+                        <button class="dropdown-item" type="button">My Profile</button>
+                    </a>
+                </li>
+                <li><a href="./buyHistory.php">
+                        <button class="dropdown-item" type="button">My Orders</button>
+                    </a>
+                </li>
+            </ul>
 
-        <a href="../Controller/user_profileViewController.php">
-            <iconify-icon icon="healthicons:ui-user-profile" class="nav_icons nav_pf"></iconify-icon>
-        </a>
 
-        <a href="./shoppingCart.php">
-            <iconify-icon icon="material-symbols:shopping-bag" class="cart_icon"></iconify-icon>
-        </a>
 
+        </div>
+
+        <!-- cart -->
+        <form action="./shoppingCart.php" method="post">
+            <input type="hidden" name="cartItems" id="cartLists" value="">
+            <button type="submit" class="cartbtn btn-link ">
+                <iconify-icon icon="material-symbols:shopping-bag" class="cart_icon"></iconify-icon>
+            </button>
+        </form>
         <!--bento menu start-->
         <a href="#">
             <label for="nav_check">

@@ -44,6 +44,9 @@ body {
   flex: 1;
   padding-left: 10px;
 }
+.btnprofile{
+  border-style: none;
+}
 .nav_icons {
   color: var(--userSecondarycolor);
   font-size: 1.8em !important; 
@@ -57,6 +60,10 @@ body {
   margin-top: 0.8em !important;
   margin-bottom: 0.7em !important;
   opacity: 70%;
+}
+.cartbtn{
+  background-color: transparent;
+  border-style: none;
 }
 .nav_desktop {
   display: flex;
@@ -134,6 +141,7 @@ a, a:link, a:visited {
   .nav_pf {
     display: none;
   }
+  
   #nav_check:checked + .nav_mobile {
     display: flex;
     flex-direction: column;

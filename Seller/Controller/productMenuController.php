@@ -19,7 +19,7 @@ if (isset($_POST["addBtn"])) {
     if ($file != "") {
         $Location  = $_FILES['productPhoto']['tmp_name'];
         $extension = pathinfo($file)['extension'];
-        if (move_uploaded_file($Location, "../storages/products/".$file.".".$extension)) {
+        if (move_uploaded_file($Location, "../../storages/products/".$file.".".$extension)) {
             //call database connection
             $db  = new DBConnection();
             $pdo = $db->connect();

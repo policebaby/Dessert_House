@@ -21,6 +21,7 @@ body{
     opacity:1;
 }
 .title{
+    text-decoration:none;
     color:var(--text-color-white) !important;
     opacity:0.5;
 }
@@ -42,6 +43,10 @@ body{
 }
 .nav-text{
     display:flex;
+    text-decoration:none;
+}
+.nav-text{
+    text-decoration:none !important;
 }
 .edit_nav{
     max-height:100% !important;
@@ -52,12 +57,13 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-decoration:none;
+    text-decoration:none !important;
 }
 .web_name{
     font-family:"DM Serif Display","sans-serif";
     font-size: 1.2em;
 }
+
 /* for page */
 .t-head{
     color:var(--text-color-white);
@@ -84,13 +90,22 @@ body{
     height:2em;
     line-height: initial;
     text-align: center;
-    color:var(--text-color-white);
+    color:var(--text-color-white) !important;
+    text-decoration:none !important;
 }
 td{
     text-align:center;
+    line-height:2em !important;
 }
 .td-text{
     font-size:0.9em !important;
+}
+table tr:nth-child(even) {
+    background-color: transparent;
+}
+
+table tr:nth-child(odd) {
+    background-color:#0b00332a ;
 }
 .down{
     color:white;
@@ -118,10 +133,7 @@ td{
 .great,.less{
     color:var(--primary-blue);
 }
-.beat{
-    background-color:var(--primary-blue) !important;
-    color:var(--text-color-white) !important;
-}
+
 
 @media screen and (max-width:720px){
     body{
@@ -154,7 +166,14 @@ td{
         width:100%;
     }
     td{
-        padding:0.1em !important;
+        font-size:0.8em !important;
+        padding:0.2em !important;
+    }
+    .td-text{
+        font-size:0.8em !important;
+        /* padding:0.2em !important; */
+        vertical-align: middle;
+        text-align:center;
     }
     .seeMore,.small-pop{
         display:block;
@@ -181,7 +200,7 @@ td{
     }
     .web_logo{
         width:2em !important;
-        margin-top:0.8em !important;
+        margin-top:1em !important;
     }
     .nav-icons{
         position:relative !important;
@@ -192,8 +211,8 @@ td{
         font-size:1.2em !important;
     }
     td{
+        font-size:0.5em !important;
         padding-left:2px !important;
-        font-size:0.6em;
     }
     .td-text{
         font-size:0.5em !important;
@@ -201,9 +220,11 @@ td{
     }
     tr{
         line-height:1.5em !important;
+        vertical-align: middle !important;
     }
-    .incoming-text{
-        font-size:1em !important;
+    .incomingorder-text{
+        font-size:0.8em !important;
+        margin:1em !important;
     }
     .accept-reject{
         width:5.3em ;
@@ -217,6 +238,6 @@ td{
         padding:5px !important;
     }
     .col-10{
-        width:80% !important;
+        max-width:82% !important;
     }
 }

@@ -1,7 +1,55 @@
 <?php
+ini_set("display_errors", "1");
+session_start();
 
+// print_r($_SESSION);
+if (isset($_SESSION["description"])) {
+    $description = $_SESSION["description"];
+    // echo "<pre>";
+    // print_r($description);
+} else {
+    echo "error";
+}
 
+if (isset($_SESSION["title"])) {
+    $title = $_SESSION["title"];
+    // echo "<pre>";
+    // print_r($title);
+} else {
+    echo "error";
+}
 
+if (isset($_SESSION["subtitle"])) {
+    $subtitle = $_SESSION["subtitle"];
+    // echo "<pre>";
+    // print_r($subtitle);
+} else {
+    echo "not exit";
+}
+
+if (isset($_SESSION["t_paragraph"])) {
+    $t_paragraph = $_SESSION["t_paragraph"];
+    // echo "<pre>";
+    // print_r($title);
+} else {
+    echo "error";
+}
+
+if (isset($_SESSION["sec_title"])) {
+    $sec_title = $_SESSION["sec_title"];
+    // echo "<pre>";
+    // print_r($sec_title);
+} else {
+    echo "error";
+}
+
+if (isset($_SESSION["sec_description"])) {
+    $sec_description = $_SESSION["sec_description"];
+    // echo "<pre>";
+    // print_r($sec_description);
+} else {
+    echo "error";
+}
 
 ?>
 
@@ -47,14 +95,18 @@
     <div class="about_us_body">
         <div class="row first_para">
             <div class="col-md-12">
-                <h4 class="title">About Us</h4>
+
+            <?php for ($i = 0; $i < count($title); $i++) {  ?>
+                <h4 class="title"><?= $title[$i]["title"] ?></h4>
+                <br>
+            <?php } ?>
+
+                
                 <div class="about_text">
-                <p class="text paragraph ">
-                    This information is essential and is not collected more than necessary. This is very different from
-                    a website  that collects users'names and addresses and then sells it to a third party for marketing
-                    purposes.Our Shop  just uses a crisp drain  and similar Mocha Italia mix as our shops to make the
-                    ideal.You haven’t tasted cafe  until the point when you’ve tasted Costa.
-                </p>
+                <?php for ($i = 0; $i < count($description); $i++) {  ?>
+                <p class="text paragraph "><?= $description[$i]["description"] ?></p>
+                <br>
+            <?php } ?>
                 </div>
             </div>
         </div>
@@ -63,17 +115,18 @@
         <div class="mb">
             <div class="paragraph">
             <div class="col-md-5 paragraph pic">
-                <img src="../View/resources/img/about_us_1.png" alt="about_us" class="para1_pic">
+                <img src="../View/resources/img/about_us_1.png" alt="about_us" class="para1_pic" >
             </div>
             <div class="col-md-5 paragraph">
                 <div class="first">
-                <h4 class="para1_title">Our Team</h4>
+                <?php for ($i = 0; $i < count($subtitle); $i++) {  ?>
+                    <h4 class="para1_title"><?= $subtitle[$i]["title"] ?></h4>
+            <?php } ?>
+
                 <div class="mv">
-                <p class="text paragraph">This information is essential <br>
-                    and is not collected more than <br>
-                    necessary. This is very different <br>
-                    from a website that collects users .
-                </p>
+                <?php for ($i = 0; $i < count($t_paragraph); $i++) {  ?>
+                    <p class="text paragraph"><?= $t_paragraph[$i]["description"] ?></p>
+            <?php } ?>
                 </div>
                 </div>
             </div>
@@ -85,13 +138,14 @@
         <div class="paragraph">
             <div class="col-md-5 ms-md-5  paragraph">
             <div class="first">
-                <h4 class="para2_title">Customer Care</h4>
+            <?php for ($i = 0; $i < count($sec_title); $i++) {  ?>
+                    <h4 class="para2_title"><?= $sec_title[$i]["sec_title"] ?></h4>
+            <?php } ?>
                 <div class="mv">
-                <p class="text paragraph">This information is essential<br>
-                    and is not collected more than <br>
-                    necessary. This is very different <br>
-                    from a website that collects users .
-                </p>
+                <?php for ($i = 0; $i < count($sec_description); $i++) {  ?>
+                    <p class="text paragraph"><?= $sec_description[$i]["sec_description"] ?></p>
+            <?php } ?>
+
                 </div>
                 </div>
             </div>

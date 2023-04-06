@@ -2,6 +2,12 @@
 
 include "../Controller/sellerDashboardController.php";
 
+if(isset($_SESSION["sellerName"])){
+    $sellerName = $_SESSION["sellerName"];
+}
+else{
+    header("Location: ../View/sellerlogin.php");
+}
 
 ?>
 
@@ -40,13 +46,13 @@ include "../Controller/sellerDashboardController.php";
                         <img src="./resources/images/Ellipse 3.png" alt="logo" class="web_logo mt-md-5 mt-sm-4">
                         <p class="web_name mb-4 mt-3">DESSERT HOUSE</p>
                     </a>
-                    <div class="nav-icons ms-md-4 ms-sm-3 mt-sm-4">
+                    <div class="nav-icons ms-md-3 ms-sm-4 mt-sm-4">
                         <!-- profile icon from left nav -->
                         <div class="nav-text">
                             <span>
                                 <iconify-icon icon="bi:people-circle" class="icons"></iconify-icon>
                             </span>
-                            <a href="./sellerProfile.php" class="title ms-md-1 mt-2">Profile</a>
+                            <a href="./sellerProfile.php" class="title ms-md-2 mt-2">Profile</a>
                         </div>
 
                         <!-- meun icon from left nav -->
@@ -54,7 +60,7 @@ include "../Controller/sellerDashboardController.php";
                             <span>
                                 <iconify-icon icon="material-symbols:menu-book-sharp" class="icons"></iconify-icon>
                             </span>
-                            <a href="./sellerNewProductMenu.php" class="title ms-md-1 mt-2">Product Menu</a>
+                            <a href="./sellerNewProductMenu.php" class="title ms-md-2 mt-2">Product Menu</a>
                         </div>
 
                         <!-- order list icon from left nav -->
@@ -62,7 +68,7 @@ include "../Controller/sellerDashboardController.php";
                             <span>
                                 <iconify-icon icon="material-symbols:order-approve-outline" class="icons"></iconify-icon>
                             </span>
-                            <a href="./orderList.php" class="title ms-md-1 mt-2">Order Lists</a>
+                            <a href="./orderList.php" class="title ms-md-2 mt-2">Order Lists</a>
                         </div>
 
                         <!-- sold history icon from left nav -->
@@ -70,7 +76,7 @@ include "../Controller/sellerDashboardController.php";
                             <span>
                                 <iconify-icon icon="mdi:clipboard-text-clock" class="icons"></iconify-icon>
                             </span>
-                            <a href="./soldHistory.php" class="title ms-md-1 mt-2">Sold History</a>
+                            <a href="./soldHistory.php" class="title ms-md-2 mt-2">Sold History</a>
                         </div>
 
                         <!-- incoming order icon from left nav -->
@@ -78,7 +84,7 @@ include "../Controller/sellerDashboardController.php";
                             <span>
                                 <iconify-icon icon="material-symbols:order-play-outline" class="icons"></iconify-icon>
                             </span>
-                            <a href="./incomingOrder.php" class="title ms-md-1 mt-2">Incoming Orders</a>
+                            <a href="./incomingOrder.php" class="title ms-md-2 mt-2">Incoming Orders</a>
                         </div>
 
                         <!-- feedback icon -->
@@ -86,7 +92,7 @@ include "../Controller/sellerDashboardController.php";
                             <span>
                                 <iconify-icon icon="ri:feedback-line" class="icons"></iconify-icon>
                             </span>
-                            <a href="./feedbackDetails.php" class="title ms-md-1">Customer's Feedback</a>
+                            <a href="./feedbackDetails.php" class="title ms-md-2">Customers' Feedbacks</a>
                         </div>
 
                         <!-- logout icon from left nav-->
@@ -94,7 +100,7 @@ include "../Controller/sellerDashboardController.php";
                             <span>
                                 <iconify-icon icon="material-symbols:logout-rounded" class="icons"></iconify-icon>
                             </span>
-                            <a href="./sellerlogin.php" class="title ms-md-1 mt-2">Logout</a>
+                            <a href="./sellerlogin.php" class="title ms-md-2 mt-2">Logout</a>
                         </div>
             </nav>
 
@@ -141,33 +147,24 @@ include "../Controller/sellerDashboardController.php";
                         <div class="text-center">
                             <span class="cent">
                                 <?php
-                                $maxPercent = 0;
-                                $selectedRating = null;
-                                foreach ($result as $row) {
-                                    $ratingType = $row['rating_type'];
-                                    $ratingPercent = round($row['rating_percent']);
-                                    if ($ratingPercent > $maxPercent) {
-                                        $maxPercent = $ratingPercent;
-                                        $selectedRating = $row;
-                                    }
-                                }
-
-                                if ($selectedRating !== null) {
-                                    $ratingType = $selectedRating['rating_type'];
-                                    $ratingPercent = round($selectedRating['rating_percent']);
-                                    if ($ratingType == '0' && $ratingPercent > '65%') {
-                                        echo '<img src="./resources/images/smile.png" class="smile me-2">';
-                                        echo $ratingPercent . "%<br>";
-                                    } else if ($ratingType == '1' && $ratingPercent < '65%') {
-                                        echo '<img src="./resources/images/simple.png" class="smile me-2">';
-                                        echo $ratingPercent . "%<br>";
-                                    } else if ($ratingType == '2' && $ratingPercent < '45%') {
-                                        echo '<img src="./resources/images/sad.png" class="smile me-2">';
-                                        echo $ratingPercent . "%<br>";
-                                    }
+                                $Smile = ($smileCount / $shopRatingCount) * 100;
+                                if ($Smile <= 45) {
+                                    echo '<span class="d-flex ">
+                                        <iconify-icon icon="ph:smiley-sad-bold" class="fs-1"></iconify-icon>
+                                        <span class="h3 ms-1">' . number_format($Smile, 0) . '%</span><br>
+                                        </span>';
+                                } else if ($Smile <= 65) {
+                                    echo '<span class="d-flex justify-content-center">
+                                        <iconify-icon icon="charm:face-neutral" class="fs-1"></iconify-icon>
+                                        <span class="h3 ms-1">' . number_format($Smile, 0) . '%</span><br>
+                                        </span>';
+                                } else {
+                                    echo '<span class="d-flex">
+                                        <iconify-icon icon="gg:smile-mouth-open" class="fs-1"></iconify-icon>
+                                        <span class="h3 ms-1">' . number_format($Smile, 0) . '%</span><br>
+                                        </span>';
                                 }
                                 ?>
-
                             </span>
                         </div>
                         <div class="ms-md-3 ms-sm-3 mt-md-4 mt-sm-4">
@@ -186,27 +183,51 @@ include "../Controller/sellerDashboardController.php";
 
                     <span class="second_row_second mb-sm-5 mt-md-2 mt-sm-4 ms-md-3 col-md-6 col-sm-6 mb-5">
                         <p class="mt-3 ms-4 feedback_header">Customers' Feedbacks</p>
-                        <div>
+                        <div class="blue-card mb-4">
                             <?php
-                            // Assume $feedbacks is an array of feedback data
+
+
                             foreach ($reviewResult as $feedback) {
                                 $username = $feedback['user_name'];
+                                $date = $feedback['create_date'];
+                                $replyDate = date('Y-m-d');
                                 $feedback_text = $feedback['user_review'];
+                                $reviewID = $feedback['review_id'];
+                                $userEmail = $feedback['user_email'];
                             ?>
 
-                                <div class="feedback_card">
+                                <?php
+                                $limit = 80;
+
+                                if (strlen($feedback_text) > $limit) {
+                                    $shortString = substr($feedback_text, 0, $limit) . '........';
+                                } else {
+                                    $shortString = $feedback_text;
+                                }
+
+                                ?>
+                                <div class="feedback_card" id="<?= $reviewID ?>">
                                     <div class="detail ms-3 mt-3 mb-0">
                                         <div class="dis me-3 mt-2"></div>
-                                        <p class="user_name mt-1 mb-0"><?= $username ?></p>
+                                        <span class="user_name mt-1 mb-0"><?= $username ?></span>
                                     </div>
-                                    <p class="ms-md-5 ms-sm-5 user_text mt-0"><?= $feedback_text ?></p>
-                                    <button class="replyBtn">Reply this feedback</button>
+                                    <span class="ms-md-5 ms-sm-5 user_text"><?= $date ?></span>
+                                    <p class="ms-md-5 ms-sm-5 user_text mt-0">
+                                        <?= $shortString ?>
+                                    </p>
+                                    <form action="../Controller/replyEmailController.php" method="POST">
+                                        <input type="hidden" name="userEmail" value="<?= $userEmail ?>">
+                                        <input type="hidden" name="reviewID" value="<?= $reviewID ?>">
+                                        <input type="submit" name="thank" value="Reply Thank" class="ms-md-5 ms-sm-5 px-3 bg-primary text-white replyBtn">
+                                    </form>
+
                                 </div>
-
                             <?php } ?>
-
+                            
+                            <div class= "mt-md-4 mt-sm-4" >
+                            <a href="./feedbackDetails.php" class="view mt-5 text-decoration-none ">View All</a>
+                            </div>
                         </div>
-                        <button class="view mt-md-4 mt-sm-4">View All</button>
                     </span>
                 </div>
 

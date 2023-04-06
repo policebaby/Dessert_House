@@ -25,7 +25,7 @@ if (isset($_POST["saveBtn"])) {
         $Location  = $_FILES['profile']['tmp_name'];
         $extension = pathinfo($file)['extension'];
 
-        if (move_uploaded_file($Location, "../storages/profile/" .$shopId. "." .$extension)) {
+        if (move_uploaded_file($Location, "../../storages/shopprofile/" .$shopId. "." .$extension)) {
 
             // call connection db
             $db  = new DBConnection();
@@ -60,7 +60,7 @@ if (isset($_POST["saveBtn"])) {
             );
             $sql->bindValue(":shopName", $shopName);
             $sql->bindValue(":shopAddress", $shopAddress);
-            $sql->bindValue(":photo", "../storages/profile/" .$shopId. "." .$extension);
+            $sql->bindValue(":photo", "../../storages/shopprofile/" .$shopId. "." .$extension);
             $sql->bindValue(":id", $shopId);
             $sql->execute();
 
