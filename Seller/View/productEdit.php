@@ -139,7 +139,7 @@ else{
                     </div>
                     <div class="label-box">
                         <label for="price-of-each-product" class="fw-bold">Price Of Each Product</label>
-                        <input type="text" class="input-box p-3" value="<?= $result[0]["product_price"]?> MMK" name="priceOfeach" >
+                        <input type="text" class="input-box p-3" value="<?= $result[0]["product_price"]?>" name="priceOfeach" >
                     </div>
                     <div class="label-box my-md-3 my-sm-3">
                             <label for="instock" class="fw-bold">Instock</label>

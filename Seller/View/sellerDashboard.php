@@ -149,7 +149,7 @@ else{
                                 <?php
                                 $Smile = ($smileCount / $shopRatingCount) * 100;
                                 if ($Smile <= 45) {
-                                    echo '<span class="d-flex ">
+                                    echo '<span class="d-flex justify-content-center ">
                                         <iconify-icon icon="ph:smiley-sad-bold" class="fs-1"></iconify-icon>
                                         <span class="h3 ms-1">' . number_format($Smile, 0) . '%</span><br>
                                         </span>';
@@ -159,8 +159,8 @@ else{
                                         <span class="h3 ms-1">' . number_format($Smile, 0) . '%</span><br>
                                         </span>';
                                 } else {
-                                    echo '<span class="d-flex">
-                                        <iconify-icon icon="gg:smile-mouth-open" class="fs-1"></iconify-icon>
+                                    echo '<span class="d-flex justify-content-center">
+                                        <iconify-icon icon="gg:smile-mouth-open" class="fs-1 "></iconify-icon>
                                         <span class="h3 ms-1">' . number_format($Smile, 0) . '%</span><br>
                                         </span>';
                                 }

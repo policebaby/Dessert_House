@@ -11,8 +11,9 @@ if (isset($_SESSION["username"])) {
     header("Location: ./user_login.php");
 }
 if (isset($_SESSION["shops"])) {
-    $shops = $_SESSION["shops"];
-    // echo "ok";
+    $shops = $_SESSION["homeshops"];
+    // echo "<pre>";
+    // print_r($shops);
 } else {
     echo "error";
 }

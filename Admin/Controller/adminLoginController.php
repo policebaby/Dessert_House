@@ -1,4 +1,5 @@
 <?php
+ini_set("display_errors", "1");
 
 //if user logged in successfully,save data to session, for further verifying identity in future
 session_start();

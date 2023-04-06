@@ -29,8 +29,8 @@ if(isset($_SESSION["shopID"])){
     (
         "
         SELECT *
-        FROM t_order o
-        INNER JOIN t_orderdetail d ON o.order_id = d.order_id
+        FROM t_order AS o
+        INNER JOIN t_orderdetail AS d ON o.order_id = d.order_id
         WHERE d.shop_id = :shopID AND d.del_flg = 0 AND o.status = 1
         ORDER BY o.order_id
         "
@@ -44,9 +44,10 @@ if(isset($_SESSION["shopID"])){
     (
         "
         SELECT o.order_id, o.items, o.grand_total, o.create_date, o.reserve_time, o.status, d.quantity
-        FROM t_order o
-        INNER JOIN t_orderdetail d ON o.order_id = d.order_id
+        FROM t_order AS o
+        INNER JOIN t_orderdetail AS d ON o.order_id = d.order_id
         WHERE d.shop_id = :shopID AND o.order_id = d.order_id AND status = 1
+        GROUP BY o.order_id
         ORDER BY o.order_id
         LIMIT $pageStart , $rowLimit
         "

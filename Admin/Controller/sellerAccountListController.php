@@ -11,7 +11,7 @@ if(isset($_GET["page"])){
   $currentPage=1;
 }
 
-$rowsPerPage = 2;
+$rowsPerPage = 10;
 $pageStart=($currentPage-1)*$rowsPerPage;
 $pageStart =($pageStart<1)? 0 : $pageStart;
 

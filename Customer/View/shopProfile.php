@@ -43,7 +43,7 @@ include "../Controller/shopProfileViewController.php";
             </button>
             <div>
                 <div class="shopLogo ms-5 mt-5">
-                    <img src="../../storages/<?= $shopinfo[0]["shop_profilepic"] ?>" alt="" class="shopProfileLogo">
+                    <img src="<?= $shopinfo[0]["shop_profilepic"] ?>" alt="" class="shopProfileLogo">
                     <span class="shopName"><?= $shopinfo[0]["shop_name"] ?></span>
                     <div class="text-light ms-5 position-relative">
                         <iconify-icon icon="gg:smile-mouth-open" class="smileIcon"></iconify-icon>
