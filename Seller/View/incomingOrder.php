@@ -136,7 +136,7 @@ include "../Controller/incomingOrderController.php";
                                         <ion-icon name="chevron-down-outline" class="down" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></ion-icon>
                                     </span>
                                 </td>
-                                <td class="td-text fw-bold title-name"><?= $result[$i]["total_price"] ?></td>
+                                <td class="td-text fw-bold title-name"><?= $result[$i]["grand_total"] ?></td>
                                 <td class="td-text fw-bold title-name"><?= $result[$i]["reserve_time"] ?></td>
                                 <td class="td-text fw-bold title-name">Pending</td>
                                 <td class="btn2">
