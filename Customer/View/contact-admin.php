@@ -42,33 +42,37 @@
     <!-- icon link end -->
 </head>
 
-<body >
+<body>
     <!--Nav bar start-->
-      <?php include "./nav.php" ?>
+    <?php include "./nav.php" ?>
     <!--Nav bar end-->
 
     <!--contact admin start-->
     <form action="../Controller/contact_adminController.php" method="post">
-    <div class="row contactA_ctn">
-        <div class="col-md-6">
-            <img src="../View/resources/img/conact admin (4).png" alt="contact admin" class="contactA_pic">
-        </div>
-        
-        <div class="col-md-6  mt-5 box">
-            <h4 class="mt-4 contact_text_header">Speak With An Admin</h4>
-            <h5 class="mt-5  contact_text">User Name</h5>
-            <input type="text" class="contactA_input ms-md-5" name="username" required>
+        <div class="row contactA_ctn">
+            <div class="col-md-6">
+                <img src="../View/resources/img/conact admin (4).png" alt="contact admin" class="contactA_pic">
+            </div>
 
-            <h5 class="mt-4  contact_text">Email</h5>
-            <input type="text" class="contactA_input ms-md-5" name="email" required>
+            <div class="col-md-6 box">
+                <h1 class="contact_text_header">Speak With An Admin</h1>
+                <h3 class="mt-5  contact_text">Address</h3>
+                <p class="ms-md-2 text">No.66, Bahan Township, Yangon,Myanmar.</p>
 
-            <h5 class="mt-4 contact_text">Your Message</h5>
-            <textarea name="comment" id="" cols="41" rows="6" class="contactA_textarea ms-md-5" name="message" required></textarea>
-            <br>
-            <button class="send_btn mt-4 mb-5" type="submit" name="send_btn">Send</button>
-        </div>
-        
-    </div>
+                <h3 class="mt-4  contact_text">Email</h3>
+                <p class="ms-md-2  text">desserthouse@gmail.com</p>
+
+                <h3 class="mt-4 contact_text">Phone Number</h3>
+                <div class="ph text">
+                    <p class="ms-md-2  "> +95 977777777 ,</p>
+                    <p class="ms-md-2  "> +95 988999994 ,</p>
+                    <p class="ms-md-2  "> +95 120200395 ,</p>
+                </div>
+
+                <h3 class="mt-4 contact_text">Honor your Loved Ones</h3>
+                <p class="text">Who do you admire for standing up for what they believe in?<br>
+                    Here's your chance to tell them and/or their family members.</p>
+            </div>
     </form>
     <!--contact admin end-->
 

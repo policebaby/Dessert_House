@@ -61,6 +61,9 @@
   font-size: 1.5em !important;
   font-weight: var(--dsFontweightSemi);
 }
+.button-unactive {
+  background-color: #c22014 !important;
+}
 .tbl_2 {
   width: 3em !important;
   height: 4em !important;

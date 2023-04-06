@@ -2,6 +2,7 @@
 ini_set("display_errors", "1");
 session_start();
 
+
 // print_r($_SESSION);
 if (isset($_SESSION["paragraph"])) {
     $paragraph = $_SESSION["paragraph"];

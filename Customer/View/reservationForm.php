@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+if (isset($_SESSION["userID"])) {
+    // already success login or sign up
+    // print_r($_SESSION) ;
+} else {
+    echo "else";
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,19 +47,19 @@
                 <div class="reserveForm  ">
                     <p class="text-center text-light fs-4">Reservation Form</p>
                     <div class="p-3">
-                        <form >
+                        <form action="../Controller/reservation_formController.php" method="post">
                             <!-- input group start -->
                             <div class="mb-4">
-                                <input type="text" class="form-control outlineColor" id="" placeholder="User Name">
+                                <input type="text" class="form-control outlineColor" name="username" id="" placeholder="User Name">
                             </div>
                             <div class="mb-4">
-                                <input type="text" class="form-control outlineColor" id="" placeholder="Phone">
+                                <input type="text" class="form-control outlineColor" name="phone" id="" placeholder="Phone">
                             </div>
                             <div class="mb-4">
-                                <input type="text" class="form-control outlineColor" id="" placeholder="Reservation Date">
+                                <input type="date" class="form-control outlineColor" name="r_date" id="" placeholder="Reservation Date">
                             </div>
                             <div class="mb-4">
-                                <input type="text" class="form-control outlineColor" id="" placeholder="Reservation Time">
+                                <input type="time" class="form-control outlineColor" name="r_time" id="" placeholder="Reservation Time">
                             </div>
                             <!-- input group end -->
 
@@ -70,8 +83,8 @@
                             </div>
                             <!-- person count end -->
                             <div class="d-flex justify-content-end">
-                                <button type="button" id="btnBook" class="btn  btnBook">Book Seat</button>
-                                <button type="submit"  class="btn btnCancel">Cancel</button>
+                            <button type="submit" id="btnBook" class="btn  btnBook " name="book">Book Seat</button>
+                                <button type="submit" class="btn btnCancel" >Cancel</button>
 
                             </div>
                         </form>

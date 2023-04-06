@@ -10,33 +10,33 @@
   <link rel="stylesheet" href="../View/resources/css/footer.css">
   <link rel="stylesheet" href="../View/resources/css/root.css">
   <!-- css link end -->
-<!--font link start-->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!--font link start-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet" />
   <!-- font link end -->
-        <!-- bootstrap link start -->
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" /> -->
-    <!-- bootstrap link end -->
-  
+  <!-- bootstrap link start -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" /> -->
+  <!-- bootstrap link end -->
+
   <!-- icon link start -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
   <!-- icon link end -->
 </head>
 
 <body>
-      <!-- footer start -->
-      <div class="footer container-fluid">
+  <!-- footer start -->
+  <div class="footer container-fluid">
     <div class="container p-4">
       <div class="row">
         <!--sub col start -->
@@ -61,13 +61,13 @@
             <h4 class="footer_subHeader text-white">Need Help?</h4>
             <br />
             <p class="text-white">
-              <a href="../View/contact-admin.php"> Contact Admin </a><br />
+              <a href="../View/contact-admin.php"> Contact Admin</a><br />
               <a href="../Controller/contactSviewController.php"> Contact Seller</a> <br />
               <a href="../View/guide.php"> Guide </a><br />
-              <a href="../View/about_us.php">About us</a> <br />
-              <a href="../View/privacy&policy.php">Privacy Policy</a>
+              <a href="../Controller/about_us_ViewController.php">About us</a> <br />
+              <a href="../Controller/privacyViewController.php">Privacy Policy</a>
             </p>
-          </div>                                  
+          </div>
         </div>
         <!-- needHelp col end -->
 
@@ -77,9 +77,9 @@
             <h4 class="footer_subHeader text-white">Navigate</h4>
             <br />
             <p class="text-white">
-            <a href="../View/coin_exchange.php">Coin Shop</a> <br />
-            <a href="../View/shops.php">Product Page </a><br />
-            <a href="../View/seat_selection.php">Seat booking</a>
+              <a href="../View/coin_exchange.php">Coin Shop</a> <br />
+              <a href="../View/shops.php">Product Page </a><br />
+              <a href="../View/seat_selection.php">Seat booking</a>
             </p>
           </div>
         </div>
@@ -106,9 +106,9 @@
       </div>
     </div>
   </div>
-    <!-- footer end -->
+  <!-- footer end -->
 
 
-  </body>
+</body>
 
 </html>

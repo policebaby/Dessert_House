@@ -1,34 +1,23 @@
-$(document).ready(function(){
 
-    $(".a").click(function(event) {
-        $(this).css('background-color', 'red !important');
-        console.log(event.target.attributes[0].value);
-    });
-    $(".b").click((event) => {
-        console.log(event.target.attributes[0].value);
-    }); 
-    $(".c").click((event) => {
-        console.log(event.target.attributes[0].value);
-    });
-    $(".d").click((event) => {
-        console.log(event.target.attributes[0].value);
-    });
-    $(".e").click((event) => {
-        console.log(event.target.attributes[0].value);
-    });
-    $(".f").click((event) => {
-        console.log(event.target.attributes[0].value);
-    });
+function seat(id) {
+  // console.log(id);
+  var button = document.getElementById(id);
+  button.style.backgroundColor = '#c22014';
+  button.style.color = 'white';
+  button.disabled = true;
+  document.getElementById("seat_form").submit();
+  localStorage.setItem(id, '#c22014');
+  localStorage.setItem(id, 'white');
+}
 
-  });
-
-  let seats = [
-    { number: 1, status: "Available" },
-    { number: 2, status: "Taken" },
-    { number: 3, status: "Waiting" }
-  ];
-  
-  // Loop through the array and print the status of each seat
-  for (let i = 0; i < seats.length; i++) {
-    console.log("Seat " + seats[i].number + ": " + seats[i].status);
+window.onload = function() {
+  var buttons = document.getElementsByTagName("button");
+  for (var i = 0; i < buttons.length; i++) {
+    var button = buttons[i];
+    if (localStorage.getItem(button.id)) {
+      button.style.backgroundColor = '#c22014';
+      button.style.color = 'white';
+      button.disabled = false;
+    }
   }
+};

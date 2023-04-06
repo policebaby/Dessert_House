@@ -4,25 +4,35 @@
   overflow: hidden !important;
 }
 .title {
- text-align: center;
+  text-align: center;
 }
 .first_para {
   margin-top: 2em !important;
 }
-.about_text{
-  width:56% !important;
+.about_text {
+  width: 56% !important;
   margin-left: 22%;
   margin-right: 20%;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
 }
-.paragraph{
+.pic {
+  display: flex;
+  justify-content: left !important;
+  align-items: start !important;
+}
+.pic1 {
+  display: flex;
+  justify-content: right !important;
+  align-items: end !important;
+}
+.paragraph {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.first{
+.first {
   display: block !important;
   justify-content: center;
   align-items: center;
@@ -44,60 +54,68 @@
 
 /* media screen start */
 @media screen and (max-width: 980px) {
-  .about_text{
-    width:70% !important;
+  .about_text {
+    width: 70% !important;
     margin-left: 15%;
     margin-right: 15%;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
   }
-} 
+}
 @media screen and (max-width: 810px) {
-  .about_text{
-    width:78% !important;
+  .about_text {
+    width: 78% !important;
     margin-left: 12%;
     margin-right: 10%;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
   }
-  .paragraph{
+  .paragraph {
     display: block;
   }
-  .mb{
+  .mb {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .para1_title,.para2_title{
+  .para1_title,
+  .para2_title {
     text-align: center !important;
   }
-  .pic{
+  .pic {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center !important;
+    align-items: center !important;
   }
-  .mv{
+  .pic1 {
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .mv {
     width: 78%;
     margin-left: 12%;
     margin-right: 10%;
   }
-  .mv br{
+  .mv br {
     display: none;
   }
 }
 @media screen and (max-width: 810px) {
-  .pic{
+  .pic {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 }
 /* about us end */
-@media (max-width:720px) and (min-width:390px){
-  a, a:link, a:visited {
-      color: black !important;
-      opacity: 100%;
-    }
+@media (max-width: 720px) and (min-width: 390px) {
+  a,
+  a:link,
+  a:visited {
+    color: black !important;
+    opacity: 100%;
+  }
 }

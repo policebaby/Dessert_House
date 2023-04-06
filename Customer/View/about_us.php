@@ -117,7 +117,7 @@ if (isset($_SESSION["sec_description"])) {
             <div class="col-md-5 paragraph pic">
                 <img src="../View/resources/img/about_us_1.png" alt="about_us" class="para1_pic" >
             </div>
-            <div class="col-md-5 paragraph">
+            <div class="col-md-2 paragraph">
                 <div class="first">
                 <?php for ($i = 0; $i < count($subtitle); $i++) {  ?>
                     <h4 class="para1_title"><?= $subtitle[$i]["title"] ?></h4>
@@ -136,7 +136,7 @@ if (isset($_SESSION["sec_description"])) {
         <div class="row third_para">
             <div class="mb">
         <div class="paragraph">
-            <div class="col-md-5 ms-md-5  paragraph">
+            <div class="col-md-2 ms-md-5  paragraph">
             <div class="first">
             <?php for ($i = 0; $i < count($sec_title); $i++) {  ?>
                     <h4 class="para2_title"><?= $sec_title[$i]["sec_title"] ?></h4>
@@ -149,7 +149,7 @@ if (isset($_SESSION["sec_description"])) {
                 </div>
                 </div>
             </div>
-            <div class="col-md-5 paragraph pic">
+            <div class="col-md-5 paragraph pic1">
                 <img src="../View/resources/img/about_us_2.png" alt="about_us" class="para2_pic">
             </div>
         </div>
