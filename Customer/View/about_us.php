@@ -27,7 +27,36 @@ if (isset($_SESSION["aboutu_paragraph"])) {
     echo "not exit";
 }
 
+<<<<<<< HEAD
 
+=======
+if (isset($_SESSION["t_paragraph"])) {
+    $t_paragraph = $_SESSION["t_paragraph"];
+    // echo "<pre>";
+    // print_r($title);
+} else {
+    echo "error";
+}
+
+if (isset($_SESSION["sec_title"])) {
+    $sec_title = $_SESSION["sec_title"];
+    // echo "<pre>";
+    // print_r($sec_title);
+} else {
+    echo "error";
+}
+
+if (isset($_SESSION["sec_description"])) {
+    $sec_description = $_SESSION["sec_description"];
+    // echo "<pre>";
+    // print_r($sec_description);
+} else {
+    echo "error";
+}
+// echo "<pre>";
+//     print_r($_SESSION["para"]);
+$para = $_SESSION["para"];
+>>>>>>> origin/main
 ?>
 
 
@@ -89,6 +118,7 @@ if (isset($_SESSION["aboutu_paragraph"])) {
         </div>
 
         <div class="row second_para">
+<<<<<<< HEAD
             <div class="mb">
                 <div class="paragraph">
                     <div class="col-md-5 paragraph pic">
@@ -103,17 +133,47 @@ if (isset($_SESSION["aboutu_paragraph"])) {
                             </div>
                         </div>
                     </div>
+=======
+        <div class="mb">
+            <div class="paragraph">
+            <div class="col-md-5 paragraph pic">
+                <img src="../View/resources/img/about_us_1.png" alt="about_us" class="para1_pic" >
+            </div>
+            <div class="col-md-2 paragraph">
+                <div class="first">
+                <!-- <?php for ($i = 0; $i < count($subtitle); $i++) {  ?> -->
+                    <h4 class="para1_title"><?= $para[$i]["title"] ?></h4>
+            <!-- <?php } ?> -->
+
+                <div class="mv">
+                <!-- <?php for ($i = 0; $i < count($t_paragraph); $i++) {  ?> -->
+                    <p class="text paragraph"><?= $para[0]["description"] ?></p>
+            <!-- <?php } ?> -->
+>>>>>>> origin/main
                 </div>
             </div>
         </div>
         <div class="row third_para">
             <div class="mb">
+<<<<<<< HEAD
                 <div class="paragraph">
                     <div class="col-md-2 ms-md-5  paragraph">
                         <div class="first">
                             <h4 class="para2_title"><?= $aboutu_paragraph[1]["title"] ?></h4>
                             <div class="mv">
                                 <p class="text paragraph"><?= $aboutu_paragraph[1]["description"] ?></p>
+=======
+        <div class="paragraph">
+            <div class="col-md-2 ms-md-5  paragraph">
+            <div class="first">
+            <!-- <?php for ($i = 0; $i < count($sec_title); $i++) {  ?> -->
+                    <h4 class="para2_title"><?= $para[1]["title"] ?></h4>
+            <!-- <?php } ?> -->
+                <div class="mv">
+                <!-- <?php for ($i = 0; $i < count($sec_description); $i++) {  ?> -->
+                    <p class="text paragraph"><?= $para[1]["description"] ?></p>
+            <!-- <?php } ?> -->
+>>>>>>> origin/main
 
                             </div>
                         </div>

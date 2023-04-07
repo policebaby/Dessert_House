@@ -10,9 +10,9 @@ if (isset($_SESSION["logInError"])) {
 
 
 // After logged in onced, there will be adminid in session, which can help direct to admin Home page directly when visiting login url
-if(isset($_SESSION["adminId"])){
-    header("Location: ./adminHome.php");
-}
+// if(isset($_SESSION["adminId"])){
+//     header("Location: ./adminHome.php");
+// }
 
 ?>
 

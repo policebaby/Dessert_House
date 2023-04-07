@@ -23,10 +23,7 @@ $sql = $pdo->prepare("SELECT M_shop.shop_id, M_shop.shop_name, M_shop.create_dat
 COALESCE(SUM(T_orderdetail.total_price), 0) AS total_revenue, M_shop.del_flg
 FROM M_shop
 LEFT JOIN T_orderdetail ON T_orderdetail.shop_id = M_shop.shop_id
-GROUP BY M_shop.shop_id
-LIMIT $pageStart, $rowsPerPage;
-
-");
+GROUP BY M_shop.shop_id");
 $sql->execute();
 $totalResult = count($sql->fetchall(PDO::FETCH_ASSOC));
 // to know how many pagination button going to show

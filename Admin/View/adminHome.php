@@ -147,7 +147,7 @@ include "../Controller/adminHomeController.php";
                 <div class="todayCoinContainer">
                     <div>Today</div>
                     <div class="countAndDownArrow">
-                        <div><?= number_format($todayShopRevenueResult[0]["todayShopRevenue"]) * 0.1 ?> MMK</div>
+                        <div><?= number_format($todayShopRevenueResult[0]["todayShopRevenue"]) * 0.1 ?> Coins</div>
                     </div>
                 </div>
 
@@ -158,7 +158,7 @@ include "../Controller/adminHomeController.php";
                 <div class="yesterdayCoinContainer">
                     <div>Total</div>
                     <div class="countAndUpArrow">
-                        <div><?= number_format($shopRevenueResult[0]["totalShopRevenue"] * 0.1) ?> MMK</div>
+                        <div><?= number_format($shopRevenueResult[0]["totalShopRevenue"] * 0.1) ?> Coins</div>
                     </div>
                 </div>
             </div>
@@ -177,7 +177,7 @@ include "../Controller/adminHomeController.php";
                 <div class="todayCoinContainer">
                     <div>Today</div>
                     <div class="countAndDownArrow">
-                        <div><?= number_format($todayShopRevenueResult[0]["todayShopRevenue"]) ?> MMK</div>
+                        <div><?= number_format($todayShopRevenueResult[0]["todayShopRevenue"]) ?> Coins</div>
                     </div>
                 </div>
 
@@ -188,7 +188,7 @@ include "../Controller/adminHomeController.php";
                 <div class="yesterdayCoinContainer">
                     <div>Total</div>
                     <div class="countAndUpArrow">
-                        <div><?= number_format($shopRevenueResult[0]["totalShopRevenue"]) ?> MMK</div>
+                        <div><?= number_format($shopRevenueResult[0]["totalShopRevenue"]) ?> Coins</div>
                     </div>
                 </div>
             </div>

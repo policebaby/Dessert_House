@@ -9,12 +9,12 @@ include "../Model/dbConnection.php";
 $adminName = $_POST["adminName"];
 $adminPassword = $_POST["adminPassword"];
 
-//Check if user has already logged in
-if(isset($_SESSION["user_id"])){
-    //If already logged in go to Homepage
-    header("Location:../View/adminHome.php");
-    exit;
-}
+// //Check if user has already logged in
+// if(isset($_SESSION["user_id"])){
+//     //If already logged in go to Homepage
+//     header("Location:../View/adminHome.php");
+//     exit;
+// }
 
 if ($_SERVER["REQUEST_METHOD"]== "POST") {
     // create an instance of DB connection
@@ -29,8 +29,9 @@ if ($_SERVER["REQUEST_METHOD"]== "POST") {
     $sql->execute();
 
     $result=$sql->fetchAll(PDO::FETCH_ASSOC);
+    print_r($result);
 
-    // if result>1 store adminId to session for further usages. d
+    // if result>1 store adminId to session for further usages. 
 if (count($result)) {
     $_SESSION["adminId"]=$result[0]["admin_id"];
     header("Location:../View/adminHome.php");
