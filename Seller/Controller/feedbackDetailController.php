@@ -55,7 +55,7 @@ if(isset($_SESSION["shopID"])){
         "SELECT COUNT(DISTINCT t.user_id) AS num_users
         FROM t_rating AS t
         JOIN m_ratingcategory AS m ON t.rating_id = m.rating_id
-        WHERE t.shop_id = :shopID AND m.rating_value = '0' "
+        WHERE t.shop_id = :shopID AND m.rating_value = 1 "
     );
     $sql->bindValue(":shopID",$shopID);
     $sql->execute();
@@ -67,7 +67,7 @@ if(isset($_SESSION["shopID"])){
         "SELECT COUNT(DISTINCT t.user_id) AS num_users
         FROM t_rating AS t
         JOIN m_ratingcategory AS m ON t.rating_id = m.rating_id
-        WHERE t.shop_id = :shopID AND m.rating_value = '1' "
+        WHERE t.shop_id = :shopID AND m.rating_value = 2 "
     );
     $sql->bindValue(":shopID",$shopID);
     $sql->execute();
@@ -79,7 +79,7 @@ if(isset($_SESSION["shopID"])){
         "SELECT COUNT(DISTINCT t.user_id) AS num_users
         FROM t_rating AS t
         JOIN m_ratingcategory AS m ON t.rating_id = m.rating_id
-        WHERE t.shop_id = :shopID AND m.rating_value = '2' "
+        WHERE t.shop_id = :shopID AND m.rating_value = 3 "
     );
     $sql->bindValue(":shopID",$shopID);
     $sql->execute();
@@ -91,7 +91,7 @@ if(isset($_SESSION["shopID"])){
         "SELECT COUNT(DISTINCT t.user_id) AS num_users
         FROM t_rating AS t
         JOIN m_ratingcategory AS m ON t.rating_id = m.rating_id
-        WHERE t.shop_id = :shopID AND m.rating_value = '3' "
+        WHERE t.shop_id = :shopID AND m.rating_value = 4 "
     );
     $sql->bindValue(":shopID",$shopID);
     $sql->execute();

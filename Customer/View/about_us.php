@@ -50,7 +50,9 @@ if (isset($_SESSION["sec_description"])) {
 } else {
     echo "error";
 }
-
+// echo "<pre>";
+//     print_r($_SESSION["para"]);
+$para = $_SESSION["para"];
 ?>
 
 
@@ -119,14 +121,14 @@ if (isset($_SESSION["sec_description"])) {
             </div>
             <div class="col-md-2 paragraph">
                 <div class="first">
-                <?php for ($i = 0; $i < count($subtitle); $i++) {  ?>
-                    <h4 class="para1_title"><?= $subtitle[$i]["title"] ?></h4>
-            <?php } ?>
+                <!-- <?php for ($i = 0; $i < count($subtitle); $i++) {  ?> -->
+                    <h4 class="para1_title"><?= $para[$i]["title"] ?></h4>
+            <!-- <?php } ?> -->
 
                 <div class="mv">
-                <?php for ($i = 0; $i < count($t_paragraph); $i++) {  ?>
-                    <p class="text paragraph"><?= $t_paragraph[$i]["description"] ?></p>
-            <?php } ?>
+                <!-- <?php for ($i = 0; $i < count($t_paragraph); $i++) {  ?> -->
+                    <p class="text paragraph"><?= $para[0]["description"] ?></p>
+            <!-- <?php } ?> -->
                 </div>
                 </div>
             </div>
@@ -138,13 +140,13 @@ if (isset($_SESSION["sec_description"])) {
         <div class="paragraph">
             <div class="col-md-2 ms-md-5  paragraph">
             <div class="first">
-            <?php for ($i = 0; $i < count($sec_title); $i++) {  ?>
-                    <h4 class="para2_title"><?= $sec_title[$i]["sec_title"] ?></h4>
-            <?php } ?>
+            <!-- <?php for ($i = 0; $i < count($sec_title); $i++) {  ?> -->
+                    <h4 class="para2_title"><?= $para[1]["title"] ?></h4>
+            <!-- <?php } ?> -->
                 <div class="mv">
-                <?php for ($i = 0; $i < count($sec_description); $i++) {  ?>
-                    <p class="text paragraph"><?= $sec_description[$i]["sec_description"] ?></p>
-            <?php } ?>
+                <!-- <?php for ($i = 0; $i < count($sec_description); $i++) {  ?> -->
+                    <p class="text paragraph"><?= $para[1]["description"] ?></p>
+            <!-- <?php } ?> -->
 
                 </div>
                 </div>

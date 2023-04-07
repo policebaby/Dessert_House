@@ -24,6 +24,7 @@ $_SESSION["adminPhone"]=$result[0]["admin_phone"];
 
 header("Location: ../View/adminProfile.php");
 
-
+echo "<pre>";
+print_r($result);
 
 ?>
