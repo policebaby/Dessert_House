@@ -8,7 +8,7 @@ $db = new DBConnection();
 $pdo = $db->connect();
 
 $sql = $pdo->prepare(
-    "SELECT * FROM M_shop WHERE del_flg = 0  LIMIT 4"
+    "SELECT * FROM m_shop WHERE del_flg = 0  LIMIT 4"
 );
 $sql->execute();
 $result = $sql->fetchAll(PDO::FETCH_ASSOC);

@@ -19,22 +19,22 @@ $pageStart =($pageStart<1)? 0 : $pageStart;
 
 
 // to calcualte total record for pagination
-$sql = $pdo->prepare("SELECT M_shop.shop_id, M_shop.shop_name, M_shop.create_date,
-COALESCE(SUM(T_orderdetail.total_price), 0) AS total_revenue, M_shop.del_flg
-FROM M_shop
-LEFT JOIN T_orderdetail ON T_orderdetail.shop_id = M_shop.shop_id
-GROUP BY M_shop.shop_id");
+$sql = $pdo->prepare("SELECT m_shop.shop_id, m_shop.shop_name, m_shop.create_date,
+COALESCE(SUM(T_orderdetail.total_price), 0) AS total_revenue, m_shop.del_flg
+FROM m_shop
+LEFT JOIN T_orderdetail ON T_orderdetail.shop_id = m_shop.shop_id
+GROUP BY m_shop.shop_id");
 $sql->execute();
 $totalResult = count($sql->fetchall(PDO::FETCH_ASSOC));
 // to know how many pagination button going to show
 $buttonNumber=ceil($totalResult/$rowsPerPage);
 
 // to display all the informations except ratings
-$sql = $pdo->prepare("SELECT M_shop.shop_id, M_shop.shop_name, M_shop.create_date,
-COALESCE(SUM(T_orderdetail.total_price), 0) AS total_revenue, M_shop.del_flg
-FROM M_shop
-LEFT JOIN T_orderdetail ON T_orderdetail.shop_id = M_shop.shop_id
-GROUP BY M_shop.shop_id
+$sql = $pdo->prepare("SELECT m_shop.shop_id, m_shop.shop_name, m_shop.create_date,
+COALESCE(SUM(T_orderdetail.total_price), 0) AS total_revenue, m_shop.del_flg
+FROM m_shop
+LEFT JOIN T_orderdetail ON T_orderdetail.shop_id = m_shop.shop_id
+GROUP BY m_shop.shop_id
 LIMIT $pageStart, $rowsPerPage;
 ");
 $sql->execute();
@@ -43,7 +43,7 @@ $result = $sql->fetchall(PDO::FETCH_ASSOC);
 
 
 // to display ratings
-$ratingSql = $pdo->prepare("SELECT M_shop.shop_name, M_shop.create_date, M_shop.del_flg,
+$ratingSql = $pdo->prepare("SELECT m_shop.shop_name, m_shop.create_date, m_shop.del_flg,
     CASE 
       WHEN COUNT(*) = 0 THEN 'N/A'
       ELSE ROUND(
@@ -59,13 +59,13 @@ $ratingSql = $pdo->prepare("SELECT M_shop.shop_name, M_shop.create_date, M_shop.
         0
       ) 
     END AS rating_percentage
-    FROM M_shop
-    LEFT JOIN T_rating ON T_rating.shop_id = M_shop.shop_id
-    GROUP BY M_shop.shop_id;");
+    FROM m_shop
+    LEFT JOIN T_rating ON T_rating.shop_id = m_shop.shop_id
+    GROUP BY m_shop.shop_id;");
 $ratingSql->execute();
 $ratingResult = $ratingSql->fetchAll(PDO::FETCH_ASSOC);
 
 
-$contactSql=$pdo->prepare("SELECT seller_phone,email FROM M_seller GROUP BY shop_id;");
+$contactSql=$pdo->prepare("SELECT seller_phone,email FROM m_seller GROUP BY shop_id;");
 $contactSql->execute();
 $contactResult=$contactSql->fetchall(PDO::FETCH_ASSOC);

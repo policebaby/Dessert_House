@@ -26,7 +26,7 @@ if(isset($_POST["update"])){
         move_uploaded_file($location, "../storages/profile/" . $userID . "." . $extension);
         $sql= $pdo->prepare(
             "
-            UPDATE M_user SET
+            UPDATE m_user SET
             user_name = :name,
             user_email= :email,
             user_phone = :phone,
@@ -40,7 +40,7 @@ if(isset($_POST["update"])){
         //no profile pic
         $sql= $pdo->prepare(
             "
-            UPDATE M_user SET
+            UPDATE m_user SET
             user_name = :name,
             user_email= :email,
             user_phone = :phone

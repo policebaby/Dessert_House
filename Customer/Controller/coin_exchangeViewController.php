@@ -12,7 +12,7 @@ if (isset($_SESSION["userID"])) {
 
     //check id exist or not 
     $sql = $pdo->prepare(
-        "SELECT * FROM M_coin"
+        "SELECT * FROM m_coin"
     );
     $sql->execute();
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);

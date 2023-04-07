@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"]== "POST") {
     // call the function connect() in the new instance which will return a new PDO object and assigning to variable pdo
     $pdo=$db->connect();
 
-    $sql=$pdo->prepare("SELECT * FROM M_admin WHERE admin_name=:adminName and admin_password=:adminPassword ");
+    $sql=$pdo->prepare("SELECT * FROM m_admin WHERE admin_name=:adminName and admin_password=:adminPassword ");
     $sql->bindValue(":adminName", $adminName);
     $sql->bindValue(":adminPassword", $adminPassword);
 

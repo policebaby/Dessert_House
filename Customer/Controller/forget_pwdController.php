@@ -14,7 +14,7 @@ if (isset($_POST["forgetpwd"])) {
     $pdo = $db->connect();
     $sql = $pdo->prepare(
         "
-        SELECT * FROM M_user WHERE user_email = :email;
+        SELECT * FROM m_user WHERE user_email = :email;
         "
     );
     $sql->bindValue(":email", $email);
@@ -33,7 +33,7 @@ if (isset($_POST["forgetpwd"])) {
         $_SESSION["emailcheck"] = " ";
         $sql = $pdo->prepare(
             "
-            UPDATE M_user SET 
+            UPDATE m_user SET 
             fourdigit_code = :fourdigit
             WHERE user_email = :email
             "

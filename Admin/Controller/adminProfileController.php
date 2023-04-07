@@ -10,7 +10,7 @@ include "../Model/dbConnection.php";
 $db = new DBConnection();
 $pdo=$db->connect();
 
-$sql=$pdo->prepare("SELECT * FROM M_admin WHERE admin_id=:adminId");
+$sql=$pdo->prepare("SELECT * FROM m_admin WHERE admin_id=:adminId");
 $sql->bindValue(":adminId",$adminId);
 $sql->execute();
 

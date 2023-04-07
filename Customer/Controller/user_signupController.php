@@ -21,7 +21,7 @@ if(isset($_POST["signup"])){
 
     //check name is already taken or not
     $sql = $pdo->prepare(
-        "SELECT user_name FROM M_user WHERE user_name = :name"
+        "SELECT user_name FROM m_user WHERE user_name = :name"
     );
     $sql->bindValue(":name", $name);
     $sql->execute();
@@ -33,7 +33,7 @@ if(isset($_POST["signup"])){
         // insert data 
         $sql= $pdo->prepare(
             "
-            INSERT INTO M_user
+            INSERT INTO m_user
             (
                 user_name,
                 user_password,
@@ -66,7 +66,7 @@ if(isset($_POST["signup"])){
 
         $sql = $pdo->prepare(
             "
-            SELECT user_id FROM M_user WHERE user_name = :name
+            SELECT user_id FROM m_user WHERE user_name = :name
             "
         );
         $sql->bindValue(":name", $name);

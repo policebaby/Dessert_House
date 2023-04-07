@@ -19,7 +19,7 @@ $pdo=$db->connect();
 if(isset($_POST["save"])){
     
     $sql=$pdo->prepare("
-    UPDATE M_admin 
+    UPDATE m_admin 
     SET
     admin_name=:adminName, 
     admin_first_name=:adminFirstName,

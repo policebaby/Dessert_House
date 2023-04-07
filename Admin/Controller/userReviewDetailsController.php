@@ -14,9 +14,9 @@ if (isset($_POST["shopId"])) {
     $db= new DBConnection();
     $pdo=$db->connect();
 
-    $sql=$pdo->prepare("SELECT T_review.user_review, M_user.user_name,M_user.user_profilepic,T_review.create_date
+    $sql=$pdo->prepare("SELECT T_review.user_review, m_user.user_name,m_user.user_profilepic,T_review.create_date
     FROM T_review
-    INNER JOIN M_user ON T_review.user_id = M_user.user_id
+    INNER JOIN m_user ON T_review.user_id = m_user.user_id
     WHERE T_review.shop_id = :shopId AND T_review.user_id = :userId");
     
     $sql->bindValue(":shopId",$shopId);

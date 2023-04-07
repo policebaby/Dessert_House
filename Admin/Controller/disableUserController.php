@@ -9,7 +9,7 @@ $userId=$_POST["userId"];
 
 $db= new DBConnection();
 $pdo=$db->connect();
-$sql=$pdo->prepare("UPDATE M_user 
+$sql=$pdo->prepare("UPDATE m_user 
                 SET del_flg = :activate
                 WHERE user_id = :userId
                 ");

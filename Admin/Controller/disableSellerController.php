@@ -17,10 +17,10 @@ $shopId = $_POST["shopId"];
 
 $db = new DBConnection();
 $pdo = $db->connect();
-$sql = $pdo->prepare("UPDATE M_seller
-JOIN M_shop ON M_seller.shop_id = M_shop.shop_id
-SET M_seller.del_flg = 1, M_shop.del_flg = 1
-WHERE M_seller.shop_id = :shopId;
+$sql = $pdo->prepare("UPDATE m_seller
+JOIN m_shop ON m_seller.shop_id = m_shop.shop_id
+SET m_seller.del_flg = 1, m_shop.del_flg = 1
+WHERE m_seller.shop_id = :shopId;
                 ");
 
 $sql->bindValue(':shopId', $shopId);

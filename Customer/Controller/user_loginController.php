@@ -15,7 +15,7 @@ if (isset($_POST["login"])) {
 
     $sql = $pdo->prepare(
         "
-        SELECT * FROM M_user WHERE user_name = :name;
+        SELECT * FROM m_user WHERE user_name = :name;
         "
     );
     $sql->bindValue(":name", $name);

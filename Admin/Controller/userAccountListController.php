@@ -13,7 +13,7 @@ $currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 $startPage = max(1, $currentPage - 1);
 $endPage = $startPage + 2;
 
-$sql = $pdo->prepare("SELECT * FROM M_user");
+$sql = $pdo->prepare("SELECT * FROM m_user");
 $sql->execute();
 $totalPages = ceil(count($sql->fetchall(PDO::FETCH_ASSOC)) / $perPage);
 
@@ -65,12 +65,12 @@ if ($currentPage < $totalPages) {
 
 // Get data from MySQL database and display results
 $offset = ($currentPage - 1) * $perPage;
-$paginationSql=$pdo->prepare("SELECT * FROM M_user LIMIT $perPage OFFSET $offset");
+$paginationSql=$pdo->prepare("SELECT * FROM m_user LIMIT $perPage OFFSET $offset");
 $paginationSql->execute();
 $userListResult=$paginationSql->fetchall(PDO::FETCH_ASSOC);
 
 
-// $sql = $pdo->prepare("SELECT * FROM M_user");
+// $sql = $pdo->prepare("SELECT * FROM m_user");
 // $sql->execute();
 
 // $userListResult = $sql->fetchall(PDO::FETCH_ASSOC);
@@ -94,9 +94,9 @@ for ($i = 0; $i < count($userIds); $i++) {
 }
 $_SESSION["userReviews"] = $userReviews;
 
-// To know each user spent amount,this SQL query retrieves the total spent amount for each user from two tables: M_User and T_Order.
+// To know each user spent amount,this SQL query retrieves the total spent amount for each user from two tables: m_User and T_Order.
 $amtSql = $pdo->prepare("SELECT u.user_id, IFNULL(SUM(o.grand_total),0) AS total_spent 
-FROM M_User u
+FROM m_User u
 LEFT JOIN T_Order o ON u.user_id = o.user_id
 GROUP BY u.user_id");
 $amtSql->execute();

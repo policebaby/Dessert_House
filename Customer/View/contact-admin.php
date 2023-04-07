@@ -69,9 +69,6 @@
                     <p class="ms-md-2  "> +95 120200395 ,</p>
                 </div>
 
-                <h3 class="mt-4 contact_text">Honor your Loved Ones</h3>
-                <p class="text">Who do you admire for standing up for what they believe in?<br>
-                    Here's your chance to tell them and/or their family members.</p>
             </div>
     </form>
     <!--contact admin end-->

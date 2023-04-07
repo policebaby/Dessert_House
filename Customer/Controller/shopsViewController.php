@@ -18,14 +18,14 @@ $pageStart = ($pageStart<0)? 0 : $pageStart;
 
 // shop count
 $sql = $pdo->prepare(
-    "SELECT * FROM M_shop WHERE del_flg = 0 "
+    "SELECT * FROM m_shop WHERE del_flg = 0 "
 );
 $sql->execute();
 $shopcount = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 // shop show
 $sql = $pdo->prepare(
-    "SELECT * FROM M_shop WHERE del_flg = 0
+    "SELECT * FROM m_shop WHERE del_flg = 0
     LIMIT $pageStart, $rowLimit 
     "
 );

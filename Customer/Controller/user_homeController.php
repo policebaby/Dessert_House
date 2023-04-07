@@ -12,7 +12,7 @@ if(isset($_POST["dessertname"])){
     
     $sql= $pdo->prepare(
         "
-        SELECT * FROM M_product WHERE product_name LIKE :dessertname 
+        SELECT * FROM m_product WHERE product_name LIKE :dessertname 
         AND shop_id = :shopid
         "
     );

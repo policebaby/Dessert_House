@@ -38,7 +38,7 @@ u.user_phone,
 rce.receipt 
 FROM 
 T_request_coin_exchange rce 
-JOIN M_user u ON rce.user_id = u.user_id 
+JOIN m_user u ON rce.user_id = u.user_id 
 ORDER BY rce.create_date DESC LIMIT $pageStart,$rowsPerPage;");
 $showRequestSql->execute();
 $showRequestResult=$showRequestSql->fetchAll(PDO::FETCH_ASSOC);
@@ -46,7 +46,7 @@ $showRequestResult=$showRequestSql->fetchAll(PDO::FETCH_ASSOC);
 
 
 // display today currency
-$todayRateSql= $pdo->prepare("SELECT to_mmk, to_usd, to_euro, to_pound FROM M_coin;");
+$todayRateSql= $pdo->prepare("SELECT to_mmk, to_usd, to_euro, to_pound FROM m_coin;");
 $todayRateSql->execute();
 $todayRateResult = $todayRateSql->fetchAll(PDO::FETCH_ASSOC);
 

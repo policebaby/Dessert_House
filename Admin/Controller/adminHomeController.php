@@ -12,13 +12,13 @@ if(isset($_SESSION["user_id"])){
 }
 
 // Calculate Total Shops
-$totalShopSql=$pdo->prepare("SELECT COUNT(shop_id) AS totalShops FROM M_shop;");
+$totalShopSql=$pdo->prepare("SELECT COUNT(shop_id) AS totalShops FROM m_shop;");
 $totalShopSql->execute();
 $totalShopResult=$totalShopSql->fetchall(PDO::FETCH_ASSOC);
 
 
 // Calculate Total User
-$totalUserSql=$pdo->prepare("SELECT COUNT(user_id) AS totalUsers FROM M_user;");
+$totalUserSql=$pdo->prepare("SELECT COUNT(user_id) AS totalUsers FROM m_user;");
 $totalUserSql->execute();
 $totalUserResult=$totalUserSql->fetchall(PDO::FETCH_ASSOC);
 

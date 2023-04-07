@@ -11,7 +11,7 @@ if (isset($_POST["reset"])) {
     $pdo = $database->connect();
 
     $sql = $pdo->prepare(
-        " SELECT * FROM M_user WHERE fourdigit_code = :fourdigit"
+        " SELECT * FROM m_user WHERE fourdigit_code = :fourdigit"
     );
     $sql->bindValue(":fourdigit", $fourdigit);
     $sql->execute();
@@ -28,7 +28,7 @@ if (isset($_POST["reset"])) {
         $_SESSION["digitIncorrect"] = " ";
         $sql = $pdo->prepare(
             "
-            UPDATE M_user SET
+            UPDATE m_user SET
             user_password = :newpwd
             WHERE fourdigit_code = :fourdigit
             "

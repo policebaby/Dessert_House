@@ -12,7 +12,7 @@ if (isset($_SESSION["userID"])) {
 
     //check id exist or not 
     $sql = $pdo->prepare(
-        "SELECT * FROM M_user WHERE user_id = :id"
+        "SELECT * FROM m_user WHERE user_id = :id"
     );
     $sql->bindValue(":id", $id);
     $sql->execute();

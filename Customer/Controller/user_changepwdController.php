@@ -12,7 +12,7 @@ if (isset($_POST["changepwd"])) {
     $db = new DBConnection();
     $pdo = $db->connect();
     $sql = $pdo->prepare(
-        "SELECT * FROM M_user WHERE user_id = :id "
+        "SELECT * FROM m_user WHERE user_id = :id "
     );
     $sql->bindValue(":id", $id);
     $sql->execute();
@@ -26,7 +26,7 @@ if (isset($_POST["changepwd"])) {
         // echo "correct";
         $sql= $pdo->prepare(
             "
-            UPDATE M_user SET
+            UPDATE m_user SET
             user_password = :newpwd
             WHERE user_id = :id
             "

@@ -8,7 +8,7 @@ $db = new DBConnection();
 $pdo = $db->connect();
 
 $sql = $pdo->prepare(
-    "SELECT * FROM M_user WHERE code = :code"
+    "SELECT * FROM m_user WHERE code = :code"
 );
 
 $sql->bindValue(":code", $code);
@@ -20,7 +20,7 @@ if (count($result) == 0) {
     echo "wrong verify code!";
 } else {
     $sql = $pdo->prepare(
-        " UPDATE M_user  SET 
+        " UPDATE m_user  SET 
         verify = 1 
         WHERE code = :code
         "

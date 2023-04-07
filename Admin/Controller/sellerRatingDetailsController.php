@@ -26,7 +26,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 //reviews
 $reviewSql=$pdo->prepare("SELECT tr.user_id, tr.user_review, tr.seller_reply, tr.create_date, mu.user_name
 FROM T_review tr
-INNER JOIN M_user mu ON tr.user_id = mu.user_id
+INNER JOIN m_user mu ON tr.user_id = mu.user_id
 WHERE tr.shop_id = :shopId;
 ");
 $reviewSql->bindValue(":shopId",$shopId);

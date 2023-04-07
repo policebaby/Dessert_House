@@ -25,9 +25,9 @@ if (isset($_POST['register'])) {
     $pdo = $db->connect();
 
 
-    //check shop name has already taken from M_shop
+    //check shop name has already taken from m_shop
     if ($shopName) {
-        $sql = $pdo->prepare("SELECT * FROM M_shop WHERE shop_name = :shopName");
+        $sql = $pdo->prepare("SELECT * FROM m_shop WHERE shop_name = :shopName");
         $sql->bindValue(":shopName", $shopName);
         $sql->execute();
         $shopNameResult = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -38,9 +38,9 @@ if (isset($_POST['register'])) {
         }
     }
 
-    //check email has already taken from M_seller
+    //check email has already taken from m_seller
     if ($email) {
-        $sql = $pdo->prepare("SELECT * FROM M_seller WHERE email = :email");
+        $sql = $pdo->prepare("SELECT * FROM m_seller WHERE email = :email");
         $sql->bindValue(":email", $email);
         $sql->execute();
         $emailResult = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -53,13 +53,13 @@ if (isset($_POST['register'])) {
 
 
 
-    //Insert information shop name into M_shop database
+    //Insert information shop name into m_shop database
     try {
         $pdo->beginTransaction();
 
-        // Insert information shop name into M_shop database
+        // Insert information shop name into m_shop database
         $sql = $pdo->prepare("
-            INSERT INTO M_shop
+            INSERT INTO m_shop
             (shop_name, shop_soldCount, total_profit, order_number, del_flg, create_date, shop_profilepic, shop_coverpic)
             VALUES
             (:shopName, :shopSoldCount, :totalProfit, :orderNumber, :delFlg, :createDate, :shopProfilePic, :shopCoverPic)
@@ -79,9 +79,9 @@ if (isset($_POST['register'])) {
         // Retrieve the generated shop_id
         $shopId = $pdo->lastInsertId();
 
-        // Insert email, password, contact phone, address into M_seller
+        // Insert email, password, contact phone, address into m_seller
         $sqlSeller = $pdo->prepare("
-            INSERT INTO M_seller
+            INSERT INTO m_seller
             (seller_name, shop_id, password, email, seller_phone, shop_coinOwn, del_flg, create_date)
             VALUES
             (:sellerName, :shopId, :password, :email, :sellerPhone, :shopCoinOwn, :delFlg, :createDate)            

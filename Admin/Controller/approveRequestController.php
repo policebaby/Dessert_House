@@ -11,7 +11,7 @@ if(isset($_POST["requestId"])){
 $requestId = $_POST["requestId"];
 
 $approveSql=$pdo->prepare("UPDATE T_request_coin_exchange AS rce
-JOIN M_user AS u ON rce.user_id = u.user_id
+JOIN m_user AS u ON rce.user_id = u.user_id
 SET rce.status = 1, u.user_coin = u.user_coin + rce.requested_coin_count
 WHERE rce.request_id = :request_id;
 ");

@@ -8,7 +8,7 @@ $db = new DBConnection();
 $pdo = $db->connect();
 
 $sql = $pdo->prepare(
-    "SELECT * FROM M_ratingCategory "
+    "SELECT * FROM m_ratingCategory "
 );
 $sql->execute();
 $result = $sql->fetchAll(PDO::FETCH_ASSOC);
