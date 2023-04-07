@@ -41,7 +41,7 @@ $db = new DBConnection();
         $sql->bindValue(":createDate", date('y-m-d'));
         $sql->execute();
 
-    header("Location: ../View/reservationForm.php");
+    header("Location: ../View/seat_selection.php");
 
   }else{
     header("Location: ../View/seat_selection.php");

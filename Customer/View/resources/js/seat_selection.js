@@ -1,5 +1,40 @@
+$(document).ready(function(){
 
-function seat(id) {
+  $(".a").click(function(event) {
+      var bgcolor = $(this).css('background-color', '#c22014');  
+      $(this).css('color', 'white');  
+      console.log(event.target.attributes[0].value);
+  });
+  $(".b").click(function(event) {
+      $(this).css('background-color', '#c22014');  
+      $(this).css('color', 'white');    
+      console.log(event.target.attributes[0].value);
+  }); 
+  $(".c").click(function(event){
+      $(this).css('background-color', '#c22014');  
+      $(this).css('color', 'white');    
+      console.log(event.target.attributes[0].value);
+  });
+  $(".d").click(function(event) {
+      $(this).css('background-color', '#c22014');  
+      $(this).css('color', 'white');    
+      console.log(event.target.attributes[0].value);
+  });
+  $(".e").click(function(event) {
+      $(this).css('background-color', '#c22014');  
+      $(this).css('color', 'white');    
+      console.log(event.target.attributes[0].value);
+  });
+  $(".f").click(function(event) {
+      $(this).css('background-color', '#c22014');  
+      $(this).css('color', 'white');    
+      console.log(event.target.attributes[0].value);
+  });
+
+
+});
+
+function fun(this) {
   // console.log(id);
   var button = document.getElementById(id);
   button.style.backgroundColor = '#c22014';

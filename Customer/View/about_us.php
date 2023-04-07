@@ -19,37 +19,14 @@ if (isset($_SESSION["title"])) {
     echo "error";
 }
 
-if (isset($_SESSION["subtitle"])) {
-    $subtitle = $_SESSION["subtitle"];
+if (isset($_SESSION["aboutu_paragraph"])) {
+    $aboutu_paragraph = $_SESSION["aboutu_paragraph"];
     // echo "<pre>";
-    // print_r($subtitle);
+    // print_r($aboutu_paragraph);
 } else {
     echo "not exit";
 }
 
-if (isset($_SESSION["t_paragraph"])) {
-    $t_paragraph = $_SESSION["t_paragraph"];
-    // echo "<pre>";
-    // print_r($title);
-} else {
-    echo "error";
-}
-
-if (isset($_SESSION["sec_title"])) {
-    $sec_title = $_SESSION["sec_title"];
-    // echo "<pre>";
-    // print_r($sec_title);
-} else {
-    echo "error";
-}
-
-if (isset($_SESSION["sec_description"])) {
-    $sec_description = $_SESSION["sec_description"];
-    // echo "<pre>";
-    // print_r($sec_description);
-} else {
-    echo "error";
-}
 
 ?>
 
@@ -77,14 +54,14 @@ if (isset($_SESSION["sec_description"])) {
     <!-- css link end -->
     <!-- js link start -->
     <!-- js link end -->
-<!--font link start-->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet" />
-  <!-- font link end -->
+    <!--font link start-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet" />
+    <!-- font link end -->
 </head>
 
 <body>
@@ -96,64 +73,56 @@ if (isset($_SESSION["sec_description"])) {
         <div class="row first_para">
             <div class="col-md-12">
 
-            <?php for ($i = 0; $i < count($title); $i++) {  ?>
-                <h4 class="title"><?= $title[$i]["title"] ?></h4>
-                <br>
-            <?php } ?>
+                <?php for ($i = 0; $i < count($title); $i++) {  ?>
+                    <h4 class="title"><?= $title[$i]["title"] ?></h4>
+                    <br>
+                <?php } ?>
 
-                
+
                 <div class="about_text">
-                <?php for ($i = 0; $i < count($description); $i++) {  ?>
-                <p class="text paragraph "><?= $description[$i]["description"] ?></p>
-                <br>
-            <?php } ?>
+                    <?php for ($i = 0; $i < count($description); $i++) {  ?>
+                        <p class="text paragraph "><?= $description[$i]["description"] ?></p>
+                        <br>
+                    <?php } ?>
                 </div>
             </div>
         </div>
 
         <div class="row second_para">
-        <div class="mb">
-            <div class="paragraph">
-            <div class="col-md-5 paragraph pic">
-                <img src="../View/resources/img/about_us_1.png" alt="about_us" class="para1_pic" >
-            </div>
-            <div class="col-md-2 paragraph">
-                <div class="first">
-                <?php for ($i = 0; $i < count($subtitle); $i++) {  ?>
-                    <h4 class="para1_title"><?= $subtitle[$i]["title"] ?></h4>
-            <?php } ?>
+            <div class="mb">
+                <div class="paragraph">
+                    <div class="col-md-5 paragraph pic">
+                        <img src="../View/resources/img/about_us_1.png" alt="about_us" class="para1_pic">
+                    </div>
+                    <div class="col-md-2 paragraph">
+                        <div class="first">
+                            <h4 class="para1_title"><?= $aboutu_paragraph[0]["title"] ?></h4>
 
-                <div class="mv">
-                <?php for ($i = 0; $i < count($t_paragraph); $i++) {  ?>
-                    <p class="text paragraph"><?= $t_paragraph[$i]["description"] ?></p>
-            <?php } ?>
+                            <div class="mv">
+                                <p class="text paragraph"><?= $aboutu_paragraph[0]["description"] ?></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                </div>
-            </div>
-            </div>
             </div>
         </div>
         <div class="row third_para">
             <div class="mb">
-        <div class="paragraph">
-            <div class="col-md-2 ms-md-5  paragraph">
-            <div class="first">
-            <?php for ($i = 0; $i < count($sec_title); $i++) {  ?>
-                    <h4 class="para2_title"><?= $sec_title[$i]["sec_title"] ?></h4>
-            <?php } ?>
-                <div class="mv">
-                <?php for ($i = 0; $i < count($sec_description); $i++) {  ?>
-                    <p class="text paragraph"><?= $sec_description[$i]["sec_description"] ?></p>
-            <?php } ?>
+                <div class="paragraph">
+                    <div class="col-md-2 ms-md-5  paragraph">
+                        <div class="first">
+                            <h4 class="para2_title"><?= $aboutu_paragraph[1]["title"] ?></h4>
+                            <div class="mv">
+                                <p class="text paragraph"><?= $aboutu_paragraph[1]["description"] ?></p>
 
-                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 paragraph pic1">
+                        <img src="../View/resources/img/about_us_2.png" alt="about_us" class="para2_pic">
+                    </div>
                 </div>
             </div>
-            <div class="col-md-5 paragraph pic1">
-                <img src="../View/resources/img/about_us_2.png" alt="about_us" class="para2_pic">
-            </div>
-        </div>
-        </div>
         </div>
     </div>
     <!--about us end-->
