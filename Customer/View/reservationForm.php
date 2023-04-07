@@ -66,19 +66,19 @@ if (isset($_SESSION["userID"])) {
                             <!-- person count start -->
                             <p class="text-light">How many person you will be with ?</p>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
                                 <label class="form-check-label" for="inlineRadio1">1</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
                                 <label class="form-check-label" for="inlineRadio2">2</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="4">
                                 <label class="form-check-label" for="inlineRadio3">4</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="6">
                                 <label class="form-check-label" for="inlineRadio4">6</label>
                             </div>
                             <!-- person count end -->

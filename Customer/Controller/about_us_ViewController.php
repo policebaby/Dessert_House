@@ -39,8 +39,6 @@ $result = $sql->fetchAll(PDO::FETCH_ASSOC);
 $_SESSION["aboutu_paragraph"]= $result;
 
 
-<<<<<<< HEAD
-=======
 $sql = $pdo->prepare(
     "
     SELECT description FROM t_paragraph ORDER BY paragraph_id DESC LIMIT 1;
@@ -71,7 +69,6 @@ $sql->execute();
 $result = $sql->fetchAll(PDO::FETCH_ASSOC);
 // print_r($result);
 $_SESSION["sec_description"]= $result;
->>>>>>> origin/main
 
 $sql = $pdo->prepare(
     "
