@@ -125,31 +125,37 @@ if (isset($_SESSION['review']) && !is_null($_SESSION['review'])) {
                         <div class="per-average">
                             <div class="per-face-text ms-3 mt-md-3 mt-sm-3">
                                 <?php
-
-                                if ($overallPercentage <= 25) {
-                                    echo '<span class="d-flex face-pt">
+                                if ($overallPercentage != 0) {
+                                    if ($overallPercentage <= 25) {
+                                        echo '<span class="d-flex face-pt">
                                     <iconify-icon icon="fa6-regular:face-dizzy" class="gold-faces"></iconify-icon>
                                         <span class="h3 ms-md-2 mt-md-3 mt-sm-2 cent">' . number_format($overallPercentage, 0) . '%</span><br>
                                         </span>
                                         <p class="ms-md-3 ms-sm-3 fw-bold above-text">Below Average</p>';
-                                } else if ($overallPercentage <= 50) {
-                                    echo '<span class="d-flex face-pt">
+                                    } else if ($overallPercentage <= 50) {
+                                        echo '<span class="d-flex face-pt">
                                     <iconify-icon icon="ph:smiley-sad-bold" class="gold-faces"></iconify-icon>
                                         <span class="h3 ms-md-2 mt-md-3 mt-sm-2 cent">' . number_format($overallPercentage, 0) . '%</span><br>
                                         </span>
                                         <p class="ms-md-3 ms-sm-3 fw-bold above-text">Middle Average</p>';
-                                } else if ($overallPercentage <= 75) {
-                                    echo '<span class="d-flex face-pt">
+                                    } else if ($overallPercentage <= 75) {
+                                        echo '<span class="d-flex face-pt">
                                     <iconify-icon icon="charm:face-neutral" class="gold-faces"></iconify-icon>
                                         <span class="h3 ms-md-2 mt-md-3 mt-sm-2 cent">' . number_format($overallPercentage, 0) . '%</span><br>
                                         </span>
                                         <p class="ms-md-3 ms-sm-3 fw-bold above-text">Good Average</p>';
-                                } else {
-                                    echo '<span class="d-flex justify-content-center">
+                                    } else {
+                                        echo '<span class="d-flex justify-content-center">
                                     <iconify-icon icon="gg:smile-mouth-open" class="gold-faces"></iconify-icon>
                                         <span class="h3 ms-md-2 mt-md-3 mt-sm-2 cent">' . number_format($overallPercentage, 0) . '%</span><br>
                                         </span>
-                                        <p class="ms-md-3 ms-sm-3 fw-bold above-text">Above Average</p>';
+                                        <p class="ms-md-5 ms-sm-3 fw-bold above-text">Above Average</p>';
+                                    }
+                                } else {
+                                    echo '<span class="d-flex justify-content-center">
+                                        <span class="h3 ms-2">0%</span><br>
+                                        </span>
+                                    ';
                                 }
                                 ?>
                             </div>
@@ -158,57 +164,90 @@ if (isset($_SESSION['review']) && !is_null($_SESSION['review'])) {
                     <!-- for progress gp -->
                     <div class="col-md-9 col-sm-9">
                         <div class="progress-gp">
-
                             <!-- progress 1 -->
                             <div class="each-progress">
                                 <img src="./resources/images/happy.png" class="faces">
                                 <?php
-                                $Spercent = ($smileCount / $shopRatingCount) * 100;
+                                if ($shopRatingCount != 0) {
+                                    $Spercent = ($smileCount / $shopRatingCount) * 100;
+                                } else {
+                                    $Spercent = 0;
+                                }
                                 for ($i = 0; $i < count($Sresult); $i++) { ?>
                                     <div class="progress w-50 mt-2 ms-md-3 ms-sm-3">
                                         <div class="progress-bar" role="progressbar" style="width: <?= $Spercent ?>%" aria-valuenow="<?= $Spercent ?>" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                                    <span class="mt-md-2 mt-sm-2 ms-md-3 ms-sm-3 fw-bold total-review"><?= $smileCount ?> reviews</span>
+                                    <?php if ($shopRatingCount != 0) { ?>
+                                        <span class="mt-md-2 mt-sm-2 ms-md-3 ms-sm-3 fw-bold total-review"><?= $smileCount ?> reviews</span>
+                                    <?php } else { ?>
+                                        <span class="mt-md-2 mt-sm-2 ms-md-3 ms-sm-3 fw-bold total-review">No reviews yet</span>
+                                    <?php } ?>
                             </div>
                         <?php } ?>
-
                         <!-- progress 2 -->
-                        <div class="each-progress my-1">
+                        <div class="each-progress">
                             <img src="./resources/images/normal.png" class="faces">
                             <?php
-                            $percent = ($pokerCount / $shopRatingCount) * 100;
+                            if ($shopRatingCount != 0) {
+                                $percent = ($pokerCount / $shopRatingCount) * 100;
+                            } else {
+                                $percent = 0;
+                            }
                             for ($i = 0; $i < count($Presult); $i++) { ?>
                                 <div class="progress w-50 mt-2 ms-md-3 ms-sm-3">
-                                    <div class="progress-bar" role="progressbar" style="width: <?= $percent ?>%" aria-valuenow="<?= $percent ?>" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" style="width: <?= $Ppercent ?>%" aria-valuenow="<?= $Ppercent ?>" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
-                                <span class="mt-md-2 mt-sm-2 ms-md-3 ms-sm-3 fw-bold total-review"><?= $pokerCount ?> reviews</span>
+                                <?php if ($shopRatingCount != 0) { ?>
+                                    <span class="mt-md-2 mt-sm-2 ms-md-3 ms-sm-3 fw-bold total-review"><?= $pokerCount ?> reviews</span>
+                                <?php } else { ?>
+                                    <span class="mt-md-2 mt-sm-2 ms-md-3 ms-sm-3 fw-bold total-review">No reviews yet</span>
+                                <?php } ?>
                         </div>
                     <?php } ?>
-
                     <!-- progress 3 -->
                     <div class="each-progress">
+
                         <img src="./resources/images/unhappy.png" class="faces">
                         <?php
-                        $Dpercent = ($sadCount / $shopRatingCount) * 100;
+                        if ($shopRatingCount != 0) {
+                            $Dpercent = ($sadCount / $shopRatingCount) * 100;
+                        } else {
+                            $Spercent = 0;
+                        }
                         for ($i = 0; $i < count($Dresult); $i++) { ?>
                             <div class="progress w-50 mt-2 ms-md-3 ms-sm-3">
                                 <div class="progress-bar" role="progressbar" style="width: <?= $Dpercent ?>%" aria-valuenow="<?= $Dpercent ?>" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                            <span class="mt-md-2 mt-sm-2 ms-md-3 ms-sm-3 fw-bold total-review"><?= $sadCount ?> review</span>
+                            <?php if ($shopRatingCount != 0) { ?>
+                                <span class="mt-md-2 mt-sm-2 ms-md-3 ms-sm-3 fw-bold total-review"><?= $sadCount ?> reviews</span>
+                            <?php } else { ?>
+                                <span class="mt-md-2 mt-sm-2 ms-md-3 ms-sm-3 fw-bold total-review">No reviews yet</span>
+                            <?php } ?>
                     </div>
                 <?php } ?>
+
                 <!-- progress 4 -->
-                <div class="each-progress my-1">
+                <div class="each-progress">
+
                     <img src="./resources/images/unlike.png" class="faces">
                     <?php
-                    $Epercent = ($crossCount / $shopRatingCount) * 100;
+                    if ($shopRatingCount != 0) {
+                        $Epercent = ($crossCount / $shopRatingCount) * 100;
+                    } else {
+                        $Spercent = 0;
+                    }
                     for ($i = 0; $i < count($Eresult); $i++) { ?>
                         <div class="progress w-50 mt-2 ms-md-3 ms-sm-3">
                             <div class="progress-bar" role="progressbar" style="width: <?= $Epercent ?>%" aria-valuenow="<?= $Epercent ?>" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
-                        <span class="mt-md-2 mt-sm-2 ms-md-3 ms-sm-3 fw-bold total-review"><?= $crossCount ?> review</span>
+                        <?php if ($shopRatingCount != 0) { ?>
+                            <span class="mt-md-2 mt-sm-2 ms-md-3 ms-sm-3 fw-bold total-review"><?= $crossCount ?> reviews</span>
+                        <?php } else { ?>
+                            <span class="mt-md-2 mt-sm-2 ms-md-3 ms-sm-3 fw-bold total-review">No reviews yet</span>
+                        <?php } ?>
                 </div>
             <?php } ?>
+
                         </div>
                     </div>
                 </div>

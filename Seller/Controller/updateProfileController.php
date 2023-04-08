@@ -215,7 +215,7 @@ if (isset($_POST["saveBtn"])) {
         // header("Location: ../View/sellerProfile.php");
     }
 } else {
-    echo "error error ";
+    // echo "error error ";
     // file uploaded or cancel btn
-    // header("Location: ../View/sellerProfile.php");
+    header("Location: ../View/sellerProfile.php");
 }

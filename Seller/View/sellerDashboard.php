@@ -127,6 +127,8 @@ if (isset($_SESSION["sellerName"])) {
                         <div class="blue_squares">
                             <img src="./resources/images/soldCount.png" class="mt-md-3 mt-sm-3 icon21">
                             <?php
+                            $soldCount = isset($result['total_quantity']) ? $result['total_quantity'] : 0;
+                           
                             echo '<p class="text_21 mt-md-2 mt-sm-2">' . $soldCount . '</p>';
                             ?>
                             <p class="blue_name">Sold Item Count</p>
@@ -147,33 +149,39 @@ if (isset($_SESSION["sellerName"])) {
                         <div class="text-center">
                             <span class="cent">
                                 <?php
-
-                                if ($overallPercentage <= 25) {
-                                    echo '<span class="d-flex justify-content-center">
-                                    <iconify-icon icon="fa6-regular:face-dizzy" class="fs-1"></iconify-icon>
-                                        <span class="h3 ms-2">' . number_format($overallPercentage, 0) . '%</span><br>
-                                        </span>
-                                        ';
-                                } else if ($overallPercentage <= 50) {
-                                    echo '<span class="d-flex justify-content-center">
-                                    <iconify-icon icon="ph:smiley-sad-bold" class="fs-1"></iconify-icon>
-                                        <span class="h3 ms-2">' . number_format($overallPercentage, 0) . '%</span><br>
-                                        </span>
-                                        ';
-                                } else if ($overallPercentage <= 75) {
-                                    echo '<span class="d-flex justify-content-center">
-                                    <iconify-icon icon="charm:face-neutral" class="fs-1"></iconify-icon>
-                                        <span class="h3 ms-2">' . number_format($overallPercentage, 0) . '%</span><br>
-                                        </span>
-                                        ';
-                                } else {
-                                    echo '<span class="d-flex justify-content-center">
-                                    <iconify-icon icon="gg:smile-mouth-open" class="fs-1"></iconify-icon>
-                                        <span class="h3 ms-2">' . number_format($overallPercentage, 0) . '%</span><br>
-                                        </span>
-                                        ';
-                                }
+                                if ($overallPercentage != 0) {
+                                    if ($overallPercentage <= 25) {
+                                        echo '<span class="d-flex justify-content-center">
+                <iconify-icon icon="fa6-regular:face-dizzy" class="fs-1"></iconify-icon>
+                    <span class="h3 ms-2">' . number_format($overallPercentage, 0) . '%</span><br>
+                    </span>
+                    ';
+                                    } else if ($overallPercentage <= 50) {
+                                        echo '<span class="d-flex justify-content-center">
+                <iconify-icon icon="ph:smiley-sad-bold" class="fs-1"></iconify-icon>
+                    <span class="h3 ms-2">' . number_format($overallPercentage, 0) . '%</span><br>
+                    </span>
+                    ';
+                                    } else if ($overallPercentage <= 75) {
+                                        echo '<span class="d-flex justify-content-center">
+                <iconify-icon icon="charm:face-neutral" class="fs-1"></iconify-icon>
+                    <span class="h3 ms-2">' . number_format($overallPercentage, 0) . '%</span><br>
+                    </span>
+                    ';
+                                    } else {
+                                        echo '<span class="d-flex justify-content-center">
+                <iconify-icon icon="gg:smile-mouth-open" class="fs-1"></iconify-icon>
+                    <span class="h3 ms-2">' . number_format($overallPercentage, 0) . '%</span><br>
+                    </span>
+                    ';
+                                    };
+                                }else {
+                                        echo '<span class="d-flex justify-content-center">
+                                            <span class="h3 ms-2">0%</span><br>
+                                            </span>
+                                        ';}
                                 ?>
+
                             </span>
                         </div>
                         <div class="ms-md-3 ms-sm-3 mt-md-4 mt-sm-4">

@@ -166,7 +166,6 @@ else{
                             </div>
                             </span>
                         
-                        <!-- <p id="message" class="fw-bold text-danger text-center"></p> -->
                         <!-- button -->
                         <div class="my-md-5 my-sm-5">
                             <span>

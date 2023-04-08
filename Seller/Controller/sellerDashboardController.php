@@ -26,43 +26,46 @@ if (isset($_SESSION["shopID"])) {
     $itemResult = $sql->fetchAll(PDO::FETCH_ASSOC);
     $itemCount = $itemResult[0]['COUNT(product_id)'];
 
-
-    // -------sellerDashboardController-----                                                                                                                               // total order
+    // total order
     $sql = $pdo->prepare(
         "
         SELECT t_order.status, COUNT(DISTINCT t_order.order_id) AS num_orders
-FROM t_order
-LEFT JOIN t_orderdetail ON t_order.order_id = t_orderdetail.order_id
-WHERE t_orderdetail.shop_id = :shopID OR t_orderdetail.shop_id IS NULL
-GROUP BY t_order.status;
+        FROM t_order
+        LEFT JOIN t_orderdetail ON t_order.order_id = t_orderdetail.order_id
+        WHERE t_orderdetail.shop_id = :shopID OR t_orderdetail.shop_id IS NULL
+        GROUP BY t_order.status;
         "
     );
     $sql->bindValue(":shopID", $shopID);
     $sql->execute();
     $orderResult = $sql->fetchAll(PDO::FETCH_ASSOC);
 
+    $totalOrder = 0;
     foreach ($orderResult as $row) {
         $status = $row['status'];
-        $totalOrder = $row['num_orders'];
+        $totalOrder += $row['num_orders'];
     }
-    echo $totalOrder;
-
+    // echo $totalOrder;
 
     // for sold count
     $sql = $pdo->prepare(
         "
-            SELECT SUM(t_orderdetail.quantity) AS total_quantity
-            FROM t_orderdetail
-            JOIN t_order ON t_orderdetail.order_id = t_order.order_id
-            WHERE t_orderdetail.shop_id = :shopID AND t_order.status = 1;
+        SELECT SUM(t_orderdetail.quantity) AS total_quantity
+        FROM t_orderdetail
+        JOIN t_order ON t_orderdetail.order_id = t_order.order_id
+        WHERE t_orderdetail.shop_id = :shopID AND t_order.status = 1;
+        
             "
     );
     $sql->bindValue(":shopID", $shopID);
     // $sql->bindValue(":status", $status);
     $sql->execute();
     $result = $sql->fetch(PDO::FETCH_ASSOC);
-
+    $soldCount = isset($result['total_quantity']) ? $result['total_quantity'] : 0;
     $soldCount = $result['total_quantity'];
+    // echo $soldCount;
+
+
     // pending Order count
     $sql = $pdo->prepare(
         "
@@ -115,41 +118,41 @@ GROUP BY t_order.status;
     JOIN m_ratingcategory AS m ON t.rating_id = m.rating_id
     WHERE t.shop_id = :shopID
     GROUP BY m.rating_value");
-$sql->bindValue(":shopID", $shopID);
-$sql->execute();
-$feedbackCounts = $sql->fetchAll(PDO::FETCH_ASSOC);
+    $sql->bindValue(":shopID", $shopID);
+    $sql->execute();
+    $feedbackCounts = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-$totalFeedback = 0;
-$positiveFeedback = 0;
-foreach ($feedbackCounts as $count) {
-    $ratingValue = $count['rating_value'];
-    $numUsers = $count['num_users'];
-    $totalFeedback += $numUsers;
-    if ($ratingValue == 1) {
-        $positiveFeedback += $numUsers;
+    $totalFeedback = 0;
+    $positiveFeedback = 0;
+    foreach ($feedbackCounts as $count) {
+        $ratingValue = $count['rating_value'];
+        $numUsers = $count['num_users'];
+        $totalFeedback += $numUsers;
+        if ($ratingValue == 1) {
+            $positiveFeedback += $numUsers;
+        }
     }
-}
 
-if ($totalFeedback > 0) {
-    $overallPercentage = $positiveFeedback / $totalFeedback * 100;
-} else {
-    $overallPercentage = 0;
-}
+    if ($totalFeedback > 0) {
+        $overallPercentage = $positiveFeedback / $totalFeedback * 100;
+    } else {
+        $overallPercentage = 0;
+    }
 
-// echo "<pre>";
-// print_r($feedbackCounts);
+    // echo "<pre>";
+    // print_r($feedbackCounts);
 
 
-// Calculate the percentage for each type of feedback
-$feedbackPercentages = [];
-$totalRatings = 0;
-foreach ($feedbackCounts as $count) {
-$ratingValue = $count['rating_value'];
-$numUsers = $count['num_users'];
-$feedbackPercentages[$ratingValue] = $numUsers / $shopRatingCount * 100;
-$totalRatings += $numUsers;
-}
-// echo $totalRatings;
+    // Calculate the percentage for each type of feedback
+    $feedbackPercentages = [];
+    $totalRatings = 0;
+    foreach ($feedbackCounts as $count) {
+        $ratingValue = $count['rating_value'];
+        $numUsers = $count['num_users'];
+        $feedbackPercentages[$ratingValue] = $numUsers / $shopRatingCount * 100;
+        $totalRatings += $numUsers;
+    }
+    // echo $totalRatings;
 
     // generate username from user_id
     $sql = $pdo->prepare(

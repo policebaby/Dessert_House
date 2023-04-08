@@ -133,19 +133,16 @@ else{
                         <label for="new-product-name texts" class="fw-bold">Product Name</label>
                         <input type="text" class="input-box p-3" value="<?= $result[0]["product_name"]?>" name="newProductName">
                     </div>
-                    <div class="label-box my-md-3 my-sm-3">
-                        <label for="product-type" class="fw-bold">Product Type</label>
-                        <input type="text" class="input-box p-3" value="<?= $result[0]["product_type"]?>" name="productType">
-                    </div>
-                    <div class="label-box">
+                    
+                    <div class="label-box  my-md-3 my-sm-3">
                         <label for="price-of-each-product" class="fw-bold">Price Of Each Product</label>
                         <input type="text" class="input-box p-3" value="<?= $result[0]["product_price"]?>" name="priceOfeach" >
                     </div>
-                    <div class="label-box my-md-3 my-sm-3">
+                    <div class="label-box">
                             <label for="instock" class="fw-bold">Instock</label>
                             <input type="text" class="input-box p-3" name="instock"value="<?= $result[0]["product_instock"]?>" name="instock">
                         </div>
-                    <div class="mb-md-5 mb-sm-5">
+                    <div class="mb-md-5 mb-sm-5 mt-md-4 mt-sm-4">
                         <button class="btns add-btn" name="saveProductBtn">Save</button>
                         <a href="./sellerNewProductMenu.php" type="button"class="btns ms-4 cancel-btn text-center text-decoration-none" id="cancelBtn">Cancel</a>
                     </div>
