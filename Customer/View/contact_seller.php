@@ -15,13 +15,13 @@ if (isset($_SESSION["shops"])) {
     // echo "<pre>";
     // print_r($shops);
 } else {
-    echo "error";
+    echo "error homeshops";
 }
  if (isset($_SESSION["ratingTypes"])) {
     $rating = $_SESSION["ratingTypes"];
     // echo "ok";
 } else {
-    echo "error";
+    echo "error rating types";
 }
 ?>
 
