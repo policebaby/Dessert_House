@@ -9,7 +9,7 @@ $title = $_POST['title'];
 $description = $_POST['description'];
 
 // check if the title already exists
-$sql = $pdo->prepare('SELECT COUNT(*) FROM T_paragraph WHERE title = :title');
+$sql = $pdo->prepare('SELECT COUNT(*) FROM t_paragraph WHERE title = :title');
 $sql->bindValue(":title", $title);
 $sql->execute();
 $count = $sql->fetchColumn();
@@ -19,7 +19,7 @@ if ($count > 0) {
   echo "Error: A paragraph with the same title already exists";
 } else {
   // the title doesn't exist, so insert a new row
-  $sql = $pdo->prepare('INSERT INTO T_paragraph (title, description, del_flg, create_date) VALUES (:title, :description, 0, NOW())');
+  $sql = $pdo->prepare('INSERT INTO t_paragraph (title, description, del_flg, create_date) VALUES (:title, :description, 0, NOW())');
   $sql->bindValue(":title",$title);
   $sql->bindValue(":description",$description);
   $sql->execute();

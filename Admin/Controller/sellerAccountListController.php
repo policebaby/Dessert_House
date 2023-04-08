@@ -20,9 +20,9 @@ $pageStart =($pageStart<1)? 0 : $pageStart;
 
 // to calcualte total record for pagination
 $sql = $pdo->prepare("SELECT m_shop.shop_id, m_shop.shop_name, m_shop.create_date,
-COALESCE(SUM(T_orderdetail.total_price), 0) AS total_revenue, m_shop.del_flg
+COALESCE(SUM(t_orderdetail.total_price), 0) AS total_revenue, m_shop.del_flg
 FROM m_shop
-LEFT JOIN T_orderdetail ON T_orderdetail.shop_id = m_shop.shop_id
+LEFT JOIN t_orderdetail ON t_orderdetail.shop_id = m_shop.shop_id
 GROUP BY m_shop.shop_id");
 $sql->execute();
 $totalResult = count($sql->fetchall(PDO::FETCH_ASSOC));
@@ -31,9 +31,9 @@ $buttonNumber=ceil($totalResult/$rowsPerPage);
 
 // to display all the informations except ratings
 $sql = $pdo->prepare("SELECT m_shop.shop_id, m_shop.shop_name, m_shop.create_date,
-COALESCE(SUM(T_orderdetail.total_price), 0) AS total_revenue, m_shop.del_flg
+COALESCE(SUM(t_orderdetail.total_price), 0) AS total_revenue, m_shop.del_flg
 FROM m_shop
-LEFT JOIN T_orderdetail ON T_orderdetail.shop_id = m_shop.shop_id
+LEFT JOIN t_orderdetail ON t_orderdetail.shop_id = m_shop.shop_id
 GROUP BY m_shop.shop_id
 LIMIT $pageStart, $rowsPerPage;
 ");
@@ -48,7 +48,7 @@ $ratingSql = $pdo->prepare("SELECT m_shop.shop_name, m_shop.create_date, m_shop.
       WHEN COUNT(*) = 0 THEN 'N/A'
       ELSE ROUND(
         COALESCE(SUM(
-          CASE T_rating.rating_id
+          CASE t_rating.rating_id
             WHEN 1 THEN 100
             WHEN 2 THEN 75
             WHEN 3 THEN 50
@@ -60,7 +60,7 @@ $ratingSql = $pdo->prepare("SELECT m_shop.shop_name, m_shop.create_date, m_shop.
       ) 
     END AS rating_percentage
     FROM m_shop
-    LEFT JOIN T_rating ON T_rating.shop_id = m_shop.shop_id
+    LEFT JOIN t_rating ON t_rating.shop_id = m_shop.shop_id
     GROUP BY m_shop.shop_id;");
 $ratingSql->execute();
 $ratingResult = $ratingSql->fetchAll(PDO::FETCH_ASSOC);

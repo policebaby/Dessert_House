@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
    
     $sql=$pdo->prepare("SELECT COUNT(*) as count, rating_id
-    FROM T_rating
+    FROM t_rating
     WHERE shop_id = :shopId
     GROUP BY rating_id;
     ");
@@ -25,7 +25,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 //reviews
 $reviewSql=$pdo->prepare("SELECT tr.user_id, tr.user_review, tr.seller_reply, tr.create_date, mu.user_name
-FROM T_review tr
+FROM t_review tr
 INNER JOIN m_user mu ON tr.user_id = mu.user_id
 WHERE tr.shop_id = :shopId;
 ");

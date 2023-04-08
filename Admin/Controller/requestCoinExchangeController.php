@@ -17,7 +17,7 @@ if(isset($_GET["page"])){
   $pageStart =($pageStart<1)? 0 : $pageStart;
 
 // to calcualte total record for pagination
-$totalRecordSql = $pdo->prepare("SELECT request_id FROM T_request_coin_exchange;
+$totalRecordSql = $pdo->prepare("SELECT request_id FROM t_request_coin_exchange;
 ");
 $totalRecordSql->execute();
 $totalRecordResult = count($totalRecordSql->fetchall(PDO::FETCH_ASSOC));
@@ -37,7 +37,7 @@ u.user_email,
 u.user_phone, 
 rce.receipt 
 FROM 
-T_request_coin_exchange rce 
+t_request_coin_exchange rce 
 JOIN m_user u ON rce.user_id = u.user_id 
 ORDER BY rce.create_date DESC LIMIT $pageStart,$rowsPerPage;");
 $showRequestSql->execute();
@@ -53,14 +53,14 @@ $todayRateResult = $todayRateSql->fetchAll(PDO::FETCH_ASSOC);
 
 // calculate today sold coin
 $todayCoinSql=$pdo->prepare("SELECT SUM(requested_coin_count) AS coins_sold_today
-FROM T_request_coin_exchange
+FROM t_request_coin_exchange
 WHERE DATE(create_date) = CURDATE();");
 $todayCoinSql->execute();
 $todayCoinResult=$todayCoinSql->fetchAll(PDO::FETCH_ASSOC);
 
 // calculate total sold coin
 $totalCoinSql=$pdo->prepare("SELECT SUM(requested_coin_count) AS coins_sold_total
-FROM T_request_coin_exchange;");
+FROM t_request_coin_exchange;");
 $totalCoinSql->execute();
 $totalCoinResult=$totalCoinSql->fetchAll(PDO::FETCH_ASSOC);
 

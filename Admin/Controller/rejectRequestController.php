@@ -14,7 +14,7 @@ if(isset($_GET["page"])){
 if (isset($_POST["requestId"])) {
     $requestId = $_POST["requestId"];
 
-    $rejectSql=$pdo->prepare("UPDATE T_request_coin_exchange
+    $rejectSql=$pdo->prepare("UPDATE t_request_coin_exchange
     SET status = 2
     WHERE request_id = :request_id;
 ");

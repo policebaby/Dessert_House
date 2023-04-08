@@ -28,7 +28,7 @@ if (isset($_POST["request"])) {
 
         $sql = $pdo->prepare(
             "
-        INSERT INTO T_request_coin_exchange
+        INSERT INTO t_request_coin_exchange
         (
             user_id,
             currency_from,

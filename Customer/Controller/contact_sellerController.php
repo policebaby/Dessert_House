@@ -14,7 +14,7 @@ if(isset($_POST["submit_btn"])){
     $pdo = $db->connect();
     $sql = $pdo->prepare(
         "
-        INSERT INTO T_review 
+        INSERT INTO t_review 
         (
             user_id,
             shop_id,
@@ -37,7 +37,7 @@ if(isset($_POST["submit_btn"])){
 
         $sql = $pdo->prepare(
             "
-            INSERT INTO T_rating
+            INSERT INTO t_rating
             (
                 user_id,
                 shop_id,

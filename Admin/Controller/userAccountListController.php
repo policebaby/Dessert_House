@@ -86,7 +86,7 @@ for ($i = 0; $i < count($userListResult); $i++) {
 }
 
 for ($i = 0; $i < count($userIds); $i++) {
-    $reviewSql = $pdo->prepare("SELECT * FROM T_review WHERE user_id=:userId");
+    $reviewSql = $pdo->prepare("SELECT * FROM t_review WHERE user_id=:userId");
     $reviewSql->bindValue(":userId", $userIds[$i]);
     $reviewSql->execute();
     $eachUserReview = $reviewSql->fetchAll(PDO::FETCH_ASSOC);
@@ -94,10 +94,10 @@ for ($i = 0; $i < count($userIds); $i++) {
 }
 $_SESSION["userReviews"] = $userReviews;
 
-// To know each user spent amount,this SQL query retrieves the total spent amount for each user from two tables: m_User and T_Order.
+// To know each user spent amount,this SQL query retrieves the total spent amount for each user from two tables: m_User and t_Order.
 $amtSql = $pdo->prepare("SELECT u.user_id, IFNULL(SUM(o.grand_total),0) AS total_spent 
 FROM m_User u
-LEFT JOIN T_Order o ON u.user_id = o.user_id
+LEFT JOIN t_Order o ON u.user_id = o.user_id
 GROUP BY u.user_id");
 $amtSql->execute();
 $allUsersSpentTotal = $amtSql->fetchAll(PDO::FETCH_ASSOC);

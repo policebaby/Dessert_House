@@ -72,7 +72,7 @@ if (isset($_POST["checkout"])) {
     for ($i=0; $i < count($cartLists) ; $i++) { 
         $sql = $pdo->prepare(
             "
-            INSERT INTO T_orderdetail
+            INSERT INTO t_orderdetail
             (
                 order_id,
                 user_id,

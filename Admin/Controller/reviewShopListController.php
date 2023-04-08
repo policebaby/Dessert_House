@@ -11,8 +11,8 @@ $db= new DBConnection();
 $pdo=$db->connect();
 $sql=$pdo->prepare("SELECT DISTINCT m_shop.shop_name, m_shop.shop_id
                 FROM m_shop
-                INNER JOIN T_review ON m_shop.shop_id = T_review.shop_id
-                WHERE T_review.user_id = :userId
+                INNER JOIN t_review ON m_shop.shop_id = t_review.shop_id
+                WHERE t_review.user_id = :userId
                 ");
 
 $sql->bindValue(':userId',$userId);
