@@ -62,7 +62,7 @@
             <br />
             <p class="text-white">
               <a href="../View/contact-admin.php"> Contact Admin</a><br />
-              <a href="../Controller/contactSviewController.php"> Contact Seller</a> <br />
+              <a href="../View/contact_seller.php"> Contact Seller</a> <br />
               <a href="../View/guide.php"> Guide </a><br />
               <a href="../Controller/about_us_ViewController.php">About us</a> <br />
               <a href="../Controller/privacyViewController.php">Privacy Policy</a>
@@ -77,7 +77,7 @@
             <h4 class="footer_subHeader text-white">Navigate</h4>
             <br />
             <p class="text-white">
-              <a href="../View/coin_exchange.php">Coin Shop</a> <br />
+              <a href="../Controller/coin_exchangeViewController.php">Coin Shop</a> <br />
               <a href="../View/shops.php">Product Page </a><br />
               <a href="../View/seat_selection.php">Seat booking</a>
             </p>
