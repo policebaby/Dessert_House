@@ -113,7 +113,7 @@ else{
         </nav>
 
         <div class="col-10">
-            <p class="h4 fw-bold edit-title mt-3">Products Edition</p>
+            <p class="h4 fw-bold edit-title mt-3">Products Edition</p> 
             <div class="first-row mb-5 me-5 mt-4">
                 <!-- form start -->
                 <form action="../Controller/productUpdateController.php" method="post" enctype="multipart/form-data">
@@ -122,7 +122,7 @@ else{
                     <div class="mb-2">
                         <!-- to show choose profile photo -->
                         <?php
-                            echo '<img src= "../' .$result[0]["product_picture"].' " class="seller-photo mb-3" id="productImg">';
+                            echo '<img src= " '.$result[0]["product_picture"].' " class="seller-photo mb-3" id="productImg">';
                         ?>
                     </div>
                     <input class="form-control mt-2" type="file" id="formFile" name="productImg">

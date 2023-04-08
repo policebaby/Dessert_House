@@ -158,11 +158,12 @@ else{
                                 <label for="email" class="email fw-bold">Email</label>
                                 <input type="email" placeholder="enter your email" class="input_box" name="email" value="<?php echo $result[0]["email"]; ?>">
                             </span>
-                            <!-- email -->
+                            
+                            <!-- for cover photo -->
                             <span class="label_box">
                                 <label for="cover" class=" mt-3  fw-bold">Cover Photo</label>
                                 <div class="mb-3 mt-md-3 mt-sm-3 d-flex flex-direction-column ">
-                                <input class="form-control" type="file" id="formFile" name="cover">
+                                <input class="form-control" type="file" id="cover" name="cover">
                             </div>
                             </span>
                         

@@ -117,7 +117,9 @@ else{
                         if ($shopResult[0]["shop_profilepic"] == "noprofile"){
                             echo '<img src="./resources/images/default.png" class="shopLogo mb-3" id="profileImg">';
                         } else {
-                            echo '<img src= "'.$shopResult[0]["shop_profilepic"].' " class="shopLogo mb-3" id="profileImg">';
+                            // echo '<pre>';
+                            // print_r($shopResult[0]["shop_profilepic"]);
+                            echo '<img src= " '.$shopResult[0]["shop_profilepic"].' " class="shopLogo mb-3" id="profileImg">';
                         };
                         ?>
                     </div>
