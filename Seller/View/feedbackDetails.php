@@ -1,12 +1,11 @@
 <?php
-
+ini_set("display_errors", "1");
 include "../Controller/feedbackDetailController.php";
 
 if (isset($_SESSION["sellerName"])) {
     $sellerName = $_SESSION["sellerName"];
     // echo $sellerName;
-}
-else{
+} else {
     header("Location: ../View/sellerlogin.php");
 }
 
@@ -126,23 +125,29 @@ if (isset($_SESSION['review']) && !is_null($_SESSION['review'])) {
                         <div class="per-average">
                             <div class="per-face-text ms-3 mt-md-3 mt-sm-3">
                                 <?php
-                                $Smile = ($smileCount / $shopRatingCount) * 100;
-                                if ($Smile <= 45) {
+
+                                if ($overallPercentage <= 25) {
                                     echo '<span class="d-flex face-pt">
-                                        <iconify-icon icon="ph:smiley-sad-bold" class="gold-faces"></iconify-icon>
-                                        <span class="h3 ms-md-2 mt-md-3 mt-sm-2 cent">' . number_format($Smile, 0) . '%</span><br>
+                                    <iconify-icon icon="fa6-regular:face-dizzy" class="gold-faces"></iconify-icon>
+                                        <span class="h3 ms-md-2 mt-md-3 mt-sm-2 cent">' . number_format($overallPercentage, 0) . '%</span><br>
                                         </span>
                                         <p class="ms-md-3 ms-sm-3 fw-bold above-text">Below Average</p>';
-                                } else if ($Smile <= 65) {
+                                } else if ($overallPercentage <= 50) {
                                     echo '<span class="d-flex face-pt">
-                                        <iconify-icon icon="charm:face-neutral" class="gold-faces"></iconify-icon>
-                                        <span class="h3 ms-md-2 mt-md-3 mt-sm-2 cent">' . number_format($Smile, 0) . '%</span><br>
+                                    <iconify-icon icon="ph:smiley-sad-bold" class="gold-faces"></iconify-icon>
+                                        <span class="h3 ms-md-2 mt-md-3 mt-sm-2 cent">' . number_format($overallPercentage, 0) . '%</span><br>
                                         </span>
                                         <p class="ms-md-3 ms-sm-3 fw-bold above-text">Middle Average</p>';
-                                } else {
+                                } else if ($overallPercentage <= 75) {
                                     echo '<span class="d-flex face-pt">
-                                        <iconify-icon icon="gg:smile-mouth-open" class="gold-faces"></iconify-icon>
-                                        <span class="h3 ms-md-2 mt-md-3 mt-sm-2 cent">' . number_format($Smile, 0) . '%</span><br>
+                                    <iconify-icon icon="charm:face-neutral" class="gold-faces"></iconify-icon>
+                                        <span class="h3 ms-md-2 mt-md-3 mt-sm-2 cent">' . number_format($overallPercentage, 0) . '%</span><br>
+                                        </span>
+                                        <p class="ms-md-3 ms-sm-3 fw-bold above-text">Good Average</p>';
+                                } else {
+                                    echo '<span class="d-flex justify-content-center">
+                                    <iconify-icon icon="gg:smile-mouth-open" class="gold-faces"></iconify-icon>
+                                        <span class="h3 ms-md-2 mt-md-3 mt-sm-2 cent">' . number_format($overallPercentage, 0) . '%</span><br>
                                         </span>
                                         <p class="ms-md-3 ms-sm-3 fw-bold above-text">Above Average</p>';
                                 }
@@ -231,15 +236,15 @@ if (isset($_SESSION['review']) && !is_null($_SESSION['review'])) {
                             </p>
                             <form action="../Controller/replyEmailController.php" method="POST">
                                 <input type="hidden" name="userEmail" value="<?= $userEmail ?>">
-                                <input type="hidden" name="reviewID" value = "<?= $reviewID ?>">
+                                <input type="hidden" name="reviewID" value="<?= $reviewID ?>">
                                 <input type="submit" name="submit" value="Reply Thank" class="ms-md-5 ms-sm-5 px-3 bg-primary text-white replyBtn">
                             </form>
 
                         </div>
                     <?php } ?>
                 </div>
-            <!-- for pagination -->
-            <nav aria-label="Page navigation example" class="mt-2 mb-sm-5">
+                <!-- for pagination -->
+                <nav aria-label="Page navigation example" class="mt-2 mb-sm-5">
                     <ul class="pagination  justify-content-center">
                         <li class="page-item 
                         <?php

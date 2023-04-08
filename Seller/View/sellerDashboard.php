@@ -1,11 +1,11 @@
 <?php
+ini_set("display_errors", "1");
 
 include "../Controller/sellerDashboardController.php";
 
-if(isset($_SESSION["sellerName"])){
+if (isset($_SESSION["sellerName"])) {
     $sellerName = $_SESSION["sellerName"];
-}
-else{
+} else {
     header("Location: ../View/sellerlogin.php");
 }
 
@@ -147,22 +147,31 @@ else{
                         <div class="text-center">
                             <span class="cent">
                                 <?php
-                                $Smile = ($smileCount / $shopRatingCount) * 100;
-                                if ($Smile <= 45) {
-                                    echo '<span class="d-flex justify-content-center ">
-                                        <iconify-icon icon="ph:smiley-sad-bold" class="fs-1"></iconify-icon>
-                                        <span class="h3 ms-1">' . number_format($Smile, 0) . '%</span><br>
-                                        </span>';
-                                } else if ($Smile <= 65) {
+
+                                if ($overallPercentage <= 25) {
                                     echo '<span class="d-flex justify-content-center">
-                                        <iconify-icon icon="charm:face-neutral" class="fs-1"></iconify-icon>
-                                        <span class="h3 ms-1">' . number_format($Smile, 0) . '%</span><br>
-                                        </span>';
+                                    <iconify-icon icon="fa6-regular:face-dizzy" class="fs-1"></iconify-icon>
+                                        <span class="h3 ms-2">' . number_format($overallPercentage, 0) . '%</span><br>
+                                        </span>
+                                        ';
+                                } else if ($overallPercentage <= 50) {
+                                    echo '<span class="d-flex justify-content-center">
+                                    <iconify-icon icon="ph:smiley-sad-bold" class="fs-1"></iconify-icon>
+                                        <span class="h3 ms-2">' . number_format($overallPercentage, 0) . '%</span><br>
+                                        </span>
+                                        ';
+                                } else if ($overallPercentage <= 75) {
+                                    echo '<span class="d-flex justify-content-center">
+                                    <iconify-icon icon="charm:face-neutral" class="fs-1"></iconify-icon>
+                                        <span class="h3 ms-2">' . number_format($overallPercentage, 0) . '%</span><br>
+                                        </span>
+                                        ';
                                 } else {
                                     echo '<span class="d-flex justify-content-center">
-                                        <iconify-icon icon="gg:smile-mouth-open" class="fs-1 "></iconify-icon>
-                                        <span class="h3 ms-1">' . number_format($Smile, 0) . '%</span><br>
-                                        </span>';
+                                    <iconify-icon icon="gg:smile-mouth-open" class="fs-1"></iconify-icon>
+                                        <span class="h3 ms-2">' . number_format($overallPercentage, 0) . '%</span><br>
+                                        </span>
+                                        ';
                                 }
                                 ?>
                             </span>
@@ -223,9 +232,9 @@ else{
 
                                 </div>
                             <?php } ?>
-                            
-                            <div class= "mt-md-4 mt-sm-4" >
-                            <a href="./feedbackDetails.php" class="view mt-5 text-decoration-none ">View All</a>
+
+                            <div class="mt-md-4 mt-sm-4">
+                                <a href="./feedbackDetails.php" class="view mt-5 text-decoration-none ">View All</a>
                             </div>
                         </div>
                     </span>

@@ -45,6 +45,7 @@ GROUP BY t_order.status;
         $status = $row['status'];
         $totalOrder = $row['num_orders'];
     }
+    echo $totalOrder;
 
 
     // for sold count
@@ -106,18 +107,49 @@ GROUP BY t_order.status;
     $ShopRating = $sql->fetchAll(PDO::FETCH_ASSOC);
     $shopRatingCount = $ShopRating[0]['num_users'];
 
-    // smile count
-    $sql = $pdo->prepare(
-        "SELECT COUNT(DISTINCT t.user_id) AS num_users
-        FROM t_rating AS t
-        JOIN m_ratingcategory AS m ON t.rating_id = m.rating_id
-        WHERE t.shop_id = :shopID AND m.rating_value = 1 "
-    );
-    $sql->bindValue(":shopID", $shopID);
-    $sql->execute();
-    $Sresult = $sql->fetchAll(PDO::FETCH_ASSOC);
-    // print_r($Sresult);
-    $smileCount = $Sresult[0]['num_users'];
+
+    // Count the number of each type of feedback
+    $sql = $pdo->prepare("
+    SELECT m.rating_value, COUNT(DISTINCT t.user_id) AS num_users
+    FROM t_rating AS t
+    JOIN m_ratingcategory AS m ON t.rating_id = m.rating_id
+    WHERE t.shop_id = :shopID
+    GROUP BY m.rating_value");
+$sql->bindValue(":shopID", $shopID);
+$sql->execute();
+$feedbackCounts = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+$totalFeedback = 0;
+$positiveFeedback = 0;
+foreach ($feedbackCounts as $count) {
+    $ratingValue = $count['rating_value'];
+    $numUsers = $count['num_users'];
+    $totalFeedback += $numUsers;
+    if ($ratingValue == 1) {
+        $positiveFeedback += $numUsers;
+    }
+}
+
+if ($totalFeedback > 0) {
+    $overallPercentage = $positiveFeedback / $totalFeedback * 100;
+} else {
+    $overallPercentage = 0;
+}
+
+// echo "<pre>";
+// print_r($feedbackCounts);
+
+
+// Calculate the percentage for each type of feedback
+$feedbackPercentages = [];
+$totalRatings = 0;
+foreach ($feedbackCounts as $count) {
+$ratingValue = $count['rating_value'];
+$numUsers = $count['num_users'];
+$feedbackPercentages[$ratingValue] = $numUsers / $shopRatingCount * 100;
+$totalRatings += $numUsers;
+}
+// echo $totalRatings;
 
     // generate username from user_id
     $sql = $pdo->prepare(
