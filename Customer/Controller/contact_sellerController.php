@@ -59,6 +59,8 @@ if(isset($_POST["submit_btn"])){
             $sql->execute();
 
             header("Location: ../View/user_home.php");
+
+
 }else{
     echo "error"; 
 }

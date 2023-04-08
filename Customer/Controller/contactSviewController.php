@@ -13,9 +13,25 @@ $sql = $pdo->prepare(
 $sql->execute();
 $result = $sql->fetchAll(PDO::FETCH_ASSOC);
 $_SESSION["ratingTypes"]= $result;
-echo "<pre>";
-print_r($result);
+// echo "<pre>";
+// print_r($result);
 
-header("Location: ../View/contact_seller.php");
+$sql = $pdo->prepare(
+    "
+    SELECT * FROM m_shop WHERE del_flg = 0;
+    "
+    );
+
+    $sql->execute();
+    $shops = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+    // echo "<pre>";
+    // print_r($shops);
+
+
+
+
+
+// header("Location: ../View/contact_seller.php");
 
 ?>

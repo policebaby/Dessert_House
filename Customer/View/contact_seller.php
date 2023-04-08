@@ -1,7 +1,8 @@
 <?php
 
 ini_set("display_errors", "1");
-session_start();
+// session_start();
+include "../Controller/contactSviewController.php";
 
 if (isset($_SESSION["username"])) {
     // already success login or sign up
@@ -10,18 +11,18 @@ if (isset($_SESSION["username"])) {
 } else {
     header("Location: ./user_login.php");
 }
-if (isset($_SESSION["shops"])) {
-    $shops = $_SESSION["homeshops"];
-    // echo "<pre>";
-    // print_r($shops);
-} else {
-    echo "error";
-}
+// if (isset($_SESSION["shops"])) {
+//     $shops = $_SESSION["homeshops"];
+//     // echo "<pre>";
+//     // print_r($shops);
+// } else {
+//     echo "error shop";
+// }
  if (isset($_SESSION["ratingTypes"])) {
     $rating = $_SESSION["ratingTypes"];
     // echo "ok";
 } else {
-    echo "error";
+    echo "error rating";
 }
 ?>
 
