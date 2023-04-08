@@ -18,7 +18,7 @@ if (isset($_SESSION["username"])) {
 // } else {
 //     echo "error shop";
 // }
- if (isset($_SESSION["ratingTypes"])) {
+if (isset($_SESSION["ratingTypes"])) {
     $rating = $_SESSION["ratingTypes"];
     // echo "ok";
 } else {
