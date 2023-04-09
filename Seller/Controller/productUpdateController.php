@@ -37,10 +37,10 @@ if (move_uploaded_file($Location, "../../storages/products/".$rowId.".".$extensi
     $sql->bindValue(":pname",$pname);
     $sql->bindValue(":price",$price);
     $sql->bindValue(":instock",$instock);
-    $sql->bindValue(":photo","../../storages/products/".$rowId.".".$extension);
+    $sql->bindValue(":photo","../storages/products/".$rowId.".".$extension);
     $sql->bindValue(":id",$rowId);
-    
     $sql->execute();
+
     header("Location: ../View/sellerNewProductMenu.php");
     }
 }else{
