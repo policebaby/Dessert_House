@@ -5,7 +5,7 @@ body {
 
 /* shopProfile HS start */
 .shopProfile {
-    background-image: url(/Dessert_House/Customer/View/resources/img/shoppic.jpg);
+    background-image: url(../img/shoppic.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 50vh;

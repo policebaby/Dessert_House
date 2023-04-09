@@ -1,7 +1,7 @@
 <?php
 ini_set("display_errors", "1");
 session_start();
-
+include "../Controller/user_homeViewController.php";
 if (isset($_SESSION["username"])) {
     // already success login or sign up
     $name = $_SESSION["username"];
