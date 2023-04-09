@@ -8,7 +8,7 @@ $db = new DBConnection();
 $pdo = $db->connect();
 
 // Set up Pagination variables
-$perPage = 3;
+$perPage = 10;
 $currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 $startPage = max(1, $currentPage - 1);
 $endPage = $startPage + 2;
