@@ -10,7 +10,7 @@ if (isset($_POST["addBtn"])) {
     $instock = $_POST["instock"];
     $shopId = $_SESSION["shopID"];
 
-    //echo $newName,$type,$price,$shopId;
+    // echo $newName,$price,$shopId;
 
     // profile data
     $file = $_FILES['productPhoto']['name'];
@@ -56,4 +56,5 @@ if (isset($_POST["addBtn"])) {
             header("Location: ../View/sellerNewProductMenu.php");
         }
     }
+    // header("Location: ../View/sellerNewProductMenu.php");
 }

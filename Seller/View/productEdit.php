@@ -113,7 +113,7 @@ else{
         </nav>
 
         <div class="col-10">
-            <p class="h4 fw-bold edit-title mt-3">Products Edition</p>
+            <p class="h4 fw-bold edit-title mt-3">Products Edition</p> 
             <div class="first-row mb-5 me-5 mt-4">
                 <!-- form start -->
                 <form action="../Controller/productUpdateController.php" method="post" enctype="multipart/form-data">
@@ -122,7 +122,7 @@ else{
                     <div class="mb-2">
                         <!-- to show choose profile photo -->
                         <?php
-                            echo '<img src= "../' .$result[0]["product_picture"].' " class="seller-photo mb-3" id="productImg">';
+                            echo '<img src= " '.$result[0]["product_picture"].' " class="seller-photo mb-3" id="productImg">';
                         ?>
                     </div>
                     <input class="form-control mt-2" type="file" id="formFile" name="productImg">
@@ -133,19 +133,16 @@ else{
                         <label for="new-product-name texts" class="fw-bold">Product Name</label>
                         <input type="text" class="input-box p-3" value="<?= $result[0]["product_name"]?>" name="newProductName">
                     </div>
-                    <div class="label-box my-md-3 my-sm-3">
-                        <label for="product-type" class="fw-bold">Product Type</label>
-                        <input type="text" class="input-box p-3" value="<?= $result[0]["product_type"]?>" name="productType">
-                    </div>
-                    <div class="label-box">
+                    
+                    <div class="label-box  my-md-3 my-sm-3">
                         <label for="price-of-each-product" class="fw-bold">Price Of Each Product</label>
                         <input type="text" class="input-box p-3" value="<?= $result[0]["product_price"]?>" name="priceOfeach" >
                     </div>
-                    <div class="label-box my-md-3 my-sm-3">
+                    <div class="label-box">
                             <label for="instock" class="fw-bold">Instock</label>
                             <input type="text" class="input-box p-3" name="instock"value="<?= $result[0]["product_instock"]?>" name="instock">
                         </div>
-                    <div class="mb-md-5 mb-sm-5">
+                    <div class="mb-md-5 mb-sm-5 mt-md-4 mt-sm-4">
                         <button class="btns add-btn" name="saveProductBtn">Save</button>
                         <a href="./sellerNewProductMenu.php" type="button"class="btns ms-4 cancel-btn text-center text-decoration-none" id="cancelBtn">Cancel</a>
                     </div>

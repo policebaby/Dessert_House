@@ -138,7 +138,7 @@ if (isset($_SESSION["sellerName"])) {
 
                                     <?php } ?>
                                     <span>
-                                        <ion-icon name="chevron-down-outline" class="down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="showItemName('<?= $soldResult[$i]['items'] ?>','<?= $soldResult[$i]['order_id'] ?>','<?= $soldResult[$i]['create_date'] ?>','<?= $soldResult[$i]['reserve_time'] ?>', '<?= $soldResult[$i]['grand_total'] ?>')"></ion-icon>
+                                        <ion-icon name="chevron-down-outline" class="down ms-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="showItemName('<?= $soldResult[$i]['items'] ?>','<?= $soldResult[$i]['order_id'] ?>','<?= $soldResult[$i]['create_date'] ?>','<?= $soldResult[$i]['reserve_time'] ?>', '<?= $soldResult[$i]['grand_total'] ?>')"></ion-icon>
                                     </span>
                                 </td>
                                 <td class="td-text fw-bold"><?= $soldResult[$i]["grand_total"] ?></td>

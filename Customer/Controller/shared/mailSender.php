@@ -22,7 +22,7 @@ class SendMail
             $mail->Host       = 'smtp.gmail.com';
             $mail->SMTPAuth   = true;
             $mail->Username   = 'desserthouse1234@gmail.com'; // change
-            $mail->Password   = 'seuhrdjzvsjcfmmz'; // change
+            $mail->Password   = 'ytjsrxwaxohcpxxl'; // change
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port       = 465;
 

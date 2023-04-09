@@ -139,7 +139,7 @@ else{
                                         <span>
                                         <?php } ?>
                                         <span>
-                                <ion-icon name="chevron-down-outline" class="down" data-bs-toggle="modal" data-bs-target="#staticBackdrop" 
+                                <ion-icon name="chevron-down-outline" class="down ms-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop" 
                                 onclick="showItemName('<?= $orderResult[$i]['items'] ?>','<?= $orderResult[$i]['order_id'] ?>', '<?= $orderResult[$i]['grand_total'] ?>','<?= $orderResult[$i]['reserve_time'] ?>')"></ion-icon>
                                 </span>
                                 </td>

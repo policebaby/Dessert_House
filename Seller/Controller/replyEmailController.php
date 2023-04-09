@@ -79,7 +79,7 @@ if(isset($_POST['thank'])){
     $generate = new Generate();
     $sellerReply = $generate->genReply();
 
-    echo $userEmail,$reviewID,$shopID,$sellerReply;
+    // echo $userEmail,$reviewID,$shopID,$sellerReply;
 
     $db = new DBConnection();
     $pdo = $db->connect();

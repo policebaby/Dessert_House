@@ -147,7 +147,7 @@ else{
                                         <span>
                                         <?php } ?>
                                         
-                                    <ion-icon name="chevron-down-outline" class="down" data-bs-toggle="modal" 
+                                    <ion-icon name="chevron-down-outline" class="down ms-4" data-bs-toggle="modal" 
                                     data-bs-target="#staticBackdrop" onclick="showItemName('<?= $result[$i]['items'] ?>','<?= $result[$i]['grand_total'] ?>')"></ion-icon>
                                     
                                 </td>
