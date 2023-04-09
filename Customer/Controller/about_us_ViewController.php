@@ -77,7 +77,8 @@ $sql = $pdo->prepare(
 );
 $sql->execute();
 $para = $sql->fetchAll(PDO::FETCH_ASSOC);
-print_r($para);
+// echo "<pre>";
+// print_r($para);
 $_SESSION["para"]= $para;
 
 
