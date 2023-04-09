@@ -1,6 +1,6 @@
 <?php
 ini_set("display_errors", "1");
-session_start();
+// session_start();
 
 include "../Model/dbConnection.php";
 
@@ -81,5 +81,4 @@ $para = $sql->fetchAll(PDO::FETCH_ASSOC);
 // print_r($para);
 $_SESSION["para"]= $para;
 
-
-header("Location: ../View/about_us.php");
+// header("Location: ../View/about_us.php");

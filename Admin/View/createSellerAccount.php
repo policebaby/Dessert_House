@@ -1,4 +1,6 @@
 <?php
+ini_set("display_errors", "1");
+
 session_start();
 
 //if admin has not logged in and entered url directly, will direct to log in page.

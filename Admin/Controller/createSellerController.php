@@ -1,4 +1,5 @@
 <?php
+ini_set("display_errors", "1");
 
 //to use session
 session_start();
@@ -11,7 +12,7 @@ $sellerName = trim($_POST["sellerName"]);
 $email = trim($_POST["email"]);
 $password = trim($_POST["password"]);
 $phone = trim($_POST["phone"]);
-$address = trim($_POST["address"]);
+// $address = trim($_POST["address"]);
 $date = date("Y-m-d");
 
 // to avoid undefined array key occurs if only one error;
@@ -100,6 +101,7 @@ if (isset($_POST['register'])) {
 
         $pdo->commit();
     } catch (PDOException $e) {
+        print_r($e);
         $pdo->rollback();
         // handle the exception
     }

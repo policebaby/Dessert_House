@@ -2,6 +2,7 @@
 ini_set("display_errors", "1");
 session_start();
 
+include "../Controller/about_us_ViewController.php";
 // print_r($_SESSION);
 if (isset($_SESSION["description"])) {
     $description = $_SESSION["description"];
