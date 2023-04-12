@@ -128,7 +128,7 @@ $_SESSION["cartItemList"]= $cartItemList;
                     <span id="subtotal" class="itemprice"><?= $subtotal ?></span>
                     <span><iconify-icon class="coinIcon coinposition" icon="healthicons:coins"></iconify-icon></span>
                 </div>
-                <!-- <div class="checkoutInfo">Reserved Seat Number :</div> -->
+                <div class="checkoutInfo">Reserved Seat Number :</div>
 
                 <div class="d-flex justify-content-end mt-5 btnCheckoutMD">
                     <form action="../Controller/checkoutController.php" method="post">

@@ -20,7 +20,7 @@ $(document).ready(()=>{
                 for (const product of returnData) {
                     $("#searcheditem").append(
                         `
-                        <div id="searcheditem" class=" d-flex justify-content-center row shopProfiles">
+                        <div id="searcheditem" class=" d-flex justify-content-center flex-row flex-wrap shopProfiles">
                         <!-- single menu block start -->
                         <div class="menublock col-md-3  justify-content-center">
                             <div class="  d-flex justify-content-center imgBorder">
