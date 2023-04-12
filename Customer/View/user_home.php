@@ -9,13 +9,13 @@ if (isset($_SESSION["username"])) {
 } else {
     header("Location: ./user_login.php");
 }
-if (isset($_SESSION["homeshops"])) {
-    $shops = $_SESSION["homeshops"];
-    // echo "<pre>";
-    // print_r($shops);
-} else {
-    echo "error";
-}
+// if (isset($_SESSION["homeshops"])) {
+//     $shops = $_SESSION["homeshops"];
+//     // echo "<pre>";
+//     // print_r($shops);
+// } else {
+//     echo "error";
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,7 +81,6 @@ if (isset($_SESSION["homeshops"])) {
     </div>
     <!-- hero section end -->
     <div id="searcheditem" class=" d-flex justify-content-center flex-row shopProfiles">
-              
         </div>
     <!-- shops profiles start -->
     <div class="shopProfiles ">

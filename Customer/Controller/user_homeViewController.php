@@ -11,8 +11,8 @@ $sql = $pdo->prepare(
     "SELECT * FROM m_shop WHERE del_flg = 0  LIMIT 4"
 );
 $sql->execute();
-$result = $sql->fetchAll(PDO::FETCH_ASSOC);
-$_SESSION["homeshops"]= $result;
+$shops = $sql->fetchAll(PDO::FETCH_ASSOC);
+// $_SESSION["homeshops"]= $result;
 // echo "<pre>";
 // print_r($result);
 // header("Location: ../View/user_home.php");
