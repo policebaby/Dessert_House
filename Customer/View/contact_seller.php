@@ -112,7 +112,7 @@ if (isset($_SESSION["ratingTypes"])) {
                         </div>
                         <br>
                         <!--btn-->
-                        <button type="submit" class="contactS_btn " name="submit_btn">Submit</button>
+                        <button type="submit" class="contactS_btn pt-2" name="submit_btn">Submit</button>
                     </div>
                 </form>
             </div>

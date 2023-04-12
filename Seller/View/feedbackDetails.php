@@ -195,7 +195,7 @@ if (isset($_SESSION['review']) && !is_null($_SESSION['review'])) {
                             }
                             for ($i = 0; $i < count($Presult); $i++) { ?>
                                 <div class="progress w-50 mt-2 ms-md-3 ms-sm-3">
-                                    <div class="progress-bar" role="progressbar" style="width: <?= $Ppercent ?>%" aria-valuenow="<?= $Ppercent ?>" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" style="width: <?= $percent ?>%" aria-valuenow="<?= $percent ?>" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <?php if ($shopRatingCount != 0) { ?>
                                     <span class="mt-md-2 mt-sm-2 ms-md-3 ms-sm-3 fw-bold total-review"><?= $pokerCount ?> reviews</span>
@@ -212,7 +212,7 @@ if (isset($_SESSION['review']) && !is_null($_SESSION['review'])) {
                         if ($shopRatingCount != 0) {
                             $Dpercent = ($sadCount / $shopRatingCount) * 100;
                         } else {
-                            $Spercent = 0;
+                            $Dpercent = 0;
                         }
                         for ($i = 0; $i < count($Dresult); $i++) { ?>
                             <div class="progress w-50 mt-2 ms-md-3 ms-sm-3">
@@ -234,7 +234,7 @@ if (isset($_SESSION['review']) && !is_null($_SESSION['review'])) {
                     if ($shopRatingCount != 0) {
                         $Epercent = ($crossCount / $shopRatingCount) * 100;
                     } else {
-                        $Spercent = 0;
+                        $Epercent = 0;
                     }
                     for ($i = 0; $i < count($Eresult); $i++) { ?>
                         <div class="progress w-50 mt-2 ms-md-3 ms-sm-3">

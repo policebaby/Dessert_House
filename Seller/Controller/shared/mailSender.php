@@ -29,7 +29,7 @@ class SendMail
             $mail->Port       = 465;
 
             //Recipients
-            $mail->setFrom('agooncafe99@gmail.com', "Dessert House"); // change
+            $mail->setFrom('lagooncafe99@gmail.com', "Dessert House"); // change
             $mail->addAddress($toMail);
 
             //Content
